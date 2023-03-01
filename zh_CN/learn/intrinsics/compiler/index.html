@@ -737,9 +737,16 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#syntax">
+    <a class="reference internal nav-link" href="#synopsis">
      <strong>
-      语法
+      Synopsis
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#characteristics">
+     <strong>
+      Characteristics
      </strong>
     </a>
    </li>
@@ -751,16 +758,16 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#arguments">
+    <a class="reference internal nav-link" href="#options">
      <strong>
-      参数
+      选项
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#returns">
+    <a class="reference internal nav-link" href="#result">
      <strong>
-      返回值
+      结果
      </strong>
     </a>
    </li>
@@ -802,47 +809,54 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
      <strong>
-      语法
+      Synopsis
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
      <strong>
-      说明
+      Characteristics
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id4">
      <strong>
-      参数
+      说明
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id5">
      <strong>
-      返回值
+      选项
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id6">
      <strong>
-      示例
+      结果
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id7">
      <strong>
-      标准
+      示例
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id8">
+     <strong>
+      标准
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
      <strong>
       另见
      </strong>
@@ -869,31 +883,44 @@
 <h2>compiler_options<a class="headerlink" href="#compiler-options" title="此标题的永久链接">#</a></h2>
 <section id="name">
 <h3><strong>名称</strong><a class="headerlink" href="#name" title="此标题的永久链接">#</a></h3>
-<p><strong>compiler_options</strong>(3) - [COMPILER INQUIRY] 传递给编译器的选项</p>
+<p><strong>compiler_options</strong>(3) - [COMPILER:INQUIRY] Options passed to the compiler</p>
 </section>
-<section id="syntax">
-<h3><strong>语法</strong><a class="headerlink" href="#syntax" title="此标题的永久链接">#</a></h3>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compiler_options</span><span class="p">()</span>
+<section id="synopsis">
+<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="此标题的永久链接">#</a></h3>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compiler_options</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:)</span><span class="w"> </span><span class="k">function </span><span class="n">compiler_options</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
+<section id="characteristics">
+<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>the return value is a default-kind <em>character</em> variable with
+system-dependent length.</p></li>
+</ul>
+</section>
 <section id="description">
 <h3><strong>说明</strong><a class="headerlink" href="#description" title="此标题的永久链接">#</a></h3>
-<p>compiler_options 返回一个带有用于编译的选项的字符串。</p>
+<p><strong>compiler_options</strong>(3) returns a string with the options used for
+compiling.</p>
 </section>
-<section id="arguments">
-<h3><strong>参数</strong><a class="headerlink" href="#arguments" title="此标题的永久链接">#</a></h3>
+<section id="options">
+<h3><strong>选项</strong><a class="headerlink" href="#options" title="此标题的永久链接">#</a></h3>
 <p>无。</p>
 </section>
-<section id="returns">
-<h3><strong>返回值</strong><a class="headerlink" href="#returns" title="此标题的永久链接">#</a></h3>
-<p>返回值是具有系统相关长度的默认类型字符串。它包含用于编译文件的编译器标志，称为 compiler_options 内在函数。</p>
+<section id="result">
+<h3><strong>结果</strong><a class="headerlink" href="#result" title="此标题的永久链接">#</a></h3>
+<p>The result contains the compiler flags used to compile the file
+containing the <strong>compiler_options</strong>(3) call.</p>
 </section>
 <section id="examples">
 <h3><strong>示例</strong><a class="headerlink" href="#examples" title="此标题的永久链接">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_compiler_version</span>
-<span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">compiler_version</span><span class="p">,</span><span class="w"> </span><span class="n">compiler_options</span>
+<span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">compiler_version</span>
+<span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">compiler_options</span>
 <span class="k">implicit none</span>
 <span class="k">   print</span><span class="w"> </span><span class="s1">&#39;(4a)&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">      </span><span class="s1">&#39;This file was compiled by &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
@@ -904,12 +931,27 @@
 </pre></div>
 </div>
 <p>结果：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">This</span> <span class="n">file</span> <span class="n">was</span> <span class="n">compiled</span> <span class="n">by</span> <span class="n">GCC</span> <span class="n">version</span> <span class="mf">5.4.0</span> <span class="n">using</span> <span class="n">the</span> <span class="n">options</span>
-   <span class="o">-</span><span class="n">I</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">w32api</span> <span class="o">-</span><span class="n">I</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">urbanjs</span><span class="o">/</span><span class="n">V600</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">CYGWIN64_GFORTRAN</span>
-   <span class="o">-</span><span class="n">mtune</span><span class="o">=</span><span class="n">generic</span> <span class="o">-</span><span class="n">march</span><span class="o">=</span><span class="n">x86</span><span class="o">-</span><span class="mi">64</span> <span class="o">-</span><span class="n">g</span> <span class="o">-</span><span class="n">Wunused</span> <span class="o">-</span><span class="n">Wuninitialized</span> <span class="o">-</span><span class="n">Wall</span>
-   <span class="o">-</span><span class="n">std</span><span class="o">=</span><span class="n">f2008</span> <span class="o">-</span><span class="n">fbounds</span><span class="o">-</span><span class="n">check</span> <span class="o">-</span><span class="n">fbacktrace</span> <span class="o">-</span><span class="n">finit</span><span class="o">-</span><span class="n">real</span><span class="o">=</span><span class="n">nan</span>
-   <span class="o">-</span><span class="n">fno</span><span class="o">-</span><span class="nb">range</span><span class="o">-</span><span class="n">check</span> <span class="o">-</span><span class="n">frecord</span><span class="o">-</span><span class="n">marker</span><span class="o">=</span><span class="mi">4</span>
-   <span class="o">-</span><span class="n">J</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">urbanjs</span><span class="o">/</span><span class="n">V600</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">CYGWIN64_GFORTRAN</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>This file was compiled by GCC version 10.3.0 using
+the options -I build/gfortran_2A42023B310FA28D
+-mtune=generic -march=x86-64 -auxbase-strip
+build/gfortran_2A42023B310FA28D/compiler_options/app_main.f90.o
+-g -Wall -Wextra -Wimplicit-interface -fPIC -fmax-errors=1
+-fcheck=bounds -fcheck=array-temps -fbacktrace
+-fcoarray=single -J build/gfortran_2A42023B310FA28D
+-fpre-include=/usr/include/finclude/math-vector-fortran.h
+
+This file was compiled by nvfortran 21.5-0 LLVM
+using the options app/main.f90 -c -Minform=inform
+-Mbackslash -Mbounds -Mchkptr -Mchkstk -traceback -module
+build/nvfortran_78229DCE997517A4 -Ibuild/nvfortran_78229DCE997517A4 -o
+build/nvfortran_78229DCE997517A4/compiler_options/app_main.f90.o
+
+This file was compiled by Intel(R) Fortran Intel(R) 64 Compiler Classic
+for applications running on Intel(R) 64, Version 2021.3.0 Build
+20210609_000000 using the options -Ibuild/ifort_5C58216731706F11
+-c -warn all -check all -error-limit 1 -O0 -g -assume
+byterecl -traceback -module build/ifort_5C58216731706F11 -o
+build/ifort_5C58216731706F11/compiler_options/app_main.f90.o
 </pre></div>
 </div>
 </section>
@@ -920,65 +962,76 @@
 <section id="see-also">
 <h3><strong>另见</strong><a class="headerlink" href="#see-also" title="此标题的永久链接">#</a></h3>
 <p><a class="reference internal" href="#compiler-version"><span class="std std-doc"><strong>compiler_version</strong>(3)</span></a>,,<strong>iso_fortran_env</strong>(7)</p>
-<p><em>fortran-lang intrinsic descriptions</em></p>
+<p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="compiler-version">
 <h2>compiler_version<a class="headerlink" href="#compiler-version" title="此标题的永久链接">#</a></h2>
 <section id="id1">
 <h3><strong>名称</strong><a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h3>
-<p><strong>compiler_version</strong>(3) - [COMPILER INQUIRY] 编译器版本字符串</p>
+<p><strong>compiler_version</strong>(3) - [COMPILER:INQUIRY] Compiler version string</p>
 </section>
 <section id="id2">
-<h3><strong>语法</strong><a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h3>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compiler_version</span><span class="p">()</span>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h3>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compiler_version</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:)</span><span class="w"> </span><span class="k">function </span><span class="n">compiler_version</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="id3">
-<h3><strong>说明</strong><a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h3>
-<p><strong>compiler_version</strong>(3) 返回一个包含编译器名称和版本的字符串。</p>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>The return value is a default-kind scalar <em>character</em> with
+system-dependent length.</p></li>
+</ul>
 </section>
 <section id="id4">
-<h3><strong>参数</strong><a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h3>
-<p>无。</p>
+<h3><strong>说明</strong><a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h3>
+<p><strong>compiler_version</strong>(3) 返回一个包含编译器名称和版本的字符串。</p>
 </section>
 <section id="id5">
-<h3><strong>返回值</strong><a class="headerlink" href="#id5" title="此标题的永久链接">#</a></h3>
-<p>返回值是具有系统相关长度的默认类型字符串。它包含编译器的名称及其版本号。</p>
+<h3><strong>选项</strong><a class="headerlink" href="#id5" title="此标题的永久链接">#</a></h3>
+<p>无。</p>
 </section>
 <section id="id6">
-<h3><strong>示例</strong><a class="headerlink" href="#id6" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id6" title="此标题的永久链接">#</a></h3>
+<p>The return value contains the name of the compiler and its version
+number used to compile the file containing the <strong>compiler_version</strong>(3)
+call.</p>
+</section>
+<section id="id7">
+<h3><strong>示例</strong><a class="headerlink" href="#id7" title="此标题的永久链接">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_compiler_version</span>
-<span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">compiler_version</span><span class="p">,</span><span class="w"> </span><span class="n">compiler_options</span>
+<span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">compiler_version</span>
 <span class="k">implicit none</span>
-<span class="k">   print</span><span class="w"> </span><span class="s1">&#39;(4a)&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="k">   print</span><span class="w"> </span><span class="s1">&#39;(2a)&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">      </span><span class="s1">&#39;This file was compiled by &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">compiler_version</span><span class="p">(),</span><span class="w">           </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="s1">&#39; using the options &#39;</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
-<span class="w">      </span><span class="n">compiler_options</span><span class="p">()</span>
+<span class="w">      </span><span class="n">compiler_version</span><span class="p">()</span>
 <span class="k">end program </span><span class="n">demo_compiler_version</span>
 </pre></div>
 </div>
 <p>结果：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">This</span> <span class="n">file</span> <span class="n">was</span> <span class="n">compiled</span> <span class="n">by</span> <span class="n">GCC</span> <span class="n">version</span> <span class="mf">5.4.0</span> <span class="n">using</span> <span class="n">the</span> <span class="n">options</span>
-   <span class="o">-</span><span class="n">I</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">w32api</span> <span class="o">-</span><span class="n">I</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">urbanjs</span><span class="o">/</span><span class="n">V600</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">CYGWIN64_GFORTRAN</span>
-   <span class="o">-</span><span class="n">mtune</span><span class="o">=</span><span class="n">generic</span> <span class="o">-</span><span class="n">march</span><span class="o">=</span><span class="n">x86</span><span class="o">-</span><span class="mi">64</span> <span class="o">-</span><span class="n">g</span> <span class="o">-</span><span class="n">Wunused</span> <span class="o">-</span><span class="n">Wuninitialized</span> <span class="o">-</span><span class="n">Wall</span>
-   <span class="o">-</span><span class="n">std</span><span class="o">=</span><span class="n">f2008</span> <span class="o">-</span><span class="n">fbounds</span><span class="o">-</span><span class="n">check</span> <span class="o">-</span><span class="n">fbacktrace</span> <span class="o">-</span><span class="n">finit</span><span class="o">-</span><span class="n">real</span><span class="o">=</span><span class="n">nan</span>
-   <span class="o">-</span><span class="n">fno</span><span class="o">-</span><span class="nb">range</span><span class="o">-</span><span class="n">check</span> <span class="o">-</span><span class="n">frecord</span><span class="o">-</span><span class="n">marker</span><span class="o">=</span><span class="mi">4</span>
-   <span class="o">-</span><span class="n">J</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">urbanjs</span><span class="o">/</span><span class="n">V600</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">CYGWIN64_GFORTRAN</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>This file was compiled by GCC version 10.3.0
+
+This file was compiled by Intel(R) Fortran Intel(R) 64 Compiler
+Classic for applications running on Intel(R) 64, Version 2021.3.0 Build
+20210609_000000
+
+This file was compiled by nvfortran 21.5-0 LLVM
 </pre></div>
 </div>
 </section>
-<section id="id7">
-<h3><strong>标准</strong><a class="headerlink" href="#id7" title="此标题的永久链接">#</a></h3>
+<section id="id8">
+<h3><strong>标准</strong><a class="headerlink" href="#id8" title="此标题的永久链接">#</a></h3>
 <p>Fortran 2008</p>
 </section>
-<section id="id8">
-<h3><strong>另见</strong><a class="headerlink" href="#id8" title="此标题的永久链接">#</a></h3>
+<section id="id9">
+<h3><strong>另见</strong><a class="headerlink" href="#id9" title="此标题的永久链接">#</a></h3>
 <p><a class="reference internal" href="#compiler-options"><span class="std std-doc"><strong>compiler_options</strong>(3)</span></a>,,<strong>iso_fortran_env</strong>(7)</p>
-<p><em>fortran-lang intrinsic descriptions</em></p>
+<p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 </section>
