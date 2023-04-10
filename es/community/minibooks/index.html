@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../_static/images/favicon.ico" type="image/x-icon">
     <title>Tutoriales de mini-libros en fortran-lang.org &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="Índice" href="../../genindex/" />
     <link rel="search" title="Búsqueda" href="../../search/" />
     <link rel="next" title="Índice de paquetes de Fortran-lang.org" href="../packages/" />
-    <link rel="prev" title="Contribuyendo con fortran-lang.org" href="../contributing/" /> 
+    <link rel="prev" title="Contribuyendo con fortran-lang.org" href="../contributing/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -462,7 +440,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="mini-book-tutorials-on-fortran-lang-org">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="mini-book-tutorials-on-fortran-lang-org">
 <h1>Tutoriales de mini-libros en fortran-lang.org<a class="headerlink" href="#mini-book-tutorials-on-fortran-lang-org" title="Enlace permanente a este encabezado">#</a></h1>
 <p>Esta guía cubrirá cómo escribir tutoriales de minilibros para la sección <a class="reference external" href="https://fortran-lang.org/learn">Aprender</a> de <a class="reference external" href="https://fortran-lang.org">https://fortran-lang.org</a>.</p>
 <p>See <a class="reference internal" href="../contributing/"><span class="doc std std-doc">contributing guidelines</span></a> for general guidance on contributing to <a class="reference external" href="https://fortran-lang.org">https://fortran-lang.org</a>.</p>
@@ -491,7 +470,7 @@ on a single webpage;</p></li>
 <ul class="simple">
 <li><p>Create a new markdown document in the <code class="docutils literal notranslate"><span class="pre">./learn</span></code> directory</p></li>
 <li><p>Escriba el contenido de su tutorial</p></li>
-<li><p>Agregue una entrada a <span class="xref myst">data/learning.yml</span> para su nuevo minilibro</p></li>
+<li><p>Agregue una entrada a <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a> para su nuevo minilibro</p></li>
 <li><p>Abrir una solicitud de integración</p></li>
 </ul>
 <section id="writing-your-mini-book-in-markdown">
@@ -554,7 +533,7 @@ the markdown implementation.</p>
 </section>
 <section id="add-your-mini-book-to-the-learn-page">
 <h3>1.3 Agregue su mini libro a la página de aprendizaje<a class="headerlink" href="#add-your-mini-book-to-the-learn-page" title="Enlace permanente a este encabezado">#</a></h3>
-<p>Para agregar su nuevo minilibro a la página <em>Learn</em>, debe agregar una nueva entrada en el archivo de datos <span class="xref myst">data/learning.yml</span>.</p>
+<p>Para agregar su nuevo minilibro a la página <em>Learn</em>, debe agregar una nueva entrada en el archivo de datos <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a>.</p>
 <p>Abra este archivo y cree una nueva entrada en el campo <code class="docutils literal notranslate"><span class="pre">books:</span></code> con el siguiente formato:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">book-title</span><span class="p p-Indicator">}}</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">book-description</span><span class="p p-Indicator">}}</span>
@@ -576,7 +555,7 @@ and should generally be the same as the <code class="docutils literal notranslat
 </div>
 <p>Guarde el archivo de datos <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> modificado y ejecute fortran_package.py y reconstruya el sitio web en su máquina local para verificar los resultados. Si tiene éxito, debería aparecer un nuevo enlace en la página _Learn* con el título de su nuevo mini-libro.</p>
 <p>Once you have completed your mini-book and added an entry to the <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> data file, open a pull request
-at <a class="reference external" href="https://github.com/fortran-lang/webpage">https://github.com/fortran-lang/webpage</a> (see <span class="xref myst">CONTRIBUTING</span>).</p>
+at <a class="reference external" href="https://github.com/fortran-lang/webpage">https://github.com/fortran-lang/webpage</a> (see <a class="reference internal" href="#./CONTRIBUTING.md"><span class="xref myst">CONTRIBUTING</span></a>).</p>
 </section>
 </section>
 <section id="multi-page-mini-books">
@@ -586,7 +565,7 @@ at <a class="reference external" href="https://github.com/fortran-lang/webpage">
 <li><p>Create a new folder in the <code class="docutils literal notranslate"><span class="pre">./learn/</span></code> directory</p></li>
 <li><p>Create an <code class="docutils literal notranslate"><span class="pre">index.md</span></code> file in your new folder</p></li>
 <li><p>Write your tutorial content in markdown files in your new folder</p></li>
-<li><p>Agregue una entrada a <span class="xref myst">data/learning.yml</span> para su nuevo minilibro</p></li>
+<li><p>Agregue una entrada a <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a> para su nuevo minilibro</p></li>
 <li><p>Abrir una solicitud de integración</p></li>
 </ul>
 <section id="create-a-new-folder-for-your-mini-book">
@@ -628,7 +607,7 @@ Each heading on the current page will show up in the inpage table-of-contents.</
 </section>
 <section id="id1">
 <h3>2.3 Add your mini-book to the Learn page<a class="headerlink" href="#id1" title="Enlace permanente a este encabezado">#</a></h3>
-<p>Para agregar su nuevo minilibro a la página <em>Learn</em>, debe agregar una nueva entrada en el archivo de datos <span class="xref myst">data/learning.yml</span>.</p>
+<p>Para agregar su nuevo minilibro a la página <em>Learn</em>, debe agregar una nueva entrada en el archivo de datos <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a>.</p>
 <p>Abra este archivo y cree una nueva entrada en el campo <code class="docutils literal notranslate"><span class="pre">books:</span></code> con el siguiente formato:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">book-title</span><span class="p p-Indicator">}}</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">book-description</span><span class="p p-Indicator">}}</span>
@@ -660,13 +639,14 @@ and should generally be the same as the <code class="docutils literal notranslat
 <p>Save the modified <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> data file and run fortran<em>package.py and rebuild the website on your local machine to check the results.
 If successful, a new link should appear on the _Learn</em> page with the title of your new mini-book.</p>
 <p>Once you have completed your mini-book and added an entry to the <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> data file, open a pull request
-at <a class="reference external" href="https://github.com/fortran-lang/fortran-lang.org">https://github.com/fortran-lang/fortran-lang.org</a> (see <span class="xref myst">CONTRIBUTING</span>).</p>
+at <a class="reference external" href="https://github.com/fortran-lang/fortran-lang.org">https://github.com/fortran-lang/fortran-lang.org</a> (see <a class="reference internal" href="#./CONTRIBUTING.md"><span class="xref myst">CONTRIBUTING</span></a>).</p>
 </section>
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

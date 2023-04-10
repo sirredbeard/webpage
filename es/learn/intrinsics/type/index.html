@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Types and kinds &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Búsqueda" href="../../../search/" />
     <link rel="next" title="Roadmap" href="../../../roadmap/" />
-    <link rel="prev" title="Matrix multiplication, dot product, and array shifts" href="../transform/" /> 
+    <link rel="prev" title="Matrix multiplication, dot product, and array shifts" href="../transform/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -1678,7 +1656,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="types-and-kinds">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="types-and-kinds">
 <h1>Types and kinds<a class="headerlink" href="#types-and-kinds" title="Enlace permanente a este encabezado">#</a></h1>
 <p>These intrinsics allow for explicitly casting one type of variable to
 another or can be used to conditionally execute code blocks based on
@@ -1841,44 +1820,44 @@ imaginary component of the argument <strong>z</strong>.</p>
 <section id="see-also">
 <h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Enlace permanente a este encabezado">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#cmplx"><span class="std std-doc"><strong>cmplx</strong>(3)</span></a> - Complex conversion function</p></li>
-<li><p><span class="xref myst"><strong>conjg</strong>(3)</span> - Complex conjugate function</p></li>
-<li><p><a class="reference internal" href="#real"><span class="std std-doc"><strong>real</strong>(3)</span></a> - Convert to real type</p></li>
+<li><p><a class="reference internal" href="#cmplx"><strong>cmplx</strong>(3)</a> - Complex conversion function</p></li>
+<li><p><a class="reference internal" href="#conjg"><span class="xref myst"><strong>conjg</strong>(3)</span></a> - Complex conjugate function</p></li>
+<li><p><a class="reference internal" href="#real"><strong>real</strong>(3)</a> - Convert to real type</p></li>
 </ul>
 <p>Fortran has strong support for <em>complex</em> values, including many intrinsics
 that take or produce <em>complex</em> values in addition to algebraic and
 logical expressions:</p>
-<p><span class="xref myst"><strong>abs</strong>(3)</span>,
-<span class="xref myst"><strong>acosh</strong>(3)</span>,
-<span class="xref myst"><strong>acos</strong>(3)</span>,
-<span class="xref myst"><strong>asinh</strong>(3)</span>,
-<span class="xref myst"><strong>asin</strong>(3)</span>,
-<span class="xref myst"><strong>atan2</strong>(3)</span>,
-<span class="xref myst"><strong>atanh</strong>(3)</span>,
-<span class="xref myst"><strong>atan</strong>(3)</span>,
-<span class="xref myst"><strong>cosh</strong>(3)</span>,
-<span class="xref myst"><strong>cos</strong>(3)</span>,
-<span class="xref myst"><strong>co_sum</strong>(3)</span>,
-<a class="reference internal" href="#dble"><span class="std std-doc"><strong>dble</strong>(3)</span></a>,
-<span class="xref myst"><strong>dot_product</strong>(3)</span>,
-<span class="xref myst"><strong>exp</strong>(3)</span>,
-<a class="reference internal" href="#int"><span class="std std-doc"><strong>int</strong>(3)</span></a>,
-<span class="xref myst"><strong>is_contiguous</strong>(3)</span>,
-<a class="reference internal" href="#kind"><span class="std std-doc"><strong>kind</strong>(3)</span></a>,
-<span class="xref myst"><strong>log</strong>(3)</span>,
-<span class="xref myst"><strong>matmul</strong>(3)</span>,
-<span class="xref myst"><strong>precision</strong>(3)</span>,
-<span class="xref myst"><strong>product</strong>(3)</span>,
-<span class="xref myst"><strong>range</strong>(3)</span>,
-<span class="xref myst"><strong>rank</strong>(3)</span>,
-<span class="xref myst"><strong>sinh</strong>(3)</span>,
-<span class="xref myst"><strong>sin</strong>(3)</span>,
-<span class="xref myst"><strong>sqrt</strong>(3)</span>,
-<span class="xref myst"><strong>storage_size</strong>(3)</span>,
-<span class="xref myst"><strong>sum</strong>(3)</span>,
-<span class="xref myst"><strong>tanh</strong>(3)</span>,
-<span class="xref myst"><strong>tan</strong>(3)</span>,
-<span class="xref myst"><strong>unpack</strong>(3)</span>,</p>
+<p><a class="reference internal" href="#abs"><span class="xref myst"><strong>abs</strong>(3)</span></a>,
+<a class="reference internal" href="#acosh"><span class="xref myst"><strong>acosh</strong>(3)</span></a>,
+<a class="reference internal" href="#acos"><span class="xref myst"><strong>acos</strong>(3)</span></a>,
+<a class="reference internal" href="#asinh"><span class="xref myst"><strong>asinh</strong>(3)</span></a>,
+<a class="reference internal" href="#asin"><span class="xref myst"><strong>asin</strong>(3)</span></a>,
+<a class="reference internal" href="#atan2"><span class="xref myst"><strong>atan2</strong>(3)</span></a>,
+<a class="reference internal" href="#atanh"><span class="xref myst"><strong>atanh</strong>(3)</span></a>,
+<a class="reference internal" href="#atan"><span class="xref myst"><strong>atan</strong>(3)</span></a>,
+<a class="reference internal" href="#cosh"><span class="xref myst"><strong>cosh</strong>(3)</span></a>,
+<a class="reference internal" href="#cos"><span class="xref myst"><strong>cos</strong>(3)</span></a>,
+<a class="reference internal" href="#co_sum"><span class="xref myst"><strong>co_sum</strong>(3)</span></a>,
+<a class="reference internal" href="#dble"><strong>dble</strong>(3)</a>,
+<a class="reference internal" href="#dot_product"><span class="xref myst"><strong>dot_product</strong>(3)</span></a>,
+<a class="reference internal" href="#exp"><span class="xref myst"><strong>exp</strong>(3)</span></a>,
+<a class="reference internal" href="#int"><strong>int</strong>(3)</a>,
+<a class="reference internal" href="#is_contiguous"><span class="xref myst"><strong>is_contiguous</strong>(3)</span></a>,
+<a class="reference internal" href="#kind"><strong>kind</strong>(3)</a>,
+<a class="reference internal" href="#log"><span class="xref myst"><strong>log</strong>(3)</span></a>,
+<a class="reference internal" href="#matmul"><span class="xref myst"><strong>matmul</strong>(3)</span></a>,
+<a class="reference internal" href="#precision"><span class="xref myst"><strong>precision</strong>(3)</span></a>,
+<a class="reference internal" href="#product"><span class="xref myst"><strong>product</strong>(3)</span></a>,
+<a class="reference internal" href="#range"><span class="xref myst"><strong>range</strong>(3)</span></a>,
+<a class="reference internal" href="#rank"><span class="xref myst"><strong>rank</strong>(3)</span></a>,
+<a class="reference internal" href="#sinh"><span class="xref myst"><strong>sinh</strong>(3)</span></a>,
+<a class="reference internal" href="#sin"><span class="xref myst"><strong>sin</strong>(3)</span></a>,
+<a class="reference internal" href="#sqrt"><span class="xref myst"><strong>sqrt</strong>(3)</span></a>,
+<a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a>,
+<a class="reference internal" href="#sum"><span class="xref myst"><strong>sum</strong>(3)</span></a>,
+<a class="reference internal" href="#tanh"><span class="xref myst"><strong>tanh</strong>(3)</span></a>,
+<a class="reference internal" href="#tan"><span class="xref myst"><strong>tan</strong>(3)</span></a>,
+<a class="reference internal" href="#unpack"><span class="xref myst"><strong>unpack</strong>(3)</span></a>,</p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -2139,44 +2118,44 @@ is <strong>real(x, kind)</strong> and the imaginary part is <strong>real(y, kind
 <section id="id9">
 <h3><strong>See Also</strong><a class="headerlink" href="#id9" title="Enlace permanente a este encabezado">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#aimag"><span class="std std-doc"><strong>aimag</strong>(3)</span></a> - Imaginary part of complex number</p></li>
-<li><p><span class="xref myst"><strong>conjg</strong>(3)</span> - Complex conjugate function</p></li>
-<li><p><a class="reference internal" href="#real"><span class="std std-doc"><strong>real</strong>(3)</span></a> - Convert to real type</p></li>
+<li><p><a class="reference internal" href="#aimag"><strong>aimag</strong>(3)</a> - Imaginary part of complex number</p></li>
+<li><p><a class="reference internal" href="#conjg"><span class="xref myst"><strong>conjg</strong>(3)</span></a> - Complex conjugate function</p></li>
+<li><p><a class="reference internal" href="#real"><strong>real</strong>(3)</a> - Convert to real type</p></li>
 </ul>
 <p>Fortran has strong support for <em>complex</em> values, including many intrinsics
 that take or produce <em>complex</em> values in addition to algebraic and
 logical expressions:</p>
-<p><span class="xref myst"><strong>abs</strong>(3)</span>,
-<span class="xref myst"><strong>acosh</strong>(3)</span>,
-<span class="xref myst"><strong>acos</strong>(3)</span>,
-<span class="xref myst"><strong>asinh</strong>(3)</span>,
-<span class="xref myst"><strong>asin</strong>(3)</span>,
-<span class="xref myst"><strong>atan2</strong>(3)</span>,
-<span class="xref myst"><strong>atanh</strong>(3)</span>,
-<span class="xref myst"><strong>atan</strong>(3)</span>,
-<span class="xref myst"><strong>cosh</strong>(3)</span>,
-<span class="xref myst"><strong>cos</strong>(3)</span>,
-<span class="xref myst"><strong>co_sum</strong>(3)</span>,
-<a class="reference internal" href="#dble"><span class="std std-doc"><strong>dble</strong>(3)</span></a>,
-<span class="xref myst"><strong>dot_product</strong>(3)</span>,
-<span class="xref myst"><strong>exp</strong>(3)</span>,
-<a class="reference internal" href="#int"><span class="std std-doc"><strong>int</strong>(3)</span></a>,
-<span class="xref myst"><strong>is_contiguous</strong>(3)</span>,
-<a class="reference internal" href="#kind"><span class="std std-doc"><strong>kind</strong>(3)</span></a>,
-<span class="xref myst"><strong>log</strong>(3)</span>,
-<span class="xref myst"><strong>matmul</strong>(3)</span>,
-<span class="xref myst"><strong>precision</strong>(3)</span>,
-<span class="xref myst"><strong>product</strong>(3)</span>,
-<span class="xref myst"><strong>range</strong>(3)</span>,
-<span class="xref myst"><strong>rank</strong>(3)</span>,
-<span class="xref myst"><strong>sinh</strong>(3)</span>,
-<span class="xref myst"><strong>sin</strong>(3)</span>,
-<span class="xref myst"><strong>sqrt</strong>(3)</span>,
-<span class="xref myst"><strong>storage_size</strong>(3)</span>,
-<span class="xref myst"><strong>sum</strong>(3)</span>,
-<span class="xref myst"><strong>tanh</strong>(3)</span>,
-<span class="xref myst"><strong>tan</strong>(3)</span>,
-<span class="xref myst"><strong>unpack</strong>(3)</span>,</p>
+<p><a class="reference internal" href="#abs"><span class="xref myst"><strong>abs</strong>(3)</span></a>,
+<a class="reference internal" href="#acosh"><span class="xref myst"><strong>acosh</strong>(3)</span></a>,
+<a class="reference internal" href="#acos"><span class="xref myst"><strong>acos</strong>(3)</span></a>,
+<a class="reference internal" href="#asinh"><span class="xref myst"><strong>asinh</strong>(3)</span></a>,
+<a class="reference internal" href="#asin"><span class="xref myst"><strong>asin</strong>(3)</span></a>,
+<a class="reference internal" href="#atan2"><span class="xref myst"><strong>atan2</strong>(3)</span></a>,
+<a class="reference internal" href="#atanh"><span class="xref myst"><strong>atanh</strong>(3)</span></a>,
+<a class="reference internal" href="#atan"><span class="xref myst"><strong>atan</strong>(3)</span></a>,
+<a class="reference internal" href="#cosh"><span class="xref myst"><strong>cosh</strong>(3)</span></a>,
+<a class="reference internal" href="#cos"><span class="xref myst"><strong>cos</strong>(3)</span></a>,
+<a class="reference internal" href="#co_sum"><span class="xref myst"><strong>co_sum</strong>(3)</span></a>,
+<a class="reference internal" href="#dble"><strong>dble</strong>(3)</a>,
+<a class="reference internal" href="#dot_product"><span class="xref myst"><strong>dot_product</strong>(3)</span></a>,
+<a class="reference internal" href="#exp"><span class="xref myst"><strong>exp</strong>(3)</span></a>,
+<a class="reference internal" href="#int"><strong>int</strong>(3)</a>,
+<a class="reference internal" href="#is_contiguous"><span class="xref myst"><strong>is_contiguous</strong>(3)</span></a>,
+<a class="reference internal" href="#kind"><strong>kind</strong>(3)</a>,
+<a class="reference internal" href="#log"><span class="xref myst"><strong>log</strong>(3)</span></a>,
+<a class="reference internal" href="#matmul"><span class="xref myst"><strong>matmul</strong>(3)</span></a>,
+<a class="reference internal" href="#precision"><span class="xref myst"><strong>precision</strong>(3)</span></a>,
+<a class="reference internal" href="#product"><span class="xref myst"><strong>product</strong>(3)</span></a>,
+<a class="reference internal" href="#range"><span class="xref myst"><strong>range</strong>(3)</span></a>,
+<a class="reference internal" href="#rank"><span class="xref myst"><strong>rank</strong>(3)</span></a>,
+<a class="reference internal" href="#sinh"><span class="xref myst"><strong>sinh</strong>(3)</span></a>,
+<a class="reference internal" href="#sin"><span class="xref myst"><strong>sin</strong>(3)</span></a>,
+<a class="reference internal" href="#sqrt"><span class="xref myst"><strong>sqrt</strong>(3)</span></a>,
+<a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a>,
+<a class="reference internal" href="#sum"><span class="xref myst"><strong>sum</strong>(3)</span></a>,
+<a class="reference internal" href="#tanh"><span class="xref myst"><strong>tanh</strong>(3)</span></a>,
+<a class="reference internal" href="#tan"><span class="xref myst"><strong>tan</strong>(3)</span></a>,
+<a class="reference internal" href="#unpack"><span class="xref myst"><strong>unpack</strong>(3)</span></a>,</p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -2311,12 +2290,12 @@ with the <em>kind</em> specified.</p>
 </section>
 <section id="id18">
 <h3><strong>See Also</strong><a class="headerlink" href="#id18" title="Enlace permanente a este encabezado">#</a></h3>
-<p><span class="xref myst"><strong>aint</strong>(3)</span>,
-<span class="xref myst"><strong>anint</strong>(3)</span>,
-<a class="reference internal" href="#nint"><span class="std std-doc"><strong>nint</strong>(3)</span></a>,
-<a class="reference internal" href="#selected-int-kind"><span class="std std-doc"><strong>selected_int_kind</strong>(3)</span></a>,
-<span class="xref myst"><strong>ceiling</strong>(3)</span>,
-<span class="xref myst"><strong>floor</strong>(3)</span></p>
+<p><a class="reference internal" href="#aint"><span class="xref myst"><strong>aint</strong>(3)</span></a>,
+<a class="reference internal" href="#anint"><span class="xref myst"><strong>anint</strong>(3)</span></a>,
+<a class="reference internal" href="#nint"><strong>nint</strong>(3)</a>,
+<a class="reference internal" href="#selected-int-kind"><strong>selected_int_kind</strong>(3)</a>,
+<a class="reference internal" href="#ceiling"><span class="xref myst"><strong>ceiling</strong>(3)</span></a>,
+<a class="reference internal" href="#floor"><span class="xref myst"><strong>floor</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -2476,12 +2455,12 @@ integer type.</p>
 </section>
 <section id="id27">
 <h3><strong>See Also</strong><a class="headerlink" href="#id27" title="Enlace permanente a este encabezado">#</a></h3>
-<p><span class="xref myst"><strong>aint</strong>(3)</span>,
-<span class="xref myst"><strong>anint</strong>(3)</span>,
-<a class="reference internal" href="#int"><span class="std std-doc"><strong>int</strong>(3)</span></a>,
-<a class="reference internal" href="#selected-int-kind"><span class="std std-doc"><strong>selected_int_kind</strong>(3)</span></a>,
-<span class="xref myst"><strong>ceiling</strong>(3)</span>,
-<span class="xref myst"><strong>floor</strong>(3)</span></p>
+<p><a class="reference internal" href="#aint"><span class="xref myst"><strong>aint</strong>(3)</span></a>,
+<a class="reference internal" href="#anint"><span class="xref myst"><strong>anint</strong>(3)</span></a>,
+<a class="reference internal" href="#int"><strong>int</strong>(3)</a>,
+<a class="reference internal" href="#selected-int-kind"><strong>selected_int_kind</strong>(3)</a>,
+<a class="reference internal" href="#ceiling"><span class="xref myst"><strong>ceiling</strong>(3)</span></a>,
+<a class="reference internal" href="#floor"><span class="xref myst"><strong>floor</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -2590,44 +2569,44 @@ parameter <strong>kind</strong> if <strong>x</strong> is a <em>complex</em>, <em
 <section id="id36">
 <h3><strong>See Also</strong><a class="headerlink" href="#id36" title="Enlace permanente a este encabezado">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#aimag"><span class="std std-doc"><strong>aimag</strong>(3)</span></a> - Imaginary part of complex number</p></li>
-<li><p><a class="reference internal" href="#cmplx"><span class="std std-doc"><strong>cmplx</strong>(3)</span></a> - Complex conversion function</p></li>
-<li><p><span class="xref myst"><strong>conjg</strong>(3)</span> - Complex conjugate function</p></li>
+<li><p><a class="reference internal" href="#aimag"><strong>aimag</strong>(3)</a> - Imaginary part of complex number</p></li>
+<li><p><a class="reference internal" href="#cmplx"><strong>cmplx</strong>(3)</a> - Complex conversion function</p></li>
+<li><p><a class="reference internal" href="#conjg"><span class="xref myst"><strong>conjg</strong>(3)</span></a> - Complex conjugate function</p></li>
 </ul>
 <p>Fortran has strong support for <em>complex</em> values, including many intrinsics
 that take or produce <em>complex</em> values in addition to algebraic and
 logical expressions:</p>
-<p><span class="xref myst"><strong>abs</strong>(3)</span>,
-<span class="xref myst"><strong>acosh</strong>(3)</span>,
-<span class="xref myst"><strong>acos</strong>(3)</span>,
-<span class="xref myst"><strong>asinh</strong>(3)</span>,
-<span class="xref myst"><strong>asin</strong>(3)</span>,
-<span class="xref myst"><strong>atan2</strong>(3)</span>,
-<span class="xref myst"><strong>atanh</strong>(3)</span>,
-<span class="xref myst"><strong>atan</strong>(3)</span>,
-<span class="xref myst"><strong>cosh</strong>(3)</span>,
-<span class="xref myst"><strong>cos</strong>(3)</span>,
-<span class="xref myst"><strong>co_sum</strong>(3)</span>,
-<a class="reference internal" href="#dble"><span class="std std-doc"><strong>dble</strong>(3)</span></a>,
-<span class="xref myst"><strong>dot_product</strong>(3)</span>,
-<span class="xref myst"><strong>exp</strong>(3)</span>,
-<a class="reference internal" href="#int"><span class="std std-doc"><strong>int</strong>(3)</span></a>,
-<span class="xref myst"><strong>is_contiguous</strong>(3)</span>,
-<a class="reference internal" href="#kind"><span class="std std-doc"><strong>kind</strong>(3)</span></a>,
-<span class="xref myst"><strong>log</strong>(3)</span>,
-<span class="xref myst"><strong>matmul</strong>(3)</span>,
-<span class="xref myst"><strong>precision</strong>(3)</span>,
-<span class="xref myst"><strong>product</strong>(3)</span>,
-<span class="xref myst"><strong>range</strong>(3)</span>,
-<span class="xref myst"><strong>rank</strong>(3)</span>,
-<span class="xref myst"><strong>sinh</strong>(3)</span>,
-<span class="xref myst"><strong>sin</strong>(3)</span>,
-<span class="xref myst"><strong>sqrt</strong>(3)</span>,
-<span class="xref myst"><strong>storage_size</strong>(3)</span>,
-<span class="xref myst"><strong>sum</strong>(3)</span>,
-<span class="xref myst"><strong>tanh</strong>(3)</span>,
-<span class="xref myst"><strong>tan</strong>(3)</span>,
-<span class="xref myst"><strong>unpack</strong>(3)</span>,</p>
+<p><a class="reference internal" href="#abs"><span class="xref myst"><strong>abs</strong>(3)</span></a>,
+<a class="reference internal" href="#acosh"><span class="xref myst"><strong>acosh</strong>(3)</span></a>,
+<a class="reference internal" href="#acos"><span class="xref myst"><strong>acos</strong>(3)</span></a>,
+<a class="reference internal" href="#asinh"><span class="xref myst"><strong>asinh</strong>(3)</span></a>,
+<a class="reference internal" href="#asin"><span class="xref myst"><strong>asin</strong>(3)</span></a>,
+<a class="reference internal" href="#atan2"><span class="xref myst"><strong>atan2</strong>(3)</span></a>,
+<a class="reference internal" href="#atanh"><span class="xref myst"><strong>atanh</strong>(3)</span></a>,
+<a class="reference internal" href="#atan"><span class="xref myst"><strong>atan</strong>(3)</span></a>,
+<a class="reference internal" href="#cosh"><span class="xref myst"><strong>cosh</strong>(3)</span></a>,
+<a class="reference internal" href="#cos"><span class="xref myst"><strong>cos</strong>(3)</span></a>,
+<a class="reference internal" href="#co_sum"><span class="xref myst"><strong>co_sum</strong>(3)</span></a>,
+<a class="reference internal" href="#dble"><strong>dble</strong>(3)</a>,
+<a class="reference internal" href="#dot_product"><span class="xref myst"><strong>dot_product</strong>(3)</span></a>,
+<a class="reference internal" href="#exp"><span class="xref myst"><strong>exp</strong>(3)</span></a>,
+<a class="reference internal" href="#int"><strong>int</strong>(3)</a>,
+<a class="reference internal" href="#is_contiguous"><span class="xref myst"><strong>is_contiguous</strong>(3)</span></a>,
+<a class="reference internal" href="#kind"><strong>kind</strong>(3)</a>,
+<a class="reference internal" href="#log"><span class="xref myst"><strong>log</strong>(3)</span></a>,
+<a class="reference internal" href="#matmul"><span class="xref myst"><strong>matmul</strong>(3)</span></a>,
+<a class="reference internal" href="#precision"><span class="xref myst"><strong>precision</strong>(3)</span></a>,
+<a class="reference internal" href="#product"><span class="xref myst"><strong>product</strong>(3)</span></a>,
+<a class="reference internal" href="#range"><span class="xref myst"><strong>range</strong>(3)</span></a>,
+<a class="reference internal" href="#rank"><span class="xref myst"><strong>rank</strong>(3)</span></a>,
+<a class="reference internal" href="#sinh"><span class="xref myst"><strong>sinh</strong>(3)</span></a>,
+<a class="reference internal" href="#sin"><span class="xref myst"><strong>sin</strong>(3)</span></a>,
+<a class="reference internal" href="#sqrt"><span class="xref myst"><strong>sqrt</strong>(3)</span></a>,
+<a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a>,
+<a class="reference internal" href="#sum"><span class="xref myst"><strong>sum</strong>(3)</span></a>,
+<a class="reference internal" href="#tanh"><span class="xref myst"><strong>tanh</strong>(3)</span></a>,
+<a class="reference internal" href="#tan"><span class="xref myst"><strong>tan</strong>(3)</span></a>,
+<a class="reference internal" href="#unpack"><span class="xref myst"><strong>unpack</strong>(3)</span></a>,</p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -2700,12 +2679,12 @@ of the input value.</p>
 <section id="id45">
 <h3><strong>See also</strong><a class="headerlink" href="#id45" title="Enlace permanente a este encabezado">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#aimag"><span class="std std-doc"><strong>aimag</strong>(3)</span></a> - Imaginary part of complex number</p></li>
-<li><p><a class="reference internal" href="#cmplx"><span class="std std-doc"><strong>cmplx</strong>(3)</span></a> - Convert values to a complex type</p></li>
-<li><p><a class="reference internal" href="#int"><span class="std std-doc"><strong>int</strong>(3)</span></a> - Truncate towards zero and convert to integer</p></li>
-<li><p><a class="reference internal" href="#nint"><span class="std std-doc"><strong>nint</strong>(3)</span></a> - Nearest whole number</p></li>
-<li><p><a class="reference internal" href="#out-of-range"><span class="std std-doc"><strong>out_of_range</strong>(3)</span></a> - Whether a value cannot be converted safely.</p></li>
-<li><p><a class="reference internal" href="#real"><span class="std std-doc"><strong>real</strong>(3)</span></a> - Convert to real type</p></li>
+<li><p><a class="reference internal" href="#aimag"><strong>aimag</strong>(3)</a> - Imaginary part of complex number</p></li>
+<li><p><a class="reference internal" href="#cmplx"><strong>cmplx</strong>(3)</a> - Convert values to a complex type</p></li>
+<li><p><a class="reference internal" href="#int"><strong>int</strong>(3)</a> - Truncate towards zero and convert to integer</p></li>
+<li><p><a class="reference internal" href="#nint"><strong>nint</strong>(3)</a> - Nearest whole number</p></li>
+<li><p><a class="reference internal" href="#out-of-range"><strong>out_of_range</strong>(3)</a> - Whether a value cannot be converted safely.</p></li>
+<li><p><a class="reference internal" href="#real"><strong>real</strong>(3)</a> - Convert to real type</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -2837,7 +2816,7 @@ oblivious to the benefits of <em>EQUIVALENCE</em> when used sparingly.</p>
 </section>
 <section id="id54">
 <h3><strong>See also</strong><a class="headerlink" href="#id54" title="Enlace permanente a este encabezado">#</a></h3>
-<p><span class="xref myst">****(3)</span></p>
+<p><a class="reference internal" href="#"><span class="xref myst">****(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -2932,9 +2911,9 @@ is not given.</p>
 </section>
 <section id="id63">
 <h3><strong>See Also</strong><a class="headerlink" href="#id63" title="Enlace permanente a este encabezado">#</a></h3>
-<p><a class="reference internal" href="#int"><span class="std std-doc"><strong>int</strong>(3)</span></a>,
-<a class="reference internal" href="#real"><span class="std std-doc"><strong>real</strong>(3)</span></a>,
-<a class="reference internal" href="#cmplx"><span class="std std-doc"><strong>cmplx</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#int"><strong>int</strong>(3)</a>,
+<a class="reference internal" href="#real"><strong>real</strong>(3)</a>,
+<a class="reference internal" href="#cmplx"><strong>cmplx</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -3008,16 +2987,16 @@ is not given.</p>
 <section id="id72">
 <h3><strong>See also</strong><a class="headerlink" href="#id72" title="Enlace permanente a este encabezado">#</a></h3>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>allocated</strong>(3)</span> - Status of an allocatable entity</p></li>
-<li><p><span class="xref myst"><strong>is_contiguous</strong>(3)</span> - test if object is contiguous</p></li>
-<li><p><span class="xref myst"><strong>lbound</strong>(3)</span> - Lower dimension bounds of an array</p></li>
-<li><p><span class="xref myst"><strong>rank</strong>(3)</span> - Rank of a data object</p></li>
-<li><p><span class="xref myst"><strong>shape</strong>(3)</span> - Determine the shape of an array</p></li>
-<li><p><span class="xref myst"><strong>size</strong>(3)</span> - Determine the size of an array</p></li>
-<li><p><span class="xref myst"><strong>ubound</strong>(3)</span> - Upper dimension bounds of an array</p></li>
-<li><p><span class="xref myst"><strong>bit_size</strong>(3)</span> - Bit size inquiry function</p></li>
-<li><p><span class="xref myst"><strong>storage_size</strong>(3)</span> - Storage size in bits</p></li>
-<li><p><a class="reference internal" href="#kind"><span class="std std-doc"><strong>kind</strong>(3)</span></a> - Kind of an entity</p></li>
+<li><p><a class="reference internal" href="#allocated"><span class="xref myst"><strong>allocated</strong>(3)</span></a> - Status of an allocatable entity</p></li>
+<li><p><a class="reference internal" href="#is_contiguous"><span class="xref myst"><strong>is_contiguous</strong>(3)</span></a> - test if object is contiguous</p></li>
+<li><p><a class="reference internal" href="#lbound"><span class="xref myst"><strong>lbound</strong>(3)</span></a> - Lower dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#rank"><span class="xref myst"><strong>rank</strong>(3)</span></a> - Rank of a data object</p></li>
+<li><p><a class="reference internal" href="#shape"><span class="xref myst"><strong>shape</strong>(3)</span></a> - Determine the shape of an array</p></li>
+<li><p><a class="reference internal" href="#size"><span class="xref myst"><strong>size</strong>(3)</span></a> - Determine the size of an array</p></li>
+<li><p><a class="reference internal" href="#ubound"><span class="xref myst"><strong>ubound</strong>(3)</span></a> - Upper dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#bit_size"><span class="xref myst"><strong>bit_size</strong>(3)</span></a> - Bit size inquiry function</p></li>
+<li><p><a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a> - Storage size in bits</p></li>
+<li><p><a class="reference internal" href="#kind"><strong>kind</strong>(3)</a> - Kind of an entity</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -3164,12 +3143,12 @@ difficulties on many processors.</p>
 <section id="id81">
 <h3><strong>See also</strong><a class="headerlink" href="#id81" title="Enlace permanente a este encabezado">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#aimag"><span class="std std-doc"><strong>aimag</strong>(3)</span></a> - Imaginary part of complex number</p></li>
-<li><p><a class="reference internal" href="#cmplx"><span class="std std-doc"><strong>cmplx</strong>(3)</span></a> - Convert values to a complex type</p></li>
-<li><p><a class="reference internal" href="#dble"><span class="std std-doc"><strong>dble</strong>(3)</span></a> - Double conversion function</p></li>
-<li><p><a class="reference internal" href="#int"><span class="std std-doc"><strong>int</strong>(3)</span></a> - Truncate towards zero and convert to integer</p></li>
-<li><p><a class="reference internal" href="#nint"><span class="std std-doc"><strong>nint</strong>(3)</span></a> - Nearest whole number</p></li>
-<li><p><a class="reference internal" href="#real"><span class="std std-doc"><strong>real</strong>(3)</span></a> - Convert to real type</p></li>
+<li><p><a class="reference internal" href="#aimag"><strong>aimag</strong>(3)</a> - Imaginary part of complex number</p></li>
+<li><p><a class="reference internal" href="#cmplx"><strong>cmplx</strong>(3)</a> - Convert values to a complex type</p></li>
+<li><p><a class="reference internal" href="#dble"><strong>dble</strong>(3)</a> - Double conversion function</p></li>
+<li><p><a class="reference internal" href="#int"><strong>int</strong>(3)</a> - Truncate towards zero and convert to integer</p></li>
+<li><p><a class="reference internal" href="#nint"><strong>nint</strong>(3)</a> - Nearest whole number</p></li>
+<li><p><a class="reference internal" href="#real"><strong>real</strong>(3)</a> - Convert to real type</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -3332,12 +3311,12 @@ trailing blanks.</p>
 </section>
 <section id="id90">
 <h3><strong>See also</strong><a class="headerlink" href="#id90" title="Enlace permanente a este encabezado">#</a></h3>
-<p><a class="reference internal" href="#selected-int-kind"><span class="std std-doc"><strong>selected_int_kind</strong>(3)</span></a>,
-<a class="reference internal" href="#selected-real-kind"><span class="std std-doc"><strong>selected_real_kind</strong>(3)</span></a></p>
-<p><span class="xref myst"><strong>achar</strong>(3)</span>,
-<span class="xref myst"><strong>char</strong>(3)</span>,
-<span class="xref myst"><strong>ichar</strong>(3)</span>,
-<span class="xref myst"><strong>iachar</strong>(3)</span></p>
+<p><a class="reference internal" href="#selected-int-kind"><strong>selected_int_kind</strong>(3)</a>,
+<a class="reference internal" href="#selected-real-kind"><strong>selected_real_kind</strong>(3)</a></p>
+<p><a class="reference internal" href="#achar"><span class="xref myst"><strong>achar</strong>(3)</span></a>,
+<a class="reference internal" href="#char"><span class="xref myst"><strong>char</strong>(3)</span></a>,
+<a class="reference internal" href="#ichar"><span class="xref myst"><strong>ichar</strong>(3)</span></a>,
+<a class="reference internal" href="#iachar"><span class="xref myst"><strong>iachar</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -3425,12 +3404,12 @@ kind values is returned.</p>
 </section>
 <section id="id99">
 <h3><strong>See Also</strong><a class="headerlink" href="#id99" title="Enlace permanente a este encabezado">#</a></h3>
-<p><span class="xref myst"><strong>aint</strong>(3)</span>,
-<span class="xref myst"><strong>anint</strong>(3)</span>,
-<a class="reference internal" href="#int"><span class="std std-doc"><strong>int</strong>(3)</span></a>,
-<a class="reference internal" href="#nint"><span class="std std-doc"><strong>nint</strong>(3)</span></a>,
-<span class="xref myst"><strong>ceiling</strong>(3)</span>,
-<span class="xref myst"><strong>floor</strong>(3)</span></p>
+<p><a class="reference internal" href="#aint"><span class="xref myst"><strong>aint</strong>(3)</span></a>,
+<a class="reference internal" href="#anint"><span class="xref myst"><strong>anint</strong>(3)</span></a>,
+<a class="reference internal" href="#int"><strong>int</strong>(3)</a>,
+<a class="reference internal" href="#nint"><strong>nint</strong>(3)</a>,
+<a class="reference internal" href="#ceiling"><span class="xref myst"><strong>ceiling</strong>(3)</span></a>,
+<a class="reference internal" href="#floor"><span class="xref myst"><strong>floor</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -3577,16 +3556,17 @@ fulfillable</p>
 </section>
 <section id="id108">
 <h3><strong>See Also</strong><a class="headerlink" href="#id108" title="Enlace permanente a este encabezado">#</a></h3>
-<p><span class="xref myst"><strong>precision</strong>(3)</span>,
-<span class="xref myst"><strong>range</strong>(3)</span>,
-<span class="xref myst"><strong>radix</strong>(3)</span></p>
+<p><a class="reference internal" href="#precision"><span class="xref myst"><strong>precision</strong>(3)</span></a>,
+<a class="reference internal" href="#range"><span class="xref myst"><strong>range</strong>(3)</span></a>,
+<a class="reference internal" href="#radix"><span class="xref myst"><strong>radix</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

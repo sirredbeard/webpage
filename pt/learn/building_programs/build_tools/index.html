@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Ferramentas de compilação &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
     <link rel="next" title="An introduction to make" href="../project_make/" />
-    <link rel="prev" title="Managing libraries (static and dynamic libraries)" href="../managing_libraries/" /> 
+    <link rel="prev" title="Managing libraries (static and dynamic libraries)" href="../managing_libraries/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -764,7 +742,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="build-tools">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="build-tools">
 <h1>Ferramentas de compilação<a class="headerlink" href="#build-tools" title="Permalink to this heading">#</a></h1>
 <p>Compiling your Fortran projects by hand can become quite complicated depending
 on the number of source files and the interdependencies through the module.
@@ -789,7 +768,7 @@ executables.
 To use <code class="docutils literal notranslate"><span class="pre">make</span></code> for your project you have to encode those rules in <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>,
 which defines the interdependencies of all the final program, the intermediary
 object files or libraries and the actual source files.
-For a short introduction see <a class="reference internal" href="#using-make-as-build-tool"><span class="std std-doc">the guide on <code class="docutils literal notranslate"><span class="pre">make</span></code></span></a>.</p>
+For a short introduction see <a class="reference internal" href="#using-make-as-build-tool">the guide on <code class="docutils literal notranslate"><span class="pre">make</span></code></a>.</p>
 <p>Maintenance tools like autotools and CMake can generate Makefiles or
 Visual Studio project files via a high-level description. They abstract
 away from the compiler and platform specifics.</p>
@@ -1250,8 +1229,9 @@ CMake, it sometimes covers them only very briefly.</p>
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

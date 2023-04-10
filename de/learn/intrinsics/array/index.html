@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Properties and attributes of arrays &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="Stichwortverzeichnis" href="../../../genindex/" />
     <link rel="search" title="Suche" href="../../../search/" />
     <link rel="next" title="Bit-level inquiry and manipulation" href="../bit/" />
-    <link rel="prev" title="Fortran Intrinsics" href="../" /> 
+    <link rel="prev" title="Fortran Intrinsics" href="../" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -2477,7 +2455,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="properties-and-attributes-of-arrays">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="properties-and-attributes-of-arrays">
 <h1>Properties and attributes of arrays<a class="headerlink" href="#properties-and-attributes-of-arrays" title="Permalink to this heading">#</a></h1>
 <section id="merge">
 <h2>merge<a class="headerlink" href="#merge" title="Permalink to this heading">#</a></h2>
@@ -2658,10 +2637,10 @@ are polymorphic.</p>
 <section id="see-also">
 <h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#pack"><span class="std std-doc"><strong>pack</strong>(3)</span></a> packs an array into an array of rank one</p></li>
-<li><p><a class="reference internal" href="#spread"><span class="std std-doc"><strong>spread</strong>(3)</span></a> is used to add a dimension and replicate data</p></li>
-<li><p><a class="reference internal" href="#unpack"><span class="std std-doc"><strong>unpack</strong>(3)</span></a> scatters the elements of a vector</p></li>
-<li><p><a class="reference internal" href="#transpose"><span class="std std-doc"><strong>transpose</strong>(3)</span></a> - Transpose an array of rank two</p></li>
+<li><p><a class="reference internal" href="#pack"><strong>pack</strong>(3)</a> packs an array into an array of rank one</p></li>
+<li><p><a class="reference internal" href="#spread"><strong>spread</strong>(3)</a> is used to add a dimension and replicate data</p></li>
+<li><p><a class="reference internal" href="#unpack"><strong>unpack</strong>(3)</a> scatters the elements of a vector</p></li>
+<li><p><a class="reference internal" href="#transpose"><strong>transpose</strong>(3)</a> - Transpose an array of rank two</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -2775,9 +2754,9 @@ size is the size of <strong>array</strong>.</p>
 </section>
 <section id="id9">
 <h3><strong>See Also</strong><a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#merge"><span class="std std-doc"><strong>merge</strong>(3)</span></a>,
-<a class="reference internal" href="#spread"><span class="std std-doc"><strong>spread</strong>(3)</span></a>,
-<a class="reference internal" href="#unpack"><span class="std std-doc"><strong>unpack</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#merge"><strong>merge</strong>(3)</a>,
+<a class="reference internal" href="#spread"><strong>spread</strong>(3)</a>,
+<a class="reference internal" href="#unpack"><strong>unpack</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -2973,9 +2952,9 @@ where <strong>n</strong> equals the rank of <strong>source</strong>.</p>
 </section>
 <section id="id18">
 <h3><strong>See Also</strong><a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#merge"><span class="std std-doc"><strong>merge</strong>(3)</span></a>,
-<a class="reference internal" href="#pack"><span class="std std-doc"><strong>pack</strong>(3)</span></a>,
-<a class="reference internal" href="#unpack"><span class="std std-doc"><strong>unpack</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#merge"><strong>merge</strong>(3)</a>,
+<a class="reference internal" href="#pack"><strong>pack</strong>(3)</a>,
+<a class="reference internal" href="#unpack"><strong>unpack</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 <!--
 when adding dimension 3,4,5, ... why is 15 not allowed if 16 is allowed?
@@ -3152,9 +3131,9 @@ of <strong>mask</strong> replaced by values from <strong>vector</strong> in arra
 </section>
 <section id="id27">
 <h3><strong>See Also</strong><a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#merge"><span class="std std-doc"><strong>merge</strong>(3)</span></a>,
-<a class="reference internal" href="#pack"><span class="std std-doc"><strong>pack</strong>(3)</span></a>,
-<a class="reference internal" href="#spread"><span class="std std-doc"><strong>spread</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#merge"><strong>merge</strong>(3)</a>,
+<a class="reference internal" href="#pack"><strong>pack</strong>(3)</a>,
+<a class="reference internal" href="#spread"><strong>spread</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -3261,7 +3240,7 @@ it returns <em>.false.</em>.</p>
 </section>
 <section id="id36">
 <h3><strong>See Also</strong><a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst"><strong>move_alloc</strong>(3)</span></p>
+<p><a class="reference internal" href="#move_alloc"><span class="xref myst"><strong>move_alloc</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -3388,7 +3367,7 @@ otherwise.</p>
 </section>
 <section id="id45">
 <h3><strong>See also</strong><a class="headerlink" href="#id45" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#id68"><span class="std std-doc">****(3)</span></a></p>
+<p><a class="reference internal" href="#id68">****(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -3544,33 +3523,33 @@ occur if there is no interface defined.</p>
 <section id="array-inquiry">
 <h4>Array inquiry:<a class="headerlink" href="#array-inquiry" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#size"><span class="std std-doc"><strong>size</strong>(3)</span></a> - Determine the size of an array</p></li>
-<li><p><a class="reference internal" href="#rank"><span class="std std-doc"><strong>rank</strong>(3)</span></a> - Rank of a data object</p></li>
-<li><p><a class="reference internal" href="#shape"><span class="std std-doc"><strong>shape</strong>(3)</span></a> - Determine the shape of an array</p></li>
-<li><p><a class="reference internal" href="#ubound"><span class="std std-doc"><strong>ubound</strong>(3)</span></a> - Upper dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#size"><strong>size</strong>(3)</a> - Determine the size of an array</p></li>
+<li><p><a class="reference internal" href="#rank"><strong>rank</strong>(3)</a> - Rank of a data object</p></li>
+<li><p><a class="reference internal" href="#shape"><strong>shape</strong>(3)</a> - Determine the shape of an array</p></li>
+<li><p><a class="reference internal" href="#ubound"><strong>ubound</strong>(3)</a> - Upper dimension bounds of an array</p></li>
 </ul>
-<p><span class="xref myst"><strong>co_ubound</strong>(3)</span>,
-<span class="xref myst"><strong>co_lbound</strong>(3)</span></p>
+<p><a class="reference internal" href="#co_ubound"><span class="xref myst"><strong>co_ubound</strong>(3)</span></a>,
+<a class="reference internal" href="#co_lbound"><span class="xref myst"><strong>co_lbound</strong>(3)</span></a></p>
 </section>
 <section id="state-inquiry">
 <h4>State Inquiry:<a class="headerlink" href="#state-inquiry" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#allocated"><span class="std std-doc"><strong>allocated</strong>(3)</span></a> - Status of an allocatable entity</p></li>
-<li><p><a class="reference internal" href="#is-contiguous"><span class="std std-doc"><strong>is_contiguous</strong>(3)</span></a> - Test if object is contiguous</p></li>
+<li><p><a class="reference internal" href="#allocated"><strong>allocated</strong>(3)</a> - Status of an allocatable entity</p></li>
+<li><p><a class="reference internal" href="#is-contiguous"><strong>is_contiguous</strong>(3)</a> - Test if object is contiguous</p></li>
 </ul>
 </section>
 <section id="kind-inquiry">
 <h4>Kind Inquiry:<a class="headerlink" href="#kind-inquiry" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>kind</strong>(3)</span> - Kind of an entity</p></li>
+<li><p><a class="reference internal" href="#kind"><span class="xref myst"><strong>kind</strong>(3)</span></a> - Kind of an entity</p></li>
 </ul>
 </section>
 <section id="bit-inquiry">
 <h4>Bit Inquiry:<a class="headerlink" href="#bit-inquiry" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>storage_size</strong>(3)</span> - Storage size in bits</p></li>
-<li><p><span class="xref myst"><strong>bit_size</strong>(3)</span> - Bit size inquiry function</p></li>
-<li><p><span class="xref myst"><strong>btest</strong>(3)</span> - Tests a bit of an <em>integer</em> value.</p></li>
+<li><p><a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a> - Storage size in bits</p></li>
+<li><p><a class="reference internal" href="#bit_size"><span class="xref myst"><strong>bit_size</strong>(3)</span></a> - Bit size inquiry function</p></li>
+<li><p><a class="reference internal" href="#btest"><span class="xref myst"><strong>btest</strong>(3)</span></a> - Tests a bit of an <em>integer</em> value.</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -3721,32 +3700,32 @@ array.</p>
 <section id="id64">
 <h4>Array inquiry:<a class="headerlink" href="#id64" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#size"><span class="std std-doc"><strong>size</strong>(3)</span></a> - Determine the size of an array</p></li>
-<li><p><a class="reference internal" href="#rank"><span class="std std-doc"><strong>rank</strong>(3)</span></a> - Rank of a data object</p></li>
-<li><p><a class="reference internal" href="#shape"><span class="std std-doc"><strong>shape</strong>(3)</span></a> - Determine the shape of an array</p></li>
-<li><p><a class="reference internal" href="#ubound"><span class="std std-doc"><strong>ubound</strong>(3)</span></a> - Upper dimension bounds of an array</p></li>
-<li><p><a class="reference internal" href="#lbound"><span class="std std-doc"><strong>lbound</strong>(3)</span></a> - Lower dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#size"><strong>size</strong>(3)</a> - Determine the size of an array</p></li>
+<li><p><a class="reference internal" href="#rank"><strong>rank</strong>(3)</a> - Rank of a data object</p></li>
+<li><p><a class="reference internal" href="#shape"><strong>shape</strong>(3)</a> - Determine the shape of an array</p></li>
+<li><p><a class="reference internal" href="#ubound"><strong>ubound</strong>(3)</a> - Upper dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#lbound"><strong>lbound</strong>(3)</a> - Lower dimension bounds of an array</p></li>
 </ul>
 </section>
 <section id="id65">
 <h4>State Inquiry:<a class="headerlink" href="#id65" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#allocated"><span class="std std-doc"><strong>allocated</strong>(3)</span></a> - Status of an allocatable entity</p></li>
-<li><p><a class="reference internal" href="#is-contiguous"><span class="std std-doc"><strong>is_contiguous</strong>(3)</span></a> - Test if object is contiguous</p></li>
+<li><p><a class="reference internal" href="#allocated"><strong>allocated</strong>(3)</a> - Status of an allocatable entity</p></li>
+<li><p><a class="reference internal" href="#is-contiguous"><strong>is_contiguous</strong>(3)</a> - Test if object is contiguous</p></li>
 </ul>
 </section>
 <section id="id66">
 <h4>Kind Inquiry:<a class="headerlink" href="#id66" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>kind</strong>(3)</span> - Kind of an entity</p></li>
+<li><p><a class="reference internal" href="#kind"><span class="xref myst"><strong>kind</strong>(3)</span></a> - Kind of an entity</p></li>
 </ul>
 </section>
 <section id="id67">
 <h4>Bit Inquiry:<a class="headerlink" href="#id67" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>storage_size</strong>(3)</span> - Storage size in bits</p></li>
-<li><p><span class="xref myst"><strong>bit_size</strong>(3)</span> - Bit size inquiry function</p></li>
-<li><p><span class="xref myst"><strong>btest</strong>(3)</span> - Tests a bit of an <em>integer</em> value.</p></li>
+<li><p><a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a> - Storage size in bits</p></li>
+<li><p><a class="reference internal" href="#bit_size"><span class="xref myst"><strong>bit_size</strong>(3)</span></a> - Bit size inquiry function</p></li>
+<li><p><a class="reference internal" href="#btest"><span class="xref myst"><strong>btest</strong>(3)</span></a> - Tests a bit of an <em>integer</em> value.</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -3848,31 +3827,31 @@ array of size zero).</p>
 <section id="id78">
 <h4>Array inquiry:<a class="headerlink" href="#id78" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#size"><span class="std std-doc"><strong>size</strong>(3)</span></a> - Determine the size of an array</p></li>
-<li><p><a class="reference internal" href="#rank"><span class="std std-doc"><strong>rank</strong>(3)</span></a> - Rank of a data object</p></li>
-<li><p><a class="reference internal" href="#ubound"><span class="std std-doc"><strong>ubound</strong>(3)</span></a> - Upper dimension bounds of an array</p></li>
-<li><p><a class="reference internal" href="#lbound"><span class="std std-doc"><strong>lbound</strong>(3)</span></a> - Lower dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#size"><strong>size</strong>(3)</a> - Determine the size of an array</p></li>
+<li><p><a class="reference internal" href="#rank"><strong>rank</strong>(3)</a> - Rank of a data object</p></li>
+<li><p><a class="reference internal" href="#ubound"><strong>ubound</strong>(3)</a> - Upper dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#lbound"><strong>lbound</strong>(3)</a> - Lower dimension bounds of an array</p></li>
 </ul>
 </section>
 <section id="id79">
 <h4>State Inquiry:<a class="headerlink" href="#id79" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#allocated"><span class="std std-doc"><strong>allocated</strong>(3)</span></a> - Status of an allocatable entity</p></li>
-<li><p><a class="reference internal" href="#is-contiguous"><span class="std std-doc"><strong>is_contiguous</strong>(3)</span></a> - Test if object is contiguous</p></li>
+<li><p><a class="reference internal" href="#allocated"><strong>allocated</strong>(3)</a> - Status of an allocatable entity</p></li>
+<li><p><a class="reference internal" href="#is-contiguous"><strong>is_contiguous</strong>(3)</a> - Test if object is contiguous</p></li>
 </ul>
 </section>
 <section id="id80">
 <h4>Kind Inquiry:<a class="headerlink" href="#id80" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>kind</strong>(3)</span> - Kind of an entity</p></li>
+<li><p><a class="reference internal" href="#kind"><span class="xref myst"><strong>kind</strong>(3)</span></a> - Kind of an entity</p></li>
 </ul>
 </section>
 <section id="id81">
 <h4>Bit Inquiry:<a class="headerlink" href="#id81" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>storage_size</strong>(3)</span> - Storage size in bits</p></li>
-<li><p><span class="xref myst"><strong>bit_size</strong>(3)</span> - Bit size inquiry function</p></li>
-<li><p><span class="xref myst"><strong>btest</strong>(3)</span> - Tests a bit of an <em>integer</em> value.</p></li>
+<li><p><a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a> - Storage size in bits</p></li>
+<li><p><a class="reference internal" href="#bit_size"><span class="xref myst"><strong>bit_size</strong>(3)</span></a> - Bit size inquiry function</p></li>
+<li><p><a class="reference internal" href="#btest"><span class="xref myst"><strong>btest</strong>(3)</span></a> - Tests a bit of an <em>integer</em> value.</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -4026,32 +4005,32 @@ present since it cannot satisfy the requirement</p>
 <section id="id91">
 <h4>Array inquiry:<a class="headerlink" href="#id91" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#size"><span class="std std-doc"><strong>size</strong>(3)</span></a> - Determine the size of an array</p></li>
-<li><p><a class="reference internal" href="#rank"><span class="std std-doc"><strong>rank</strong>(3)</span></a> - Rank of a data object</p></li>
-<li><p><a class="reference internal" href="#shape"><span class="std std-doc"><strong>shape</strong>(3)</span></a> - Determine the shape of an array</p></li>
-<li><p><a class="reference internal" href="#ubound"><span class="std std-doc"><strong>ubound</strong>(3)</span></a> - Upper dimension bounds of an array</p></li>
-<li><p><a class="reference internal" href="#lbound"><span class="std std-doc"><strong>lbound</strong>(3)</span></a> - Lower dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#size"><strong>size</strong>(3)</a> - Determine the size of an array</p></li>
+<li><p><a class="reference internal" href="#rank"><strong>rank</strong>(3)</a> - Rank of a data object</p></li>
+<li><p><a class="reference internal" href="#shape"><strong>shape</strong>(3)</a> - Determine the shape of an array</p></li>
+<li><p><a class="reference internal" href="#ubound"><strong>ubound</strong>(3)</a> - Upper dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#lbound"><strong>lbound</strong>(3)</a> - Lower dimension bounds of an array</p></li>
 </ul>
 </section>
 <section id="id92">
 <h4>State Inquiry:<a class="headerlink" href="#id92" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#allocated"><span class="std std-doc"><strong>allocated</strong>(3)</span></a> - Status of an allocatable entity</p></li>
-<li><p><a class="reference internal" href="#is-contiguous"><span class="std std-doc"><strong>is_contiguous</strong>(3)</span></a> - Test if object is contiguous</p></li>
+<li><p><a class="reference internal" href="#allocated"><strong>allocated</strong>(3)</a> - Status of an allocatable entity</p></li>
+<li><p><a class="reference internal" href="#is-contiguous"><strong>is_contiguous</strong>(3)</a> - Test if object is contiguous</p></li>
 </ul>
 </section>
 <section id="id93">
 <h4>Kind Inquiry:<a class="headerlink" href="#id93" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>kind</strong>(3)</span> - Kind of an entity</p></li>
+<li><p><a class="reference internal" href="#kind"><span class="xref myst"><strong>kind</strong>(3)</span></a> - Kind of an entity</p></li>
 </ul>
 </section>
 <section id="id94">
 <h4>Bit Inquiry:<a class="headerlink" href="#id94" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>storage_size</strong>(3)</span> - Storage size in bits</p></li>
-<li><p><span class="xref myst"><strong>bit_size</strong>(3)</span> - Bit size inquiry function</p></li>
-<li><p><span class="xref myst"><strong>btest</strong>(3)</span> - Tests a bit of an <em>integer</em> value.</p></li>
+<li><p><a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a> - Storage size in bits</p></li>
+<li><p><a class="reference internal" href="#bit_size"><span class="xref myst"><strong>bit_size</strong>(3)</span></a> - Bit size inquiry function</p></li>
+<li><p><a class="reference internal" href="#btest"><span class="xref myst"><strong>btest</strong>(3)</span></a> - Tests a bit of an <em>integer</em> value.</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -4212,34 +4191,34 @@ interface defined.</p>
 <section id="id104">
 <h4>Array inquiry:<a class="headerlink" href="#id104" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#size"><span class="std std-doc"><strong>size</strong>(3)</span></a> - Determine the size of an array</p></li>
-<li><p><a class="reference internal" href="#rank"><span class="std std-doc"><strong>rank</strong>(3)</span></a> - Rank of a data object</p></li>
-<li><p><a class="reference internal" href="#shape"><span class="std std-doc"><strong>shape</strong>(3)</span></a> - Determine the shape of an array</p></li>
-<li><p><a class="reference internal" href="#lbound"><span class="std std-doc"><strong>lbound</strong>(3)</span></a> - Lower dimension bounds of an array</p></li>
+<li><p><a class="reference internal" href="#size"><strong>size</strong>(3)</a> - Determine the size of an array</p></li>
+<li><p><a class="reference internal" href="#rank"><strong>rank</strong>(3)</a> - Rank of a data object</p></li>
+<li><p><a class="reference internal" href="#shape"><strong>shape</strong>(3)</a> - Determine the shape of an array</p></li>
+<li><p><a class="reference internal" href="#lbound"><strong>lbound</strong>(3)</a> - Lower dimension bounds of an array</p></li>
 </ul>
-<p><span class="xref myst"><strong>co_ubound</strong>(3)</span>,
-<span class="xref myst"><strong>co_lbound</strong>(3)</span></p>
+<p><a class="reference internal" href="#co_ubound"><span class="xref myst"><strong>co_ubound</strong>(3)</span></a>,
+<a class="reference internal" href="#co_lbound"><span class="xref myst"><strong>co_lbound</strong>(3)</span></a></p>
 </section>
 <section id="id105">
 <h4>State Inquiry:<a class="headerlink" href="#id105" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#allocated"><span class="std std-doc"><strong>allocated</strong>(3)</span></a> - Status of an allocatable entity</p></li>
-<li><p><a class="reference internal" href="#is-contiguous"><span class="std std-doc"><strong>is_contiguous</strong>(3)</span></a> - Test if object is contiguous</p></li>
+<li><p><a class="reference internal" href="#allocated"><strong>allocated</strong>(3)</a> - Status of an allocatable entity</p></li>
+<li><p><a class="reference internal" href="#is-contiguous"><strong>is_contiguous</strong>(3)</a> - Test if object is contiguous</p></li>
 </ul>
 </section>
 <section id="id106">
 <h4>Kind Inquiry:<a class="headerlink" href="#id106" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>kind</strong>(3)</span> - Kind of an entity</p></li>
+<li><p><a class="reference internal" href="#kind"><span class="xref myst"><strong>kind</strong>(3)</span></a> - Kind of an entity</p></li>
 </ul>
 </section>
 <section id="id107">
 <h4>Bit Inquiry:<a class="headerlink" href="#id107" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>storage_size</strong>(3)</span> - Storage size in bits</p></li>
-<li><p><span class="xref myst"><strong>bit_size</strong>(3)</span> - Bit size inquiry function</p></li>
-<li><p><span class="xref myst"><strong>btest</strong>(3)</span> - Tests a bit of an <em>integer</em> value.</p></li>
-<li><p><a class="reference internal" href="#lbound"><span class="std std-doc"><strong>lbound</strong>(3)</span></a>,</p></li>
+<li><p><a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a> - Storage size in bits</p></li>
+<li><p><a class="reference internal" href="#bit_size"><span class="xref myst"><strong>bit_size</strong>(3)</span></a> - Bit size inquiry function</p></li>
+<li><p><a class="reference internal" href="#btest"><span class="xref myst"><strong>btest</strong>(3)</span></a> - Tests a bit of an <em>integer</em> value.</p></li>
+<li><p><a class="reference internal" href="#lbound"><strong>lbound</strong>(3)</a>,</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -4370,12 +4349,12 @@ not start with one.</p>
 <section id="id116">
 <h3><strong>See Also</strong><a class="headerlink" href="#id116" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#findloc"><span class="std std-doc"><strong>findloc</strong>(3)</span></a> - Location of first element of ARRAY
+<li><p><a class="reference internal" href="#findloc"><strong>findloc</strong>(3)</a> - Location of first element of ARRAY
 identified by MASK along dimension DIM matching a target</p></li>
-<li><p><a class="reference internal" href="#minloc"><span class="std std-doc"><strong>minloc</strong>(3)</span></a> - Location of the minimum value within an array</p></li>
-<li><p><a class="reference internal" href="#maxval"><span class="std std-doc"><strong>maxval</strong>(3)</span></a></p></li>
-<li><p><a class="reference internal" href="#minval"><span class="std std-doc"><strong>minval</strong>(3)</span></a></p></li>
-<li><p><span class="xref myst"><strong>max</strong>(3)</span></p></li>
+<li><p><a class="reference internal" href="#minloc"><strong>minloc</strong>(3)</a> - Location of the minimum value within an array</p></li>
+<li><p><a class="reference internal" href="#maxval"><strong>maxval</strong>(3)</a></p></li>
+<li><p><a class="reference internal" href="#minval"><strong>minval</strong>(3)</a></p></li>
+<li><p><a class="reference internal" href="#max"><span class="xref myst"><strong>max</strong>(3)</span></a></p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
@@ -4489,14 +4468,14 @@ all cases, the result is of default <em>integer</em> type.</p>
 <section id="id125">
 <h3><strong>See Also</strong><a class="headerlink" href="#id125" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#findloc"><span class="std std-doc"><strong>findloc</strong>(3)</span></a> - Location of first element of ARRAY
+<li><p><a class="reference internal" href="#findloc"><strong>findloc</strong>(3)</a> - Location of first element of ARRAY
 identified by MASK along dimension DIM matching a target</p></li>
-<li><p><a class="reference internal" href="#maxloc"><span class="std std-doc"><strong>maxloc</strong>(3)</span></a> - Location of the maximum value within an array</p></li>
-<li><p><a class="reference internal" href="#minloc"><span class="std std-doc"><strong>minloc</strong>(3)</span></a> - Location of the minimum value within an array</p></li>
-<li><p><span class="xref myst"><strong>min</strong>(3)</span></p></li>
-<li><p><a class="reference internal" href="#minval"><span class="std std-doc"><strong>minval</strong>(3)</span></a></p></li>
-<li><p><a class="reference internal" href="#maxval"><span class="std std-doc"><strong>maxval</strong>(3)</span></a></p></li>
-<li><p><span class="xref myst"><strong>max</strong>(3)</span></p></li>
+<li><p><a class="reference internal" href="#maxloc"><strong>maxloc</strong>(3)</a> - Location of the maximum value within an array</p></li>
+<li><p><a class="reference internal" href="#minloc"><strong>minloc</strong>(3)</a> - Location of the minimum value within an array</p></li>
+<li><p><a class="reference internal" href="#min"><span class="xref myst"><strong>min</strong>(3)</span></a></p></li>
+<li><p><a class="reference internal" href="#minval"><strong>minval</strong>(3)</a></p></li>
+<li><p><a class="reference internal" href="#maxval"><strong>maxval</strong>(3)</a></p></li>
+<li><p><a class="reference internal" href="#max"><span class="xref myst"><strong>max</strong>(3)</span></a></p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -4808,8 +4787,8 @@ value false, all elements of the result are zero.</p></li>
 <section id="id135">
 <h3><strong>See Also</strong><a class="headerlink" href="#id135" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#maxloc"><span class="std std-doc"><strong>maxloc</strong>(3)</span></a> - Location of the maximum value within an array</p></li>
-<li><p><a class="reference internal" href="#minloc"><span class="std std-doc"><strong>minloc</strong>(3)</span></a> - Location of the minimum value within an array</p></li>
+<li><p><a class="reference internal" href="#maxloc"><strong>maxloc</strong>(3)</a> - Location of the maximum value within an array</p></li>
+<li><p><a class="reference internal" href="#minloc"><strong>minloc</strong>(3)</a> - Location of the minimum value within an array</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -4922,10 +4901,10 @@ element (j,i) of the input for all (i,j).</p>
 <section id="id144">
 <h3><strong>See also</strong><a class="headerlink" href="#id144" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#merge"><span class="std std-doc"><strong>merge</strong>(3)</span></a> - Merge variables</p></li>
-<li><p><a class="reference internal" href="#pack"><span class="std std-doc"><strong>pack</strong>(3)</span></a> - Pack an array into an array of rank one</p></li>
-<li><p><a class="reference internal" href="#spread"><span class="std std-doc"><strong>spread</strong>(3)</span></a> - Add a dimension and replicate data</p></li>
-<li><p><a class="reference internal" href="#unpack"><span class="std std-doc"><strong>unpack</strong>(3)</span></a> - Scatter the elements of a vector</p></li>
+<li><p><a class="reference internal" href="#merge"><strong>merge</strong>(3)</a> - Merge variables</p></li>
+<li><p><a class="reference internal" href="#pack"><strong>pack</strong>(3)</a> - Pack an array into an array of rank one</p></li>
+<li><p><a class="reference internal" href="#spread"><strong>spread</strong>(3)</a> - Add a dimension and replicate data</p></li>
+<li><p><a class="reference internal" href="#unpack"><strong>unpack</strong>(3)</a> - Scatter the elements of a vector</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -5052,7 +5031,7 @@ returned for each set of elements along the <strong>dim</strong> dimension.</p><
 </section>
 <section id="id153">
 <h3><strong>See Also</strong><a class="headerlink" href="#id153" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#any"><span class="std std-doc"><strong>any</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#any"><strong>any</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -5223,7 +5202,7 @@ array sections.</p></li>
 </section>
 <section id="id162">
 <h3><strong>See Also</strong><a class="headerlink" href="#id162" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#all"><span class="std std-doc"><strong>all</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#all"><strong>all</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -5468,9 +5447,9 @@ removed dimension.</p>
 </section>
 <section id="id171">
 <h3><strong>See Also</strong><a class="headerlink" href="#id171" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#any"><span class="std std-doc"><strong>any</strong>(3)</span></a>,
-<a class="reference internal" href="#all"><span class="std std-doc"><strong>all</strong>(3)</span></a>,
-<a class="reference internal" href="#sum"><span class="std std-doc"><strong>sum</strong>(3)</span></a>,</p>
+<p><a class="reference internal" href="#any"><strong>any</strong>(3)</a>,
+<a class="reference internal" href="#all"><strong>all</strong>(3)</a>,
+<a class="reference internal" href="#sum"><strong>sum</strong>(3)</a>,</p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -5575,11 +5554,11 @@ kind as <strong>array</strong>.</p>
 </section>
 <section id="id180">
 <h3><strong>See Also</strong><a class="headerlink" href="#id180" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#maxloc"><span class="std std-doc"><strong>maxloc</strong>(3)</span></a>,
-<a class="reference internal" href="#minloc"><span class="std std-doc"><strong>minloc</strong>(3)</span></a>,
-<a class="reference internal" href="#minval"><span class="std std-doc"><strong>minval</strong>(3)</span></a>,
-<span class="xref myst"><strong>max</strong>(3)</span>,
-<span class="xref myst"><strong>min</strong>(3)</span></p>
+<p><a class="reference internal" href="#maxloc"><strong>maxloc</strong>(3)</a>,
+<a class="reference internal" href="#minloc"><strong>minloc</strong>(3)</a>,
+<a class="reference internal" href="#minval"><strong>minval</strong>(3)</a>,
+<a class="reference internal" href="#max"><span class="xref myst"><strong>max</strong>(3)</span></a>,
+<a class="reference internal" href="#min"><span class="xref myst"><strong>min</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -5748,11 +5727,11 @@ kind as <strong>array</strong>.</p>
 </section>
 <section id="id189">
 <h3><strong>See Also</strong><a class="headerlink" href="#id189" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst"><strong>min</strong>(3)</span>,
-<a class="reference internal" href="#minloc"><span class="std std-doc"><strong>minloc</strong>(3)</span></a>
-<a class="reference internal" href="#maxloc"><span class="std std-doc"><strong>maxloc</strong>(3)</span></a>,
-<a class="reference internal" href="#maxval"><span class="std std-doc"><strong>maxval</strong>(3)</span></a>,
-<span class="xref myst"><strong>min</strong>(3)</span></p>
+<p><a class="reference internal" href="#min"><span class="xref myst"><strong>min</strong>(3)</span></a>,
+<a class="reference internal" href="#minloc"><strong>minloc</strong>(3)</a>
+<a class="reference internal" href="#maxloc"><strong>maxloc</strong>(3)</a>,
+<a class="reference internal" href="#maxval"><strong>maxval</strong>(3)</a>,
+<a class="reference internal" href="#min"><span class="xref myst"><strong>min</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -6001,7 +5980,7 @@ dim=3 :( 2 3 )
 </section>
 <section id="id198">
 <h3><strong>See Also</strong><a class="headerlink" href="#id198" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#sum"><span class="std std-doc"><strong>sum</strong>(3)</span></a>, note that an element by element multiplication is done
+<p><a class="reference internal" href="#sum"><strong>sum</strong>(3)</a>, note that an element by element multiplication is done
 directly using the star character.</p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -6221,13 +6200,13 @@ zero means a scalar).</p>
 <section id="id207">
 <h3><strong>See Also</strong><a class="headerlink" href="#id207" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#all"><span class="std std-doc"><strong>all</strong>(3)</span></a> - Determines if all the values are true</p></li>
-<li><p><a class="reference internal" href="#any"><span class="std std-doc"><strong>any</strong>(3)</span></a> - Determines if any of the values in the logical array are true.</p></li>
-<li><p><a class="reference internal" href="#count"><span class="std std-doc"><strong>count</strong>(3)</span></a> - Count true values in an array</p></li>
-<li><p><a class="reference internal" href="#maxval"><span class="std std-doc"><strong>maxval</strong>(3)</span></a> - Determines the maximum value in an array</p></li>
-<li><p><a class="reference internal" href="#minval"><span class="std std-doc"><strong>minval</strong>(3)</span></a> - Minimum value of an array</p></li>
-<li><p><a class="reference internal" href="#product"><span class="std std-doc"><strong>product</strong>(3)</span></a> - Product of array elements</p></li>
-<li><p><a class="reference internal" href="#merge"><span class="std std-doc"><strong>merge</strong>(3)</span></a> - Merge variables</p></li>
+<li><p><a class="reference internal" href="#all"><strong>all</strong>(3)</a> - Determines if all the values are true</p></li>
+<li><p><a class="reference internal" href="#any"><strong>any</strong>(3)</a> - Determines if any of the values in the logical array are true.</p></li>
+<li><p><a class="reference internal" href="#count"><strong>count</strong>(3)</a> - Count true values in an array</p></li>
+<li><p><a class="reference internal" href="#maxval"><strong>maxval</strong>(3)</a> - Determines the maximum value in an array</p></li>
+<li><p><a class="reference internal" href="#minval"><strong>minval</strong>(3)</a> - Minimum value of an array</p></li>
+<li><p><a class="reference internal" href="#product"><strong>product</strong>(3)</a> - Product of array elements</p></li>
+<li><p><a class="reference internal" href="#merge"><strong>merge</strong>(3)</a> - Merge variables</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -6462,16 +6441,17 @@ until all elements are filled. The new array may be smaller than
 </section>
 <section id="id216">
 <h3><strong>See Also</strong><a class="headerlink" href="#id216" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#shape"><span class="std std-doc"><strong>shape</strong>(3)</span></a>,
-<a class="reference internal" href="#pack"><span class="std std-doc"><strong>pack</strong>(3)</span></a>,
-<a class="reference internal" href="#transpose"><span class="std std-doc"><strong>transpose</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#shape"><strong>shape</strong>(3)</a>,
+<a class="reference internal" href="#pack"><strong>pack</strong>(3)</a>,
+<a class="reference internal" href="#transpose"><strong>transpose</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

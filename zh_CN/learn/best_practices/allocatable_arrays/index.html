@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>可分配数组 &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="索引" href="../../../genindex/" />
     <link rel="search" title="搜索" href="../../../search/" />
     <link rel="next" title="文件输入/输出" href="../file_io/" />
-    <link rel="prev" title="数组的逐元操作" href="../element_operations/" /> 
+    <link rel="prev" title="数组的逐元操作" href="../element_operations/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -732,7 +710,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="allocatable-arrays">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="allocatable-arrays">
 <h1>可分配数组<a class="headerlink" href="#allocatable-arrays" title="此标题的永久链接">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">allocatable</span></code> 属性为内存处理提供了一种安全的方式。与具有 <code class="docutils literal notranslate"><span class="pre">pointer</span></code> 属性的变量相比，内存是自动管理的，一旦变量超出范围，就会自动释放。使用 <code class="docutils literal notranslate"><span class="pre">allocatable</span></code> 变量消除了在应用程序中创建内存泄漏的可能性。</p>
 <p>当自动数组变得太大而无法放入堆栈时，它们可以在子例程中用于创建临时数组或工作数组。</p>
@@ -825,8 +804,9 @@
 <p><code class="docutils literal notranslate"><span class="pre">source</span></code> 关键字支持标量和数组值变量和常量。</p>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

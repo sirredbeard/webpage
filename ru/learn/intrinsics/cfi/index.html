@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Procedures for binding to C interfaces &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="Алфавитный указатель" href="../../../genindex/" />
     <link rel="search" title="Поиск" href="../../../search/" />
     <link rel="next" title="General mathematical functions" href="../math/" />
-    <link rel="prev" title="Information about compiler and compiler options used for building" href="../compiler/" /> 
+    <link rel="prev" title="Information about compiler and compiler options used for building" href="../compiler/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -1143,7 +1121,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="procedures-for-binding-to-c-interfaces">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="procedures-for-binding-to-c-interfaces">
 <h1>Procedures for binding to C interfaces<a class="headerlink" href="#procedures-for-binding-to-c-interfaces" title="Permalink to this heading">#</a></h1>
 <section id="c-associated">
 <h2>c_associated<a class="headerlink" href="#c-associated" title="Permalink to this heading">#</a></h2>
@@ -1225,8 +1204,8 @@ addresses.</p>
 </section>
 <section id="see-also">
 <h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#c-loc"><span class="std std-doc"><strong>c_loc</strong>(3)</span></a>,
-<a class="reference internal" href="#c-funloc"><span class="std std-doc"><strong>c_funloc</strong>(3)</span></a>,
+<p><a class="reference internal" href="#c-loc"><strong>c_loc</strong>(3)</a>,
+<a class="reference internal" href="#c-funloc"><strong>c_funloc</strong>(3)</a>,
 <strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
@@ -1309,8 +1288,8 @@ must be equal to the rank of <strong>fptr</strong>.</p>
 </section>
 <section id="id8">
 <h3><strong>See Also</strong><a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#c-loc"><span class="std std-doc"><strong>c_loc</strong>(3)</span></a>,
-<a class="reference internal" href="#c-f-procpointer"><span class="std std-doc"><strong>c_f_procpointer</strong>(3)</span></a>,
+<p><a class="reference internal" href="#c-loc"><strong>c_loc</strong>(3)</a>,
+<a class="reference internal" href="#c-f-procpointer"><strong>c_f_procpointer</strong>(3)</a>,
 <strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
@@ -1389,8 +1368,8 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </section>
 <section id="id16">
 <h3><strong>See Also</strong><a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#c-loc"><span class="std std-doc"><strong>c_loc</strong>(3)</span></a>,
-<a class="reference internal" href="#c-f-pointer"><span class="std std-doc"><strong>c_f_pointer</strong>(3)</span></a>,
+<p><a class="reference internal" href="#c-loc"><strong>c_loc</strong>(3)</a>,
+<a class="reference internal" href="#c-f-pointer"><strong>c_f_pointer</strong>(3)</a>,
 <strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
@@ -1468,10 +1447,10 @@ argument.</p>
 </section>
 <section id="id25">
 <h3><strong>See Also</strong><a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#c-associated"><span class="std std-doc"><strong>c_associated</strong>(3)</span></a>,
-<a class="reference internal" href="#c-loc"><span class="std std-doc"><strong>c_loc</strong>(3)</span></a>,
-<a class="reference internal" href="#c-f-pointer"><span class="std std-doc"><strong>c_f_pointer</strong>(3)</span></a>,</p>
-<p><a class="reference internal" href="#c-f-procpointer"><span class="std std-doc"><strong>c_f_procpointer</strong>(3)</span></a>,
+<p><a class="reference internal" href="#c-associated"><strong>c_associated</strong>(3)</a>,
+<a class="reference internal" href="#c-loc"><strong>c_loc</strong>(3)</a>,
+<a class="reference internal" href="#c-f-pointer"><strong>c_f_pointer</strong>(3)</a>,</p>
+<p><a class="reference internal" href="#c-f-procpointer"><strong>c_f_procpointer</strong>(3)</a>,
 <strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
@@ -1536,10 +1515,10 @@ argument.</p>
 </section>
 <section id="id34">
 <h3><strong>See Also</strong><a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#c-associated"><span class="std std-doc"><strong>c_associated</strong>(3)</span></a>,
-<a class="reference internal" href="#c-funloc"><span class="std std-doc"><strong>c_funloc</strong>(3)</span></a>,
-<a class="reference internal" href="#c-f-pointer"><span class="std std-doc"><strong>c_f_pointer</strong>(3)</span></a>,</p>
-<p><a class="reference internal" href="#c-f-procpointer"><span class="std std-doc"><strong>c_f_procpointer</strong>(3)</span></a>,
+<p><a class="reference internal" href="#c-associated"><strong>c_associated</strong>(3)</a>,
+<a class="reference internal" href="#c-funloc"><strong>c_funloc</strong>(3)</a>,
+<a class="reference internal" href="#c-f-pointer"><strong>c_f_pointer</strong>(3)</a>,</p>
+<p><a class="reference internal" href="#c-f-procpointer"><strong>c_f_procpointer</strong>(3)</a>,
 <strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
@@ -1611,14 +1590,15 @@ default <em>real</em> variables are unusually padded.</p>
 </section>
 <section id="id43">
 <h3><strong>See Also</strong><a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst"><strong>storage_size</strong>(3)</span></p>
+<p><a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

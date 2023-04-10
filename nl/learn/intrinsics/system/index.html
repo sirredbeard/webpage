@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Accessing external system information &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Zoeken" href="../../../search/" />
     <link rel="next" title="Matrix multiplication, dot product, and array shifts" href="../transform/" />
-    <link rel="prev" title="General and miscellaneous intrinsics" href="../state/" /> 
+    <link rel="prev" title="General and miscellaneous intrinsics" href="../state/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -1292,7 +1270,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="accessing-external-system-information">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="accessing-external-system-information">
 <h1>Accessing external system information<a class="headerlink" href="#accessing-external-system-information" title="Permalink to this heading">#</a></h1>
 <section id="command-argument-count">
 <h2>command_argument_count<a class="headerlink" href="#command-argument-count" title="Permalink to this heading">#</a></h2>
@@ -1362,8 +1341,8 @@ does not count as one of the command arguments.</p>
 </section>
 <section id="see-also">
 <h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#get-command"><span class="std std-doc"><strong>get_command</strong>(3)</span></a>,
-<a class="reference internal" href="#get-command-argument"><span class="std std-doc"><strong>get_command_argument</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#get-command"><strong>get_command</strong>(3)</a>,
+<a class="reference internal" href="#get-command-argument"><strong>get_command_argument</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -1480,8 +1459,8 @@ command retrieval fails. Otherwise, it is unchanged.</p>
 </section>
 <section id="id8">
 <h3><strong>See Also</strong><a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#get-command-argument"><span class="std std-doc"><strong>get_command_argument</strong>(3)</span></a>,
-<a class="reference internal" href="#command-argument-count"><span class="std std-doc"><strong>command_argument_count</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#get-command-argument"><strong>get_command_argument</strong>(3)</a>,
+<a class="reference internal" href="#command-argument-count"><strong>command_argument_count</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -1645,8 +1624,8 @@ is <strong>-1</strong>; and otherwise the <strong>status</strong> is zero.</p>
 </section>
 <section id="id18">
 <h3><strong>See Also</strong><a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#get-command"><span class="std std-doc"><strong>get_command</strong>(3)</span></a>,
-<a class="reference internal" href="#command-argument-count"><span class="std std-doc"><strong>command_argument_count</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#get-command"><strong>get_command</strong>(3)</a>,
+<a class="reference internal" href="#command-argument-count"><strong>command_argument_count</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -1758,8 +1737,8 @@ may very from system to system. See compiler-specific for details.</p>
 </section>
 <section id="id27">
 <h3><strong>See Also</strong><a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#system-clock"><span class="std std-doc"><strong>system_clock</strong>(3)</span></a>,
-<a class="reference internal" href="#date-and-time"><span class="std std-doc"><strong>date_and_time</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#system-clock"><strong>system_clock</strong>(3)</a>,
+<a class="reference internal" href="#date-and-time"><strong>date_and_time</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -1919,8 +1898,8 @@ not those images share the same information.</p>
 </section>
 <section id="id35">
 <h3><strong>See Also</strong><a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#cpu-time"><span class="std std-doc"><strong>cpu_time</strong>(3)</span></a>,
-<a class="reference internal" href="#system-clock"><span class="std std-doc"><strong>system_clock</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#cpu-time"><strong>cpu_time</strong>(3)</a>,
+<a class="reference internal" href="#system-clock"><strong>system_clock</strong>(3)</a></p>
 </section>
 <section id="resources">
 <h3><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h3>
@@ -2092,8 +2071,8 @@ approximately 18.20648193 ticks per second, at 11:30 A.M. the reference</p>
 </section>
 <section id="id43">
 <h3><strong>See Also</strong><a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#date-and-time"><span class="std std-doc"><strong>date_and_time</strong>(3)</span></a>,
-<a class="reference internal" href="#cpu-time"><span class="std std-doc"><strong>cpu_time</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#date-and-time"><strong>date_and_time</strong>(3)</a>,
+<a class="reference internal" href="#cpu-time"><strong>cpu_time</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -2225,7 +2204,7 @@ explanatory message. Otherwise, it is unchanged.</p>
 </section>
 <section id="id51">
 <h3><strong>See also</strong><a class="headerlink" href="#id51" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#get-environment-variable"><span class="std std-doc"><strong>get_environment_variable</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#get-environment-variable"><strong>get_environment_variable</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -2386,8 +2365,8 @@ the environment variable name.</p>
 </section>
 <section id="id60">
 <h3><strong>See also</strong><a class="headerlink" href="#id60" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#get-command-argument"><span class="std std-doc"><strong>get_command_argument</strong>(3)</span></a>,
-<a class="reference internal" href="#get-command"><span class="std std-doc"><strong>get_command</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#get-command-argument"><strong>get_command_argument</strong>(3)</a>,
+<a class="reference internal" href="#get-command"><strong>get_command</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -2396,8 +2375,9 @@ the environment variable name.</p>
 <h1><a class="headerlink" href="#id61" title="Permalink to this heading">#</a></h1>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

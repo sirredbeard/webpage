@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>General mathematical functions &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -49,7 +48,8 @@
     <link rel="index" title="Rejstřík" href="../../../genindex/" />
     <link rel="search" title="Vyhledávání" href="../../../search/" />
     <link rel="next" title="Controlling and querying the current numeric model" href="../model/" />
-    <link rel="prev" title="Procedures for binding to C interfaces" href="../cfi/" /> 
+    <link rel="prev" title="Procedures for binding to C interfaces" href="../cfi/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -96,40 +96,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -3159,7 +3137,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="general-mathematical-functions">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="general-mathematical-functions">
 <h1>General mathematical functions<a class="headerlink" href="#general-mathematical-functions" title="Permalink to this heading">#</a></h1>
 <section id="acos">
 <h2>acos<a class="headerlink" href="#acos" title="Permalink to this heading">#</a></h2>
@@ -3256,7 +3235,7 @@ the result is in radians and lies in the range <strong>0 &lt;= acos(x%re) &lt;= 
 </section>
 <section id="see-also">
 <h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Permalink to this heading">#</a></h3>
-<p>Inverse function: <span class="xref myst"><strong>cos</strong>(3)</span></p>
+<p>Inverse function: <a class="reference internal" href="#cos"><span class="xref myst"><strong>cos</strong>(3)</span></a></p>
 </section>
 <section id="resources">
 <h3><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h3>
@@ -3337,7 +3316,7 @@ and lies between</p>
 </section>
 <section id="id9">
 <h3><strong>See Also</strong><a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
-<p>Inverse function: <a class="reference internal" href="#cosh"><span class="std std-doc"><strong>cosh</strong>(3)</span></a></p>
+<p>Inverse function: <a class="reference internal" href="#cosh"><strong>cosh</strong>(3)</a></p>
 </section>
 <section id="id10">
 <h3><strong>Resources</strong><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
@@ -3465,7 +3444,7 @@ train reducing the allowable grade.</p>
 </section>
 <section id="id19">
 <h3><strong>See Also</strong><a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
-<p>Inverse function: <a class="reference internal" href="#sin"><span class="std std-doc"><strong>sin</strong>(3)</span></a></p>
+<p>Inverse function: <a class="reference internal" href="#sin"><strong>sin</strong>(3)</a></p>
 </section>
 <section id="id20">
 <h3><strong>Resources</strong><a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
@@ -3546,7 +3525,7 @@ between <strong>-PI/2 &lt;= aimag(asinh(x)) &lt;= PI/2</strong>.</p>
 </section>
 <section id="id29">
 <h3><strong>See Also</strong><a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
-<p>Inverse function: <a class="reference internal" href="#sinh"><span class="std std-doc"><strong>sinh</strong>(3)</span></a></p>
+<p>Inverse function: <a class="reference internal" href="#sinh"><strong>sinh</strong>(3)</a></p>
 </section>
 <section id="id30">
 <h3><strong>Resources</strong><a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
@@ -3650,7 +3629,7 @@ arguments Fortran 2008</p>
 </section>
 <section id="id39">
 <h3><strong>See Also</strong><a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#atan2"><span class="std std-doc"><strong>atan2</strong>(3)</span></a>, <a class="reference internal" href="#tan"><span class="std std-doc"><strong>tan</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#atan2"><strong>atan2</strong>(3)</a>, <a class="reference internal" href="#tan"><strong>tan</strong>(3)</a></p>
 </section>
 <section id="id40">
 <h3><strong>Resources</strong><a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h3>
@@ -3842,7 +3821,7 @@ so <strong>atan(0.0,0.0)</strong> will produce an error.</p>
 <section id="id49">
 <h3><strong>See Also</strong><a class="headerlink" href="#id49" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#atan"><span class="std std-doc"><strong>atan</strong>(3)</span></a></p></li>
+<li><p><a class="reference internal" href="#atan"><strong>atan</strong>(3)</a></p></li>
 </ul>
 </section>
 <section id="id50">
@@ -3922,7 +3901,7 @@ imaginary part of the result is in radians and lies between</p>
 </section>
 <section id="id59">
 <h3><strong>See Also</strong><a class="headerlink" href="#id59" title="Permalink to this heading">#</a></h3>
-<p>Inverse function: <a class="reference internal" href="#tanh"><span class="std std-doc"><strong>tanh</strong>(3)</span></a></p>
+<p>Inverse function: <a class="reference internal" href="#tanh"><strong>tanh</strong>(3)</a></p>
 </section>
 <section id="id60">
 <h3><strong>Resources</strong><a class="headerlink" href="#id60" title="Permalink to this heading">#</a></h3>
@@ -4018,9 +3997,9 @@ radians, often called the phase.</p>
 </section>
 <section id="id69">
 <h3><strong>See Also</strong><a class="headerlink" href="#id69" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#acos"><span class="std std-doc"><strong>acos</strong>(3)</span></a>,
-<a class="reference internal" href="#sin"><span class="std std-doc"><strong>sin</strong>(3)</span></a>,
-<a class="reference internal" href="#tan"><span class="std std-doc"><strong>tan</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#acos"><strong>acos</strong>(3)</a>,
+<a class="reference internal" href="#sin"><strong>sin</strong>(3)</a>,
+<a class="reference internal" href="#tan"><strong>tan</strong>(3)</a></p>
 </section>
 <section id="id70">
 <h3><strong>Resources</strong><a class="headerlink" href="#id70" title="Permalink to this heading">#</a></h3>
@@ -4099,7 +4078,7 @@ in radians.</p>
 </section>
 <section id="id79">
 <h3><strong>See Also</strong><a class="headerlink" href="#id79" title="Permalink to this heading">#</a></h3>
-<p>Inverse function: <a class="reference internal" href="#acosh"><span class="std std-doc"><strong>acosh</strong>(3)</span></a></p>
+<p>Inverse function: <a class="reference internal" href="#acosh"><strong>acosh</strong>(3)</a></p>
 </section>
 <section id="id80">
 <h3><strong>Resources</strong><a class="headerlink" href="#id80" title="Permalink to this heading">#</a></h3>
@@ -4254,17 +4233,17 @@ along the surface of the Earth between the locations:</p>
 </section>
 <section id="id89">
 <h3><strong>See Also</strong><a class="headerlink" href="#id89" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#asin"><span class="std std-doc"><strong>asin</strong>(3)</span></a>,
-<a class="reference internal" href="#cos"><span class="std std-doc"><strong>cos</strong>(3)</span></a>,
-<a class="reference internal" href="#tan"><span class="std std-doc"><strong>tan</strong>(3)</span></a>,
-<a class="reference internal" href="#acosh"><span class="std std-doc"><strong>acosh</strong>(3)</span></a>,
-<a class="reference internal" href="#acos"><span class="std std-doc"><strong>acos</strong>(3)</span></a>,
-<a class="reference internal" href="#asinh"><span class="std std-doc"><strong>asinh</strong>(3)</span></a>,
-<a class="reference internal" href="#atan2"><span class="std std-doc"><strong>atan2</strong>(3)</span></a>,
-<a class="reference internal" href="#atanh"><span class="std std-doc"><strong>atanh</strong>(3)</span></a>,
-<a class="reference internal" href="#acosh"><span class="std std-doc"><strong>acosh</strong>(3)</span></a>,
-<a class="reference internal" href="#asinh"><span class="std std-doc"><strong>asinh</strong>(3)</span></a>,
-<a class="reference internal" href="#atanh"><span class="std std-doc"><strong>atanh</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#asin"><strong>asin</strong>(3)</a>,
+<a class="reference internal" href="#cos"><strong>cos</strong>(3)</a>,
+<a class="reference internal" href="#tan"><strong>tan</strong>(3)</a>,
+<a class="reference internal" href="#acosh"><strong>acosh</strong>(3)</a>,
+<a class="reference internal" href="#acos"><strong>acos</strong>(3)</a>,
+<a class="reference internal" href="#asinh"><strong>asinh</strong>(3)</a>,
+<a class="reference internal" href="#atan2"><strong>atan2</strong>(3)</a>,
+<a class="reference internal" href="#atanh"><strong>atanh</strong>(3)</a>,
+<a class="reference internal" href="#acosh"><strong>acosh</strong>(3)</a>,
+<a class="reference internal" href="#asinh"><strong>asinh</strong>(3)</a>,
+<a class="reference internal" href="#atanh"><strong>atanh</strong>(3)</a></p>
 </section>
 <section id="id90">
 <h3><strong>Resources</strong><a class="headerlink" href="#id90" title="Permalink to this heading">#</a></h3>
@@ -4374,7 +4353,7 @@ as a value in radians.</p>
 </section>
 <section id="id99">
 <h3><strong>See Also</strong><a class="headerlink" href="#id99" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#asinh"><span class="std std-doc"><strong>asinh</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#asinh"><strong>asinh</strong>(3)</a></p>
 </section>
 <section id="id100">
 <h3><strong>Resources</strong><a class="headerlink" href="#id100" title="Permalink to this heading">#</a></h3>
@@ -4452,10 +4431,10 @@ in radians.</p>
 </section>
 <section id="id109">
 <h3><strong>See Also</strong><a class="headerlink" href="#id109" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#atan"><span class="std std-doc"><strong>atan</strong>(3)</span></a>,
-<a class="reference internal" href="#atan2"><span class="std std-doc"><strong>atan2</strong>(3)</span></a>,
-<a class="reference internal" href="#cos"><span class="std std-doc"><strong>cos</strong>(3)</span></a>,
-<a class="reference internal" href="#sin"><span class="std std-doc"><strong>sin</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#atan"><strong>atan</strong>(3)</a>,
+<a class="reference internal" href="#atan2"><strong>atan2</strong>(3)</a>,
+<a class="reference internal" href="#cos"><strong>cos</strong>(3)</a>,
+<a class="reference internal" href="#sin"><strong>sin</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -4531,7 +4510,7 @@ a radian value.</p>
 </section>
 <section id="id118">
 <h3><strong>See Also</strong><a class="headerlink" href="#id118" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#atanh"><span class="std std-doc"><strong>atanh</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#atanh"><strong>atanh</strong>(3)</a></p>
 </section>
 <section id="id119">
 <h3><strong>Resources</strong><a class="headerlink" href="#id119" title="Permalink to this heading">#</a></h3>
@@ -4645,7 +4624,7 @@ pseudorandom numbers from the uniform distribution over the range
 </section>
 <section id="id127">
 <h3><strong>See Also</strong><a class="headerlink" href="#id127" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#random-seed"><span class="std std-doc"><strong>random_seed</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#random-seed"><strong>random_seed</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -4735,7 +4714,7 @@ or equal to the number returned by the <strong>size</strong> argument.</p>
 </section>
 <section id="id135">
 <h3><strong>See Also</strong><a class="headerlink" href="#id135" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#random-number"><span class="std std-doc"><strong>random_number</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#random-number"><strong>random_number</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -4847,7 +4826,7 @@ regarded as a value in radians.</p>
 <section id="id144">
 <h3><strong>See Also</strong><a class="headerlink" href="#id144" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#log"><span class="std std-doc"><strong>log</strong>(3)</span></a></p></li>
+<li><p><a class="reference internal" href="#log"><strong>log</strong>(3)</a></p></li>
 </ul>
 </section>
 <section id="id145">
@@ -4938,7 +4917,7 @@ real zero.</p>
 </section>
 <section id="id154">
 <h3><strong>See also</strong><a class="headerlink" href="#id154" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst">****(3)</span></p>
+<p><a class="reference internal" href="#"><span class="xref myst">****(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -5017,7 +4996,7 @@ called the „common logarithm“.</p>
 </section>
 <section id="id163">
 <h3><strong>See also</strong><a class="headerlink" href="#id163" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst">****(3)</span></p>
+<p><a class="reference internal" href="#"><span class="xref myst">****(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -5125,9 +5104,9 @@ same sign as the imaginary part of <strong>x</strong>.</p>
 </section>
 <section id="id172">
 <h3><strong>See also</strong><a class="headerlink" href="#id172" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#exp"><span class="std std-doc"><strong>exp</strong>(3)</span></a>,
-<a class="reference internal" href="#log"><span class="std std-doc"><strong>log</strong>(3)</span></a>,
-<a class="reference internal" href="#log10"><span class="std std-doc"><strong>log10</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#exp"><strong>exp</strong>(3)</a>,
+<a class="reference internal" href="#log"><strong>log</strong>(3)</a>,
+<a class="reference internal" href="#log10"><strong>log10</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -5245,7 +5224,7 @@ the origin.</p>
 </section>
 <section id="id181">
 <h3><strong>See also</strong><a class="headerlink" href="#id181" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst">****(3)</span></p>
+<p><a class="reference internal" href="#"><span class="xref myst">****(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -5318,11 +5297,11 @@ The result lies in the range <strong>-0.4027 &lt;= bessel(0,x) &lt;= 1</strong>.
 </section>
 <section id="id190">
 <h3><strong>See Also</strong><a class="headerlink" href="#id190" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#bessel-j1"><span class="std std-doc"><strong>bessel_j1</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-jn"><span class="std std-doc"><strong>bessel_jn</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y0"><span class="std std-doc"><strong>bessel_y0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y1"><span class="std std-doc"><strong>bessel_y1</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-yn"><span class="std std-doc"><strong>bessel_yn</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#bessel-j1"><strong>bessel_j1</strong>(3)</a>,
+<a class="reference internal" href="#bessel-jn"><strong>bessel_jn</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y0"><strong>bessel_y0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y1"><strong>bessel_y1</strong>(3)</a>,
+<a class="reference internal" href="#bessel-yn"><strong>bessel_yn</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -5394,11 +5373,11 @@ of order <strong>1</strong> of <strong>x</strong>.</p>
 </section>
 <section id="id199">
 <h3><strong>See Also</strong><a class="headerlink" href="#id199" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#bessel-j0"><span class="std std-doc"><strong>bessel_j0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-jn"><span class="std std-doc"><strong>bessel_jn</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y0"><span class="std std-doc"><strong>bessel_y0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y1"><span class="std std-doc"><strong>bessel_y1</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-yn"><span class="std std-doc"><strong>bessel_yn</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#bessel-j0"><strong>bessel_j0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-jn"><strong>bessel_jn</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y0"><strong>bessel_y0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y1"><strong>bessel_y1</strong>(3)</a>,
+<a class="reference internal" href="#bessel-yn"><strong>bessel_yn</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -5509,11 +5488,11 @@ of the first kind and order N1+i-1 of X.</p>
 </section>
 <section id="id207">
 <h3><strong>See Also</strong><a class="headerlink" href="#id207" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#bessel-j0"><span class="std std-doc"><strong>bessel_j0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-j1"><span class="std std-doc"><strong>bessel_j1</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y0"><span class="std std-doc"><strong>bessel_y0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y1"><span class="std std-doc"><strong>bessel_y1</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-yn"><span class="std std-doc"><strong>bessel_yn</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#bessel-j0"><strong>bessel_j0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-j1"><strong>bessel_j1</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y0"><strong>bessel_y0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y1"><strong>bessel_y1</strong>(3)</a>,
+<a class="reference internal" href="#bessel-yn"><strong>bessel_yn</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -5585,11 +5564,11 @@ Its value shall be greater than zero.</p>
 </section>
 <section id="id216">
 <h3><strong>See Also</strong><a class="headerlink" href="#id216" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#bessel-j0"><span class="std std-doc"><strong>bessel_j0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-j1"><span class="std std-doc"><strong>bessel_j1</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-jn"><span class="std std-doc"><strong>bessel_jn</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y1"><span class="std std-doc"><strong>bessel_y1</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-yn"><span class="std std-doc"><strong>bessel_yn</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#bessel-j0"><strong>bessel_j0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-j1"><strong>bessel_j1</strong>(3)</a>,
+<a class="reference internal" href="#bessel-jn"><strong>bessel_jn</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y1"><strong>bessel_y1</strong>(3)</a>,
+<a class="reference internal" href="#bessel-yn"><strong>bessel_yn</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -5660,11 +5639,11 @@ Its value shall be greater than zero.</p>
 </section>
 <section id="id225">
 <h3><strong>See Also</strong><a class="headerlink" href="#id225" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#bessel-j0"><span class="std std-doc"><strong>bessel_j0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-j1"><span class="std std-doc"><strong>bessel_j1</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-jn"><span class="std std-doc"><strong>bessel_jn</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y0"><span class="std std-doc"><strong>bessel_y0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-yn"><span class="std std-doc"><strong>bessel_yn</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#bessel-j0"><strong>bessel_j0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-j1"><strong>bessel_j1</strong>(3)</a>,
+<a class="reference internal" href="#bessel-jn"><strong>bessel_jn</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y0"><strong>bessel_y0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-yn"><strong>bessel_yn</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -5777,11 +5756,11 @@ function of the second kind and order N1+i-1 of X.</p>
 </section>
 <section id="id234">
 <h3><strong>See Also</strong><a class="headerlink" href="#id234" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#bessel-j0"><span class="std std-doc"><strong>bessel_j0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-j1"><span class="std std-doc"><strong>bessel_j1</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-jn"><span class="std std-doc"><strong>bessel_jn</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y0"><span class="std std-doc"><strong>bessel_y0</strong>(3)</span></a>,
-<a class="reference internal" href="#bessel-y1"><span class="std std-doc"><strong>bessel_y1</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#bessel-j0"><strong>bessel_j0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-j1"><strong>bessel_j1</strong>(3)</a>,
+<a class="reference internal" href="#bessel-jn"><strong>bessel_jn</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y0"><strong>bessel_y0</strong>(3)</a>,
+<a class="reference internal" href="#bessel-y1"><strong>bessel_y1</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -5855,8 +5834,8 @@ range <strong>-1</strong> &lt;= <strong>erf</strong>(x) &lt;= 1 .</p>
 </section>
 <section id="id243">
 <h3><strong>See also</strong><a class="headerlink" href="#id243" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#erfc"><span class="std std-doc"><strong>erfc</strong>(3)</span></a>,
-<a class="reference internal" href="#erfc-scaled"><span class="std std-doc"><strong>erf_scaled</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#erfc"><strong>erfc</strong>(3)</a>,
+<a class="reference internal" href="#erfc-scaled"><strong>erf_scaled</strong>(3)</a></p>
 </section>
 <section id="id244">
 <h3><strong>Resources</strong><a class="headerlink" href="#id244" title="Permalink to this heading">#</a></h3>
@@ -5953,8 +5932,8 @@ function of <strong>x</strong> ( **1-erf(x) ).</p>
 </section>
 <section id="id253">
 <h3><strong>See also</strong><a class="headerlink" href="#id253" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#erf"><span class="std std-doc"><strong>erf</strong>(3)</span></a>
-<span class="xref myst"><strong>erf_scaled</strong>(3)</span></p>
+<p><a class="reference internal" href="#erf"><strong>erf</strong>(3)</a>
+<a class="reference internal" href="#erf_scaled"><span class="xref myst"><strong>erf_scaled</strong>(3)</span></a></p>
 </section>
 <section id="id254">
 <h3><strong>Resources</strong><a class="headerlink" href="#id254" title="Permalink to this heading">#</a></h3>
@@ -6042,9 +6021,9 @@ of <strong>x</strong></p>
 </section>
 <section id="id263">
 <h3><strong>See also</strong><a class="headerlink" href="#id263" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#erf"><span class="std std-doc"><strong>erf</strong>(3)</span></a>,
-<a class="reference internal" href="#exp"><span class="std std-doc"><strong>exp</strong>(3)</span></a>,
-<a class="reference internal" href="#erfc"><span class="std std-doc"><strong>erfc</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#erf"><strong>erf</strong>(3)</a>,
+<a class="reference internal" href="#exp"><strong>exp</strong>(3)</a>,
+<a class="reference internal" href="#erfc"><strong>erfc</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -6191,7 +6170,7 @@ function of <strong>x</strong>.</p>
 </section>
 <section id="id272">
 <h3><strong>See Also</strong><a class="headerlink" href="#id272" title="Permalink to this heading">#</a></h3>
-<p>Logarithm of the Gamma function: <a class="reference internal" href="#id283"><span class="std std-doc"><strong>log_gamma</strong>(3)</span></a></p>
+<p>Logarithm of the Gamma function: <a class="reference internal" href="#log-gamma"><strong>log_gamma</strong>(3)</a></p>
 </section>
 <section id="id273">
 <h3><strong>Resources</strong><a class="headerlink" href="#id273" title="Permalink to this heading">#</a></h3>
@@ -6268,7 +6247,7 @@ of <strong>x</strong>.</p>
 </section>
 <section id="id282">
 <h3><strong>See Also</strong><a class="headerlink" href="#id282" title="Permalink to this heading">#</a></h3>
-<p>Gamma function: <a class="reference internal" href="#gamma"><span class="std std-doc"><strong>gamma</strong>(3)</span></a></p>
+<p>Gamma function: <a class="reference internal" href="#gamma"><strong>gamma</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -6341,7 +6320,7 @@ of <strong>x</strong>.</p>
 </section>
 <section id="id292">
 <h3><strong>See Also</strong><a class="headerlink" href="#id292" title="Permalink to this heading">#</a></h3>
-<p>Gamma function: <a class="reference internal" href="#gamma"><span class="std std-doc"><strong>gamma</strong>(3)</span></a></p>
+<p>Gamma function: <a class="reference internal" href="#gamma"><strong>gamma</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
@@ -6474,16 +6453,17 @@ overflow or underflow.</p>
 </section>
 <section id="id301">
 <h3><strong>See Also</strong><a class="headerlink" href="#id301" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst"><strong>product</strong>(3)</span>,
-<span class="xref myst"><strong>sum</strong>(3)</span>,
-<a class="reference internal" href="#hypot"><span class="std std-doc"><strong>hypot</strong>(3)</span></a></p>
+<p><a class="reference internal" href="#product"><span class="xref myst"><strong>product</strong>(3)</span></a>,
+<a class="reference internal" href="#sum"><span class="xref myst"><strong>sum</strong>(3)</span></a>,
+<a class="reference internal" href="#hypot"><strong>hypot</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

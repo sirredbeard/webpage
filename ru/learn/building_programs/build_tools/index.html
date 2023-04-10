@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Инструменты сборки &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="Алфавитный указатель" href="../../../genindex/" />
     <link rel="search" title="Поиск" href="../../../search/" />
     <link rel="next" title="Введение в систему сборки make" href="../project_make/" />
-    <link rel="prev" title="Управление библиотеками (статические и динамические библиотеки)" href="../managing_libraries/" /> 
+    <link rel="prev" title="Управление библиотеками (статические и динамические библиотеки)" href="../managing_libraries/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -764,12 +742,13 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="build-tools">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="build-tools">
 <h1>Инструменты сборки<a class="headerlink" href="#build-tools" title="Permalink to this heading">#</a></h1>
 <p>Компиляция ваших проектов на языке Fortran вручную может стать довольно сложной задачей по мере роста числа файлов исходного кода и зависимостей в файлах модулей. Поддержка различных компиляторов и компоновщиков или различных платформ может стать все более сложной, если не использовать правильные инструменты для автоматического выполнения этих задач.</p>
 <p>В зависимости от размера и цели вашего проекта могут быть использованы различные варианты автоматизации сборки.</p>
 <p>Прежде всего, ваша интегрированная среда разработки (IDE), возможно, предоставляет способ сборки вашей программы. Популярным кроссплатформенным инструментом является <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> от Microsoft, но существуют и другие, такие как <a href="https://atom.io/" target="_blank" rel="noopener">Atom</a>, <a href="https://www.eclipse.org/photran/" target="_blank" rel="noopener">Eclipse Photran</a>, и <a href="http://www.codeblocks.org/" target="_blank" rel="noopener">Code::Blocks</a>. Они предлагают пользовательский интерфейс, но часто очень специфичны для компилятора и платформы.</p>
-<p>Для небольших проектов часто используется система сборки <code class="docutils literal notranslate"><span class="pre">make</span></code>. На основе заданных правил она может выполнять такие задачи, как (пере)компиляция объектных файлов из обновлённых файлов исходных кодов, создание библиотек, и компоновка исполняемых файлов. Чтобы использовать <code class="docutils literal notranslate"><span class="pre">make</span></code>, для вашего проекта вы должны создать эти правила в файле <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>, который определяет взаимозависимости всех конечных программ, промежуточных объектных файлов или библиотек и непосредственно файлов исходных кодов. Краткое введение по этой системе сборки приводится <a class="reference internal" href="#using-make-as-build-tool"><span class="std std-doc">в руководстве по <code class="docutils literal notranslate"><span class="pre">make</span></code></span></a>.</p>
+<p>Для небольших проектов часто используется система сборки <code class="docutils literal notranslate"><span class="pre">make</span></code>. На основе заданных правил она может выполнять такие задачи, как (пере)компиляция объектных файлов из обновлённых файлов исходных кодов, создание библиотек, и компоновка исполняемых файлов. Чтобы использовать <code class="docutils literal notranslate"><span class="pre">make</span></code>, для вашего проекта вы должны создать эти правила в файле <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>, который определяет взаимозависимости всех конечных программ, промежуточных объектных файлов или библиотек и непосредственно файлов исходных кодов. Краткое введение по этой системе сборки приводится <a class="reference internal" href="#using-make-as-build-tool">в руководстве по <code class="docutils literal notranslate"><span class="pre">make</span></code></a>.</p>
 <p>Инструменты сопровождения, такие как autotools и CMake, могут генерировать файлы Makefile или файлы проектов Visual Studio через высокоуровневое описание. Они абстрагируются от специфики компилятора и платформы.</p>
 <p>Какой из этих инструментов лучше выбрать для ваших проектов, зависит от многих факторов. Выбирайте инструмент сборки, с которым вам удобно работать, он не должен мешать вам во время разработки. Если тратить больше времени на работу с инструментом сборки, чем на саму разработку, то это может быстро надоесть.</p>
 <p>Также обратите внимание на доступность инструментов сборки. Если их использование ограничено одной IDE, смогут ли все разработчики вашего проекта получить к ним доступ? Если вы используете определённую систему сборки, работает ли она на всех платформах, для которых вы разрабатываете? Насколько велик входной порог для ваших инструментов сборки? Предварительно узнайте о кривой обучения для инструментов сборки – идеальный инструмент сборки будет бесполезен, если сначала вам сначала придётся изучить сложный язык программирования, чтобы добавить новый файл исходного кода. Наконец, посмотрите, какие другие проекты вы используете как зависимости и какие используют (или будут использовать) ваш проект как зависимость.</p>
@@ -1079,8 +1058,9 @@ Found ninja-1.10.0 at /usr/bin/ninja
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

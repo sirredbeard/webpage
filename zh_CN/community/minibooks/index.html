@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../_static/images/favicon.ico" type="image/x-icon">
     <title>fortran-lang.org 上的迷你书教程 &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="Fortran-lang.org 包索引" href="../packages/" />
-    <link rel="prev" title="参与 fortran-lang.org 贡献" href="../contributing/" /> 
+    <link rel="prev" title="参与 fortran-lang.org 贡献" href="../contributing/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -462,7 +440,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="mini-book-tutorials-on-fortran-lang-org">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="mini-book-tutorials-on-fortran-lang-org">
 <h1>fortran-lang.org 上的迷你书教程<a class="headerlink" href="#mini-book-tutorials-on-fortran-lang-org" title="此标题的永久链接">#</a></h1>
 <p>本指南将介绍如何为 <a class="reference external" href="https://fortran-lang.org">https://fortran-lang.org</a> 的 <a class="reference external" href="https://fortran-lang.org/learn">Learn</a> 部分编写迷你书教程。</p>
 <p>有关为 <a class="reference external" href="https://fortran-lang.org">https://fortran-lang.org</a> 做出贡献的一般指导，请参阅 <a class="reference internal" href="../contributing/"><span class="doc std std-doc">贡献指南</span></a>。</p>
@@ -490,7 +469,7 @@
 <ul class="simple">
 <li><p>在 <code class="docutils literal notranslate"><span class="pre">./learn</span></code> 路径下新建一个 markdown 文档</p></li>
 <li><p>编写你的教程内容</p></li>
-<li><p>在 <span class="xref myst">data/learning.yml</span> 中添加你的新迷你书的条目</p></li>
+<li><p>在 <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a> 中添加你的新迷你书的条目</p></li>
 <li><p>发起新「拉取请求」</p></li>
 </ul>
 <section id="writing-your-mini-book-in-markdown">
@@ -549,7 +528,7 @@
 </section>
 <section id="add-your-mini-book-to-the-learn-page">
 <h3>1.3 将你的迷你书添加到 Learn 页面<a class="headerlink" href="#add-your-mini-book-to-the-learn-page" title="此标题的永久链接">#</a></h3>
-<p>你需要在 <span class="xref myst">data/learning.yml</span> 数据文件中添加一个新条目，以将新迷你书加入到 <em>Learn</em> 页面。</p>
+<p>你需要在 <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a> 数据文件中添加一个新条目，以将新迷你书加入到 <em>Learn</em> 页面。</p>
 <p>打开此文件并在 <code class="docutils literal notranslate"><span class="pre">books:</span></code> 字段下按以下格式创建一个新条目：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">book-title</span><span class="p p-Indicator">}}</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">book-description</span><span class="p p-Indicator">}}</span>
@@ -569,7 +548,7 @@
 </pre></div>
 </div>
 <p>保存修改后的 <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> 数据文件并运行 fortran_package.py 并在本地计算机上重建网站以检查结果。 如果成功，_Learn* 页面上应该会出现一个新链接，其中包含新迷你书的标题。</p>
-<p>完成迷你书并向 <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> 数据文件添加条目后，请在 <a class="reference external" href="https://github.com/fortran-lang/webpage">https://github.com/fortran-lang/webpage</a> 处发起「拉取请求」（请参阅 <span class="xref myst">CONTRIBUTING</span>)。</p>
+<p>完成迷你书并向 <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> 数据文件添加条目后，请在 <a class="reference external" href="https://github.com/fortran-lang/webpage">https://github.com/fortran-lang/webpage</a> 处发起「拉取请求」（请参阅 <a class="reference internal" href="#./CONTRIBUTING.md"><span class="xref myst">CONTRIBUTING</span></a>)。</p>
 </section>
 </section>
 <section id="multi-page-mini-books">
@@ -579,7 +558,7 @@
 <li><p>在<code class="docutils literal notranslate"><span class="pre">./learn/</span></code>目录下新建文件夹</p></li>
 <li><p>在新文件夹中创建一个 <code class="docutils literal notranslate"><span class="pre">index.md</span></code> 文件</p></li>
 <li><p>在新文件夹中的 markdown 文件里编写教程内容</p></li>
-<li><p>在 <span class="xref myst">data/learning.yml</span> 中添加你的新迷你书的条目</p></li>
+<li><p>在 <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a> 中添加你的新迷你书的条目</p></li>
 <li><p>发起新「拉取请求」</p></li>
 </ul>
 <section id="create-a-new-folder-for-your-mini-book">
@@ -617,7 +596,7 @@
 </section>
 <section id="id1">
 <h3>2.3 将你的迷你书添加到学习页面<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h3>
-<p>你需要在 <span class="xref myst">data/learning.yml</span> 数据文件中添加一个新条目，以将新迷你书加入到 <em>Learn</em> 页面。</p>
+<p>你需要在 <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a> 数据文件中添加一个新条目，以将新迷你书加入到 <em>Learn</em> 页面。</p>
 <p>打开此文件并在 <code class="docutils literal notranslate"><span class="pre">books:</span></code> 字段下按以下格式创建一个新条目：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">book-title</span><span class="p p-Indicator">}}</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">book-description</span><span class="p p-Indicator">}}</span>
@@ -646,13 +625,14 @@
 </pre></div>
 </div>
 <p>保存修改后的 <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> 数据文件并运行 fortran<em>package.py 并在本地计算机上重建网站以检查结果。如果成功，_Learn</em> 页面上应该会出现一个新链接，其中包含新迷你书的标题。</p>
-<p>完成迷你书并向 <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> 数据文件添加条目后，请在 <a class="reference external" href="https://github.com/fortran-lang/fortran-lang.org">https://github.com/fortran-lang/fortran-lang.org</a> 上打开拉取请求（请参阅 <span class="xref myst">CONTRIBUTING </span>)。</p>
+<p>完成迷你书并向 <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> 数据文件添加条目后，请在 <a class="reference external" href="https://github.com/fortran-lang/fortran-lang.org">https://github.com/fortran-lang/fortran-lang.org</a> 上打开拉取请求（请参阅 <a class="reference internal" href="#./CONTRIBUTING.md"><span class="xref myst">CONTRIBUTING </span></a>)。</p>
 </section>
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>

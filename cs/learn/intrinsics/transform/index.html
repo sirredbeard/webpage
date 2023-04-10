@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Matrix multiplication, dot product, and array shifts &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="icon" sizes="256x256" type="image/ico" href="../../../_static/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,7 +46,8 @@
     <link rel="index" title="Rejstřík" href="../../../genindex/" />
     <link rel="search" title="Vyhledávání" href="../../../search/" />
     <link rel="next" title="Types and kinds" href="../type/" />
-    <link rel="prev" title="Accessing external system information" href="../system/" /> 
+    <link rel="prev" title="Accessing external system information" href="../system/" />
+
 <meta
   name="description"
   content="Fortran : High-performance parallel programming language"
@@ -94,40 +94,18 @@
     <b>Site preview: </b>you are previewing unpublished changes for
     <a id="pr"></a>
   </h3>
-</div> 
+</div>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="Blog"
 />
- 
-<link href="True" rel="stylesheet" />
 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+<link href="True" rel="stylesheet"/>
+
 
   </head>
   
@@ -1289,7 +1267,8 @@
           <div class="bd-content col-12 col-md-9 col-xl-7">
               
               <article class="bd-article" role="main">
-                 <section class="tex2jax_ignore mathjax_ignore" id="matrix-multiplication-dot-product-and-array-shifts">
+                
+<section class="tex2jax_ignore mathjax_ignore" id="matrix-multiplication-dot-product-and-array-shifts">
 <h1>Matrix multiplication, dot product, and array shifts<a class="headerlink" href="#matrix-multiplication-dot-product-and-array-shifts" title="Permalink to this heading">#</a></h1>
 <section id="cshift">
 <h2>cshift<a class="headerlink" href="#cshift" title="Permalink to this heading">#</a></h2>
@@ -1425,16 +1404,16 @@ or by different amounts.</p>
 <section id="see-also">
 <h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="#eoshift"><span class="std std-doc"><strong>eoshift</strong>(3)</span></a> - End-off shift elements of an array</p></li>
+<li><p><a class="reference internal" href="#eoshift"><strong>eoshift</strong>(3)</a> - End-off shift elements of an array</p></li>
 </ul>
 <!--
 - [**cshift**(3)](#cshift) - Circular shift elements of an array
   -->
 <ul class="simple">
-<li><p><span class="xref myst"><strong>sum</strong>(3)</span> - sum the elements of an array</p></li>
-<li><p><span class="xref myst"><strong>product</strong>(3)</span> - Product of array elements</p></li>
-<li><p><span class="xref myst"><strong>findloc</strong>(3)</span> - Location of first element of ARRAY identified by MASK along dimension DIM having a value</p></li>
-<li><p><span class="xref myst"><strong>maxloc</strong>(3)</span> - Location of the maximum value within an array</p></li>
+<li><p><a class="reference internal" href="#sum"><span class="xref myst"><strong>sum</strong>(3)</span></a> - sum the elements of an array</p></li>
+<li><p><a class="reference internal" href="#product"><span class="xref myst"><strong>product</strong>(3)</span></a> - Product of array elements</p></li>
+<li><p><a class="reference internal" href="#findloc"><span class="xref myst"><strong>findloc</strong>(3)</span></a> - Location of first element of ARRAY identified by MASK along dimension DIM having a value</p></li>
+<li><p><a class="reference internal" href="#maxloc"><span class="xref myst"><strong>maxloc</strong>(3)</span></a> - Location of the maximum value within an array</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
@@ -1541,9 +1520,9 @@ return value is <em>.true.</em> or <em>.false.</em>.</p>
 </section>
 <section id="id10">
 <h3><strong>See Also</strong><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst"><strong>sum</strong>(3)</span>,
-<span class="xref myst"><strong>conjg</strong>(3)</span>,
-<span class="xref myst"><strong>any</strong>(3)</span></p>
+<p><a class="reference internal" href="#sum"><span class="xref myst"><strong>sum</strong>(3)</span></a>,
+<a class="reference internal" href="#conjg"><span class="xref myst"><strong>conjg</strong>(3)</span></a>,
+<a class="reference internal" href="#any"><span class="xref myst"><strong>any</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -1688,8 +1667,8 @@ the <strong>boundary</strong> value.</p>
 </section>
 <section id="id19">
 <h3><strong>See Also</strong><a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst"><strong>dshiftr</strong>(3)</span>,
-<span class="xref myst"><strong>dshiftl</strong>(3)</span></p>
+<p><a class="reference internal" href="#dshiftr"><span class="xref myst"><strong>dshiftr</strong>(3)</span></a>,
+<a class="reference internal" href="#dshiftl"><span class="xref myst"><strong>dshiftl</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -1930,8 +1909,8 @@ of the result are instead:</p>
 </section>
 <section id="id29">
 <h3><strong>See Also</strong><a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst"><strong>product</strong>(3)</span>,
-<span class="xref myst"><strong>transpose</strong>(3)</span></p>
+<p><a class="reference internal" href="#product"><span class="xref myst"><strong>product</strong>(3)</span></a>,
+<a class="reference internal" href="#transpose"><span class="xref myst"><strong>transpose</strong>(3)</span></a></p>
 </section>
 <section id="resources">
 <h3><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h3>
@@ -2053,14 +2032,14 @@ result is an array of parity values with dimension <strong>dim</strong> dropped.
 <section id="id38">
 <h3><strong>See also</strong><a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span class="xref myst"><strong>all</strong>(3)</span> - Determines if all the values are true</p></li>
-<li><p><span class="xref myst"><strong>any</strong>(3)</span> - Determines if any of the values in the logical array are <em>.true.</em></p></li>
-<li><p><span class="xref myst"><strong>count</strong>(3)</span> - Count true values in an array</p></li>
-<li><p><span class="xref myst"><strong>sum</strong>(3)</span> - Sum the elements of an array</p></li>
-<li><p><span class="xref myst"><strong>maxval</strong>(3)</span> - Determines the maximum value in an array or row</p></li>
-<li><p><span class="xref myst"><strong>minval</strong>(3)</span> - Minimum value of an array</p></li>
-<li><p><span class="xref myst"><strong>product</strong>(3)</span> - Product of array elements</p></li>
-<li><p><a class="reference internal" href="#reduce"><span class="std std-doc"><strong>reduce</strong>(3)</span></a> - General array reduction</p></li>
+<li><p><a class="reference internal" href="#all"><span class="xref myst"><strong>all</strong>(3)</span></a> - Determines if all the values are true</p></li>
+<li><p><a class="reference internal" href="#any"><span class="xref myst"><strong>any</strong>(3)</span></a> - Determines if any of the values in the logical array are <em>.true.</em></p></li>
+<li><p><a class="reference internal" href="#count"><span class="xref myst"><strong>count</strong>(3)</span></a> - Count true values in an array</p></li>
+<li><p><a class="reference internal" href="#sum"><span class="xref myst"><strong>sum</strong>(3)</span></a> - Sum the elements of an array</p></li>
+<li><p><a class="reference internal" href="#maxval"><span class="xref myst"><strong>maxval</strong>(3)</span></a> - Determines the maximum value in an array or row</p></li>
+<li><p><a class="reference internal" href="#minval"><span class="xref myst"><strong>minval</strong>(3)</span></a> - Minimum value of an array</p></li>
+<li><p><a class="reference internal" href="#product"><span class="xref myst"><strong>product</strong>(3)</span></a> - Product of array elements</p></li>
+<li><p><a class="reference internal" href="#reduce"><strong>reduce</strong>(3)</a> - General array reduction</p></li>
 </ul>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
@@ -2196,7 +2175,7 @@ type.</p>
 </section>
 <section id="id47">
 <h3><strong>See Also</strong><a class="headerlink" href="#id47" title="Permalink to this heading">#</a></h3>
-<p><span class="xref myst"><strong>associated</strong>(3)</span></p>
+<p><a class="reference internal" href="#associated"><span class="xref myst"><strong>associated</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -2413,7 +2392,7 @@ the product of its two real arguments.</p>
 <section id="id56">
 <h3><strong>See Also</strong><a class="headerlink" href="#id56" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span class="xref myst">co_reduce(3)</span></p></li>
+<li><p><a class="reference internal" href="#co_reduce"><span class="xref myst">co_reduce(3)</span></a></p></li>
 </ul>
 </section>
 <section id="id57">
@@ -2426,8 +2405,9 @@ the product of its two real arguments.</p>
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
               </article>
