@@ -591,13 +591,11 @@
 </section>
 <section id="add-pages-to-your-mini-book">
 <h3>2.2 Adicione páginas a seu mini-book<a class="headerlink" href="#add-pages-to-your-mini-book" title="Permalink to this heading">#</a></h3>
-<p>For each new page in your mini-book, create a new markdown file in your mini-book folder.</p>
-<p>As with single-page mini-books, you should use headings to break-up each
-page into a logical structure.
-Each heading on the current page will show up in the inpage table-of-contents.</p>
+<p>Para cada nova página no seu mini-book, crie um novo arquivo markdown no seu diretório mini-book.</p>
+<p>Como em mini-books de uma página, você deve usar títulos para dividir cada página em uma estrutura lógica. Cada título na página atual aparecerá no sumário.</p>
 </section>
 <section id="id1">
-<h3>2.3 Add your mini-book to the Learn page<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>2.3 Adicione seu mini-livro à página Aprenda<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Para adicionar seu novo mini-book à página <em>Aprenda</em>, você deve adicionar uma nova entrada no ficheiro de dados <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a>.</p>
 <p>Abra este ficheiro e crie uma nova entrada abaixo do campo <code class="docutils literal notranslate"><span class="pre">books:</span></code>, no seguinte formato:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">book-title</span><span class="p p-Indicator">}}</span>
@@ -610,12 +608,11 @@ Each heading on the current page will show up in the inpage table-of-contents.</
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/learn/{{book-folder}}/{{page3-filename}}</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">title</span></code> field is what will be displayed on the <em>Learn</em> page for your mini-book
-and should generally be the same as the <code class="docutils literal notranslate"><span class="pre">title</span></code> field in your <code class="docutils literal notranslate"><span class="pre">index.md</span></code> markdown file, but this isn’t required.</p>
+<p>O campo <code class="docutils literal notranslate"><span class="pre">título</span></code> é o que ficará exibido na página <em>Aprenda</em> do seu mini-livro e deveria geralmente ser o mesmo do campo <code class="docutils literal notranslate"><span class="pre">título</span></code> no seu arquivo markdown <code class="docutils literal notranslate"><span class="pre">index.md</span></code>, mas isto não é necessário.</p>
 <p>Os conteúdos do campo <code class="docutils literal notranslate"><span class="pre">description</span></code> também é mostrado na página <em>Learn</em> e deve descrever brevemente o conteúdo de seu tutorial mini-book.</p>
 <p>O campo <code class="docutils literal notranslate"><span class="pre">category</span></code> deve bater com uma das categorias listadas no topo do ficheiro de dados (abaixo do campo <code class="docutils literal notranslate"><span class="pre">categories:</span></code>) e usado para agrupar tutoriais na página Aprenda.</p>
-<p>The top-level <code class="docutils literal notranslate"><span class="pre">link</span></code> field should exactly match the <code class="docutils literal notranslate"><span class="pre">permalink</span></code> field in your <code class="docutils literal notranslate"><span class="pre">index.md</span></code> file.</p>
-<p>Each <code class="docutils literal notranslate"><span class="pre">link</span></code> field under <code class="docutils literal notranslate"><span class="pre">pages</span></code> should exactly match the <code class="docutils literal notranslate"><span class="pre">permalink</span></code> field in each of your subsequent mini-book pages.</p>
+<p>o campo <code class="docutils literal notranslate"><span class="pre">link</span></code> deve corresponder exatamente ao campo <code class="docutils literal notranslate"><span class="pre">permalink</span></code> no seu arquivo <code class="docutils literal notranslate"><span class="pre">index.md</span></code>.</p>
+<p>Cada campo <code class="docutils literal notranslate"><span class="pre">link</span></code> em <code class="docutils literal notranslate"><span class="pre">pages</span></code> deve corresponder exatamente ao campo <code class="docutils literal notranslate"><span class="pre">permalink</span></code> em cada página subsequente do seu mini-book.</p>
 <p><strong>Exemplo:</strong> entrada de livro no <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Parallel programming with Coarrays</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A tutorial on parallel programming using coarrays</span>
@@ -627,8 +624,7 @@ and should generally be the same as the <code class="docutils literal notranslat
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/learn/coarrays/examples</span>
 </pre></div>
 </div>
-<p>Save the modified <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> data file and run fortran<em>package.py and rebuild the website on your local machine to check the results.
-If successful, a new link should appear on the _Learn</em> page with the title of your new mini-book.</p>
+<p>Salve o arquivo modificado <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code> e use o comando fortran<em>package.py e refaça o build do website na sua máquina local para verificar os resultados. Se bem sucedido, um novo link deverá aparecer na página _Learn</em> com o título do seu novo mini-book.</p>
 <p>Uma vez finalizado seu mini-book e adicionado ao ficheiro de dados <code class="docutils literal notranslate"><span class="pre">learning.yml</span></code>, abra um PR em <a class="reference external" href="https://github.com/fortran-lang/fortran-lang.org">https://github.com/fortran-lang/fortran-lang.org</a> (veja <a class="reference internal" href="#./CONTRIBUTING.md"><span class="xref myst">CONTRIBUTING para mais informações</span></a>).</p>
 </section>
 </section>

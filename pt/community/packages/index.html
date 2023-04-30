@@ -445,62 +445,49 @@
 <h1>índice de pacotes do fortran-lang.org<a class="headerlink" href="#fortran-lang-org-package-index" title="Permalink to this heading">#</a></h1>
 <section id="package-criteria">
 <h2>Critérios para pacotes<a class="headerlink" href="#package-criteria" title="Permalink to this heading">#</a></h2>
-<p>The following criteria are required of packages to be indexed:</p>
+<p>Os seguintes critérios são necessário para que os pacotes sejam indexados:</p>
 <ul class="simple">
-<li><p><strong>Relevance</strong>: the package must be primarily implemented in Fortran or provide
-a complete Fortran interface to an existing package or be purposed solely towards
-software development in Fortran.</p></li>
-<li><p><strong>Maturity</strong>: the primary functionality of the package shall be implemented.
-No prototype, testing or partially complete packages will be accepted.
-If the package is hosted on github or similar, it should have at least 5 “stars”.</p></li>
-<li><p><strong>Availability</strong>: the package source shall be freely available for browsing online
-or cloning or downloading</p></li>
-<li><p><strong>Open source</strong>: the package shall be licensed under an appropriate <a class="reference external" href="https://opensource.org/licenses">open-source license</a>
-with the license file clearly included with the source code</p></li>
-<li><p><strong>Uniqueness</strong>: the package shall not be a fork or minor revision of existing packages</p></li>
-<li><p><strong>README</strong>: the package shall have some form of README or landing-page clearly
-stating the package purpose and functionality. This should also contain information on the package dependencies and the steps required to build and run.</p></li>
+<li><p><strong>Relevância</strong>: o pacote deve ser principalmente implementado em Fortran ou prover uma interface Fortran completa para um pacote existente ou que tenha o propósito exclusivo de desenvolvimento de software em Fortran.</p></li>
+<li><p><strong>Maturidade</strong>: a principal funcionalidade do pacote deve ser implementada. Nenhum protótipo, teste ou pacotes parcialmente completos serão aceitos. Se o pacote está hospedado no github ou similar, ele deve conter pelo menos 5 “estrelas”.</p></li>
+<li><p><strong>Disponibilidade</strong>: a fonte do pacote deve estar disponível gratuitamente para olhar online ou clonar ou fazer download</p></li>
+<li><p><strong>Open source</strong>: o pacote deve estar licenciado sob um <a class="reference external" href="https://opensource.org/licenses">licença open-source</a> apropriada com o arquivo da licença evidentemente incluso dentro do código-fonte</p></li>
+<li><p><strong>Originalidade</strong>: O pacote não deve ser um fork ou revisão minoritária de pacotes existentes</p></li>
+<li><p><strong>README</strong>: o pacote deve conter alguma forma de README ou landing-page declarando claramente o propósito do pacote e sua funcionalidade. Deve também conter informações sobre as dependências utilizadas e os passos necessários para realizar o build da aplicação e rodá-la.</p></li>
 </ul>
-<p>The following criteria are not required but are recommended:</p>
+<p>Os critérios a seguir não são necessários mas recomendados:</p>
 <ul class="simple">
-<li><p><strong>Documentation</strong>: any form of written documentation aimed at users of the package. Ideally
-this should cover:</p>
+<li><p><strong>Documentação</strong>: Qualquer tipo de documentação escrita focada nos usuários do pacote. Idealmente isso deve cobrir:</p>
 <ul>
-<li><p>Supported / tested compilers</p></li>
+<li><p>Compiladores suportados / testados</p></li>
 <li><p>Dependências</p></li>
-<li><p>Build and install process</p></li>
-<li><p>Modules contained within the package</p></li>
-<li><p>Procedures made available and their interfaces</p></li>
+<li><p>Processo de build e instalação</p></li>
+<li><p>Módulos contidos dentro do pacote</p></li>
+<li><p>Procedimentos disponíveis e suas interfaces</p></li>
 <li><p>Código de exemplo</p></li>
 </ul>
 </li>
-<li><p><strong>Contributing</strong>: details on how users may submit issues and contribute to the development of the
-package</p></li>
-<li><p><strong>Tests</strong>: any form of executable test(s) that can be used to verify the functionality of the package</p></li>
-<li><p><strong>Portability</strong>: no non-standard language extensions or proprietary dependencies</p></li>
-<li><p><strong>FPM</strong>: support installation by the Fortran Package Manager <a class="reference external" href="https://github.com/fortran-lang/fpm">fpm</a></p></li>
+<li><p><strong>Contribuindo</strong>: Detalhes em como usuários podem submeter issues e contribuir para o desenvolvimento do pacote</p></li>
+<li><p><strong>Testes</strong>: qualquer forma de testes executáveis que podem ser usados para verificar a funcionalidade do pacote</p></li>
+<li><p><strong>Portabilidade</strong>: sem extensões ou dependências proprietárias da linguagem fora do padrão</p></li>
+<li><p><strong>FPM</strong>: suporte de instalação pelo Fortran Package Manager <a class="reference external" href="https://github.com/fortran-lang/fpm">fpm</a></p></li>
 </ul>
 </section>
 <section id="process-for-adding-packages">
-<h2>Process for adding packages<a class="headerlink" href="#process-for-adding-packages" title="Permalink to this heading">#</a></h2>
+<h2>Processo para adicionar pacotes<a class="headerlink" href="#process-for-adding-packages" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Users should confirm that their project meets the minimum requirements for listing in the
-Fortran-lang package index, as written in this document</p></li>
-<li><p>Users should open a pull request using the “Package index request” template</p></li>
-<li><p>At least three Fortran-lang community members shall review the request against the criteria above</p></li>
-<li><p>If three or more Fortran-lang community members agree that the package should be listed and there is no significant objection, then the pull request will be merged</p></li>
+<li><p>Usuários devem confirmar que seus projetos atendam aos requisitos mínimos para serem listados no índice de pacotes do Fortran, como descrito nesse documento</p></li>
+<li><p>Usuários devem abrir um pull request usando o template “Package index request”</p></li>
+<li><p>Pelo menos três membros da comunidade da linguagem Fortran devem revisar a requisição de acordo com os critérios acima</p></li>
+<li><p>Se três ou mais membros da linguagem Fortran concordarem que o pacote deve ser listado e não houver objeções significativas, então o pull request terá seu merge</p></li>
 </ol>
 </section>
 <section id="package-index-requests">
-<h2>Pedidos de pacotes<a class="headerlink" href="#package-index-requests" title="Permalink to this heading">#</a></h2>
-<p>Package index requests are made by pull requests against the <a class="reference external" href="https://github.com/fortran-lang/webpage/">fortran-lang.org repository</a>.
-See <a class="reference external" href="https://guides.github.com/activities/forking/">this guide</a> for guidance on forking and making pull requests.</p>
-<p>Package details are listed in the <code class="docutils literal notranslate"><span class="pre">data/package_index.yml</span></code> data file.</p>
-<p>To add a package simply create a new entry within this file.
-The data file is ordered by high-level categories merely to aid in navigation;
-find the appropriate category for your package and create a new entry.</p>
+<h2>Pedidos de indexação de pacotes<a class="headerlink" href="#package-index-requests" title="Permalink to this heading">#</a></h2>
+<p>Pedidos de indexação de pacotes são feitos por meio de pull requests para o <a class="reference external" href="https://github.com/fortran-lang/webpage/">repositório fortran-lang.org</a>. Veja <a class="reference external" href="https://guides.github.com/activities/forking/">este guia</a> para orientações em como fazer forks e pull requests.</p>
+<p>Detalhes do pacote são listados no arquivo <code class="docutils literal notranslate"><span class="pre">data/package_index.yml</span></code>.</p>
+<p>Para adicionar um pacote crie uma nova entrada dentro desse arquivo. Os dados do arquivo são ordenados por categorias meramente para auxiliar na navegação, encontre a categoria apropriada para adicionar seu pacote e crie uma nova entrada.</p>
 <section id="after-adding-a-new-entry-to-package-index-run-the-github-action-fortran-packages-before-building-the-sphinx-build">
-<h3>After adding a new entry to package index, run the github action fortran_packages before building the sphinx build.<a class="headerlink" href="#after-adding-a-new-entry-to-package-index-run-the-github-action-fortran-packages-before-building-the-sphinx-build" title="Permalink to this heading">#</a></h3>
+<h3>Após adicionar uma nova entrada ao índice de pacotes, rode o github action fortran_packages antes de realizar o build do sphinx.<a class="headerlink" href="#after-adding-a-new-entry-to-package-index-run-the-github-action-fortran-packages-before-building-the-sphinx-build" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="github-hosted-packages">
 <h3>Pacotes no Gihub<a class="headerlink" href="#github-hosted-packages" title="Permalink to this heading">#</a></h3>
@@ -516,33 +503,32 @@ find the appropriate category for your package and create a new entry.</p>
 <p>Categorias válidas:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">libraries</span></code>: bibliotecas em geral</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interfaces</span></code>: libraries that provide interfaces to other libraries, software or devices</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">programming</span></code>: general programming utilities: errors, logging, testing, documentation <em>etc.</em></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">data-types</span></code>: libraries providing advanced data types: containers, datetime, resizable arrays <em>etc.</em></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">strings</span></code>: string handling libraries</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">io</span></code>: libraries that parse and generate various file formats</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">graphics</span></code>: plotting and GUIs</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numerical</span></code>: matrices, linear algebra, solvers, root-finding, interpolation, optimization, differential eqns, statistics, machine learning, random numbers <em>etc.</em></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scientific</span></code>: domain-specific scientific libraries or applications</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">examples</span></code>: repositories offering language feature demonstrations, tutorials and benchmarks</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interfaces</span></code>: biblioteca que fornecem interface para outras bibliotecas, software ou dispositivos</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">programação</span></code>: utilitários gerais de programação: erros, logging, testes, documentação <em>etc.</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tipos</span> <span class="pre">de</span> <span class="pre">dados</span></code>: bibliotecas fornecendo tipos de dados avançados: containers, datetime, matrizes redimensionáveis <em>etc.</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string</span></code>: bibliotecas de manipulação de string</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">io</span></code>: bibliotecas que transformam ou geram vários formatos de arquivos</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gráficos</span></code>: plots e GUIs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numérico</span></code>: matrizes, algebra linear, solucionadores, cálculo de raiz, interpolação, otimização, equações diferenciais, estatística, aprendizado de máquina, números aleatórios <em>etc.</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">científico</span></code>: bibliotecas ou aplicações científicas de domínio específico</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exemplos</span></code>: repositórios fornecendo demonstrações de recursos da linguagem, tutoriais e benchmarks</p></li>
 </ul>
-<p><strong>Projects listing more than one category must provide good justification thereof in the pull request.</strong></p>
+<p><strong>Projetos listando mais de uma categoria deve prover boas justificativas para essa decisão no pull request.</strong></p>
 <p><strong>Notas:</strong></p>
 <ul class="simple">
-<li><p>The package description should clearly describe the functionality of the package in a single sentence.</p></li>
-<li><p>Tags (optional) should contain any terms not already contained in the name or description that users may search directly for. Tags should be separate by spaces.</p></li>
+<li><p>A descrição do pacote deve descrever claramente as funcionalidades do pacote em uma única frase.</p></li>
+<li><p>Tags (opcional) deve conter quaisquer termos não contidos no nome ou na descrição que os usuários podem buscar diretamente o termo. Tags devem ser separadas por espaço.</p></li>
 <li><p>Versão do pacote</p>
 <ul>
-<li><p>this can be determined automatically if a versioned release has been created on github</p></li>
-<li><p>if version is specified, it will override any detected github version</p></li>
-<li><p>if version is “none”, then no version information will be displayed. (Use this if
-your package has no version.)</p></li>
+<li><p>isso pode ser determinado automaticamente se a versão da release foi criada no github</p></li>
+<li><p>se a versão é especificada, ela irá sobrescrever qualquer versão detectada do github</p></li>
+<li><p>se a versão é “none”, então nenhuma informação de versão será apresentada. (Use isso se o seu pacote não tiver versão.)</p></li>
 </ul>
 </li>
 <li><p>Licença do pacote</p>
 <ul>
-<li><p>this can be determined automatically if github is able to detect a known license</p></li>
-<li><p>license must be specified if github is unable to detect a known license</p></li>
+<li><p>isso pode ser determinado automaticamente se o github está habilitado para detectar uma licença conhecida</p></li>
+<li><p>a licença deve ser especificada se o github estiver desabilitado para detectar uma licença conhecida</p></li>
 </ul>
 </li>
 </ul>
@@ -560,33 +546,33 @@ your package has no version.)</p></li>
 </div>
 <p><strong>Notas:</strong></p>
 <ul class="simple">
-<li><p>License and version information cannot be detected automatically for non-github repositories</p></li>
-<li><p>if your package has no version, then omit the version field</p></li>
-<li><p>a license must be specified for non-github repositories</p></li>
+<li><p>Informações de licença e versão não podem ser detectadas automaticamente para repositórios fora do github</p></li>
+<li><p>se o seu pacote não tiver versão, então omita o campo «version»</p></li>
+<li><p>Uma licença deve ser especificada para repositórios fora do github</p></li>
 </ul>
 </section>
 <section id="member-review-checklist">
 <h3>Lista de pontos que devem observados durante a revisão<a class="headerlink" href="#member-review-checklist" title="Permalink to this heading">#</a></h3>
-<p>Community members reviewing packages should cover the following points:</p>
+<p>Membros da comunidade revisando pacotes devem cobrir os seguintes pontos:</p>
 <ol class="arabic simple">
-<li><p>Ensure the package meets the minimum criteria as written in this document</p></li>
-<li><p>Check the package metadata</p>
+<li><p>Garante que o pacote atenda aos critérios mínimos definidos nesse documento</p></li>
+<li><p>Verifique os metadados do pacote</p>
 <ul class="simple">
-<li><p>Repository exists and is accessible</p></li>
-<li><p>Description clearly and concisely describes the package</p></li>
-<li><p>Assigned category is appropriate</p></li>
+<li><p>Repositório existe e é acessível</p></li>
+<li><p>Descrição descreve concisa e claramente o pacote</p></li>
+<li><p>Categoria atribuída é apropriada</p></li>
 </ul>
 </li>
 <li><p>Cheque as informações de licenciamento</p>
 <ul class="simple">
-<li><p>If license field has been omitted: check that github has detected the license</p></li>
-<li><p>If license field is included: check that it matches repository license file</p></li>
+<li><p>Se o campo «license» foi omitido: cheque se o github detectou a licença</p></li>
+<li><p>Se o campo «license» foi incluído: cheque se corresponde com o arquivo da licença do repositório</p></li>
 </ul>
 </li>
 </ol>
 <p>Após o merge:</p>
 <ul class="simple">
-<li><p>Check that package is available in expected category and search</p></li>
+<li><p>Cheque se o pacote está disponível na categoria esperada e busca</p></li>
 </ul>
 </section>
 </section>
