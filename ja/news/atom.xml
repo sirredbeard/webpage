@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
   <id>https://fortran-lang.org/en/</id>
   <title>Blog</title>
-  <updated>2023-04-30T15:03:54.195634+00:00</updated>
+  <updated>2023-05-03T16:27:05.395237+00:00</updated>
   <link href="https://fortran-lang.org/en/"/>
   <link href="https://fortran-lang.org/en/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.2">ABlog</generator>
@@ -311,7 +311,7 @@ Fortran news from the previous month.This month we've had several updates to the
     <title>Fortran-lang welcomes new students to Google Summer of Code 2021</title>
     <updated>2021-05-18T00:00:00+00:00</updated>
     <author>
-      <name>Milan Curcic</name>
+      <name>Arjen Markus</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;We're happy to announce six students that will work on Fortran projects under
@@ -407,7 +407,7 @@ Fortran news from the previous month.This month we've had several updates to the
     <title>Fortran-lang accepted to Google Summer of Code 2021</title>
     <updated>2021-03-09T00:00:00+00:00</updated>
     <author>
-      <name>Milan Curcic</name>
+      <name>Arjen Markus</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;We are excited to announce that Fortran-lang has been accepted as a &lt;a class="reference external" href="https://summerofcode.withgoogle.com/organizations/6633903353233408"&gt;Google Summer of Code (GSoC) 2021 mentoring organization&lt;/a&gt;! 🎉&lt;/p&gt;
@@ -529,7 +529,7 @@ Fortran news from the previous month.This month we've had a few additions and im
     <title>Fortran newsletter: October 2020</title>
     <updated>2020-10-01T00:00:00+00:00</updated>
     <author>
-      <name>Milan Curcic</name>
+      <name>and Laurence Kedward</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Welcome to the October 2020 edition of the monthly Fortran newsletter.
@@ -549,7 +549,7 @@ and details Fortran news from the previous month.This month we've had only one m
     <title>Fortran newsletter: September 2020</title>
     <updated>2020-09-01T00:00:00+00:00</updated>
     <author>
-      <name>Milan Curcic</name>
+      <name>Thomas König</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Welcome to the September 2020 edition of the monthly Fortran newsletter.
@@ -609,7 +609,7 @@ and details Fortran news from the previous month.Work has continued on the Fortr
     <title>Fortran newsletter: June 2020</title>
     <updated>2020-06-01T00:00:00+00:00</updated>
     <author>
-      <name>Brad Richardson</name>
+      <name>Milan Curcic and Ondřej Čertík</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Welcome to the June 2020 edition of the monthly Fortran newsletter.

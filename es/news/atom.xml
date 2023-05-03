@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es">
   <id>https://fortran-lang.org/en/</id>
   <title>Blog</title>
-  <updated>2023-04-30T15:01:44.944088+00:00</updated>
+  <updated>2023-05-03T16:25:13.409513+00:00</updated>
   <link href="https://fortran-lang.org/en/"/>
   <link href="https://fortran-lang.org/en/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.2">ABlog</generator>
@@ -211,7 +211,7 @@ Fortran news from the previous month.This month we’ve had several updates to t
     <title>Fortran newsletter: October 2021</title>
     <updated>2021-10-01T00:00:00+00:00</updated>
     <author>
-      <name>Laurence Kedward</name>
+      <name>Ondřej Čertík</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Welcome to the October 2021 edition of the monthly Fortran newsletter.
@@ -447,7 +447,7 @@ Fortran news from the previous month.This month we’ve had several updates to t
     <title>Fortran newsletter: February 2021</title>
     <updated>2021-02-01T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Welcome to the February 2021 edition of the monthly Fortran newsletter.
@@ -509,7 +509,7 @@ Fortran news from the previous month.This month we’ve had a few updates to the
     <title>Fortran newsletter: November 2020</title>
     <updated>2020-11-01T00:00:00+00:00</updated>
     <author>
-      <name>Jeremie Vandenplas</name>
+      <name>Ondřej Čertík</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Welcome to the November 2020 edition of the monthly Fortran newsletter.
@@ -569,7 +569,7 @@ and details Fortran news from the previous month.We continued the work on the Fo
     <title>Fortran newsletter: August 2020</title>
     <updated>2020-08-01T00:00:00+00:00</updated>
     <author>
-      <name>Ondřej Čertík</name>
+      <name>Arjen Markus and Gary Klimowicz</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Welcome to the August 2020 edition of the monthly Fortran newsletter.
@@ -609,7 +609,7 @@ and details Fortran news from the previous month.Work has continued on the Fortr
     <title>Fortran newsletter: June 2020</title>
     <updated>2020-06-01T00:00:00+00:00</updated>
     <author>
-      <name>Milan Curcic and Ondřej Čertík</name>
+      <name>Brad Richardson</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Welcome to the June 2020 edition of the monthly Fortran newsletter.
