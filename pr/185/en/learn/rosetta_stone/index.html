@@ -1016,16 +1016,16 @@ multiplication</p></li>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id17">
 <div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id17" title="Permalink to this code">#</a></div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">empty</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
- <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
-     <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">3</span>
- <span class="k">elif</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-     <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
- <span class="k">else</span><span class="p">:</span>
-     <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">empty</span>                     
+<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>     
+<span class="n">b</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>                                  
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>                 
+  <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>                            
+      <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">3</span>                        
+  <span class="k">elif</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>                     
+      <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>                 
+  <span class="k">else</span><span class="p">:</span>                                      
+      <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  
 </pre></div>
 </div>
 </div>
@@ -1124,8 +1124,7 @@ multiplication</p></li>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">pi</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">array</span><span class="p">([(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">pi</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)])</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> 
- <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)])</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)])</span>
 </pre></div>
 </div>
 </div>
@@ -1321,9 +1320,9 @@ multiplication</p></li>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id41">
 <div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id41" title="Permalink to this code">#</a></div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
- <span class="n">r</span> <span class="o">*=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>                                     
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>            
+ <span class="n">r</span> <span class="o">*=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  
 </pre></div>
 </div>
 </div>
@@ -1347,9 +1346,9 @@ multiplication</p></li>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id43">
 <div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id43" title="Permalink to this code">#</a></div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
- <span class="n">r</span> <span class="o">*=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>                                     
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">):</span>            
+ <span class="n">r</span> <span class="o">*=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  
 </pre></div>
 </div>
 </div>
@@ -1530,11 +1529,11 @@ recommended)</p></li>
 <div class="code-block-caption"><span class="caption-text">Python a.py</span><a class="headerlink" href="#id55" title="Permalink to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
- <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                            
+ <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>          
 
-<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
- <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                                 
+ <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">5</span>  
 </pre></div>
 </div>
 </div>
@@ -1630,11 +1629,11 @@ code snippet just by appending <code class="docutils literal notranslate"><span 
 
 <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
- <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                            
+ <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>          
 
-<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
- <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                                 
+ <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">5</span>  
 </pre></div>
 </div>
 </div>
@@ -1960,9 +1959,9 @@ function’s namespace:</p>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id81">
 <div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id81" title="Permalink to this code">#</a></div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
- <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-     <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>                   
+ <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                                    
+     <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span>                    
  <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -2040,14 +2039,14 @@ function’s namespace:</p>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id87">
 <div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id87" title="Permalink to this code">#</a></div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simpson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
- <span class="k">return</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span> <span class="o">*</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">f</span><span class="p">((</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
- <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-     <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
- <span class="nb">print</span><span class="p">(</span><span class="n">simpson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">pi</span><span class="p">))</span>
- <span class="nb">print</span><span class="p">(</span><span class="n">simpson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simpson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>                       
+ <span class="k">return</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span> <span class="o">*</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">f</span><span class="p">((</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>    
+                                             
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>                           
+ <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                                    
+     <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>                       
+ <span class="nb">print</span><span class="p">(</span><span class="n">simpson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">pi</span><span class="p">))</span>                       
+ <span class="nb">print</span><span class="p">(</span><span class="n">simpson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>  
 </pre></div>
 </div>
 </div>
@@ -2156,9 +2155,9 @@ interactive session.</p>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id93">
 <div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id93" title="Permalink to this code">#</a></div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
- <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">:</span>
-     <span class="k">break</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>                  
+ <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">:</span>                                       
+     <span class="k">break</span>                       
  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2190,9 +2189,9 @@ affected by appending its name to the <code class="docutils literal notranslate"
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id95">
 <div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id95" title="Permalink to this code">#</a></div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
- <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-     <span class="k">continue</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>                 
+ <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>                   
+     <span class="k">continue</span>                   
  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2237,11 +2236,11 @@ affected by appending its name to the <code class="docutils literal notranslate"
 <span class="n">fractal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span> <span class="o">+</span> <span class="mi">255</span>
 
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ITERATIONS</span><span class="p">):</span>
- <span class="nb">print</span> <span class="s2">&quot;Iteration </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iteration </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span><span class="p">)</span>
  <span class="n">mask</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">10</span>
  <span class="n">z</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">*=</span> <span class="n">z</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
  <span class="n">z</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">+=</span> <span class="n">c</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
- <span class="n">fractal</span><span class="p">[(</span><span class="n">fractal</span> <span class="o">==</span> <span class="mi">255</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">-</span><span class="n">mask</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">254.</span> <span class="o">*</span> <span class="n">n</span> <span class="o">/</span> <span class="n">ITERATIONS</span>
+ <span class="n">fractal</span><span class="p">[(</span><span class="n">fractal</span> <span class="o">==</span> <span class="mi">255</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">~</span><span class="n">mask</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">254.</span> <span class="o">*</span> <span class="n">n</span> <span class="o">/</span> <span class="n">ITERATIONS</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saving...&quot;</span><span class="p">)</span>
 <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">&quot;fractal.dat&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">fractal</span><span class="p">))</span>
