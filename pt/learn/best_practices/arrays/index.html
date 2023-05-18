@@ -713,16 +713,15 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="arrays">
 <h1>Matrizes<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h1>
-<p>Arrays are a central object in Fortran. The creation of dynamic sized arrays
-is discussed in the <a class="reference internal" href="#./allocatable_arrays.html"><span class="xref myst">allocatable arrays section</span></a>.</p>
-<p>To pass arrays to procedures four ways are available</p>
+<p>Matrizes são um objeto central em Fortran. A criação de matrizes com tamanho dinâmico é discutido na <a class="reference internal" href="#./allocatable_arrays.html"><span class="xref myst">seção de matrizes alocáveis</span></a>.</p>
+<p>Para passar matrizes para processos há quatro formas disponíveis</p>
 <ol class="arabic simple">
-<li><p><em>assumed-shape</em> arrays</p></li>
-<li><p><em>assumed-rank</em> arrays</p></li>
-<li><p><em>explicit-shape</em> arrays</p></li>
-<li><p><em>assumed-size</em> arrays</p></li>
+<li><p>matrizes <em>assumed-shape</em></p></li>
+<li><p>matrizes <em>assumend-rank</em></p></li>
+<li><p>matrizes <em>explicit-shape</em></p></li>
+<li><p>matrizes <em>assumed-size</em></p></li>
 </ol>
-<p>The preferred way to pass arrays to procedures is as <em>assumed-shape</em> arrays</p>
+<p>O modo indicado para passar matrizes para processos é por matrizes <em>assumed-shape</em></p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">f</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(:)</span>
 <span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">i</span>
@@ -733,23 +732,19 @@ is discussed in the <a class="reference internal" href="#./allocatable_arrays.ht
 <span class="k">end subroutine </span><span class="n">f</span>
 </pre></div>
 </div>
-<p>Higher-dimensional arrays can be passed in a similar way.</p>
+<p>Matrizes de dimensões maiores podem ser passadas de modo similar.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">g</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">A</span><span class="p">(:,</span><span class="w"> </span><span class="p">:)</span>
 <span class="w">  </span><span class="p">...</span>
 <span class="k">end subroutine </span><span class="n">g</span>
 </pre></div>
 </div>
-<p>The array is simply passed by</p>
+<p>A matriz é simplesmente passada</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="k">call </span><span class="n">f</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In this case no array copy is done, which has the advantage that the shape and size
-information is automatically passed along and checked at compile and optionally at
-runtime.
-Similarly, array strides can be passed without requiring a copy of the array but as
-<em>assumed-shape</em> descriptor:</p>
+<p>Nesse caso nenhuma cópia de matriz é feita, o que tem a vantagem de que o formato e tamanho da informação é automaticamente passada para frente e checada em tempo de compilação e opcionalmente em tempo de execução. Similarmente, caminhos de matrizes podem ser passada sem requisição de cópia da matriz mas como um descritor <em>assumed-shape</em>:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="k">call </span><span class="n">f</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">))</span>
 <span class="k">call </span><span class="n">f</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">))</span>
