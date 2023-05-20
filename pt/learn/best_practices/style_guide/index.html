@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../element_operations/">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../type_casting/">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -714,7 +714,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparison-to-other-languages">
-   Comparison to Other Languages
+   Comparação com Outras Linguagens
   </a>
  </li>
 </ul>
@@ -735,52 +735,22 @@
 <h1>Guia de Estilos para o Fortran<a class="headerlink" href="#fortran-style-guide" title="Permalink to this heading">#</a></h1>
 <section id="naming-convention">
 <h2>Convenção de Nomes<a class="headerlink" href="#naming-convention" title="Permalink to this heading">#</a></h2>
-<p>Ultimately this is a matter of preference. Here is a style guide that we
-like and that seems to be prevalent in most scientific codes (as well as
-the Fortran standard library), and you are welcome to follow it.</p>
+<p>Em última análise, isso é uma questão de preferência. Aqui está um guia de estilos que gostamos e que parece ter prevalência nos códigos científicos (assim como na Fortran standard library), e recomendamos segui-lo.</p>
 <ol class="arabic simple">
-<li><p>Use lowercase for all Fortran constructs (<code class="docutils literal notranslate"><span class="pre">do</span></code>, <code class="docutils literal notranslate"><span class="pre">subroutine</span></code>,
-<code class="docutils literal notranslate"><span class="pre">module</span></code>, …).</p></li>
-<li><p>Follow short mathematical notation for mathematical
-variables/functions (<code class="docutils literal notranslate"><span class="pre">Ylm</span></code>, <code class="docutils literal notranslate"><span class="pre">Gamma</span></code>, <code class="docutils literal notranslate"><span class="pre">gamma</span></code>, <code class="docutils literal notranslate"><span class="pre">Enl</span></code>, <code class="docutils literal notranslate"><span class="pre">Rnl</span></code>, …).</p></li>
-<li><p>For other names use all lowercase: try to keep names to one or two
-syllables; if more are required, use underscores to clarify
-(<code class="docutils literal notranslate"><span class="pre">sortpair</span></code>, <code class="docutils literal notranslate"><span class="pre">whitechar</span></code>, <code class="docutils literal notranslate"><span class="pre">meshexp</span></code>, <code class="docutils literal notranslate"><span class="pre">numstrings</span></code>, <code class="docutils literal notranslate"><span class="pre">linspace</span></code>,
-<code class="docutils literal notranslate"><span class="pre">meshgrid</span></code>, <code class="docutils literal notranslate"><span class="pre">argsort</span></code>, <code class="docutils literal notranslate"><span class="pre">spline</span></code>, <code class="docutils literal notranslate"><span class="pre">spline_interp</span></code>,
-<code class="docutils literal notranslate"><span class="pre">spline_interpolate</span></code>, <code class="docutils literal notranslate"><span class="pre">stoperr</span></code>, <code class="docutils literal notranslate"><span class="pre">stop_error</span></code>, <code class="docutils literal notranslate"><span class="pre">meshexp_der</span></code>).</p></li>
+<li><p>Use caixa baixa para todos os construtores Fortran (<code class="docutils literal notranslate"><span class="pre">do</span></code>, <code class="docutils literal notranslate"><span class="pre">subroutine</span></code>, <code class="docutils literal notranslate"><span class="pre">module</span></code>, …).</p></li>
+<li><p>Use notações matemáticas curtas para variáveis/funções matemáticas (<code class="docutils literal notranslate"><span class="pre">Ylm</span></code>, <code class="docutils literal notranslate"><span class="pre">Gamma</span></code>, <code class="docutils literal notranslate"><span class="pre">gamma</span></code>, <code class="docutils literal notranslate"><span class="pre">Enl</span></code>, <code class="docutils literal notranslate"><span class="pre">Rnl</span></code>, …).</p></li>
+<li><p>Para outros nomes use tudo em caixa baixa: tente manter os nomes em uma ou duas sílabas; se há necessidade de mais, use sublinha para manter claro (<code class="docutils literal notranslate"><span class="pre">sortpair</span></code>, <code class="docutils literal notranslate"><span class="pre">whitechar</span></code>, <code class="docutils literal notranslate"><span class="pre">meshexp</span></code>, <code class="docutils literal notranslate"><span class="pre">numstrings</span></code>, <code class="docutils literal notranslate"><span class="pre">linspace</span></code>, <code class="docutils literal notranslate"><span class="pre">meshgrid</span></code>, <code class="docutils literal notranslate"><span class="pre">argsort</span></code>, <code class="docutils literal notranslate"><span class="pre">spline</span></code>, <code class="docutils literal notranslate"><span class="pre">spline_interp</span></code>, <code class="docutils literal notranslate"><span class="pre">spline_interpolate</span></code>, <code class="docutils literal notranslate"><span class="pre">stoperr</span></code>, <code class="docutils literal notranslate"><span class="pre">stop_error</span></code>, <code class="docutils literal notranslate"><span class="pre">meshexp_der</span></code>).</p></li>
 </ol>
-<p>For example «spline interpolation» can be shortened to
-<code class="docutils literal notranslate"><span class="pre">spline_interpolation</span></code>, <code class="docutils literal notranslate"><span class="pre">spline_interpolate</span></code>, <code class="docutils literal notranslate"><span class="pre">spline_interp</span></code>, <code class="docutils literal notranslate"><span class="pre">spline</span></code>,
-but not to <code class="docutils literal notranslate"><span class="pre">splineint</span></code> («int» could mean integration, integer, etc. —
-too much ambiguity, even in the clear context of a computational code).
-This is in contrast to <code class="docutils literal notranslate"><span class="pre">get_argument()</span></code> where <code class="docutils literal notranslate"><span class="pre">getarg()</span></code> is perfectly
-clean and clear.</p>
-<p>The above are general guidelines. In general, choosing the right name
-certainly depends on the word being truncated as to whether the first
-syllable is sufficient. Usually it is but clearly not always. Thus some
-thought should go into step «try to keep names to 2 syllables or less»
-since it can really affect the indicativeness and simplicity. Simple
-consistent naming rules are a real help in this regard – for both
-collaboration and for one’s own sanity when going back to some old code
-you haven’t seen in while.</p>
+<p>Por exemplo «spline interpolation» pode ser definido por <code class="docutils literal notranslate"><span class="pre">spline_interpolation</span></code>, <code class="docutils literal notranslate"><span class="pre">spline_interpolate</span></code>, <code class="docutils literal notranslate"><span class="pre">spline_interp</span></code>, <code class="docutils literal notranslate"><span class="pre">spline</span></code>, mas não <code class="docutils literal notranslate"><span class="pre">splineint</span></code> («int» pode significar integração, inteiro, etc. — muita ambiguidade, até para um contexto claro de código computacional). Isso está em contraste com <code class="docutils literal notranslate"><span class="pre">get_argument()</span></code> onde <code class="docutils literal notranslate"><span class="pre">getarg()</span></code> é perfeitamente limpo eclaro.</p>
+<p>Acima são orientações gerais. Em geral, escolhe o nome correto certamente depende se a primeira sílaba da palavra truncada é suficiente. Normalmente é claro mas nem sempre. Portanto é necessário refletir sobre «tentar manter nomes em 2 sílabas ou menos» uma vez que pode afetar o significado e a simplicidade. Regras simples de nomeação consistente é uma boa ajuda nessa questão – tanto para colaboração quando para a própria sanidade quando revisitar algum código antigo que não tenha visto há um tempo.</p>
 </section>
 <section id="indentation">
 <h2>Identação<a class="headerlink" href="#indentation" title="Permalink to this heading">#</a></h2>
-<p>Use a consistent indentation to make your code readable.
-The amount of indentation is a matter of preference, the most common choices
-are two, three or four spaces.</p>
+<p>Use uma indentação consistente para tornar seu código legível. A quantidade da indentação é uma questão de preferência, as escolhas mais comuns são duas, três ou quatro espaços.</p>
 </section>
 <section id="comparison-to-other-languages">
-<h2>Comparison to Other Languages<a class="headerlink" href="#comparison-to-other-languages" title="Permalink to this heading">#</a></h2>
-<p>On the other hand, in most of the rest of the programming world, where
-the main focus is, in one form or another, on defining and using large
-sets of complex objects, with tons of properties and behaviors, known
-only in the code in which they are defined (as opposed to defined by the
-same notation throughout the literature), it makes more sense to use
-longer, more descriptive names. The naming conventions one sees used in
-more general-purpose languages such as C++ and Python, therefore, are
-perfectly consistent with their more general-purpose missions. But
-Fortran has a different mission (numerical scientific computing).</p>
+<h2>Comparação com Outras Linguagens<a class="headerlink" href="#comparison-to-other-languages" title="Permalink to this heading">#</a></h2>
+<p>Por outro lado, na maioria do resto do mundo da programação, em que o foco é, de uma forma ou outra, em definir e usar grandes conjuntos de objetos complexos, com várias propriedades e comportamentos, conhecidos apenas no código onde são definidas (em oposição a definido pela mesma notação em toda a literatura), nesse caso faz mais sentido usar nomes grandes e mais descritivos. A convenção de nomes vista em linguagens de propósito geral tais como C++ e Python, portanto, são perfeitamente consistente com suas missões de propósito geral. Mas Fortran tem uma missão diferente (computação científica numérica).</p>
 </section>
 </section>
 

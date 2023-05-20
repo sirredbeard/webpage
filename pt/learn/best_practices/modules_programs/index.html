@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../element_operations/">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../type_casting/">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -713,12 +713,8 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="modules-and-programs">
 <h1>Módulos e Programas<a class="headerlink" href="#modules-and-programs" title="Permalink to this heading">#</a></h1>
-<p>Modules are the preferred way create modern Fortran libraries and applications.
-As a convention, one source file should always contain only one module, while
-the module name should match the filepath to allow easy navigation in larger
-projects. It is also recommended to prefix module names with the library name
-to avoid name clashes when used as dependency in other projects.</p>
-<p>An example for such a module file is given here</p>
+<p>Módulos é o modo preferido para criar bibliotecas e aplicações Fortran modernas. Como uma convenção, um arquivo de fonte única deve sempre conter apenas um módulo, enquanto que o nome do módulo deve sempre corresponder ao caminho de arquivo para facilitar a navegação em projetos grandes. É também recomendado prefixar o nome dos módulos com o nome da biblioteca para evitar conflite de nomes quando usando como dependências em outros projetos.</p>
+<p>Um exemplo para tal arquivo de módulo é dado aqui</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">!&gt; Interface to TOML processing library.</span>
 <span class="c">!&gt;</span>
 <span class="c">!&gt; ...</span>
@@ -752,29 +748,12 @@ to avoid name clashes when used as dependency in other projects.</p>
 <span class="k">end module </span><span class="n">fpm_toml</span>
 </pre></div>
 </div>
-<p>There are a few things in this example module to highlight. First, every module
-starts with comments documenting the purpose and content of the module.
-Similarly, every procedure starts with a comment briefly describing its
-purpose and the intent of the dummy arguments. Documentation is one of the most
-important parts of creating long-living software, regardless of language.</p>
-<p>Second, imports (<em>use</em>) and exports (<em>public</em>) are explicitly given, this
-allows on a glance at the module source to check the used and available
-procedures, constants and derived types. The imports are usually limited
-to the module scope rather than reimported in every procedure or interface
-scope. Similarly, exports are made explicitly by adding a <em>private</em> statement
-on a single line and explicitly listing all exported symbols in <em>public</em>
-statements.</p>
-<p>Finally, the <code class="docutils literal notranslate"><span class="pre">implicit</span> <span class="pre">none</span></code> statement works for the whole module and there
-is no need to repeat it within each procedure.</p>
-<p>Variables inside a module are static (<em>implicitly saved</em>). It is highly
-recommended to limit the usage of module variables to constant expressions,
-like parameters or enumerators only or export them as <em>protected</em> rather
-than <em>public</em>.</p>
-<p>Submodules can be used to break long dependency chains and shorten recompilation
-cascades in Fortran programs. They also offer the possibility to provide specialized
-and optimized implementations without requiring the use of preprocessor.</p>
-<p>An example from the Fortran standard library is the quadrature module, which
-only defines interfaces to module procedures, but no implementations</p>
+<p>H[a algumas coisas nesse exemplo a destacar. Primeiro, cada módulo começa com comentários documentando o propósito e conteúdo do módulo. Semelhante, cada procedimento começa com um breve comentário descrevendo seu propósito e a intenção dos argumentos fictícios. Documentação é uma das partes mais importantes para a criação de software de longa duração, independente da linguagem.</p>
+<p>Segundo, imports (<em>use</em>) e exports (<em>public</em>) são passados explicitamente, isso permite uma visão da fonte do módulo para checar os procedimentos usados e disponíveis, tipos constantes e derivadas. Os imports são normalmente limitados ao escopo do módulo ao invés de reimportado em cada escopo de procedimento ou interface. Semelhante, exports são feitos explicitamente adicionando a declaração <em>private</em> em uma única linha e explicitamente listando todos os símbolos exportados na declaração <em>public</em>.</p>
+<p>Finalmente, a declaração <code class="docutils literal notranslate"><span class="pre">implicit</span> <span class="pre">none</span></code> funciona para todo o módulo e não há necessidade de repetir dentro de cada procedimento.</p>
+<p>Variáveis dentro de módulos são estáticos (<em>implicitly saved</em>). É altamente recomendado limitar o uso de variáveis de módulos para expressões constantes, como unicamente parâmetros ou enumeráveis, ou exportá-los como <em>protected</em> ao invés de <em>public</em>.</p>
+<p>Submódulos podem ser usar para quebrar longas cadeias de dependência e encurtar a cascata de recompilação em programas Fortran. Eles também oferecem a possibilidade de fornecer implementações especializadas e otimizadas sem necessidade de uso de pré-processador.</p>
+<p>Um exemplo da Fortran standard library é o módulo quadrature, que define somente interfaces para os procedimentos de módulo, mas sem implementações</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">!&gt; Numerical integration</span>
 <span class="c">!&gt;</span>
 <span class="c">!&gt; ...</span>
@@ -804,8 +783,7 @@ only defines interfaces to module procedures, but no implementations</p>
 <span class="k">end module </span><span class="n">stdlib_quadrature</span>
 </pre></div>
 </div>
-<p>While the implementation is provided in separate submodules like the one for the
-trapezoidal integration rule given here.</p>
+<p>Enquanto que a implementação é fornecida em submódulos separados como esse para a regra de integração trapezoidal.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">!&gt; Actual implementation of the trapezoidal integration rule</span>
 <span class="c">!&gt;</span>
 <span class="c">!&gt; ...</span>
@@ -836,12 +814,8 @@ trapezoidal integration rule given here.</p>
 <span class="k">end submodule </span><span class="n">stdlib_quadrature_trapz</span>
 </pre></div>
 </div>
-<p>Note that the module procedures do not have to be implemented in the same submodule.
-Several submodules can be used to reduce the compilation load for huge modules.</p>
-<p>Finally, when setting up a program, it is recommended to keep the actual implementations
-in the program body at minimum. Reusing implementations from modules allows you to write
-reusable code and focus the program unit on conveying user input to the respective library
-functions and objects.</p>
+<p>Note que os procedimentos de módulos não tem que ser implementados no mesmo submódulo. Vários submódulos podem ser usados para reduzir a carga de compilação para módulos grandes.</p>
+<p>Finalmente, quando configurando um programa, é recomendado que mantenha as reais implementações no corpo programa ao mínimo. Reusar implementações de módulos permite que você escreva código reutilizável e foque a unidade do programa em transmitir o input do usuário para os respectivos objetos e funções da biblioteca.</p>
 </section>
 
 <div class="section ablog__blog_comments">

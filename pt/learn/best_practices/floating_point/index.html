@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../element_operations/">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../type_casting/">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -713,26 +713,20 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="floating-point-numbers">
 <h1>Números de Ponto Flutuante<a class="headerlink" href="#floating-point-numbers" title="Permalink to this heading">#</a></h1>
-<p>The default representation of floating point numbers is using single precision
-(usually 32 bits / 4 bytes). For most applications a higher precision is required.
-For this purpose a custom kind parameter can be defined.
-The recommended way of defining kind parameters is to use</p>
+<p>A representação padrão de números de ponto flutuante é usando precisão simples (usualmente 32 bits / 4 bytes). Para a maioria das aplicações uma precisão maior é necessária. Para esse propósito, um parâmetro de tipo específico pode ser definido. O meio recomendado para definir os tipos do parâmetros é usando</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">dp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">selected_real_kind</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For many purposes it also suffices to directly infer the kind parameter from
-a literal like here</p>
+<p>Para muitos propósitos, é possível inferir diretamente o tipo do parâmetro a partir de um literal como aqui</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">dp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">kind</span><span class="p">(</span><span class="mf">0.0d0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>or to rename the imported kind parameter from the <code class="docutils literal notranslate"><span class="pre">iso_fortran_env</span></code> module</p>
+<p>ou para renomear o tipo do parâmetro importado vindo do módulo <code class="docutils literal notranslate"><span class="pre">iso_fortran_dev</span></code></p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">dp</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">real64</span>
 </pre></div>
 </div>
-<p>For some insightful thoughts on kind parameters see
-<a href="https://web.archive.org/web/20200930090137/https://stevelionel.com/drfortran/2017/03/27/doctor-fortran-in-it-takes-all-kinds/">Doctor Fortran in it takes all KINDs</a>.</p>
-<p>It is recommended to have a central module to define kind parameters and include
-them with use as necessary. An example for such a module is given with</p>
+<p>Para melhor conhecimento em tipos de parâmetros veja <a href="https://web.archive.org/web/20200930090137/https://stevelionel.com/drfortran/2017/03/27/doctor-fortran-in-it-takes-all-kinds/">Doctor Fortran in it takes all KINDs</a>.</p>
+<p>É recomendado que haja um módulo central para definir os tipos de parâmetros e inclui-los à medida que usa. Um exemplo para tal módulo é dado abaixo</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">!&gt; Numerical storage size parameters for real and integer values</span>
 <span class="k">module </span><span class="n">kind_parameter</span>
 <span class="w">   </span><span class="k">implicit none</span>
@@ -757,33 +751,29 @@ them with use as necessary. An example for such a module is given with</p>
 <span class="k">end module </span><span class="n">kind_parameter</span>
 </pre></div>
 </div>
-<p>Floating point constants should always be declared including a kind parameter suffix:</p>
+<p>Constantes de ponto flutuante devem sempre ser declaradas incluindo um sufixo de tipo de parâmetro:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0_dp</span>
 <span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.5_dp</span>
 <span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.34e8_dp</span>
 </pre></div>
 </div>
-<p>It is safe to assign integers to floating point numbers without losing accuracy:</p>
+<p>É seguro atribuir inteiros para números de ponto flutuante sem perder precisão:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
 </pre></div>
 </div>
-<p>In order to impose floating point division (as opposed to integer
-division <code class="docutils literal notranslate"><span class="pre">3/4</span></code> equal to <code class="docutils literal notranslate"><span class="pre">0</span></code>), one can convert the integer to a floating
-point number by:</p>
+<p>Para forçar a divisão de ponto flutuante (em oposição à divisão de inteiro <code class="docutils literal notranslate"><span class="pre">3/4</span></code> igual a <code class="docutils literal notranslate"><span class="pre">0</span></code>), pode-se converter o inteiro para um número de ponto flutuante assim:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="c">! &#39;a&#39; is equal to 0.75_dp</span>
 </pre></div>
 </div>
-<p>or simply separate the integer division with multiplication by <code class="docutils literal notranslate"><span class="pre">1.0_dp</span></code></p>
+<p>ou simplesmente separe a divisão de inteiros com uma multiplicação por <code class="docutils literal notranslate"><span class="pre">1.0_dp</span></code></p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.0_dp</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="c">! &#39;a&#39; is equal to 0.75_dp</span>
 </pre></div>
 </div>
-<p>To print floating point numbers without losing precision use the unlimited
-format specifier <code class="docutils literal notranslate"><span class="pre">(g0)</span></code> or the exponential representation <code class="docutils literal notranslate"><span class="pre">(es24.16e3)</span></code>,
-which will give you 17 significant digits of printout.</p>
+<p>Para imprimir números de ponto flutuante sem perder precisão use o especificador de formato ilimitado <code class="docutils literal notranslate"><span class="pre">(g0)</span></code> ou a representação exponencial <code class="docutils literal notranslate"><span class="pre">(es24.16e3)</span></code>. o qual te dará 17 dígitos significativos na saída.</p>
 </section>
 
 <div class="section ablog__blog_comments">

@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../element_operations/">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../type_casting/">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -713,13 +713,7 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="integer-division">
 <h1>Divisão de Inteiros<a class="headerlink" href="#integer-division" title="Permalink to this heading">#</a></h1>
-<p>Fortran distinguishes between floating point and integer arithmetic. It is
-important to note that division for integers is always using integer
-arithmetic. Furthermore, while Fortran uses the standard order-of-operations
-(e.g. multiplication and division preceed addition and subtraction, in the
-absence of parenthesis), operations of the same precedence are evaluated from
-left to right. Consider the following example for integer division of an odd
-number:</p>
+<p>Fortran faz distinção entre aritmética de ponto flutuante e inteiro. É importante notar que a divisão para inteiros é sempre usando aritmética de inteiros. Além disso, enquanto Fortran usa o padrão de ordem de operações (p.ex. multiplicação e divisão precede adição e subtração na ausência de parênteses), operações com a mesma precedência são avaliados da esquerda para a direita. Veja o seguinte exemplo para divisão de inteiros de um número impar:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
 <span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="c">! prints 1</span>
@@ -729,10 +723,7 @@ number:</p>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="c">! prints -1</span>
 </pre></div>
 </div>
-<p>Be careful about whether you want to actually use integer arithmetic
-in this context. If you want to use floating point arithmetic instead
-make sure to cast to reals before using the division operator, or separate
-the integers by multiplying by <code class="docutils literal notranslate"><span class="pre">1.0_dp</span></code>:</p>
+<p>Seja cuidadoso ao escolher quando quer utilizar a aritmética de inteiro nesse contexto. Se ao invés você quiser usar aritmética de ponteiro flutuante, garante que você tenha convertido os reais antes de usar o operador de divisão, ou separe os inteiros com uma multiplicação por <code class="docutils literal notranslate"><span class="pre">1.0_dp</span></code>:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
 <span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="c">! prints 1.5</span>

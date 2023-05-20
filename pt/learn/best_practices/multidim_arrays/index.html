@@ -45,7 +45,7 @@
     <link rel="canonical" href="https://fortran-lang.org/en/learn/best_practices/multidim_arrays.html" />
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
-    <link rel="next" title="Element-wise Operations on Arrays" href="../element_operations/" />
+    <link rel="next" title="Operações sobre Elementos em Matrizes" href="../element_operations/" />
     <link rel="prev" title="Matrizes" href="../arrays/" />
 
 <meta
@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../element_operations/">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../type_casting/">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -713,19 +713,9 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="multidimensional-arrays">
 <h1>Arrays Multidimensionais<a class="headerlink" href="#multidimensional-arrays" title="Permalink to this heading">#</a></h1>
-<p>Multidimensional arrays are stored in column-major order. This means the
-left-most (inner-most) index addresses elements contiguously.
-From a practical point this means that the array slice <code class="docutils literal notranslate"><span class="pre">V(:,</span> <span class="pre">1)</span></code> is
-contiguous, while the stride between elements in the slice <code class="docutils literal notranslate"><span class="pre">V(1,</span> <span class="pre">:)</span></code>
-is the dimension of the columns. This is important when passing array
-slices to procedures which expect to work on contiguous data.</p>
-<p>The locality of the memory is important to consider depending on
-your application, usually when performing operations on a multidimensional
-the sequential access should always advance in unity strides.</p>
-<p>In the following example the inverse distance between two sets of points
-is evaluated. Note that the points are stored contiguously in the arrays
-<code class="docutils literal notranslate"><span class="pre">xyz1</span></code>/<code class="docutils literal notranslate"><span class="pre">xyz2</span></code>, while the inner-most loop is advancing the left-most
-index of the matrix <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+<p>Matrizes multidimensionais são armazenadas em ordem de maior coluna. Isso significa que o índice mais à esquerda (mais interno) endereça elementos continuamente. De um ponto de vista prático, isso significa que a parte da matriz <code class="docutils literal notranslate"><span class="pre">V(:,1)</span></code> é continua, enquanto que o passo entre os elementos da parte <code class="docutils literal notranslate"><span class="pre">V(1,:)</span></code> é a dimensão das colunas. Isso é importante ao passar pedaços da matriz para procedimentos que esperam trabalhar em dados contínuos.</p>
+<p>É importante considerar a localização da memória na sua aplicação, normalmente quando realizando operações multidimensionais o acesso sequencial deve sempre avançar em passos unitários.</p>
+<p>No exemplo à seguir a distância inversa entre dois conjuntos de ponto é calculada. Note que os pontos são guardados continuamente nas matrizes <code class="docutils literal notranslate"><span class="pre">xyz1</span></code>/<code class="docutils literal notranslate"><span class="pre">xyz2</span></code>, enquanto que o laço mais interno está avançando o índice mais externo da matriz <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">coulomb_matrix</span><span class="p">(</span><span class="n">xyz1</span><span class="p">,</span><span class="w"> </span><span class="n">xyz2</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">xyz1</span><span class="p">(:,</span><span class="w"> </span><span class="p">:)</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">xyz2</span><span class="p">(:,</span><span class="w"> </span><span class="p">:)</span>
@@ -739,8 +729,7 @@ index of the matrix <code class="docutils literal notranslate"><span class="pre"
 <span class="k">end subroutine </span><span class="n">coulomb_matrix</span>
 </pre></div>
 </div>
-<p>Another example would be the contraction of the third dimension of a rank
-three array:</p>
+<p>Outro exemplo seria a contradição da terceira dimensão em uma matriz tridimensional:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">amat</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
 <span class="w">  </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">amat</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 <span class="w">    </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">amat</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
@@ -750,11 +739,8 @@ three array:</p>
 <span class="k">end do</span>
 </pre></div>
 </div>
-<p>Contiguous array slices can be used in array-bound remapping to allow usage
-of higher rank arrays as lower rank arrays without requiring to reshape
-and potentially create a temporary copy of the array.</p>
-<p>For example this can be used to contract the third dimension of a rank
-three array using a matrix-vector operation:</p>
+<p>Pedaços de matrizes contínuas podem ser usadas em remapeamento vinculados à matriz para permitir uso de matriz de ordem maior como matriz de ordem menor sem necessidade de remodelar e potencialmente criar uma cópia temporária da matriz.</p>
+<p>Por exemplo, isso pode ser usado para suprimir a terceira dimensão de uma matriz tridimensional usando uma operação matriz-vetor:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">matmul312</span><span class="p">(</span><span class="n">amat</span><span class="p">,</span><span class="w"> </span><span class="n">bvec</span><span class="p">,</span><span class="w"> </span><span class="n">cmat</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">contiguous</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">target</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">amat</span><span class="p">(:,</span><span class="w"> </span><span class="p">:,</span><span class="w"> </span><span class="p">:)</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">bvec</span><span class="p">(:)</span>

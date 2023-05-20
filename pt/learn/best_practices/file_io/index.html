@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../element_operations/">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../type_casting/">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -713,29 +713,22 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="file-input-output">
 <h1>Entrada/Saída em Ficheiros<a class="headerlink" href="#file-input-output" title="Permalink to this heading">#</a></h1>
-<p>In Fortran files are managed by unit identifiers. Interaction with the filesystem
-mainly happens through the <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">inquire</span></code> built-in procedures.
-Generally, the workflow is to open a file to a unit identifier, read and/or write
-to it and close it again.</p>
+<p>Em Fortran, arquivos são gerenciados por identificadores unitários. Interações com o sistema de arquivos acontece principalmente através dos procedimentos integrados <code class="docutils literal notranslate"><span class="pre">open</span></code> e <code class="docutils literal notranslate"><span class="pre">inquire</span></code>. Geralmente, o fluxo de trabalho é abrir um arquivo para um identificador unitário, ler e/ou escrever nele e fechá-lo novamente.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">io</span>
 <span class="k">open</span><span class="p">(</span><span class="n">newunit</span><span class="o">=</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="s2">&quot;log.txt&quot;</span><span class="p">)</span>
 <span class="c">! ...</span>
 <span class="k">close</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>By default the file will be created if it is not existing already and opened for
-both reading and writing. Writing to an existing file will start in the first
-record (line) and therefore overwrite the file by default.</p>
-<p>To create a read-only access to a file the <code class="docutils literal notranslate"><span class="pre">status</span></code> and <code class="docutils literal notranslate"><span class="pre">action</span></code> have to be
-specified with</p>
+<p>Por padrão o arquivo será criado se já não existir e aberto tanto para ler quanto escrever. Escrever em um arquivo existente começará no primeiro registro (linha) e portanto sobrescreverá o arquivo por padrão.</p>
+<p>Para um acesso de somente leitura em um arquivo o <code class="docutils literal notranslate"><span class="pre">status</span></code> e a <code class="docutils literal notranslate"><span class="pre">action</span></code> tem que ser especificados com</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">io</span>
 <span class="k">open</span><span class="p">(</span><span class="n">newunit</span><span class="o">=</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="s2">&quot;log.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="o">=</span><span class="s2">&quot;old&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;read&quot;</span><span class="p">)</span>
 <span class="k">read</span><span class="p">(</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>
 <span class="k">close</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In case the file is not present a runtime error will occur. To check for the existence
-of a file prior to opening it the <code class="docutils literal notranslate"><span class="pre">inquire</span></code> function can be used</p>
+<p>No caso do arquivo não estar presente um erro em tempo de execução ocorrerá. Para checar se o arquivo existe antes de abri-lo, a função <code class="docutils literal notranslate"><span class="pre">inquire</span></code> pode ser usada</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">logical</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">exists</span>
 <span class="k">inquire</span><span class="p">(</span><span class="k">file</span><span class="o">=</span><span class="s2">&quot;log.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">exist</span><span class="o">=</span><span class="n">exists</span><span class="p">)</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">exists</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
@@ -743,7 +736,7 @@ of a file prior to opening it the <code class="docutils literal notranslate"><sp
 <span class="k">end if</span>
 </pre></div>
 </div>
-<p>Alternatively, the <code class="docutils literal notranslate"><span class="pre">open</span></code> procedure can return an optional <em>iostat</em> and <em>iomsg</em>:</p>
+<p>Alternativamente, o procedimento <code class="docutils literal notranslate"><span class="pre">open</span></code> pode retornar opcionalmente <em>iostat</em> e <em>iomsg</em>:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="nb">stat</span>
 <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">msg</span>
 <span class="k">open</span><span class="p">(</span><span class="n">newunit</span><span class="o">=</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="s2">&quot;log.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="o">=</span><span class="s2">&quot;old&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;read&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
@@ -753,20 +746,15 @@ of a file prior to opening it the <code class="docutils literal notranslate"><sp
 <span class="k">end if</span>
 </pre></div>
 </div>
-<p>Note that <em>iomsg</em> requires a fixed-length character variable with sufficient storage
-size to hold the error message.</p>
-<p>Similarly, writing to a file happens by using the <em>status</em> and <em>action</em> keyword.
-To create a new file use</p>
+<p>Note que <em>iomsq</em> requer uma variável de caracteres de tamanho fixado com espaço suficiente para obter a mensagem de erro.</p>
+<p>Similarmente, escrever em um arquivo ocorre quando usa as palavras-chave <em>status</em> e <em>action</em>. Para criar um novo arquivo use</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">io</span>
 <span class="k">open</span><span class="p">(</span><span class="n">newunit</span><span class="o">=</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="s2">&quot;log.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="o">=</span><span class="s2">&quot;new&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;write&quot;</span><span class="p">)</span>
 <span class="k">write</span><span class="p">(</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>
 <span class="k">close</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">status=&quot;replace&quot;</span></code> can be used to overwrite an existing file.
-It is highly recommended to first check for the existence of a file before deciding
-on the <em>status</em> to use.
-To append to an output file the <em>position</em> keyword can be specified explicitly with</p>
+<p>Alternativamente, <code class="docutils literal notranslate"><span class="pre">status=&quot;replace&quot;</span></code> pode ser usado para sobrescrever um arquivo existente. É altamente recomendado que primeiro cheque a existência do arquivo antes de decidir pelo uso do <em>status</em>. Para anexar em um arquivo de saída a palavra-chave <em>position</em> pode ser especificada explicitamente com</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">io</span>
 <span class="k">open</span><span class="p">(</span><span class="n">newunit</span><span class="o">=</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="k">file</span><span class="o">=</span><span class="s2">&quot;log.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;append&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">  </span><span class="p">&amp;</span><span class="w"> </span><span class="n">status</span><span class="o">=</span><span class="s2">&quot;old&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;write&quot;</span><span class="p">)</span>
@@ -775,11 +763,8 @@ To append to an output file the <em>position</em> keyword can be specified expli
 <span class="k">close</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To reset the position in a file the built-in procedures <code class="docutils literal notranslate"><span class="pre">rewind</span></code> and <code class="docutils literal notranslate"><span class="pre">backspace</span></code>
-can be used. <code class="docutils literal notranslate"><span class="pre">rewind</span></code> will reset to the first record (line), while <code class="docutils literal notranslate"><span class="pre">backspace</span></code> will
-return to the previous record (line).</p>
-<p>Finally, to delete a file the file has to be opened and can be deleted after closing
-with</p>
+<p>Para reiniciar a posição em um arquivo, os procedimentos integrados <code class="docutils literal notranslate"><span class="pre">rewind</span></code> e <code class="docutils literal notranslate"><span class="pre">backspace</span></code> podem ser usados. <code class="docutils literal notranslate"><span class="pre">rewind</span></code> irá reiniciar no primeiro registro (linha), enquanto <code class="docutils literal notranslate"><span class="pre">backspace</span></code> irá retornar para o registro anterior (linha).</p>
+<p>Finalmente, para deletar um arquivo o arquivo deve ser aberto e pode ser deletado após fechar com</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">logical</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">exists</span>
 <span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="nb">stat</span>
 <span class="k">inquire</span><span class="p">(</span><span class="k">file</span><span class="o">=</span><span class="s2">&quot;log.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">exist</span><span class="o">=</span><span class="n">exists</span><span class="p">)</span>
@@ -789,8 +774,7 @@ with</p>
 <span class="k">end if</span>
 </pre></div>
 </div>
-<p>A useful IO feature is scratch files, which can be opened with <code class="docutils literal notranslate"><span class="pre">status=&quot;scratch&quot;</span></code>.
-They are automatically deleted after closing the unit identifier.</p>
+<p>Uma funcionalidade útil de IO é arquivos de rascunho, que podem ser abertos com <code class="docutils literal notranslate"><span class="pre">status=&quot;scratch&quot;</span></code>. Eles serão automaticamente deletados após fechar o identificador unitário.</p>
 </section>
 
 <div class="section ablog__blog_comments">

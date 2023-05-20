@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
-    <title>Type Casting in Callbacks &#8212; Fortran Programming Language</title>
+    <title>Conversão de Tipos em Callbacks &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../element_operations/">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -757,17 +757,12 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="type-casting-in-callbacks">
-<h1>Type Casting in Callbacks<a class="headerlink" href="#type-casting-in-callbacks" title="Permalink to this heading">#</a></h1>
-<p>There are essentially five different ways to do type casting, each with its own
-advantages and disadvantages.</p>
-<p>The methods I, II and V can be used both in C and Fortran. The methods
-III and IV are only available in Fortran. The method VI is obsolete and
-should not be used.</p>
+<h1>Conversão de Tipos em Callbacks<a class="headerlink" href="#type-casting-in-callbacks" title="Permalink to this heading">#</a></h1>
+<p>Há essencialmente cinco jeitos diferentes de fazer a conversão de tipo, cada qual com suas vantagens e desvantagens.</p>
+<p>Os métodos, I, II e V são usados em C e Fortran. Os métodos III e IV estão disponíveis somente em Fortran. O método VI é obsoleto e não deve ser usado.</p>
 <section id="work-arrays">
 <h2>Arrays de Trabalho<a class="headerlink" href="#work-arrays" title="Permalink to this heading">#</a></h2>
-<p>Pass a «work array» which is packed with everything needed by
-the caller and unpacked by the called routine. This is the old way –
-e.g., how LAPACK does it.</p>
+<p>Passar uma «matriz de trabalho» a qual é empacotada com tudo que é necessária pelo invocador e desempacotado pela rotina invocada. Esse é o modo antigo – p.ex.:, como o LAPACK faz isso.</p>
 <p>Cálculo de Integrais:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">integrals</span>
 <span class="w">  </span><span class="k">use </span><span class="n">types</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span>

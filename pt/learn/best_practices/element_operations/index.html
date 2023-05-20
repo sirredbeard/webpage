@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
-    <title>Element-wise Operations on Arrays &#8212; Fortran Programming Language</title>
+    <title>Operações sobre Elementos em Matrizes &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../type_casting/">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -712,16 +712,14 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="element-wise-operations-on-arrays">
-<h1>Element-wise Operations on Arrays<a class="headerlink" href="#element-wise-operations-on-arrays" title="Permalink to this heading">#</a></h1>
-<p>There are three approaches to perform element-wise operations on arrays when using subroutines and functions:</p>
+<h1>Operações sobre Elementos em Matrizes<a class="headerlink" href="#element-wise-operations-on-arrays" title="Permalink to this heading">#</a></h1>
+<p>Há três abordagens para realizar operações sobre elementos em matrizes quando usando subrotinas e funções:</p>
 <ul class="simple">
 <li><p>Procedimentos do tipo <code class="docutils literal notranslate"><span class="pre">elemental</span></code></p></li>
 <li><p>matrizes <em>explicit-shape</em></p></li>
-<li><p>implementing the operation for vectors and write simple wrapper
-subroutines (that use <code class="docutils literal notranslate"><span class="pre">reshape</span></code> internally) for each array shape</p></li>
+<li><p>implementando a operação para vetores e escrevendo um empacotador simples de subrotinas (que use <code class="docutils literal notranslate"><span class="pre">reshape</span></code> internamente) para cada forma da matriz</p></li>
 </ul>
-<p>In the first approach, one uses the <code class="docutils literal notranslate"><span class="pre">elemental</span></code> keyword to create a
-function like this:</p>
+<p>Na primeira abordagem, usa-se a palavra-chave <code class="docutils literal notranslate"><span class="pre">elemental</span></code> para criar uma função como essa:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="k">elemental function </span><span class="n">nroot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span>
@@ -729,8 +727,7 @@ function like this:</p>
 <span class="k">end function</span>
 </pre></div>
 </div>
-<p>All arguments (in and out) must be scalars. You can then use this
-function with arrays of any (compatible) shape, for example:</p>
+<p>Todos os argumentos (dentro e fora) devem ser escalares. Você pode então usar essa função com matrizes de qualquer tipo (compatível), por exemplo:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">nroot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">9._dp</span><span class="p">)</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">nroot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">1._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">4._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">9._dp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0._dp</span><span class="p">])</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">nroot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nb">reshape</span><span class="p">([</span><span class="mf">1._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">4._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">9._dp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0._dp</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]))</span>
@@ -738,7 +735,7 @@ function with arrays of any (compatible) shape, for example:</p>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">nroot</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">],</span><span class="w"> </span><span class="mf">4._dp</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The output will be:</p>
+<p>A saída será:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="mf">3.0000000000000000</span>
 <span class="mf">1.0000000000000000</span><span class="w">        </span><span class="mf">2.0000000000000000</span><span class="w">        </span><span class="mf">3.0000000000000000</span><span class="w">        </span><span class="mf">3.1622776601683795</span>
 <span class="mf">1.0000000000000000</span><span class="w">        </span><span class="mf">2.0000000000000000</span><span class="w">        </span><span class="mf">3.0000000000000000</span><span class="w">        </span><span class="mf">3.1622776601683795</span>
@@ -746,18 +743,9 @@ function with arrays of any (compatible) shape, for example:</p>
 <span class="mf">2.0000000000000000</span><span class="w">        </span><span class="mf">1.5874010519681994</span><span class="w">        </span><span class="mf">1.4142135623730951</span><span class="w">        </span><span class="mf">1.3195079107728942</span>
 </pre></div>
 </div>
-<p>In the above, typically <code class="docutils literal notranslate"><span class="pre">n</span></code> is a parameter and <code class="docutils literal notranslate"><span class="pre">x</span></code> is the array of an
-arbitrary shape, but as you can see, Fortran does not care as long as
-the final operation makes sense (if one argument is an array, then the
-other arguments must be either arrays of the same shape or scalars). If
-it does not, you will get a compiler error.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">elemental</span></code> keyword implies the <code class="docutils literal notranslate"><span class="pre">pure</span></code> keyword, so the procedure
-must be pure. It results that <code class="docutils literal notranslate"><span class="pre">elemental</span> <span class="pre">procedures</span></code> can only use <code class="docutils literal notranslate"><span class="pre">pure</span></code> procedures and have no side effects.</p>
-<p>If the elemental procedure algorithm can be made faster using array
-operations inside, or if for some reasons the arguments must be arrays of
-incompatible shapes, then one should use the other two approaches. One
-can make <code class="docutils literal notranslate"><span class="pre">nroot</span></code> operate on a vector and write a simple wrapper for
-other array shapes, e.g.:</p>
+<p>No código acima, tipicamente <code class="docutils literal notranslate"><span class="pre">n</span></code> é um parâmetro e <code class="docutils literal notranslate"><span class="pre">x</span></code> é uma matriz de formato arbitrário, mas como pode ver, Fortran não se importa desde que a operação final faça sentido (se um argumento é uma matriz, então os outros argumentos devem ser matrizes do mesmo formato ou escalares). Se não for assim, você receberá um erro do compilador.</p>
+<p>A palavra-chave <code class="docutils literal notranslate"><span class="pre">elemental</span></code> implica na palavra-chave <code class="docutils literal notranslate"><span class="pre">pure</span></code>, então o procedimento deve ser puro. Isso resulta que <code class="docutils literal notranslate"><span class="pre">elemental</span> <span class="pre">procedures</span></code> só podem usar procedimentos <code class="docutils literal notranslate"><span class="pre">pure</span></code> e não há efeitos colaterais.</p>
+<p>Se o algoritmo de procedimento elementar puder ser feito mais rápido usando operações de matrizes internamente, ou se por alguma razão os argumentos deverão ser matrizes de formatos incompatíveis, então deve-se usar uma das duas outras abordagens. Pode-se fazer o <code class="docutils literal notranslate"><span class="pre">nroot</span></code> operar em um vetor ou escrever um simples empacotador para os outros formatos das matrizes, p.ex.:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">function </span><span class="n">nroot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="p">(:)</span>
@@ -782,7 +770,7 @@ other array shapes, e.g.:</p>
 <span class="k">end function</span>
 </pre></div>
 </div>
-<p>And use as follows:</p>
+<p>E use da seguinte forma:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">nroot_0d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">9._dp</span><span class="p">)</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">nroot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">1._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">4._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">9._dp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0._dp</span><span class="p">])</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">nroot_2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nb">reshape</span><span class="p">([</span><span class="mf">1._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">4._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">9._dp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0._dp</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]))</span>
@@ -794,8 +782,7 @@ other array shapes, e.g.:</p>
 <span class="mf">1.0000000000000000</span><span class="w">        </span><span class="mf">2.0000000000000000</span><span class="w">        </span><span class="mf">3.0000000000000000</span><span class="w">        </span><span class="mf">3.1622776601683795</span>
 </pre></div>
 </div>
-<p>Or one can use <em>explicit-shape</em> arrays as
-follows:</p>
+<p>Ou pode-se usar matrizes <em>explicite-shape</em> como apresentado a seguir:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">function </span><span class="n">nroot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">k</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
@@ -810,7 +797,7 @@ follows:</p>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">nroot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nb">reshape</span><span class="p">([</span><span class="mf">1._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">4._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">9._dp</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0._dp</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]))</span>
 </pre></div>
 </div>
-<p>The output is the same as before:</p>
+<p>A saída é a mesma que a anterior:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="mf">3.0000000000000000</span>
 <span class="mf">1.0000000000000000</span><span class="w">        </span><span class="mf">2.0000000000000000</span><span class="w">        </span><span class="mf">3.0000000000000000</span><span class="w">        </span><span class="mf">3.1622776601683795</span>
 <span class="mf">1.0000000000000000</span><span class="w">        </span><span class="mf">2.0000000000000000</span><span class="w">        </span><span class="mf">3.0000000000000000</span><span class="w">        </span><span class="mf">3.1622776601683795</span>

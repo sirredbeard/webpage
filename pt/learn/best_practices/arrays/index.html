@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../element_operations/">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../type_casting/">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -750,14 +750,12 @@
 <span class="k">call </span><span class="n">f</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>This should always be your default way of passing arrays in and out of subroutines.
-Avoid passing arrays as whole slices, as it obfuscates the actual intent of the code:</p>
+<p>Essa deve ser sempre o meio padrão de passar matrizes para dentro e para fora de subrotinas. Evite passar matriz como pedaços inteiros, uma vez que ofusca a intenção real do código:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="k">call </span><span class="n">f</span><span class="p">(</span><span class="n">r</span><span class="p">(:))</span>
 </pre></div>
 </div>
-<p>In case more general arrays should be passed to a procedure the <em>assumed-rank</em>
-functionality introduced in the Fortran 2018 standard can be used</p>
+<p>No caso de precisar matrizes genéricas para um procedimento, a funcionalidade <em>assumed-rank</em> introduzida na especificação Fortran 2018 pode ser usada</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">h</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(..)</span>
 <span class="w">  </span><span class="k">select </span><span class="n">rank</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
@@ -769,15 +767,9 @@ functionality introduced in the Fortran 2018 standard can be used</p>
 <span class="k">end subroutine </span><span class="n">h</span>
 </pre></div>
 </div>
-<p>The actual rank can be queried at runtime using the <code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">rank</span></code> construct.
-This easily allows to create more generic functions that have to deal with
-different array ranks.</p>
-<p><em>Explicit-shape</em> arrays can be useful for returning data from functions.
-Most of their functionality can be provided by <em>assumed-shape</em> and <em>assumed-rank</em>
-arrays but they find frequent use for interfacing with C or in legacy Fortran
-procedures, therefore they will be discussed briefly here.</p>
-<p>To use <em>explicit-shape</em> arrays, the dimension has to be passed explicitly as dummy
-argument like in the example below</p>
+<p>A atual classificação pode ser consultada em tempo de execução usando o construto <code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">rank</span></code>. Isso facilmente permite criar funções mais genéricas que precisam lidar com diferentes classificações de matrizes.</p>
+<p>Matrizes <em>explicit-shape</em> pode ser útil para retornar dados para funções. A maioria de suas funcionalidades pode ser fornecidas por <em>assumed-shape</em> e matrizes <em>assumed-rank</em>, mas encontram uso frequente para servir de interface com C ou em processos Fortran legado, portanto serão discutidos brevemente aqui.</p>
+<p>Para usar matrizes <em>explicit-shape</em>, a dimensão tem que ser passada explicitamente como um argumento fictício como no exemplo abaixo</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -788,7 +780,7 @@ argument like in the example below</p>
 <span class="k">end subroutine</span>
 </pre></div>
 </div>
-<p>For high-dimensional arrays additional indices have to be passed.</p>
+<p>Para matrizes de altas dimensões índices adicionais tem que ser passados.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">g</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
@@ -796,23 +788,20 @@ argument like in the example below</p>
 <span class="k">end subroutine</span>
 </pre></div>
 </div>
-<p>The routines can be invoked by</p>
+<p>As rotinas podem ser invocadas por</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="n">s</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 <span class="k">call </span><span class="n">f</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">r</span><span class="p">),</span><span class="w"> </span><span class="n">r</span><span class="p">)</span>
 <span class="k">call </span><span class="n">g</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Note that the shape is not checked, so the following would be legal code
-that will potentially yield incorrect results:</p>
+<p>Note que o formato não é checado, assim o código legal à seguir potencialmente produzirá resultados incorretos:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">s</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 <span class="k">call </span><span class="n">g</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w">  </span><span class="c">! s(12, 1) in g</span>
 <span class="k">call </span><span class="n">g</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w">  </span><span class="c">! s(4, 3) in g</span>
 </pre></div>
 </div>
-<p>In this case the memory layout is preserved but the shape is changed.
-Also, <em>explicit-shape</em> arrays require contiguous memory and will create temporary
-arrays in case non-contiguous array strides are passed.</p>
-<p>To return an array from a function with <em>explicit-shape</em> use</p>
+<p>Nesse caso a configuração da memória é preservada mas o formato será mudado. Além disso, matrizes <em>explicit-shape</em> requerem memória contínua e irão criar matrizes temporárias no caso de caminhos de array não-contínuos forem passados.</p>
+<p>Para retornar uma matriz vinda de uma função com uso <em>explicit-shape</em></p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">function </span><span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -823,37 +812,30 @@ arrays in case non-contiguous array strides are passed.</p>
 <span class="k">end function</span>
 </pre></div>
 </div>
-<p>Finally, there are <em>assumed-size</em> arrays, which provide the least compile-time and run-time
-checking and can be found frequently in legacy code. They should be avoided
-in favour of <em>assumed-shape</em> or <em>assumed-rank</em> arrays.
-An <em>assumed-size</em> array dummy argument is identified by an asterisk as the last dimension,
-this disables the usage of this array with many intrinsic functions, like <code class="docutils literal notranslate"><span class="pre">size</span></code> or
-<code class="docutils literal notranslate"><span class="pre">shape</span></code>.</p>
-<p>To check for the correct size and shape of an <em>assumed-shape</em> array the <code class="docutils literal notranslate"><span class="pre">size</span></code> and
-<code class="docutils literal notranslate"><span class="pre">shape</span></code> intrinsic functions can be used to query for those properties</p>
+<p>Finalmente, há matrizes <em>assumed-size</em>, que provém o menor tempo de compilação e checagem em tempo de execução e pode ser encontrado frequentemente em código legado. Eles devem ser evitados em favor de matrizes <em>assumed-shape</em> ou <em>assumed-rank</em>. Um argumento fictício de uma matriz <em>assumed-size</em> é identificada por um asterisco como última dimensão, isso desativa o uso dessa matriz com muitas funções intrínsecas, como <code class="docutils literal notranslate"><span class="pre">size</span></code> ou <code class="docutils literal notranslate"><span class="pre">shape</span></code>.</p>
+<p>Para checar o tamanho e formato correto de uma matriz <em>assumed-shape</em> as funções intrínsecas <code class="docutils literal notranslate"><span class="pre">size</span></code> e <code class="docutils literal notranslate"><span class="pre">shape</span></code> podem ser usadas para consultas essas propriedades</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">error stop</span><span class="w"> </span><span class="s2">&quot;Incorrect size of &#39;r&#39;&quot;</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="nb">shape</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]))</span><span class="w"> </span><span class="k">error stop</span><span class="w"> </span><span class="s2">&quot;Incorrect shape of &#39;r&#39;&quot;</span>
 </pre></div>
 </div>
-<p>Note that <code class="docutils literal notranslate"><span class="pre">size</span></code> returns the total size of all dimensions. To obtain the shape of
-a specific dimension add it as second argument to the function.</p>
-<p>Arrays can be initialized by using an array constructor</p>
+<p>Note que <code class="docutils literal notranslate"><span class="pre">size</span></code> retorna o tamanho total de todas as dimensões. Para obter o formato de uma dimensão específica adicione essa dimensão como segundo argumento da função.</p>
+<p>Matrizes podem ser inicializadas usando construtor para matrizes</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The array constructor can be annotated with the type of the constructed array</p>
+<p>O construtor de matriz pode ser anotado com o tipo da matriz construída</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Implicit do loops can be used inside an array constructor as well</p>
+<p>Laços implícitos «do» podem também ser usados dentro de um construtor de matriz</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[(</span><span class="kt">real</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">r</span><span class="p">))]</span>
 </pre></div>
 </div>
-<p>In order for the array to start with different index than 1, do:</p>
+<p>Para que a matriz inicie com índice diferente de 1, faça:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">print_eigenvalues</span><span class="p">(</span><span class="n">kappa_min</span><span class="p">,</span><span class="w"> </span><span class="n">lam</span><span class="p">)</span>
 <span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">kappa_min</span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lam</span><span class="p">(</span><span class="n">kappa_min</span><span class="p">:)</span>

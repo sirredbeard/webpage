@@ -45,7 +45,7 @@
     <link rel="canonical" href="https://fortran-lang.org/en/learn/best_practices/callbacks.html" />
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
-    <link rel="next" title="Type Casting in Callbacks" href="../type_casting/" />
+    <link rel="next" title="Conversão de Tipos em Callbacks" href="../type_casting/" />
     <link rel="prev" title="Entrada/Saída em Ficheiros" href="../file_io/" />
 
 <meta
@@ -566,7 +566,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../element_operations/">
-     Element-wise Operations on Array
+     Operações em Elementos em Matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -586,7 +586,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../type_casting/">
-     Type Casting in Callbacks
+     Conversão de Tipos em Callbacks
     </a>
    </li>
   </ul>
@@ -713,10 +713,8 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="callbacks">
 <h1>Callbacks<a class="headerlink" href="#callbacks" title="Permalink to this heading">#</a></h1>
-<p>A callback is a function that is passed as an argument to another function.</p>
-<p>The preferred way of creating such a callback is to provide an <em>abstract interface</em>
-declaring the signature of the callback. This allows to use compile time checks
-for the passed callback.</p>
+<p>Um callback é uma função que é passada como argumento para outra função.</p>
+<p>A forma preferível de criar o callback é de prover uma <em>abstract interface</em> declarando a assinatura do callback. Isso permite que use checagem em tempo de compilação para o callback passado.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">integrals</span>
 <span class="w">  </span><span class="k">use </span><span class="n">types</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span>
 <span class="w">  </span><span class="k">implicit none</span>
@@ -744,8 +742,7 @@ for the passed callback.</p>
 <span class="k">end module </span><span class="n">integrals</span>
 </pre></div>
 </div>
-<p>The function can then be used with a callback by importing the module
-as shown in the following example</p>
+<p>A função pode então ser usada com um callback ao importar o módulo como mostrado no exemplo a seguir</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">demo_functions</span>
 <span class="w">  </span><span class="k">use </span><span class="n">types</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span>
 <span class="w">  </span><span class="k">implicit none</span>
@@ -771,8 +768,7 @@ as shown in the following example</p>
 <span class="k">end module </span><span class="n">demo_functions</span>
 </pre></div>
 </div>
-<p>Exporting the abstract interface allows you to create procedure pointers with the
-correct signature and also to extend the callback further as shown here</p>
+<p>Exportando a interface abstrata permite que você crie ponteiros de procedimento com a assinatura correto e também estender o callback além como mostrado aqui</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">demo_integrals</span>
 <span class="w">  </span><span class="k">use </span><span class="n">types</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span>
 <span class="w">  </span><span class="k">use </span><span class="n">integrals</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">simpson</span><span class="p">,</span><span class="w"> </span><span class="n">integrable_function</span>
