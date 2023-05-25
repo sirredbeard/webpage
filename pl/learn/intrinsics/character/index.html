@@ -2230,16 +2230,16 @@ WRITE() and PRINT() when each statement completes:</p>
 <span class="w">   </span><span class="k">end</span>
 </pre></div>
 </div>
-<p>produces:
-x=11</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>y=22
+<p>produces:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>   x=11
+
+   y=22
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Alternatively, a &quot;/&quot; descriptor in a format is used to generate a
-newline on the output. For example:
-```fortran
-   write(*,&#39;(a,1x,i0,/,a)&#39;) &#39;x =&#39;,11,&#39;is the answer&#39;
-   end
+<p>Alternatively, a „/” descriptor in a format is used to generate a
+newline on the output. For example:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a,1x,i0,/,a)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;x =&#39;</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="s1">&#39;is the answer&#39;</span>
+<span class="w">   </span><span class="k">end</span>
 </pre></div>
 </div>
 <p>produces:</p>
