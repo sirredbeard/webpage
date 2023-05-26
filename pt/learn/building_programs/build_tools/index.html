@@ -792,36 +792,21 @@ all
 <span class="w">	</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
-<p>Note how we declare variables in <code class="docutils literal notranslate"><span class="pre">make</span></code>, you should always declare your local
-variables with <code class="docutils literal notranslate"><span class="pre">:=</span></code>. To access the content of a variable we use the <code class="docutils literal notranslate"><span class="pre">$(...)</span></code>,
-note that we have to enclose the variable name in parenthesis.</p>
+<p>Note como declaramos as variáveis em <code class="docutils literal notranslate"><span class="pre">make</span></code>, você deve sempre declarar suas variáveis locais com <code class="docutils literal notranslate"><span class="pre">:=</span></code>. Para acessar o conteúdo de uma variável nós usamos o <code class="docutils literal notranslate"><span class="pre">$(...)</span></code>, note que nós temos que fechar o nome da variável dentro de parênteses.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>The declaration of variables is usually done with <code class="docutils literal notranslate"><span class="pre">:=</span></code>, but <code class="docutils literal notranslate"><span class="pre">make</span></code> does
-support <em>recursively expanded</em> variables as well with <code class="docutils literal notranslate"><span class="pre">=</span></code>.
-Normally, the first kind of declaration is wanted, as they are more predictable
-and do not have a runtime overhead from the recursive expansion.</p>
+<p>A declaração das variáveis é geralmente feita com <code class="docutils literal notranslate"><span class="pre">:=</span></code>, mas <code class="docutils literal notranslate"><span class="pre">make</span></code> suporta variáveis <em>recursively expanded</em> assim como com <code class="docutils literal notranslate"><span class="pre">=</span></code>. Normalmente, o primeiro tipo de declaração é exigido, já que são mais previsíveis e não precisam de um overhead de execução em expansão recursiva.</p>
 </div>
-<p>We introduced a dependency of the rule all, namely the content of the variable
-<code class="docutils literal notranslate"><span class="pre">PROG</span></code>, also we modified the printout, we want to see all the dependencies
-of this rule, which are stored in the variable <code class="docutils literal notranslate"><span class="pre">$^</span></code>.
-Now for the new rule which we name after the value of the variable <code class="docutils literal notranslate"><span class="pre">PROG</span></code>,
-it does the same thing we did before for the rule <em>all</em>, note how the value
-of <code class="docutils literal notranslate"><span class="pre">$&#64;</span></code> is dependent on the rule it is used in.</p>
-<p>Again check by running the <code class="docutils literal notranslate"><span class="pre">make</span></code>, you should see:</p>
+<p>Nós introduzimos uma dependência na regra all, a saber o conteúdo da variável <code class="docutils literal notranslate"><span class="pre">PROG</span></code>, também modificamos a impressão, nós queremos ver todas as dependências dessa regra, as quais estão armazenadas na variável <code class="docutils literal notranslate"><span class="pre">$^</span></code>. Agora para a nova regra que nomeamos com o valor da variável <code class="docutils literal notranslate"><span class="pre">PROG</span></code>, ela fará a mesma coisa que fizemos anteriormente para a regra <em>all</em>, note como o valor de <code class="docutils literal notranslate"><span class="pre">$&#64;</span></code> é dependente da regra à qual é utilizada.</p>
+<p>De novo executando o <code class="docutils literal notranslate"><span class="pre">make</span></code>, você deverá ver:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>echo &quot;my_prog&quot;
 my_prog
 echo &quot;all depends on my_prog&quot;
 all depends on my_prog
 </pre></div>
 </div>
-<p>The dependency has been correctly resolved and evaluated before performing
-any action on the rule <em>all</em>.
-Let’s run only the second rule: type <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">my_prog</span></code> and you will only find
-the first two lines in your terminal.</p>
-<p>The next step is to perform some real actions with <code class="docutils literal notranslate"><span class="pre">make</span></code>, we take
-the source code from the previous chapter here and add new rules to our
-<code class="docutils literal notranslate"><span class="pre">Makefile</span></code>:</p>
+<p>A dependência foi corretamente solucionada e avaliada antes de executar qualquer ação na regra <em>all</em>. Vamos executar a segunda regra: escreva <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">my_prog</span></code> e você verá apenas as duas primeiras linhas no seu terminal.</p>
+<p>O próximo passo é executar algumas ações real com <code class="docutils literal notranslate"><span class="pre">make</span></code>, nós usamos o código fonte do capítulo anterior aqui e adicionamos novas regras ao nosso <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>:</p>
 <div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nv">OBJS</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>tabulate.o<span class="w"> </span>functions.o
 <span class="nv">PROG</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>my_prog
 
@@ -834,19 +819,9 @@ the source code from the previous chapter here and add new rules to our
 <span class="w">	</span>gfortran<span class="w"> </span>-c<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span><span class="w"> </span>$&lt;
 </pre></div>
 </div>
-<p>We define <code class="docutils literal notranslate"><span class="pre">OBJS</span></code> which stands for object files, our program depends on
-those <code class="docutils literal notranslate"><span class="pre">OBJS</span></code> and for each object file we create a rule to make them from
-a source file.
-The last rule we introduced is a pattern matching rule, <code class="docutils literal notranslate"><span class="pre">%</span></code> is the common
-pattern between <code class="docutils literal notranslate"><span class="pre">tabulate.o</span></code> and <code class="docutils literal notranslate"><span class="pre">tabulate.f90</span></code>, which connects our object file
-<code class="docutils literal notranslate"><span class="pre">tabulate.o</span></code> to the source file <code class="docutils literal notranslate"><span class="pre">tabulate.f90</span></code>.
-With this set, we run our compiler, here <code class="docutils literal notranslate"><span class="pre">gfortran</span></code> and translate the source
-file into an object file, we do not create an executable yet due to the <code class="docutils literal notranslate"><span class="pre">-c</span></code>
-flag.
-Note the usage of the <code class="docutils literal notranslate"><span class="pre">$&lt;</span></code> for the first element of the dependencies here.</p>
-<p>After compiling all the object files we attempt to link the program, we do not
-use a linker directly, but <code class="docutils literal notranslate"><span class="pre">gfortran</span></code> to produce the executable.</p>
-<p>Now we run the build script with <code class="docutils literal notranslate"><span class="pre">make</span></code>:</p>
+<p>Nós definimos <code class="docutils literal notranslate"><span class="pre">OBJS</span></code> para arquivos de objeto, nosso programa depende desses <code class="docutils literal notranslate"><span class="pre">OBJS</span></code> e para cada arquivo de objeto nós criamos a regra para construí-los a partir do código fonte. A última regra que introduzimos é uma regra de pattern matching, <code class="docutils literal notranslate"><span class="pre">%</span></code> é um padrão comum entre <code class="docutils literal notranslate"><span class="pre">tabulate.o</span></code> e <code class="docutils literal notranslate"><span class="pre">tabulate.f90</span></code>, o qual conecta nosso arquivo de objeto <code class="docutils literal notranslate"><span class="pre">tabulate.o</span></code> ao código fonte <code class="docutils literal notranslate"><span class="pre">tabulate.f90</span></code>. Com esse conjunto, nós executamos nosso compilador, aqui <code class="docutils literal notranslate"><span class="pre">gfortran</span></code> e traduzimos o arquivo fonte no arquivo de objeto, nós não criamos um executável ainda devido a flag <code class="docutils literal notranslate"><span class="pre">-c</span></code>. Note o uso de <code class="docutils literal notranslate"><span class="pre">$&lt;</span></code> para o primeiro elemento nas dependências aqui.</p>
+<p>Após compilar todos os arquivos de objeto nós tentaremos linkar o programa, nós não usamos um linker diretamente, mas o <code class="docutils literal notranslate"><span class="pre">gfortran</span></code> para criar o executável.</p>
+<p>Agora nós executamos o script de build com <code class="docutils literal notranslate"><span class="pre">make</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gfortran -c -o tabulate.o tabulate.f90
 tabulate.f90:2:7:
 
@@ -857,30 +832,22 @@ compilation terminated.
 make: *** [Makefile:10: tabulate.f90.o] Error 1
 </pre></div>
 </div>
-<p>We remember that we have dependencies between our source files, therefore we add
-this dependency explicitly to the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> with</p>
+<p>Lembramos que temos dependências entre nossos arquivos fonte, portando nós adicionamos essas dependências explicitamente no <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> com</p>
 <div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nf">tabulate.o</span><span class="o">:</span><span class="w"> </span><span class="n">functions</span>.<span class="n">o</span>
 </pre></div>
 </div>
-<p>Now we can retry and find that the build is working correctly. The output should
-look like</p>
+<p>Agora nós tentamos novamente e descobrimos que o build ocorre corretamente. A saída deve ser parecida com</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gfortran -c -o functions.o functions.f90
 gfortran -c -o tabulate.o tabulate.f90
 gfortran -o my_prog tabulate.o functions.o
 </pre></div>
 </div>
-<p>You should find <em>four</em> new files in the directory now.
-Run <code class="docutils literal notranslate"><span class="pre">my_prog</span></code> to make sure everything works as expected.
-Let’s run <code class="docutils literal notranslate"><span class="pre">make</span></code> again:</p>
+<p>Você deve encontrar <em>quatro</em> novos arquivos no seu diretório agora. Execute <code class="docutils literal notranslate"><span class="pre">my_prog</span></code> para garantir que tudo funciona como esperado. Agora execute <code class="docutils literal notranslate"><span class="pre">make</span></code> de novo:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make: Nothing to be done for &#39;all&#39;.
 </pre></div>
 </div>
-<p>Using the timestamps of the executable <code class="docutils literal notranslate"><span class="pre">make</span></code> was able to determine, it is
-newer than both <code class="docutils literal notranslate"><span class="pre">tabulate.o</span></code> and <code class="docutils literal notranslate"><span class="pre">functions.o</span></code>, which in turn are newer than
-<code class="docutils literal notranslate"><span class="pre">tabulate.f90</span></code> and <code class="docutils literal notranslate"><span class="pre">functions.f90</span></code>.
-Therefore, the program is already up-to-date with the latest code and no
-action has to be performed.</p>
-<p>In the end, we will have a look at a complete <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>.</p>
+<p>Usando os timestamps do executável <code class="docutils literal notranslate"><span class="pre">make</span></code> foi possível determinar que é mais novo que o <code class="docutils literal notranslate"><span class="pre">tabulate.o</span></code> e <code class="docutils literal notranslate"><span class="pre">functions.o</span></code>, os quais são mais novos que <code class="docutils literal notranslate"><span class="pre">tabulate.f90</span></code> e <code class="docutils literal notranslate"><span class="pre">functions.f90</span></code>. Portanto, o programa está atualizado com o último código e nenhuma ação é necessária.</p>
+<p>Por fim, nós veremos o <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> completo.</p>
 <div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="c"># Disable all of make&#39;s built-in rules (similar to Fortran&#39;s implicit none)</span>
 <span class="nv">MAKEFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>--no-builtin-rules<span class="w"> </span>--no-builtin-variables
 <span class="c"># configuration</span>
@@ -912,19 +879,8 @@ action has to be performed.</p>
 <span class="w">	</span><span class="k">$(</span>RM<span class="k">)</span><span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.o,<span class="w"> </span><span class="k">$(</span>OBJS<span class="k">))</span><span class="w"> </span><span class="k">$(</span>wildcard<span class="w"> </span>*.mod<span class="k">)</span><span class="w"> </span><span class="k">$(</span>PROG<span class="k">)</span>
 </pre></div>
 </div>
-<p>Since you are starting with <code class="docutils literal notranslate"><span class="pre">make</span></code> we highly recommend to always include
-the first line, like with Fortran’s <code class="docutils literal notranslate"><span class="pre">implicit</span> <span class="pre">none</span></code> we do not want to have
-implicit rules messing up our <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> in surprising and harmful ways.</p>
-<p>Next, we have a configuration section where we define variables, in case you
-want to switch out your compiler, it can be easily done here.
-We also introduced the <code class="docutils literal notranslate"><span class="pre">SRCS</span></code> variable to hold all source files, which is
-more intuitive than specifying object files.
-We can easily create the object files by appending a <code class="docutils literal notranslate"><span class="pre">.o</span></code> suffix using the
-functions <code class="docutils literal notranslate"><span class="pre">addsuffix</span></code>.
-The <code class="docutils literal notranslate"><span class="pre">.PHONY</span></code> is a special rule, which should be used for all entry points
-of your <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>, here we define two entry point, we already know <em>all</em>,
-the new <em>clean</em> rule deletes all the build artifacts again such that we indeed
-start with a clean directory.</p>
+<p>Já que você está começando com <code class="docutils literal notranslate"><span class="pre">make</span></code> recomendamos fortemente que você a primeira linha, como no <code class="docutils literal notranslate"><span class="pre">implicit</span> <span class="pre">none</span></code> do Fortran não queremos regras implícitas bagunçando nosso <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> de formas surpreendentes e prejudiciais.</p>
+<p>Em seguida, nós temos uma seção de configuração onde nós definimos variáveis, em caso de você querer mudar o seu compilador, é fácil realizar aqui. Também introduzimos a variável <code class="docutils literal notranslate"><span class="pre">SRCS</span></code> que contem todos os arquivos fonte, o qual é mais intuitivo que especificar os arquivos de objeto. Podemos facilmente criar os arquivos de objeto ao anexar o sufixo <code class="docutils literal notranslate"><span class="pre">.o</span></code> usando a função <code class="docutils literal notranslate"><span class="pre">addsuffix</span></code>. O <code class="docutils literal notranslate"><span class="pre">.PHONY</span></code> é uma regra especial, o qual deve ser usada para todos os pontos de entrada no seu <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>, aqui definimos dois pontos de entrada, já sabemos o <em>all</em>, e a nova regra <em>clean</em> a qual deleta todos os artefatos de build novamente para começarmos com um diretório limpo.</p>
 <p>Also, we slightly changed the build rule for the object files to account for
 appending the <code class="docutils literal notranslate"><span class="pre">.o</span></code> suffix instead of substituting it.
 Notice that we still need to explicitly define the interdependencies in the

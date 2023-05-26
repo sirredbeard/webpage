@@ -451,7 +451,7 @@
 <p>Ce site est en open source et vos contributions sont les bienvenues !</p>
 <ul class="simple">
 <li><p>Voir le <a class="reference internal" href="../packages/"><span class="doc std std-doc">guide du catalogue des paquets</span></a> pour savoir comment ajouter une entrée au <a class="reference internal" href="../../packages/"><span class="doc std std-doc">catalogue des paquets</span></a></p></li>
-<li><p>Voir le <a class="reference internal" href="../minibooks/"><span class="doc std std-doc">guide des mini-livres</span></a> pour savoir comment rédiger et structurer un tutoriel pour la section <a class="reference internal" href="../../learn/"><span class="doc std std-doc">Apprendre</span></a>.</p></li>
+<li><p>Voir le <a class="reference internal" href="../minibooks/"><span class="doc std std-doc">guide des mini-livres</span></a> pour savoir comment rédiger et structurer un tutoriel pour la section <a class="reference internal" href="../../learn/"><span class="doc std std-doc">Apprendre</span></a></p></li>
 </ul>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers cette rubrique">#</a></h2>
@@ -461,17 +461,15 @@
 <p>Les composants structurels du site web sont écrits avec le générateur de site statique Sphinx pour les fonctionnalités statiques, et en JavaScript pour les fonctionnalités dynamiques.</p>
 <p><strong>Dois-je connaître le langage HTML pour contribuer ?</strong></p>
 <p>La majorité du contenu du site est rédigé en <a class="reference external" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>, un langage de balisage simple pour le formatage du texte. Ne vous inquiétez pas si vous ne l’avez jamais utilisé, il est très facile à prendre en main !</p>
-<p><strong>How is the site built?</strong></p>
-<p>The Fortran-lang site uses the Python-based <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx static site generator</a> to compile the RST,Markdown and HTML files.
-It is recommended for contributors to install Python on your development computer so that changes can be previewed locally, however this is not mandatory since site previews can be generated during the pull request process (see below for more information).
-See <a class="reference external" href="https://github.com/fortran-lang/webpage/blob/HEAD/README.md">README.md</a> for how to setup Sphinx and build the site.</p>
+<p><strong>Comment ce site a-t-il été construit ?</strong></p>
+<p>Le site Fortran-lang utilise le <a class="reference external" href="https://www.sphinx-doc.org/en/master/">générateur de site statique Sphinx</a>, basé sur Python, pour compiler les fichiers RST, Markdown et HTML. Il est recommandé aux contributeurs d’installer Python sur leur ordinateur afin que les modifications puissent être prévisualisées localement, mais ce n’est pas obligatoire car les aperçus de site peuvent être générés pendant le processus de Pull Request (voir ci-dessous pour plus d’informations). Voir <a class="reference external" href="https://github.com/fortran-lang/webpage/blob/HEAD/README.md">README.md</a> pour savoir comment configurer Sphinx et construire le site.</p>
 <p>The GitHub repository default branch only ever contains the “source code” for the website, not the final compiled result; an automated service compiles this source code every time an update is pushed and stores the compiled result on the <a class="reference external" href="https://github.com/fortran-lang/webpage/tree/gh-pages"><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></a> branch which is served up at <a class="reference external" href="https://fortran-lang.org">https://fortran-lang.org</a>.</p>
 <p>Therefore, as a contributor you only need to upload changes to the site source code and not the compiled result, because this is built automatically from the source code on the default branch.</p>
 </section>
 <section id="workflow">
-<h2>Workflow<a class="headerlink" href="#workflow" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Flux opérationnel<a class="headerlink" href="#workflow" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Contributions to the site are made by pull request to the github repository: <a class="reference external" href="https://github.com/fortran-lang/webpage/">https://github.com/fortran-lang/webpage/</a>.</p>
-<p>The workflow for doing so takes the following form:</p>
+<p>Le flux opérationnel (workflow) faisant cela prend la forme suivante :</p>
 <ol class="arabic simple">
 <li><p>Create/update a personal fork of webpage</p>
 <ul class="simple">
@@ -480,13 +478,13 @@ See <a class="reference external" href="https://github.com/fortran-lang/webpage/
 </li>
 <li><p>Create a new branch in your fork</p>
 <ul class="simple">
-<li><p>The branch name should concisely describe your contribution, <em>e.g.</em> <code class="docutils literal notranslate"><span class="pre">fix-spelling-homepage</span></code>, <code class="docutils literal notranslate"><span class="pre">update-compiler-info</span></code></p></li>
+<li><p>Le nom de la branche doit décrire votre contribution de façon concise, <em>ex.</em> <code class="docutils literal notranslate"><span class="pre">fix-spelling-homepage</span></code>, <code class="docutils literal notranslate"><span class="pre">update-compiler-info</span></code></p></li>
 </ul>
 </li>
-<li><p>Perform your changes on the local branch</p></li>
+<li><p>Appliquer vos changements sur la branche locale</p></li>
 <li><p>Push your modified branch to your fork</p>
 <ul class="simple">
-<li><p><em>e.g.</em> <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--set-upstream</span> <span class="pre">origin</span> <span class="pre">fix-spelling-homepage</span></code></p></li>
+<li><p><em>ex.</em> <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--set-upstream</span> <span class="pre">origin</span> <span class="pre">fix-spelling-homepage</span></code></p></li>
 </ul>
 </li>
 <li><p>Create a pull request in the fortran-lang/webpage from your modified fork branch</p>
