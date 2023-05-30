@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
-    <title>Managing libraries (static and dynamic libraries) &#8212; Fortran Programming Language</title>
+    <title>Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas) &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -46,7 +46,7 @@
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
     <link rel="next" title="Ferramentas de compilação" href="../build_tools/" />
-    <link rel="prev" title="Include files and modules" href="../include_files/" />
+    <link rel="prev" title="Incluir arquivos e módulos" href="../include_files/" />
 
 <meta
   name="description"
@@ -484,7 +484,7 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../compiling_source/">
-     Compiling the source code
+     Compilando o código fonte
     </a>
    </li>
    <li class="toctree-l2">
@@ -499,12 +499,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../include_files/">
-     Include files and modules
+     Incluir arquivos e módulos
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Managing libraries (static and dynamic libraries)
+     Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)
     </a>
    </li>
    <li class="toctree-l2">
@@ -514,7 +514,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../project_make/">
-     An introduction to make
+     Um introdução ao make
     </a>
    </li>
    <li class="toctree-l2">
@@ -704,7 +704,7 @@
 <nav id="bd-toc-nav" class="page-toc"><ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#static-versus-dynamic-libraries">
-   Static versus dynamic libraries
+   bibliotecas estáticas versus dinâmicas
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -732,7 +732,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="managing-libraries-static-and-dynamic-libraries">
-<h1>Managing libraries (static and dynamic libraries)<a class="headerlink" href="#managing-libraries-static-and-dynamic-libraries" title="Permalink to this heading">#</a></h1>
+<h1>Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)<a class="headerlink" href="#managing-libraries-static-and-dynamic-libraries" title="Permalink to this heading">#</a></h1>
 <p>If you need to manage a program built of dozens of source files (and
 that is not uncommon!), the command-line needed to specify all the
 object files will be very long indeed. This soon becomes tedious or
@@ -779,12 +779,8 @@ every library.</p></li>
 <p>Using libraries you can build very large programs without
 having to resort to extremely long command lines.</p>
 <section id="static-versus-dynamic-libraries">
-<h2>Static versus dynamic libraries<a class="headerlink" href="#static-versus-dynamic-libraries" title="Permalink to this heading">#</a></h2>
-<p>The above discussion is tacitly assuming that you are using the so-called
-static libraries. Static libraries (or at least parts of their
-contents) become an integral part of the executable program. The only
-way to change the routines incorporated in the program is by rebuilding
-the program with a new version of the library.</p>
+<h2>bibliotecas estáticas versus dinâmicas<a class="headerlink" href="#static-versus-dynamic-libraries" title="Permalink to this heading">#</a></h2>
+<p>A discussão acima assume tacitamente que você está usando as chamadas bibliotecas estáticas. Bibliotecas estáticas (ou pelo menos parte dela) se torna uma parte integral do programa executável. A única forma de mudar as rotinas incorporadas no programa é realizando o rebuild do programa com uma nova versão da biblioteca.</p>
 <p>A flexible alternative is to use the so-called dynamic libraries. These
 libraries remain outside the executable program and as a consequence
 can be replaced without rebuilding the entire program. Compilers and

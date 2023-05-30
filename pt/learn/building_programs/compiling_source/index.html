@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
-    <title>Compiling the source code &#8212; Fortran Programming Language</title>
+    <title>Compilando o código fonte &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -484,7 +484,7 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Compiling the source code
+     Compilando o código fonte
     </a>
    </li>
    <li class="toctree-l2">
@@ -499,12 +499,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../include_files/">
-     Include files and modules
+     Incluir arquivos e módulos
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../managing_libraries/">
-     Managing libraries (static and dynamic libraries)
+     Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)
     </a>
    </li>
    <li class="toctree-l2">
@@ -514,7 +514,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../project_make/">
-     An introduction to make
+     Um introdução ao make
     </a>
    </li>
    <li class="toctree-l2">
@@ -712,53 +712,27 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="compiling-the-source-code">
-<h1>Compiling the source code<a class="headerlink" href="#compiling-the-source-code" title="Permalink to this heading">#</a></h1>
-<p>The first step in the build process is to compile the source code. The
-output from this step is generally known as the object code — a set of
-instructions for the computer generated from the human-readable source
-code. Different compilers will produce different object codes from the
-same source code and the naming conventions are different.</p>
+<h1>Compilando o código fonte<a class="headerlink" href="#compiling-the-source-code" title="Permalink to this heading">#</a></h1>
+<p>O primeiro passo no processo de build é compilar o código fonte. A saída nesse passo é geralmente conhecida como código objeto - um conjunto de instruções para o computador gerado a partir de código fonte legível por humanos. Compiladores diferentes irão produzir códigos objeto diferentes a partir do mesmo código fonte e as convenções de nomeação são diferentes.</p>
 <p>As consequências:</p>
 <ul class="simple">
-<li><p>If you use a particular compiler for one source file, you need to use
-the same compiler (or a compatible one) for all other pieces. After
-all, a program may be built from many different source files and the
-compiled pieces have to cooperate.</p></li>
-<li><p>Each source file will be compiled and the result is stored in a file
-with an extension like «.o» or «.obj». It is these object files that are
-the input for the next step: the link process.</p></li>
+<li><p>Se você usar um compilador em particular para um arquivo fonte, você precisará usar o mesmo compilador (ou um compatível) para todas as outras partes. Afinal de contas, um programa pode ser construído a partir de diferentes arquivos fonte e as partes compiladas devem cooperar.</p></li>
+<li><p>Cada arquivo fonte será compilador e o resultado é armazenado em um arquivo com a extensão «.o» ou «.obj». Esse é os arquivos objeto que são a entrada para o próximo passo: o processo de link.</p></li>
 </ul>
-<p>Compilers are complex pieces of software: they have to understand the
-language in much more detail and depth than the average programmer. They
-also need to understand the inner working of the computer. And then,
-over the years they have been extended with numerous options to
-customise the compilation process and the final program that will be
-built.</p>
-<p>But the basics are simple enough. Take the gfortran compiler, part of
-the GNU compiler collection. To compile a simple program as the one
-above, that consists of one source file, you run the following command,
-assuming the source code is stored in the file «hello.f90»:</p>
+<p>Compiladores são pedaços complexos de software: eles tem que entender a linguagem em muito mais detalhes e profundidade que o programador médio. Eles também precisam entender o funcionamento interno do computador. E por fim, através de anos eles foram estendidos com numerosas opções para customizar o processo de compilação e o programa final ser construído.</p>
+<p>Mas os básicos são simples. Por exemplo, o compilador gfortran, parte da coleção de compiladores GNU. Para compilar um simples programa como o acima, que consiste de um arquivo fonte, você pode executar o seguinte comando, assumindo que o código fonte é armazenado no arquivo «hello.f90»:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>gfortran<span class="w"> </span>-c<span class="w"> </span>hello.f90
 </pre></div>
 </div>
-<p>This results in a file «hello.o» (as the gfortran compiler uses «.o» as
-the extension for the object files).</p>
-<p>The option «-c» means: only compile the source files. If you were to
-leave it out, then the default action of the compiler is to compile the
-source file and start the linker to build the actual executable program.
-The command:</p>
+<p>Isso resultado em um arquivo «hello.o» (o compilador gfortran usa «.o» como extensão dos arquivos objeto).</p>
+<p>A opção «-c» significa: apenas compile os arquivos fonte. Se você não usar, a ação padrão do compilador é compilar o arquivo fonte e iniciar o linker para gerar a build do programa executável presente. O comando:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>gfortran<span class="w"> </span>hello.f90
 </pre></div>
 </div>
-<p>results in an executable file, «a.out» on Linux or «a.exe» on
-Windows.</p>
+<p>resulta em um arquivo executável, «a.out» no Linux our «a.exe» no Windows.</p>
 <p>Algumas observações:</p>
 <ul class="simple">
-<li><p>The compiler may complain about the contents of the source file, if it
-finds something wrong with it — a typo for instance or an unknown
-keyword. In that case the compilation process is broken off and you will
-not get an object file or an executable program. For instance, if
-the word «program» was inadvertently typed as «prgoram»:</p></li>
+<li><p>O compilador pode reclamar do conteúdo no arquivo fonte, se achar algo de errado com ele - um erro de digitação ou uma palavra chave não conhecida. Nesse caso, oo processo de compilação quebrará e você não conseguirá o arquivo objeto ou o programa executável. Por exemplo, se a palavra «program» for digitada erroneamente como «prgoram»:</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>gfortran<span class="w"> </span>hello3.f90
 hello.f90:1:0:
@@ -774,13 +748,9 @@ Error:<span class="w"> </span>Syntax<span class="w"> </span>error<span class="w"
 f951:<span class="w"> </span>Error:<span class="w"> </span>Unexpected<span class="w"> </span>end<span class="w"> </span>of<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s1">&#39;hello.f90&#39;</span>
 </pre></div>
 </div>
-<p>Using this compilation report you can correct the source code and try
-again.</p>
+<p>Usando o relatório de compilação você pode corrigir o código fonte e tentar novamente.</p>
 <ul class="simple">
-<li><p>The step without «-c» can only succeed if the source file contains a
-main program — characterised by the <code class="docutils literal notranslate"><span class="pre">program</span></code> statement in Fortran.
-Otherwise the link step will complain about a missing «symbol», something
-along these lines:</p></li>
+<li><p>O passo sem «-c» só será sucedido se o código fonte contiver o programa principal - caracterizado pela declaração <code class="docutils literal notranslate"><span class="pre">program</span></code> no Fortran. Caso contrário o passo de link irá reclamar de um «símbolo» faltante, algo entre essas linhas:</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>gfortran<span class="w"> </span>hello2.f90
 /usr/lib/../lib64/crt1.o:<span class="w"> </span>In<span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="sb">`</span>_start<span class="s1">&#39;:</span>
@@ -788,19 +758,13 @@ along these lines:</p></li>
 collect2:<span class="w"> </span>error:<span class="w"> </span>ld<span class="w"> </span>returned<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span>status
 </pre></div>
 </div>
-<p>The file «hello2.f90» is almost the same as the file «hello.f90», except
-that the keyword <code class="docutils literal notranslate"><span class="pre">program</span></code> has been replaced by the keyword <code class="docutils literal notranslate"><span class="pre">subroutine</span></code>.</p>
-<p>The above examples of output from the compiler will differ per compiler
-and platform on which it runs. These examples come from the gfortran
-compiler running in a Cygwin environment on Windows.</p>
-<p>Compilers also differ in the options they support, but in general:</p>
+<p>O arquivo «hello2.f90» é quase igual ao arquivo «hello.f90», com exceção que a palavra chave <code class="docutils literal notranslate"><span class="pre">program</span></code> foi substituída pela palavra-chave <code class="docutils literal notranslate"><span class="pre">subrotina</span></code>.</p>
+<p>Os exemplos acima de saída do compilador irão ser de diferentes de acordo com o compilador e a plataforma que roda. Esses exemplos vem do compilador gfortran executando em um ambiente Cygwin no Windows.</p>
+<p>Compiladores irão diferir também nas opções que tem suporte, mas em geral:</p>
 <ul class="simple">
-<li><p>Options for optimising the code — resulting in faster programs or
-smaller memory footprints;</p></li>
-<li><p>Options for checking the source code — checks that a variable is not
-used before it has been given a value, for instance or checks if some
-extension to the language is used;</p></li>
-<li><p>Options for the location of include or module files, see below;</p></li>
+<li><p>Opções para otimizar o código - resultando em programas mais rápidos ou com menor espaço em memória;</p></li>
+<li><p>Opções para checar o código fonte - checa se a variável não é usada antes de dá-la um valor, ou checa se alguma extensão é usada;</p></li>
+<li><p>Opções para a locação de arquivo de inclusão ou módulos, veja abaixo;</p></li>
 <li><p>Opções de depuração.</p></li>
 </ul>
 </section>

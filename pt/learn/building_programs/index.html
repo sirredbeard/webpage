@@ -45,7 +45,7 @@
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/index.html" />
     <link rel="index" title="Índice" href="../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../search/" />
-    <link rel="next" title="Compiling the source code" href="compiling_source/" />
+    <link rel="next" title="Compilando o código fonte" href="compiling_source/" />
     <link rel="prev" title="Tipos Derivados" href="../quickstart/derived_types/" />
 
 <meta
@@ -484,7 +484,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="compiling_source/">
-     Compiling the source code
+     Compilando o código fonte
     </a>
    </li>
    <li class="toctree-l2">
@@ -499,12 +499,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="include_files/">
-     Include files and modules
+     Incluir arquivos e módulos
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="managing_libraries/">
-     Managing libraries (static and dynamic libraries)
+     Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)
     </a>
    </li>
    <li class="toctree-l2">
@@ -514,7 +514,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="project_make/">
-     An introduction to make
+     Um introdução ao make
     </a>
    </li>
    <li class="toctree-l2">
@@ -709,44 +709,24 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="building-programs">
 <h1>Compilando programas<a class="headerlink" href="#building-programs" title="Permalink to this heading">#</a></h1>
-<p>Languages like Fortran, C, C++ and Java, to name but a few, share
-certain characteristics: you write code in your language of choice but
-then you have to build an executable program from that source code.
-Other languages are interpreted — the source code is analysed by a
-special program and taken as direct instructions. Two very simple
-examples of that type of language: Windows batch files and Linux shell
-scripts.</p>
-<p>In this tutorial we concentrate on the first type of languages, with
-Fortran as the main example. One advantage of compiled languages is that
-the build process that you need to build an executable program, is used
-to transform the human-readable source code into an efficient program
-that can be run on the computer.</p>
-<p>Remark: this tutorial gives examples for the Windows and Linux operating
-systems, however the workflow and general principles still apply to macOS.</p>
+<p>Linguagens como Fortran, C, C++ e Java, para nomear algumas, compartilham certas características, você escreve o código na sua linguagem de preferência mas então faz o build do programa executável a partir do código fonte. Outras linguagens são interpretadas - o código fonte é analisado por um programa especial e é tomado como instruções diretas. Dois exemplos simples desse tipo de linguagem: Arquivos batch do Windows e shell scripts do Linux.</p>
+<p>Nesse tutotiral nos concentraremos no primeiro tipo de linguagens, com Fortran como o principal exemplo. Uma vantagem de linguagens compiladas é que o processo de build necessário para o build do programa executável é usado para transformar o código fonte legível para humanos em um programa eficiente que pode ser usado para rodar no computador.</p>
+<p>Observação: este tutorial dá exemplos para sistemas operacionais Windows e Linux, contudo o fluxo de trabalho e princípios gerais se aplicam ao macOS.</p>
 <section id="compiled-languages">
 <h2>Linguagens compiladas<a class="headerlink" href="#compiled-languages" title="Permalink to this heading">#</a></h2>
-<p>Let us have a look at a simple example:</p>
+<p>Vejamos um exemplo simples:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">hello</span>
 <span class="w">    </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Hello!&#39;</span>
 <span class="k">end program </span><span class="n">hello</span>
 </pre></div>
 </div>
-<p>This is just about the simplest program you can write in Fortran and it
-is certainly a variation on one of the most famous programs. Even though
-it is simple to express in source code, a lot of things actually happen
-when the executable that is built from this code runs:</p>
+<p>Esse é o programa mais simples que você pode escrever em Fortran e é certamente uma variação de um dos programas mais famosos. Apesar de sua simplicidade expressada no código fonte, várias coisas acontecem quando o executável construído desde código roda:</p>
 <ul class="simple">
-<li><p>A process is started on the computer in such a way that it can write
-to the console — the window (DOS-box, xterm, …) at which you type the
-program’s name.</p></li>
-<li><p>It writes the text «Hello!» to the console. To do so it must properly
-interact with the console.</p></li>
-<li><p>When done, it finishes, cleaning up all the resources (memory,
-connection to the console etc.) it took.</p></li>
+<li><p>Um processo é iniciado no seu computador de tal forma que ele pode escrever no console - a tela (DOS-box, xterm, …) onde você escreve o nome do programa.</p></li>
+<li><p>Ele escreve o texto «Hello!» no console. Para isso, ele precisa interagir propriamente com o console.</p></li>
+<li><p>Quando completo, ele finaliza, limpando todos os recursos (memória, conexão ao console etc.) que ele usou.</p></li>
 </ul>
-<p>Fortunately, as a programmer in a high-level language you do not need to
-consider all these details. In fact, this is the sort of things that is
-taken care of by the build process: the compiler and the linker.</p>
+<p>Por sorte, como programador em uma linguagem de alto nível você não precisa se atentar a todos esses detalhes. De fato, isso são coisas que são resolvidas pelo processo de geração de build: o compilador e o linker.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>

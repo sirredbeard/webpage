@@ -46,7 +46,7 @@
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
     <link rel="next" title="Bibliotecas em Tempo de Execução" href="../runtime_libraries/" />
-    <link rel="prev" title="Compiling the source code" href="../compiling_source/" />
+    <link rel="prev" title="Compilando o código fonte" href="../compiling_source/" />
 
 <meta
   name="description"
@@ -484,7 +484,7 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../compiling_source/">
-     Compiling the source code
+     Compilando o código fonte
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -499,12 +499,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../include_files/">
-     Include files and modules
+     Incluir arquivos e módulos
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../managing_libraries/">
-     Managing libraries (static and dynamic libraries)
+     Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)
     </a>
    </li>
    <li class="toctree-l2">
@@ -514,7 +514,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../project_make/">
-     An introduction to make
+     Um introdução ao make
     </a>
    </li>
    <li class="toctree-l2">
@@ -713,11 +713,8 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="linking-the-objects">
 <h1>Vinculando os objetos<a class="headerlink" href="#linking-the-objects" title="Permalink to this heading">#</a></h1>
-<p>Almost all programs, except for the simplest, are built up from
-different pieces. We are going to examine such a situation in
-more detail.</p>
-<p>Here is a general program for tabulating a function (source code in
-«tabulate.f90»):</p>
+<p>Quase todos os programas, exceto os mais simples, são construídos por diferentes peças. Nós vamos examinar tal situação em detalhe.</p>
+<p>Aqui um programa geral para tabular uma função (código fonte em «tabulate.f90»):</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">tabulate</span>
 <span class="w">    </span><span class="k">use </span><span class="n">user_functions</span>
 
@@ -735,7 +732,7 @@ more detail.</p>
 <span class="k">end program </span><span class="n">tabulate</span>
 </pre></div>
 </div>
-<p>Note the <code class="docutils literal notranslate"><span class="pre">use</span></code> statement — this will be where we define the function <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<p>Note a declaração <code class="docutils literal notranslate"><span class="pre">use</span></code> - ela estará onde definimos a função <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 <p>We want to make the program general, so keep the
 specific source code — the implementation of the function <code class="docutils literal notranslate"><span class="pre">f</span></code> —
 separated from the general source code. There are several ways to

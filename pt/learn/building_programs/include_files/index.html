@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
-    <title>Include files and modules &#8212; Fortran Programming Language</title>
+    <title>Incluir arquivos e módulos &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -45,7 +45,7 @@
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/include_files.html" />
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
-    <link rel="next" title="Managing libraries (static and dynamic libraries)" href="../managing_libraries/" />
+    <link rel="next" title="Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)" href="../managing_libraries/" />
     <link rel="prev" title="Bibliotecas em Tempo de Execução" href="../runtime_libraries/" />
 
 <meta
@@ -484,7 +484,7 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../compiling_source/">
-     Compiling the source code
+     Compilando o código fonte
     </a>
    </li>
    <li class="toctree-l2">
@@ -499,12 +499,12 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Include files and modules
+     Incluir arquivos e módulos
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../managing_libraries/">
-     Managing libraries (static and dynamic libraries)
+     Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)
     </a>
    </li>
    <li class="toctree-l2">
@@ -514,7 +514,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../project_make/">
-     An introduction to make
+     Um introdução ao make
     </a>
    </li>
    <li class="toctree-l2">
@@ -712,31 +712,13 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="include-files-and-modules">
-<h1>Include files and modules<a class="headerlink" href="#include-files-and-modules" title="Permalink to this heading">#</a></h1>
-<p>Your program can be contained in various source files, all stored in the
-same directory or organised in some convenient directory tree. The
-details of the organisation depend on personal taste, arrangements made
-by the group of developers you belong to, or simply the history of the
-program. Whatever the directory structure is, you will encounter a
-situation where the compiler needs assistance in order to compile a
-particular source file:</p>
+<h1>Incluir arquivos e módulos<a class="headerlink" href="#include-files-and-modules" title="Permalink to this heading">#</a></h1>
+<p>Se programa pode estar contido em vários arquivos fonte, todos armazenado no mesmo diretório ou organizados em alguma árvore de diretórios conveniente. Os detalhes da organização dependem de gosto pessoal, acordos feitos pelo grupo de desenvolvedores que você pertença, ou simplesmente a história do programa. Qualquer que seja a estrutura do diretório, você encontrará uma situação onde seu compilador precisa de assistência para compilador um arquivo fonte particular:</p>
 <ul class="simple">
-<li><p>Fortran (and other languages) has the possibility to include an
-external file. While this feature has become a bit less useful with the
-advent of modules, it still has its uses. Quite often, such «include
-files» are stored in a directory separated from the directories
-containing the source files, because they are used in several locations.
-Quite often the name of that directory is «include».</p></li>
-<li><p>As we have seen, compiling source code that defines one or more modules, leads to
-the compiler generating so-called «module intermediate files» (with the extension «.mod»).
-The compiler needs access to these files to be able to read the interfaces
-and variables and what not, and based on this information, actually
-compile the source code that uses the various modules.</p></li>
+<li><p>Fortran (e outras linguagens) tem a possibilidade de incluir um arquivo externo. Enquanto que essa funcionalidade se torna um pouco menos útil com o advento de módulos, ainda há alguns usos. Frequentemente, «include files» são armazenados em um diretório separados dos diretórios contendo arquivos fonte, porque eles serão usados em diversos locais. Muito frequente, o nome desse diretório é «include».</p></li>
+<li><p>Como vimos, compilando o código fonte que define um ou mais módulo, leva ao compilar gerar os chamados «arquivos módulo intermediários» (com a extensão «.mod»). O compilador precisa de acesso à esses arquivos para ser capaz de ler as interfaces e variáveis para assim, baseado nessa informação, compilar o código fonte que usa vários módulos.</p></li>
 </ul>
-<p>Compilers support options like <code class="docutils literal notranslate"><span class="pre">-I</span></code> to indicate where these include
-files and module intermediate files are to be found. Suppose we store
-the two files of our <code class="docutils literal notranslate"><span class="pre">tabulate</span></code> program in the following directory
-structure:</p>
+<p>Compiladores suportam opções como <code class="docutils literal notranslate"><span class="pre">-I</span></code> para indicar onde estão esses arquivos de inclusão e arquivos de módulo intermediários. Supondo que armazenamos dois arquivos do nosso programa <code class="docutils literal notranslate"><span class="pre">tabulate</span></code> na seguinte estrutura de diretórios:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tabulate</span><span class="o">/</span>
     <span class="n">main</span><span class="o">/</span>
         <span class="n">tabulate</span><span class="o">.</span><span class="n">f90</span>
@@ -744,12 +726,12 @@ structure:</p>
         <span class="n">functions</span><span class="o">.</span><span class="n">f90</span>
 </pre></div>
 </div>
-<p>Compiling the file «functions.f90» with the commands</p>
+<p>Compilando o arquivo «functions.f90» com os comandos</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>sub
 $<span class="w"> </span>gfortran<span class="w"> </span>-c<span class="w"> </span>functions.f90
 </pre></div>
 </div>
-<p>leads to this structure:</p>
+<p>leva a esta estrutura:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tabulate</span><span class="o">/</span>
     <span class="n">main</span><span class="o">/</span>
         <span class="n">tabulate</span><span class="o">.</span><span class="n">f90</span>
@@ -759,8 +741,7 @@ $<span class="w"> </span>gfortran<span class="w"> </span>-c<span class="w"> </sp
         <span class="n">functions</span><span class="o">.</span><span class="n">o</span>
 </pre></div>
 </div>
-<p>To successfully compile and subsequently build the program we need to
-tell the compiler where it can find the file «user_functions.mod»:</p>
+<p>Para compilar com sucesso e subsequentemente realizar o build do programa nós precisamos dizer ao compilador onde encontrar o arquivo «user_functions.mod»:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>main
 $<span class="w"> </span>gfortran<span class="w"> </span>-c<span class="w"> </span>tabulate.f90<span class="w"> </span>-I<span class="w"> </span>../sub
 $<span class="w"> </span>gfortran<span class="w"> </span>-o<span class="w"> </span>tabulate<span class="w"> </span>tabulate.o<span class="w"> </span>../sub/functions.o
@@ -780,19 +761,9 @@ $<span class="w"> </span>gfortran<span class="w"> </span>-o<span class="w"> </sp
 </div>
 <p>Notas:</p>
 <ul class="simple">
-<li><p>The details differ per compiler. Sometimes the <code class="docutils literal notranslate"><span class="pre">-I</span></code> option should be
-followed by a space and then the name of the directory, sometimes the
-directory should come consecutively.</p></li>
-<li><p>By default the module intermediate files (.mod) are put in the
-same directory as the object files. When your program code is organised
-in different subdirectories, they will get scattered over the directory
-tree, complicating the compilation process. Luckily,
-many compilers allow you to specify the output location for these
-files. For gfortran this is <code class="docutils literal notranslate"><span class="pre">-J</span></code>, for instance:
-<code class="docutils literal notranslate"><span class="pre">-J../include</span></code> (so that the .mod files could all appear in the
-same directory)</p></li>
-<li><p>For large programs, consisting of many source files, it is important to
-think through what organisation to use.</p></li>
+<li><p>Os detalhes diferem por compilador. Algumas vezes a opção <code class="docutils literal notranslate"><span class="pre">-l</span></code> deve ser seguida de um espaço e então o nome do diretório, outras vezes o diretório deve vir consecutivamente.</p></li>
+<li><p>Por padrão os arquivos de módulos intermediários (.mod) são guardados no mesmo diretórios que os arquivos de objeto. Quando seu código é organizado em diferentes subdiretórios, eles ficarão espalhados pela árvore de diretórios, complicando o processo de compilação. Por sorte, muitos compiladores permitem que você especifique a localização de saída desses arquivos. Para gfortran é <code class="docutils literal notranslate"><span class="pre">-J</span></code>, por exemplo: <code class="docutils literal notranslate"><span class="pre">-J../include</span></code> (para assim os arquivos .mod aparecerem no mesmo diretório)</p></li>
+<li><p>Para programas grandes, consistindo em vários arquivos fonte, é importante pensar qual organização usará.</p></li>
 </ul>
 </section>
 

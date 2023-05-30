@@ -46,7 +46,7 @@
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
     <link rel="next" title="Práticas Recomendadas em Fortran" href="../../best_practices/" />
-    <link rel="prev" title="An introduction to make" href="../project_make/" />
+    <link rel="prev" title="Um introdução ao make" href="../project_make/" />
 
 <meta
   name="description"
@@ -484,7 +484,7 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../compiling_source/">
-     Compiling the source code
+     Compilando o código fonte
     </a>
    </li>
    <li class="toctree-l2">
@@ -499,12 +499,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../include_files/">
-     Include files and modules
+     Incluir arquivos e módulos
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../managing_libraries/">
-     Managing libraries (static and dynamic libraries)
+     Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)
     </a>
    </li>
    <li class="toctree-l2">
@@ -514,7 +514,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../project_make/">
-     An introduction to make
+     Um introdução ao make
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -704,7 +704,7 @@
 <nav id="bd-toc-nav" class="page-toc"><ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#distributing-the-tabulation-program">
-   Distributing the tabulation program
+   Distribuindo o programa de tabulação
   </a>
  </li>
 </ul>
@@ -723,50 +723,30 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="distributing-your-programs">
 <h1>Distribuição dos seus programas<a class="headerlink" href="#distributing-your-programs" title="Permalink to this heading">#</a></h1>
-<p>When you distribute your programs, there are a number of options you can
-choose from:</p>
+<p>Quando fornecer seus programas, há uma diversidade de opções que você pode optar:</p>
 <ol class="arabic simple">
-<li><p>Distribute the entire source code</p></li>
-<li><p>Distribute a pre-built executable program</p></li>
-<li><p>Distribute static or dynamic libraries that people can use</p></li>
+<li><p>Distribuir o código fonte completo</p></li>
+<li><p>Distribuir um programa executável já compilado</p></li>
+<li><p>Distribuir bibliotecas estáticas e dinâmicas que as pessoas podem usar</p></li>
 </ol>
-<p><strong>Option 1: Distribute the entire source code</strong></p>
-<p>By far the simplest — for you as a programmer — is this one: you leave it
-up to the user to build it on their own machine. Unfortunately, that
-means you will have to have a user-friendly build system in place and
-the user will have to have access to suitable compilers. For build systems:
-see the previous section.</p>
-<p><strong>Option 2: Distribute a pre-built executable program</strong></p>
-<p>A pre-built program that does not need to be customised, other than via its
-input, will still need to come with the various run-time libraries and will
-be specific to the operating system/environment it was built for.</p>
-<p>The set of run-time libraries differs per operating system and compiler version.
-For a freely available compiler like gfortran, the easiest thing is to ask the
-user to install that compiler on their system. In the case of Windows: the Cygwin
-environment may be called for.</p>
-<p>Alternatively, you can supply copies of the run-time libraries together with your
-program. Put them in the directory where they can be found at run-time.</p>
-<p>Note: On Windows, the Intel Fortran comes with a set of <em>redistributable</em> libraries.
-These will need to be made available.</p>
-<p>In general: use a tool like «ldd» or «dependency walker» to find out what
-libraries are required and consult the documentation of the compiler.</p>
-<p>If your program does allow customisation, consider using dynamic libraries for this.
-More is said about this below.</p>
-<p><strong>Option 3: Distribute static or dynamic libraries that people can use</strong></p>
-<p>This option is a combination of the first two options. It does put some burden on
-the user, as they must create a main program that calls your routines in the
-proper way, but they do not need to know much about the build system you used.
-You will have to deal with the run-time libraries, though.</p>
-<p>If you choose this option, besides the compiled libraries, you will also need to
-supply the module intermediate files. These files are compiler-specific, but so are
-the static libraries you build.</p>
+<p><strong>Opção 1: Distribuir o código fonte completo</strong></p>
+<p>De longe o mais - para você como programador - é essa: você deixar para o usuário realizar o build na própria máquina. Infelizmente, isso significa que você terá que fazer um sistema de build «user-friendly» e usuário terá que ter aceso aos compiladores adequados. Para sistemas de geração build: veja a seção anterior.</p>
+<p><strong>Opção 2: Distribuir um programa executável já compilado</strong></p>
+<p>Um programa pré-compilado que não precisa ser customizado, a não ser através de suas entradas, ainda precisará ser distribuído com várias bibliotecas usadas em tempo de execução ou serão específicas ao sistema operacional/ambiente que foi gerado o build para ele.</p>
+<p>O conjunto de bibliotecas executadas em tempo de execução diferem por sistema operacional e versão do compilador. Para uma compilador disponível gratuitamente como o fortran, a coisa mais fácil é solicitar ao usuário que instale o compilador no seu sistema. No caso do Windows: o ambiente Cygwin é uma opção.</p>
+<p>Alternativamente, você pode fornecer cópias das bibliotecas usadas em tempo de execução junto com seu programa. Coloque-os no diretório onde podem ser encontradas em tempo de execução.</p>
+<p>Nota: No Windows, o Intel Fortran vem com um conjunto de bibliotecas <em>redistribuíveis</em>. Elas precisam estar disponíveis.</p>
+<p>No geral: usa uma ferramenta como «Idd» ou «dependency walker» para encontrar quais bibliotecas são requisitadas e consulte a documentação do compilador.</p>
+<p>Se seu programa permite customização, considere usar bibliotecas dinâmicas para isso. Mais sobre isso é dito abaixo.</p>
+<p><strong>Opção 3: Distribuir bibliotecas estáticas ou dinâmicas que as pessoas possam usar</strong></p>
+<p>Essa opção é uma combinação das duas primeiras. Isso coloca algum trabalho para o usuário, já que eles precisam criar o programa principal que chama suas rotinas de um jeito apropriado, mas eles não precisam saber muito sobre o sistema de geração de build que você usou. De toda forma, você vai precisar lidar com as bibliotecas usadas em tempo de execução.</p>
+<p>Se você escolher essa opção, além das bibliotecas compiladas, você precisará fornecer também os arquivos de módulo intermediários. Esses arquivos são específicos de compilador, mas suas bibliotecas estáticas também são.</p>
 <section id="distributing-the-tabulation-program">
-<h2>Distributing the tabulation program<a class="headerlink" href="#distributing-the-tabulation-program" title="Permalink to this heading">#</a></h2>
-<p>As shown above, the tabulation program can be built with the user-defined function
-in a dynamic library. This enables you to:</p>
+<h2>Distribuindo o programa de tabulação<a class="headerlink" href="#distributing-the-tabulation-program" title="Permalink to this heading">#</a></h2>
+<p>Como mostrado acima, o programa de tabulação pode ser construído com a função definida pelo usuário em uma biblioteca dinâmica. Isso permite que você:</p>
 <ul class="simple">
-<li><p>Ship the executable (with the appropriate run-time libraries)</p></li>
-<li><p>Provide a skeleton version of the module, something like:</p></li>
+<li><p>Distribua o executável (com as bibliotecas usadas em tempo de execução apropriadas)</p></li>
+<li><p>Forneça uma versão base do módulo, algo como:</p></li>
 </ul>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">user_functions</span>
 <span class="w">    </span><span class="k">implicit none</span>
@@ -784,7 +764,7 @@ in a dynamic library. This enables you to:</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Provide a basic build script with a command like:</p></li>
+<li><p>Forneça um script básico de geração de build com um comando como:</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gfortran<span class="w"> </span>-o<span class="w"> </span>functions.dll<span class="w"> </span>functions.f90<span class="w"> </span>-shared
 </pre></div>
@@ -793,11 +773,8 @@ in a dynamic library. This enables you to:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ifort<span class="w"> </span>-exe:functions.dll<span class="w"> </span>functions.f90<span class="w"> </span>-dll
 </pre></div>
 </div>
-<p>As said, you cannot control that the user has done the right thing — any
-DLL «functions.dll» with a function <code class="docutils literal notranslate"><span class="pre">f</span></code> would be accepted, but not necessarily
-lead to a successful run.</p>
-<p>An alternative set-up would be to change the main program into a subroutine
-and have the function as an argument:</p>
+<p>Como dito, você não pode garantir que o usuário fez a coisa certa - qualquer DLL «functions.dll» com a função <code class="docutils literal notranslate"><span class="pre">f</span></code> será aceita, mas não necessariamente levará a uma execução bem sucedida.</p>
+<p>Uma alternativa de montagem seria trocar o programa principal por uma subrotina e transformar a função em um argumento:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">tabulation</span>
 <span class="w">    </span><span class="k">implicit none</span>
 <span class="k">contains</span>
@@ -816,7 +793,7 @@ and have the function as an argument:</p>
 <span class="k">end module </span><span class="n">tabulation</span>
 </pre></div>
 </div>
-<p>Then provide a skeleton main program:</p>
+<p>Então forneça uma programa principal base:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">tabulate_f</span>
 <span class="w">    </span><span class="k">use </span><span class="n">tabulation</span>
 
@@ -834,9 +811,7 @@ and have the function as an argument:</p>
 <span class="k">end program </span><span class="n">tabulate_f</span>
 </pre></div>
 </div>
-<p>The advantage is that the compiler can check the interface of the
-function that is passed and that the user has more freedom in the use of the
-functionality provided by your library.</p>
+<p>A vantagem é que o compilador pode checar a interface da função que é passada e o usuário tem mais liberdade no uso da funcionalidade fornecida pela sua biblioteca.</p>
 </section>
 </section>
 
