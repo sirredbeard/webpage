@@ -741,13 +741,8 @@
 </pre></div>
 </div>
 <p>Note a declaração <code class="docutils literal notranslate"><span class="pre">use</span></code> - ela estará onde definimos a função <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
-<p>We want to make the program general, so keep the
-specific source code — the implementation of the function <code class="docutils literal notranslate"><span class="pre">f</span></code> —
-separated from the general source code. There are several ways to
-achieve this, but one is to put it in a different source file. We can
-give the general program to a user and they provide a specific source code.</p>
-<p>Assume for the sake of the example that the function is implemented in a
-source file «functions.f90» as:</p>
+<p>nós queremos fazer o programa generalista, então mantenha o código fonte específico - a implementação da função <code class="docutils literal notranslate"><span class="pre">f</span></code> - separado do código fonte geral. Há várias formas de se conseguir isso, uma sendo colocar em um arquivo fonte diferente. Podemos dar o código generalista para um usuário e eles proverão um código fonte específico.</p>
+<p>Presuma para o contexto do exemplo que a função é implementada em um código fonte «functions.f90» como:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">user_functions</span>
 <span class="w">    </span><span class="k">implicit none</span>
 <span class="k">contains</span>
@@ -760,42 +755,20 @@ source file «functions.f90» as:</p>
 <span class="k">end module </span><span class="n">user_functions</span>
 </pre></div>
 </div>
-<p>To build the program with this specific function, we need to compile two
-source files and combine them via the link step into one executable
-program. Because the program «tabulate» depends on the module
-«function», we need to compile the source file containing our module
-first. A sequence of commands to do this is:</p>
+<p>Para construir o programa com a função específica, precisamos compilar dois códigos fontes e combiná-los com a fase de link em um programa executável. Por conta do programa «tabulate» depender de um módulo «function», precisamos compilar o código fonte contendo o nosso módulo primeiro. Uma sequência de comandos para fazer isso é:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>gfortran<span class="w"> </span>-c<span class="w"> </span>functions.f90
 $<span class="w"> </span>gfortran<span class="w"> </span>tabulate.f90<span class="w"> </span>functions.o
 </pre></div>
 </div>
-<p>The first step compiles the module, resulting in an object file
-«functions.o» and a module intermediate file, «user_functions.mod». This module
-file contains all the information the compiler needs to determine that
-the function <code class="docutils literal notranslate"><span class="pre">f</span></code> is defined in this module and what its interface is. This
-information is important: it enables the compiler to check that you call
-the function in the right way. It might be that you made a mistake and
-called the function with two arguments instead of one. If the compiler
-does not know anything about the function’s interface, then it cannot
-check anything.</p>
-<p>The second step invokes the compiler in such a way that:</p>
+<p>O primeiro passo compila o módulo, resultando em um arquivo objeto «functions.o» e um arquivo módulo intermediário, «user_functions.mod». Esse arquivo módulo contém toda a informação que o compilador precisa para determinar que a função <code class="docutils literal notranslate"><span class="pre">f</span></code> é definida nesse módulo e qual é sua interface. Essa informação é importante: Isso permite que o compilador cheque que você chama a função da forma correta. Pode ser que você tenha cometido um erro e chamado a função com dois argumentos ao invés de um. Se o compilador sabe nada sobre a interface da função, então ele pode checar nada.</p>
+<p>O segundo passo invoca o compilador de tal forma que:</p>
 <ul class="simple">
-<li><p>it compiles the file «tabulate.f90» (using the module file);</p></li>
-<li><p>it invokes the linker to combine the object files tabulate.o and functions.o into an
-executable program — with the default name «a.out» or «a.exe» (if you
-want a different name, use the option «-o»).</p></li>
+<li><p>ele compila o arquivo «tabulate.f90» (usando o arquivo módulo);</p></li>
+<li><p>isso invoca o linker para combinar os arquivos objeto tabulate.o e functions.o em um programa executável - com o nome padrão «a.out» ou «a.exe» (se você quer um nome diferente, use a opção «-o»).</p></li>
 </ul>
-<p>What you do not see in general is that the linker also adds a number of
-extra files in this link step, the run-time libraries. These run-time
-libraries contain all the «standard» stuff — low-level routines that do
-the input and output to screen, the <code class="docutils literal notranslate"><span class="pre">sin</span></code> function and much more.</p>
-<p>If you want to see the gory details, add the option «-v». This instructs
-the compiler to report all the steps that are in detail.</p>
-<p>The end result, the executable program, contains the compiled source
-code and various auxiliary routines that make it work. It also contains
-references to so-called dynamic run-time libraries (in Windows: DLLs, in
-Linux: shared objects or shared libraries). Without these run-time
-libraries the program will not start.</p>
+<p>O que você não vê no geral é que o linker também adiciona um número de arquivos extra nessa fase de link, as bibliotecas de tempo de execução. Essas bibliotecas de tempo de execução contém todas as «coisas padrão» - rotinas de baixo nível que fazem a entrada e saída da tela, a função <code class="docutils literal notranslate"><span class="pre">sin</span></code> e muito mais.</p>
+<p>Se você quer ver mais detalhes, adicione a opção «-v». Isso instrui o compilador a apresentar todos os passos em detalhe.</p>
+<p>O resultado final, o programa executável, contém o código fonte compilado e várias rotinas auxiliares que o fazem funcionar. Ele também contém referências para as chamadas bibliotecas de tempo de execução dinâmicas (no Windows, DLLs, no Linux: objetos compartilhados ou bibliotecas compartilhadas). Sem essas bibliotecas de tempo de execução o programa não iniciará.</p>
 </section>
 
 <div class="section ablog__blog_comments">

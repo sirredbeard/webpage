@@ -736,20 +736,12 @@
                 
 <section class="tex2jax_ignore mathjax_ignore" id="an-introduction-to-make">
 <h1>Um introdução ao make<a class="headerlink" href="#an-introduction-to-make" title="Permalink to this heading">#</a></h1>
-<p>We briefly discussed the basics of <code class="docutils literal notranslate"><span class="pre">make</span></code>. This chapter gives ideas
-and strategies to scale <code class="docutils literal notranslate"><span class="pre">make</span></code> for larger projects.</p>
-<p>Before going into detail with <code class="docutils literal notranslate"><span class="pre">make</span></code>, consider a few points:</p>
+<p>Discutimos brevemente o básico do <code class="docutils literal notranslate"><span class="pre">make</span></code>. Esse capítulos dá ideias e estratégias de escalas <code class="docutils literal notranslate"><span class="pre">make</span></code> para projetos maiores.</p>
+<p>Antes de irmos aos detalhes com <code class="docutils literal notranslate"><span class="pre">make</span></code>, considere alguns pontos:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">make</span></code> is a Unix tool and might give you a hard time when porting to non-Unix
-platforms. That said, there are also different flavors of <code class="docutils literal notranslate"><span class="pre">make</span></code> available,
-not all might support the features you want to use.</p></li>
-<li><p>While <code class="docutils literal notranslate"><span class="pre">make</span></code> gives you full control over the build process, it also
-means you are responsible for the entire build process, and you have to specify the rules for every detail of your project.
-You might find yourself spending a significant amount of time writing and
-maintaining your <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> instead of developing your source code.</p></li>
-<li><p>You can work with your <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>, but think about other developers
-on your project who may not be familiar with <code class="docutils literal notranslate"><span class="pre">make</span></code>. How much time do you expect them to spend learning your
-<code class="docutils literal notranslate"><span class="pre">Makefile</span></code> and would they be able to debug or add features?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span></code> é uma ferramenta Unix e pode te dar algum trabalho quando portando para plataformas não Unix. Dito isso, há outros sabores de <code class="docutils literal notranslate"><span class="pre">make</span></code> disponíveis, mas nem todos podem ter as funcionalidades que você queira usar.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span></code> te dá controle total do processo de geração de build, isso significa que você é responsável por todo o processo, e deverá especificar as regras para cada detalhe do seu projeto. Você poderá se encontrar gastando um tempo significativo escrevendo e mantendo seu <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> ao invés de desenvolver seu código fonte.</p></li>
+<li><p>Você pode trabalhar com seu <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>, mas lembre dos outros desenvolvedores no seu projeto que podem não ser familiares com <code class="docutils literal notranslate"><span class="pre">make</span></code>. Quanto tempo você espera que eles gastem para aprender seu <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> e eles serão capazes de debugar ou adicionar funcionalidades?</p></li>
 <li><p>Pure <code class="docutils literal notranslate"><span class="pre">make</span></code> will not scale. You will soon add auxiliary programs
 to dynamically or statically generate your <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>. Those introduce
 dependencies and possible sources of errors. The effort needed to test and document those
