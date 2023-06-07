@@ -742,37 +742,25 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">make</span></code> é uma ferramenta Unix e pode te dar algum trabalho quando portando para plataformas não Unix. Dito isso, há outros sabores de <code class="docutils literal notranslate"><span class="pre">make</span></code> disponíveis, mas nem todos podem ter as funcionalidades que você queira usar.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">make</span></code> te dá controle total do processo de geração de build, isso significa que você é responsável por todo o processo, e deverá especificar as regras para cada detalhe do seu projeto. Você poderá se encontrar gastando um tempo significativo escrevendo e mantendo seu <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> ao invés de desenvolver seu código fonte.</p></li>
 <li><p>Você pode trabalhar com seu <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>, mas lembre dos outros desenvolvedores no seu projeto que podem não ser familiares com <code class="docutils literal notranslate"><span class="pre">make</span></code>. Quanto tempo você espera que eles gastem para aprender seu <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> e eles serão capazes de debugar ou adicionar funcionalidades?</p></li>
-<li><p>Pure <code class="docutils literal notranslate"><span class="pre">make</span></code> will not scale. You will soon add auxiliary programs
-to dynamically or statically generate your <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>. Those introduce
-dependencies and possible sources of errors. The effort needed to test and document those
-tools should not be underestimated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span></code> puro não irá escalar. Cedo você adicionará programas auxiliares para gerar dinamicamente ou estaticamente seu <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>. Eles introduzem dependências e possíveis fontes de erros. O esforço necessário para testar e documentar essas ferramentas não deve ser subestimada.</p></li>
 </ol>
-<p>If you think <code class="docutils literal notranslate"><span class="pre">make</span></code> is suitable for your needs, than you can start writing
-your <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>. For this course we will use real world examples from the
-package index, which (at the time of writing) use build systems other
-than <code class="docutils literal notranslate"><span class="pre">make</span></code>. This guide should present a general recommended style to write
-<code class="docutils literal notranslate"><span class="pre">make</span></code>, but also serve as demonstration of useful and interesting features.</p>
+<p>Se você acha <code class="docutils literal notranslate"><span class="pre">make</span></code> adequado para suas necessidades, então você pode começar escrevendo seu <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>. Para esse curso nós iremos usar exemplos do mundo real vindo do pacote de índice, o qual (no momento dessa escrita) usa sistemas de geração de build fora o <code class="docutils literal notranslate"><span class="pre">make</span></code>. Esse guia apresenta uma recomendação de estilo geral para escrever <code class="docutils literal notranslate"><span class="pre">make</span></code>, mas também serve como demonstração de funcionalidades úteis e interessantes.</p>
 <div class="admonition tip">
 <p class="admonition-title">Dica</p>
-<p>Even if you find <code class="docutils literal notranslate"><span class="pre">make</span></code> unsuitable to build your project, it is <em>the</em> tool to automate workflows defined by files. Maybe you can leverage its power in a different context.</p>
+<p>Mesmo se você achar <code class="docutils literal notranslate"><span class="pre">make</span></code> inadequado para gerar o build do seu projeto, essa é <em>a</em> ferramenta para automatizar fluxos de trabalho definidos pelos arquivos. Talvez você possa utilizar de seu poder em um contexto diferente.</p>
 </div>
 <section id="getting-started">
 <h2>Começando<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
-<p>For this part we will work with
-<a href="https://github.com/jacobwilliams/fortran-csv-module/tree/1.2.0" target="_blank" rel="noopener"> the Fortran CSV module (v1.2.0)</a>.
-Our goal is to write a <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> to compile this project to a static library.
-Start by cloning the repository</p>
+<p>Para essa parte, trabalharemos com <a href="https://github.com/jacobwilliams/fortran-csv-module/tree/1.2.0" target="_blank" rel="noopener"> o Fortran CSV module (v1.2.0)</a>. Nosso objetivo é criar um <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> para compilar esse projeto em uma biblioteca estática. Comece clonando o repositório</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jacobwilliams</span><span class="o">/</span><span class="n">fortran</span><span class="o">-</span><span class="n">csv</span><span class="o">-</span><span class="n">module</span> <span class="o">-</span><span class="n">b</span> <span class="mf">1.2.0</span>
 <span class="n">cd</span> <span class="n">fortran</span><span class="o">-</span><span class="n">csv</span><span class="o">-</span><span class="n">module</span>
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Dica</p>
-<p>For this part we will work with the code from tag <code class="docutils literal notranslate"><span class="pre">1.2.0</span></code>, to make it as reproducible as possible. Feel free to use the latest version or another project instead.</p>
+<p>Para essa parte trabalharemos com o código da tag <code class="docutils literal notranslate"><span class="pre">1.2.0</span></code> para fazê-lo o mais reprodutível o possível. Sinta-se a vontade de usar a última versão ou outro projeto.</p>
 </div>
-<p>This project uses FoBiS as build system, and you can check the
-<code class="docutils literal notranslate"><span class="pre">build.sh</span></code> for options used with FoBiS. We are about to write a <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>
-for this project. First, we check the directory structure and the source files</p>
+<p>Esse projeto usa FoBiS como sistema de geração de build, e você pode chegar o <code class="docutils literal notranslate"><span class="pre">build.sh</span></code> para opções com FoBiS. Nós agora iremos escrever o <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> para esse projeto. Primeiro, checamos a estrutura do diretório e os arquivos fonte</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.
 ├── build.sh
 ├── files
@@ -792,10 +780,8 @@ for this project. First, we check the directory structure and the source files</
         └── csv_write_test.f90
 </pre></div>
 </div>
-<p>We find seven different Fortran source files; the four in <code class="docutils literal notranslate"><span class="pre">src</span></code> should
-be compiled and added to a static library while the three in <code class="docutils literal notranslate"><span class="pre">src/tests</span></code>
-contain individual programs that depend on this static library.</p>
-<p>Start by creating a simple <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>:</p>
+<p>Nós encontramos sete arquivos fonte Fortran diferentes; os quatros no <code class="docutils literal notranslate"><span class="pre">src</span></code> devem ser compilados e adicionados na biblioteca estática enquanto que os três em <code class="docutils literal notranslate"><span class="pre">src/tests</span></code> contém programas individuais que dependem da biblioteca estática.</p>
+<p>Comece criando um <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> simples:</p>
 <div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="c"># Disable the default rules</span>
 <span class="nv">MAKEFLAGS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>--no-builtin-rules<span class="w"> </span>--no-builtin-variables
 
@@ -859,8 +845,7 @@ contain individual programs that depend on this static library.</p>
 <span class="w">	</span><span class="k">$(</span>RM<span class="k">)</span><span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.o,<span class="w"> </span><span class="k">$(</span>OBJS<span class="k">)</span><span class="w"> </span><span class="k">$(</span>TEST_OBJS<span class="k">))</span><span class="w"> </span><span class="k">$(</span>filter<span class="w"> </span>%.exe,<span class="w"> </span><span class="k">$(</span>TEST_EXE<span class="k">))</span><span class="w"> </span><span class="k">$(</span>LIB<span class="k">)</span><span class="w"> </span><span class="k">$(</span>wildcard<span class="w"> </span>*.mod<span class="k">)</span>
 </pre></div>
 </div>
-<p>Invoking <code class="docutils literal notranslate"><span class="pre">make</span></code> should build the static library and the test executables as
-expected:</p>
+<p>Invocando <code class="docutils literal notranslate"><span class="pre">make</span></code> deve construir a biblioteca estática e os executáveis dos testes como esperado:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gfortran -c -o src/csv_kinds.f90.o src/csv_kinds.f90
 gfortran -c -o src/csv_parameters.f90.o src/csv_parameters.f90
 gfortran -c -o src/csv_utilities.f90.o src/csv_utilities.f90
