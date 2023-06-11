@@ -606,7 +606,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../intrinsics/array/">
-     Properties and attributes of arrays
+     Propriedades e atributos das matrizes
     </a>
    </li>
    <li class="toctree-l2">
@@ -738,26 +738,17 @@
 <p><em>No Linux:</em></p>
 <ul class="simple">
 <li><p>A biblioteca de ambiente <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> é usada. Ela consiste em uma lista de diretórios à ser vasculhada, cada diretório separado por dois pontos (:) dos outros. Por instância: <code class="docutils literal notranslate"><span class="pre">usr/lib:/usr/local/lib</span></code> - tipo sistema de diretórios.</p></li>
-<li><p>At the link step you can also use an option to set <code class="docutils literal notranslate"><span class="pre">RPATH</span></code>, a list
-of directories that is put into the executable file itself.</p></li>
-<li><p>Then there are several system directories that are searched.</p></li>
+<li><p>Na fase de link você pode usar também a opção de definir <code class="docutils literal notranslate"><span class="pre">RPATH</span></code>, uma lista de diretórios que é adicionada ao próprio arquivo executável.</p></li>
+<li><p>Então há diversos diretórios do sistemas que serão vasculhados.</p></li>
 </ul>
 <p><em>No Windows:</em></p>
 <ul class="simple">
-<li><p>The directory containing the executable program may also contain
-dynamic libraries.</p></li>
-<li><p>The environment variable «PATH» is used. Again a list of directories
-to be searched, but now the separating character is the semicolon (;).</p></li>
-<li><p>A set of system directories is searched.</p></li>
+<li><p>O diretório contendo o programa executável pode conter também bibliotecas dinâmicas.</p></li>
+<li><p>A variável de ambiente «PATH» é usada. De novo uma lista de diretórios para serem vasculhadas, mas agora o carácter de separação é o ponto-e-vírgula (;).</p></li>
+<li><p>Um conjunto de diretórios de sistema é vasculhado.</p></li>
 </ul>
-<p>Unfortunately, the details can change from one version of the operating
-system to the next. The above is merely an indication — use tools like
-«ldd» or «dependency walker» to find out what libraries are loaded and
-where they are found.</p>
-<p>If you want to share your program with colleagues or clients or simply
-users all over the world, you will have to take care that, besides the
-program, you also distribute the libraries it depends on. For more
-information: see below.</p>
+<p>Infelizmente, os detalhes podem mudar de uma versão do sistema operação para outra. O supracitado é meramente uma indicação - use ferramentas como «ldd» ou «dependency walker» para descobrir quais bibliotecas são carregas e onde serão encontradas.</p>
+<p>Se você quer compartilhar seu programa com colegas ou clientes ou simplesmente usuários ao redor do mundo, você terá que ter cuidado com, além do programa, as distribuição das bibliotecas que seu programa depende. Para mais informações: veja abaixo.</p>
 </section>
 
 <div class="section ablog__blog_comments">
