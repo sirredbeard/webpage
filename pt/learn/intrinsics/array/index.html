@@ -2503,19 +2503,12 @@ scalars according to a logical mask. The result is equal to an element
 of <strong>tsource</strong> where the corresponding element of <strong>mask</strong> is <em>.true.</em>, or an
 element of <strong>fsource</strong> when it is <em>.false.</em> .</p>
 <p>Matrizes multidimensionais são suportadas.</p>
-<p>Note that argument expressions to <strong>merge</strong>(3) are not required to be
-short-circuited so (as an example) if the array <strong>x</strong> contains zero values
-in the statement below the standard does not prevent floating point
-divide by zero being generated; as <strong>1.0/x</strong> may be evaluated for all values
-of <strong>x</strong> before the mask is used to select which value to retain:</p>
+<p>Note que as expressões de argumento para <strong>merge</strong>(3) não são necessárias de serem curto circuitadas então (como um exemplo) se a matriz <strong>x</strong> contém valores zero na declaração abaixo o padrão não previne divisão de ponto flutuante por zero; como <strong>1.0/x</strong> pode ser avaliada para todos os valores de <strong>x</strong> antes da máscara ser usada para selecionar quais valores reter:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">merge</span><span class="p">(</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Note the compiler is also free to short-circuit or to generate an
-infinity so this may work in many programming environments but is not
-recommended.</p>
-<p>For cases like this one may instead use masked assignment via the <strong>where</strong>
-construct:</p>
+<p>Note que o compilador também é livre para curto circuitar ou gerar um infinito então isso pode funcionar em muitos ambientes de programação mas isso não é recomendado.</p>
+<p>Para casos como esse pode usar atribuição mascarada por meio do construto <strong>where</strong>:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="k">where</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="p">.</span><span class="n">ne</span><span class="p">.</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span>
 <span class="w">         </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="n">x</span>
 <span class="w">      </span><span class="n">elsewhere</span>
@@ -2523,7 +2516,7 @@ construct:</p>
 <span class="w">      </span><span class="k">endwhere</span>
 </pre></div>
 </div>
-<p>instead of the more obscure</p>
+<p>ao invés do mais obscuro</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="nb">merge</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="nb">merge</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span>
 </pre></div>
 </div>
