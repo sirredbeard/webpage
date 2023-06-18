@@ -675,7 +675,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference external" href="https://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">
-     GNU Free Documentation License
+     Licença de Documentação Gratuita GNU
     </a>
    </li>
   </ul>
@@ -3037,7 +3037,7 @@ of <strong>mask</strong> replaced by values from <strong>vector</strong> in arra
 </section>
 <section id="id25">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
-<p>Particular values may be «scattered» to particular positions in an array by using</p>
+<p>Valores particulares podem ser «distribuídos» para posições particular em uma matriz usando</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                       1 0 0
     If M is the array  0 1 0
                        0 0 1
@@ -3273,53 +3273,33 @@ shall be associated.</p></li>
 <h3><strong>Descrição</strong><a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h3>
 <p><strong>is_contiguous</strong>(3) returns <em>.true.</em> if and only if an object is
 contiguous.</p>
-<p>An object is contiguous if it is</p>
+<p>Um objeto é contíguo se ele for</p>
 <ul class="simple">
-<li><p><strong>(1)</strong>
-an object with the CONTIGUOUS attribute,</p></li>
-<li><p><strong>(2)</strong>
-a nonpointer whole array that is not assumed-shape,</p></li>
-<li><p><strong>(3)</strong>
-an assumed-shape array that is argument associated with an array
-that is contiguous,</p></li>
-<li><p><strong>(4)</strong>
-an array allocated by an ALLOCATE statement,</p></li>
-<li><p><strong>(5)</strong>
-a pointer associated with a contiguous target, or</p></li>
-<li><p><strong>(6)</strong>
-a nonzero-sized array section provided that</p>
+<li><p><strong>(1)</strong> um objeto com o atributo CONTIGUOUS,</p></li>
+<li><p><strong>(2)</strong> uma matriz cheia sem ponteiro que não é assumed-shape,</p></li>
+<li><p><strong>(3)</strong> uma matriz assumed-shape que é associada por argumento com uma matriz que é contígua,</p></li>
+<li><p><strong>(4)</strong> uma matriz alocada por uma declaração ALLOCATE,</p></li>
+<li><p><strong>(5)</strong> um ponteiro associado a um destino contíguo, ou</p></li>
+<li><p><strong>(6)</strong> uma seção de matriz não nula fornecida que</p>
 <ul>
-<li><p><strong>(a)</strong>
-its base object is contiguous,</p></li>
-<li><p><strong>(b)</strong>
-it does not have a vector subscript,</p></li>
-<li><p><strong>(c)</strong>
-the elements of the section, in array element order, are a
-subset of the base object elements that are consecutive in
-array element order,</p></li>
-<li><p><strong>(d)</strong>
-if the array is of type character and a substring-range
-appears, the substring-range specifies all of the characters
-of the parent-string,</p></li>
-<li><p><strong>(e)</strong>
-only its final part-ref has nonzero rank, and</p></li>
-<li><p><strong>(f)</strong>
-it is not the real or imaginary part of an array of type
-complex.</p></li>
+<li><p><strong>(a)</strong> seu objeto base é contíguo,</p></li>
+<li><p><strong>(b)</strong> não tem um vetor subscrito,</p></li>
+<li><p><strong>(c)</strong> os elemento da seção, em ordem de elemento da matriz, são um subconjunto dos elemento do objeto base que são sucessivos em ordem de elemento de matriz,</p></li>
+<li><p><strong>(d)</strong> se a matriz é do tipo character e um tamanho de substring aparece, o tamanho do substring especifica todos os caracteres da string pai,</p></li>
+<li><p><strong>(e)</strong> somente a parte referenciada final tem uma ordem não zero, e</p></li>
+<li><p><strong>(f)</strong> não é a parte real ou imaginária de uma matriz de tipo complexo.</p></li>
 </ul>
 </li>
 </ul>
-<p>An object is not contiguous if it is an array subobject, and</p>
+<p>Um objeto é não contíguo se ele for um subobjeto de matriz, e</p>
 <ul class="simple">
-<li><p>the object has two or more elements,</p></li>
-<li><p>the elements of the object in array element order are not
-consecutive in the elements of the base object,</p></li>
-<li><p>the object is not of type character with length zero, and</p></li>
-<li><p>the object is not of a derived type that has no ultimate
-components other than zero-sized arrays and</p></li>
-<li><p>characters with length zero.</p></li>
+<li><p>o objeto tiver dois ou mais elementos,</p></li>
+<li><p>os elementos do objeto em ordem de elemento de matriz não forem consecutivos nos elementos do objeto base,</p></li>
+<li><p>o objeto não é do tipo character com tamanho zero, e</p></li>
+<li><p>o objeto não é de um tipo derivado que não tem componentes últimos além de matriz de tamanho zero e</p></li>
+<li><p>caracteres tem tamanho zero.</p></li>
 </ul>
-<p>It is processor-dependent whether any other object is contiguous.</p>
+<p>É dependente de processamento se qualquer outro objeto é contíguo.</p>
 </section>
 <section id="id41">
 <h3><strong>Opções</strong><a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h3>
@@ -3415,7 +3395,7 @@ bound along the <strong>dim</strong> dimension.</p>
 <h3><strong>Opções</strong><a class="headerlink" href="#id50" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>array</strong></dt><dd><p>Shall be an array, of any type.</p>
+<dt><strong>array</strong></dt><dd><p>Deve ser uma matriz, de qualquer tipo.</p>
 </dd>
 </dl>
 </li>
@@ -3427,8 +3407,7 @@ If <strong>dim</strong> is absent, the result is an array of the upper bounds of
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>kind</strong></dt><dd><p>An <em>integer</em> initialization expression indicating the kind
-parameter of the result.</p>
+<dt><strong>kind</strong></dt><dd><p>Um expressão de inicialização de <em>integer</em> indicando o tipo de parâmetro do resultado.</p>
 </dd>
 </dl>
 </li>
@@ -3452,9 +3431,7 @@ present since it cannot satisfy the requirement **1 &lt;= dim &lt;= 0**.
 </section>
 <section id="id52">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id52" title="Permalink to this heading">#</a></h3>
-<p>Note that in my opinion this function should not be used on assumed-size
-arrays or in any function without an explicit interface. Errors can
-occur if there is no interface defined.</p>
+<p>Note que em minha opinião essa função não deveria ser usada em matrizes assumed-size ou em qualquer função sem uma interface explícita. Erros podem acontecer se não houver interface definida.</p>
 <p>Exemplo de programa</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! program demo_lbound</span>
 <span class="k">module </span><span class="n">m_bounds</span>
@@ -3918,8 +3895,7 @@ in the range from 1 to n, where n equals the rank of <strong>array</strong>.</p>
 are returned.</p>
 </li>
 <li><dl class="simple myst">
-<dt><strong>kind</strong></dt><dd><p>An <em>integer</em> initialization expression indicating the kind
-parameter of the result.</p>
+<dt><strong>kind</strong></dt><dd><p>Um expressão de inicialização de <em>integer</em> indicando o tipo de parâmetro do resultado.</p>
 </dd>
 </dl>
 <p>If absent the kind type parameter of the returned value is that of
@@ -4104,16 +4080,11 @@ of the default kind is returned.</p>
 </section>
 <section id="id100">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id100" title="Permalink to this heading">#</a></h3>
-<p>The return value is of type <em>integer</em> and of kind <strong>kind</strong>. If <strong>kind</strong>
-is absent, the return value is of default integer kind.</p>
+<p>O valor retornado é do tipo <em>integer</em> e do tipo <strong>kind</strong>. Se <strong>kind</strong> não for especificado, o valor retornado é do tipo inteiro padrão.</p>
 <p>If <strong>dim</strong> is absent, the result is an array of the upper bounds of
 each dimension of the <strong>array</strong>.</p>
-<p>If <strong>dim</strong> is present, the result is a scalar corresponding to the upper
-bound of the array along that dimension.</p>
-<p>If <strong>array</strong> is an expression rather than a whole array or array
-structure component, or if it has a zero extent along the relevant
-dimension, the upper bound is taken to be the number of elements along
-the relevant dimension.</p>
+<p>Se <strong>dim</strong> estiver presente, o resultado é um escalar correspondendo ao limite superior da matriz ao longo daquela dimensão.</p>
+<p>Se <strong>array</strong> é uma expressão ao invés de uma matriz cheia ou um componente de estrutura de matriz, ou tem um zero ao longo da dimensão de interesse, o limite superior é dado pelo número de elementos ao longo da dimensão de interesse.</p>
 <p>NOTE1
 If ARRAY is assumed-rank and has rank zero, DIM cannot be present
 since it cannot satisfy the requirement
@@ -4121,9 +4092,7 @@ since it cannot satisfy the requirement
 </section>
 <section id="id101">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id101" title="Permalink to this heading">#</a></h3>
-<p>Note this function should not be used on assumed-size arrays or in any
-function without an explicit interface. Errors can occur if there is no
-interface defined.</p>
+<p>Note que essa função não deve ser usada em matrizes assumed-size ou em qualquer função sem interface explícita. Erros podem acontecer se não houver interface definida.</p>
 <p>Exemplo de programa</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! program demo_ubound</span>
 <span class="k">module </span><span class="n">m2_bounds</span>
@@ -4227,7 +4196,7 @@ interface defined.</p>
 <h2>maxloc<a class="headerlink" href="#maxloc" title="Permalink to this heading">#</a></h2>
 <section id="id108">
 <h3><strong>Nome</strong><a class="headerlink" href="#id108" title="Permalink to this heading">#</a></h3>
-<p><strong>maxloc</strong>(3) - [ARRAY:LOCATION] Location of the maximum value within an array</p>
+<p><strong>maxloc</strong>(3) - [ARRAY:LOCATION] Localização do maior valor dentro de uma matriz</p>
 </section>
 <section id="id109">
 <h3><strong>Synopsis</strong><a class="headerlink" href="#id109" title="Permalink to this heading">#</a></h3>
@@ -4268,19 +4237,17 @@ row are zero, the result value for that row is zero.</p>
 <h3><strong>Opções</strong><a class="headerlink" href="#id112" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>array</strong></dt><dd><p>Shall be an array of type <em>integer</em>, <em>real</em>, or <em>character</em>.</p>
+<dt><strong>array</strong></dt><dd><p>Pode ser uma matriz do tipo <em>integer</em>, <em>real</em> ou <em>character</em>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>dim</strong></dt><dd><p>(Optional) Shall be a scalar of type <em>integer</em>, with a value between
-one and the rank of <strong>array</strong>, inclusive. It may not be an optional
-dummy argument.</p>
+<dt><strong>dim</strong></dt><dd><p>(Opcional) Deve ser um escalar do tipo <em>integer</em>, com o valor entre um e a ordem do <strong>array</strong>, inclusivo. Ele não pode ser um argumento ficcional opcional.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>mask</strong></dt><dd><p>Shall be an array of type <em>logical</em>, and conformable with <strong>array</strong>.</p>
+<dt><strong>mask</strong></dt><dd><p>Deve ser uma matriz do tipo <em>logical</em>, e conformável com <strong>array</strong>.</p>
 </dd>
 </dl>
 </li>
@@ -4288,15 +4255,8 @@ dummy argument.</p>
 </section>
 <section id="id113">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id113" title="Permalink to this heading">#</a></h3>
-<p>If <strong>dim</strong> is absent, the result is a rank-one array with a length equal
-to the rank of <strong>array</strong>. If <strong>dim</strong> is present, the result is an array
-with a rank one less than the rank of <strong>array</strong>, and a size corresponding
-to the size of <strong>array</strong> with the <strong>dim</strong> dimension removed. If <strong>dim</strong>
-is present and <strong>array</strong> has a rank of one, the result is a scalar. In
-all cases, the result is of default <em>integer</em> type.</p>
-<p>The value returned is reference to the offset from the beginning of the
-array, not necessarily the subscript value if the array subscripts do
-not start with one.</p>
+<p>Se <strong>dim</strong> for ausente, o resultado é uma matriz de primeira ordem com tamanho igual à ordem de <strong>array</strong>. Se <strong>dim</strong> estiver presente, o resultado é uma matriz com uma ordem um nível inferior à ordem de <strong>array</strong>, e um tamanho correspondente ao tamanho de <strong>array</strong> com a dimensão <strong>dim</strong> removida. Se <strong>dim</strong> estiver presente** e <strong>array</strong> é de primeira ordem, o resultado é um escalar. Em todos os casos, o resultado é por padrão do tipo <em>integer</em>.</p>
+<p>O valor retornado é referência para o deslocamento desde o início da matriz, não necessariamente o valor subscrito se os subscritos da matriz não iniciam com um.</p>
 </section>
 <section id="id114">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id114" title="Permalink to this heading">#</a></h3>
@@ -4362,7 +4322,7 @@ identified by MASK along dimension DIM matching a target</p></li>
 <h2>minloc<a class="headerlink" href="#minloc" title="Permalink to this heading">#</a></h2>
 <section id="id117">
 <h3><strong>Nome</strong><a class="headerlink" href="#id117" title="Permalink to this heading">#</a></h3>
-<p><strong>minloc</strong>(3) - [ARRAY:LOCATION] Location of the minimum value within an array</p>
+<p><strong>minloc</strong>(3) - [ARRAY:LOCATION] Localização do menor valor dentro de uma matriz</p>
 </section>
 <section id="id118">
 <h3><strong>Synopsis</strong><a class="headerlink" href="#id118" title="Permalink to this heading">#</a></h3>
@@ -4404,19 +4364,17 @@ zero, the result value for that row is zero.</p>
 <h3><strong>Opções</strong><a class="headerlink" href="#id121" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>array</strong></dt><dd><p>Shall be an array of type <em>integer</em>, <em>real</em>, or <em>character</em>.</p>
+<dt><strong>array</strong></dt><dd><p>Pode ser uma matriz do tipo <em>integer</em>, <em>real</em> ou <em>character</em>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>dim</strong></dt><dd><p>(Optional) Shall be a scalar of type <em>integer</em>, with a value between
-one and the rank of <strong>array</strong>, inclusive. It may not be an optional
-dummy argument.</p>
+<dt><strong>dim</strong></dt><dd><p>(Opcional) Deve ser um escalar do tipo <em>integer</em>, com o valor entre um e a ordem do <strong>array</strong>, inclusivo. Ele não pode ser um argumento ficcional opcional.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>mask</strong></dt><dd><p>Shall be an array of type <em>logical</em>, and conformable with <strong>array</strong>.</p>
+<dt><strong>mask</strong></dt><dd><p>Deve ser uma matriz do tipo <em>logical</em>, e conformável com <strong>array</strong>.</p>
 </dd>
 </dl>
 </li>
@@ -4424,12 +4382,7 @@ dummy argument.</p>
 </section>
 <section id="id122">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id122" title="Permalink to this heading">#</a></h3>
-<p>If <strong>dim</strong> is absent, the result is a rank-one array with a length equal
-to the rank of <strong>array</strong>. If <strong>dim</strong> is present, the result is an array
-with a rank one less than the rank of <strong>array</strong>, and a size corresponding
-to the size of <strong>array</strong> with the <strong>dim</strong> dimension removed. If <strong>dim</strong>
-is present and <strong>array</strong> has a rank of one, the result is a scalar. In
-all cases, the result is of default <em>integer</em> type.</p>
+<p>Se <strong>dim</strong> for ausente, o resultado é uma matriz de primeira ordem com tamanho igual à ordem de <strong>array</strong>. Se <strong>dim</strong> estiver presente, o resultado é uma matriz com uma ordem um nível inferior à ordem de <strong>array</strong>, e um tamanho correspondente ao tamanho de <strong>array</strong> com a dimensão <strong>dim</strong> removida. Se <strong>dim</strong> estiver presente** e <strong>array</strong> é de primeira ordem, o resultado é um escalar. Em todos os casos, o resultado é por padrão do tipo <em>integer</em>.</p>
 </section>
 <section id="id123">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id123" title="Permalink to this heading">#</a></h3>
@@ -4544,7 +4497,7 @@ element order.</p>
 <h3><strong>Opções</strong><a class="headerlink" href="#id130" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>array</strong></dt><dd><p>shall be an array of intrinsic type.</p>
+<dt><strong>array</strong></dt><dd><p>deve ser uma matriz do tipo intrínseco.</p>
 </dd>
 </dl>
 </li>
@@ -4567,12 +4520,12 @@ shall not be an optional dummy argument.</p>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>kind</strong></dt><dd><p>(optional) shall be a scalar integer initialization expression.</p>
+<dt><strong>kind</strong></dt><dd><p>(opcional) deve ser uma expressão de inicialização de escalar inteiro.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>back</strong></dt><dd><p>(optional) shall be a logical scalar.</p>
+<dt><strong>back</strong></dt><dd><p>(opcional) deve ser um escalar lógico.</p>
 </dd>
 </dl>
 </li>
@@ -5264,8 +5217,7 @@ rank(number of dimensions) of <strong>mask</strong>.</p>
 argument, a disassociated pointer, or an unallocated allocatable.</p>
 </li>
 <li><dl class="simple myst">
-<dt><strong>kind</strong></dt><dd><p>An <em>integer</em> initialization expression indicating the kind
-parameter of the result.</p>
+<dt><strong>kind</strong></dt><dd><p>Um expressão de inicialização de <em>integer</em> indicando o tipo de parâmetro do resultado.</p>
 </dd>
 </dl>
 </li>
@@ -5493,14 +5445,12 @@ of nulls if <strong>array</strong> is of character type.</p>
 <h3><strong>Opções</strong><a class="headerlink" href="#id176" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>array</strong></dt><dd><p>Shall be an array of type <em>integer</em>, <em>real</em>, or <em>character</em>.</p>
+<dt><strong>array</strong></dt><dd><p>Pode ser uma matriz do tipo <em>integer</em>, <em>real</em> ou <em>character</em>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>dim</strong></dt><dd><p>(Optional) Shall be a scalar of type <em>integer</em>, with a value between
-one and the rank of <strong>array</strong>, inclusive. It may not be an optional
-dummy argument.</p>
+<dt><strong>dim</strong></dt><dd><p>(Opcional) Deve ser um escalar do tipo <em>integer</em>, com o valor entre um e a ordem do <strong>array</strong>, inclusivo. Ele não pode ser um argumento ficcional opcional.</p>
 </dd>
 </dl>
 </li>
@@ -5603,7 +5553,7 @@ is of character type.</p>
 <h3><strong>Opções</strong><a class="headerlink" href="#id185" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>array</strong></dt><dd><p>Shall be an array of type <em>integer</em>, <em>real</em>, or <em>character</em>.</p>
+<dt><strong>array</strong></dt><dd><p>Pode ser uma matriz do tipo <em>integer</em>, <em>real</em> ou <em>character</em>.</p>
 </dd>
 </dl>
 </li>
@@ -5615,7 +5565,7 @@ dummy argument.</p>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>mask</strong></dt><dd><p>Shall be an array of type <em>logical</em>, and conformable with <strong>array</strong>.</p>
+<dt><strong>mask</strong></dt><dd><p>Deve ser uma matriz do tipo <em>logical</em>, e conformável com <strong>array</strong>.</p>
 </dd>
 </dl>
 </li>
