@@ -45,7 +45,7 @@
     <link rel="canonical" href="https://fortran-lang.org/en/learn/intrinsics/array.html" />
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
-    <link rel="next" title="Bit-level inquiry and manipulation" href="../bit/" />
+    <link rel="next" title="manipulação e consulta à nível de bit" href="../bit/" />
     <link rel="prev" title="Funções Intrínsecas do Fortran" href="../" />
 
 <meta
@@ -611,7 +611,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../bit/">
-     Bit-level inquiry and manipulation
+     manipulação e consulta à nível de bit
     </a>
    </li>
    <li class="toctree-l2">
@@ -4514,8 +4514,7 @@ shall not be an optional dummy argument.</p>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>mask</strong></dt><dd><p>(optional) shall be of type logical and shall be conformable with
-<strong>array</strong>.</p>
+<dt><strong>mask</strong></dt><dd><p>(opcional) deve ser do tipo logical e deve estar em concordância com <strong>array</strong>.</p>
 </dd>
 </dl>
 </li>
@@ -4545,27 +4544,13 @@ the result is an array of rank one and of size equal to the rank of
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">[</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">,</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span><span class="p">,</span> <span class="n">dn</span> <span class="p">]</span>
 </pre></div>
 </div>
-<p>is the shape of <strong>array</strong>.</p>
+<p>é a forma de <strong>array</strong>.</p>
 </section>
 <section id="id132">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id132" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>Case (i):</strong>
-The result of <strong>findloc (array, value)</strong> is a rank-one array whose
-element values are the values of the subscripts of an element of
-<strong>array</strong> whose value matches <strong>value</strong>. If there is such a value, the
-ith subscript returned lies in the range 1 to ei, where ei is the
-extent of the ith dimension of <strong>array</strong>. If no elements match <strong>value</strong>
-or <strong>array</strong> has size zero, all elements of the result are zero.</p></li>
-<li><p><strong>Case (ii):</strong>
-the result of <strong>findloc (array, value, mask = mask)</strong> is a
-rank-one array whose element values are the values of the subscripts
-of an element of <strong>array</strong>, corresponding to a true element of <strong>mask</strong>,
-whose value matches <strong>value</strong>. If there is such a value, the ith
-subscript returned lies in the range 1 to ei, where ei is the
-extent of the ith dimension of <strong>array</strong>. If no elements match
-<strong>value</strong>, <strong>array</strong> has size zero, or every element of <strong>mask</strong> has the
-value false, all elements of the result are zero.</p></li>
+<li><p><strong>Caso (i):</strong> O resultado de <strong>findlock (array, value)</strong> é uma matriz de primeira ordem cujo valores dos elementos são os valores dos subscritos de um elemento em <strong>array</strong> cujo valor corresponde à <strong>value</strong>. Se não houver tal valor, o i-ésimo subscrito retornado estará na faixa de 1 à ei, onde ei é a extensão da i-ésima dimensão de <strong>array</strong>. Se nenhum elemento corresponder à <strong>value</strong> ou <strong>array</strong> tiver tamanho zero, todos os elementos do resultado serão zero.</p></li>
+<li><p><strong>Caso (ii):</strong> O resultado de <strong>findlock (array, value, mask = mask)</strong> é uma matriz de primeira ordem cujos valores do elemento são os valores dos subscritos de um elemento de <strong>array</strong>, correspondente ao elemento verdadeiro de <strong>mask</strong>, cujo valor corresponde à <strong>value</strong>. Se não houver tal valor, o i-ésimo subscrito retornado estará na faixa de 1 a ei, onde ei é a extensão da i-ésima dimensão de <strong>array</strong>. Se nenhum elemento corresponde à <strong>value</strong>, <strong>array</strong> tiver tamanho zero, ou todo elemento de <strong>mask</strong> for falso, todos os elementos do resultado serão zero.</p></li>
 </ul>
 </section>
 <section id="id133">
@@ -5558,9 +5543,7 @@ is of character type.</p>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>dim</strong></dt><dd><p>(Optional) Shall be a scalar of type <em>integer</em>, with a value between
-one and the rank of ARRAY, inclusive. It may not be an optional
-dummy argument.</p>
+<dt><strong>dim</strong></dt><dd><p>(Opcional) Deve ser um escalar do tipo <em>integer</em>, com um valor entre um e a ordem de ARRAY, inclusivo. Este não pode ser um argumento fictício opcional.</p>
 </dd>
 </dl>
 </li>
@@ -5726,7 +5709,7 @@ to that of <strong>array</strong> with dimension <strong>dim</strong> dropped is
 <h3><strong>Opções</strong><a class="headerlink" href="#id194" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>array</strong></dt><dd><p>Shall be an array of type <em>integer</em>, <em>real</em> or <em>complex</em>.</p>
+<dt><strong>array</strong></dt><dd><p>Deve ser uma matriz do tipo <em>integer</em>, <em>real</em> ou <em>complexo</em>.</p>
 </dd>
 </dl>
 </li>
