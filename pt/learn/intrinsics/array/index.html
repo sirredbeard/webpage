@@ -5025,11 +5025,7 @@ instead of a scalar answer.</p>
 </section>
 <section id="id159">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id159" title="Permalink to this heading">#</a></h3>
-<p><strong>any(mask)</strong> returns a scalar value of type <em>logical</em> where the kind type
-parameter is the same as the kind type parameter of <strong>mask</strong>. If <strong>dim</strong>
-is present, then <strong>any(mask, dim)</strong> returns an array with the rank of
-<strong>mask</strong> minus 1. The shape is determined from the shape of <strong>mask</strong>
-where the <strong>dim</strong> dimension is elided.</p>
+<p><strong>any(mask)</strong> retorna um valor escalar do tipo <em>logical</em> onde o tipo do parâmetro é do mesmo tipo do parâmetro de <strong>mask</strong>. Se <strong>dim</strong> estiver presente, então <strong>any(mask, dim)</strong> retorna uma matriz com a ordem de <strong>mask</strong> menos 1. O formato é determinado pelo formato de <strong>mask</strong> onde a dimensão <strong>dim</strong> é omitida.</p>
 <ol class="arabic simple">
 <li><p><strong>any(mask)</strong> is <em>.true.</em> if any element of <strong>mask</strong> is <em>.true.</em>;
 otherwise, it is <em>.false.</em>. It also is <em>.false.</em> if <strong>mask</strong> has
@@ -5440,8 +5436,7 @@ of nulls if <strong>array</strong> is of character type.</p>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>mask</strong></dt><dd><p>(Optional) Shall be an array of type <em>logical</em>, and conformable with
-<strong>array</strong>.</p>
+<dt><strong>mask</strong></dt><dd><p>(Opcional) Deve ser uma matriz do tipo <em>logical</em>, e em conformidade com <strong>array</strong>.</p>
 </dd>
 </dl>
 </li>
