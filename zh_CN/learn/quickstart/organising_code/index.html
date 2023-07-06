@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -869,7 +869,10 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>将此 <code class="docutils literal notranslate"><span class="pre">print_matrix</span></code> 子例程与在模块外部编写的子例程进行比较，我们不再需要显式传递矩阵维度，而是可以利用 <em>assumed-shape</em> 参数，因为模块将为我们生成所需的显式接口。这导致了一个更简单的子程序接口。</p>
+<div><p>Compare this <code class="docutils literal notranslate"><span class="pre">print_matrix</span></code> subroutine with that written outside of a module.
+We no longer have to explicitly pass the matrix dimensions and can instead take
+advantage of <em>assumed-shape</em> arguments since the module will generate the required
+explicit interface for us. This results in a much simpler subroutine interface.</p>
 </div></blockquote>
 <p>要在程序中 <code class="docutils literal notranslate"><span class="pre">use</span></code> 模块：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">use_mod</span>
