@@ -807,7 +807,9 @@
 <p>字符由单引号 (<code class="docutils literal notranslate"><span class="pre">'</span></code>) 或双引号 (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>) 包围。</p>
 <p>逻辑或布尔值可以是 <code class="docutils literal notranslate"><span class="pre">.true.</span></code> 或 <code class="docutils literal notranslate"><span class="pre">.false.</span></code>。</p>
 <blockquote>
-<div><p>注意 “content=” 声明时的赋值：<code class="docutils literal notranslate"><span class="pre">integer</span> <span class="pre">::</span> <span class="pre">amount</span> <span class="pre">=</span> <span class="pre">1</span></code>。 <strong>这不是正常的初始化；</strong> 它暗示了 <code class="docutils literal notranslate"><span class="pre">save</span></code> 属性，这意味着变量在过程调用之间保留其值。好的做法是将变量分别初始化为它们的声明。</p>
+<div><p>Watch out for assignment at declaration: <code class="docutils literal notranslate"><span class="pre">integer</span> <span class="pre">::</span> <span class="pre">amount</span> <span class="pre">=</span> <span class="pre">1</span></code>.
+<strong>This is NOT a normal initialisation;</strong> it implies the <code class="docutils literal notranslate"><span class="pre">save</span></code> attribute which means that the variable retains
+its value between procedure calls. Good practice is to initialise your variables separately to their declaration.</p>
 </div></blockquote>
 <section id="standard-input-output">
 <h2>标准输入/输出<a class="headerlink" href="#standard-input-output" title="此标题的永久链接">#</a></h2>

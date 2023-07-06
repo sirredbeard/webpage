@@ -807,7 +807,9 @@
 <p>Символьные значения обрамляются одиночными (<code class="docutils literal notranslate"><span class="pre">'</span></code>) или двойными кавычками (<code class="docutils literal notranslate"><span class="pre">\&quot;</span></code>).</p>
 <p>Логические или булевы величины могут быть равны <code class="docutils literal notranslate"><span class="pre">.true.</span></code> (истина) или <code class="docutils literal notranslate"><span class="pre">.false.</span></code> (ложь).</p>
 <blockquote>
-<div><p>Осторожно используйте присваивание при объявлении: <code class="docutils literal notranslate"><span class="pre">integer</span> <span class="pre">::</span> <span class="pre">amount</span> <span class="pre">=</span> <span class="pre">1</span></code>. <strong>Это НЕ ЯВЛЯЕТСЯ нормальным способом инициализации;</strong> в этом случае неявно применяется атрибут <code class="docutils literal notranslate"><span class="pre">save</span></code>, который означает, что переменная сохраняет своё значение между вызовами подпрограммы (процедуры или функции). Хорошей практикой является инициализация ваших переменных отдельно от их объявления.</p>
+<div><p>Watch out for assignment at declaration: <code class="docutils literal notranslate"><span class="pre">integer</span> <span class="pre">::</span> <span class="pre">amount</span> <span class="pre">=</span> <span class="pre">1</span></code>.
+<strong>This is NOT a normal initialisation;</strong> it implies the <code class="docutils literal notranslate"><span class="pre">save</span></code> attribute which means that the variable retains
+its value between procedure calls. Good practice is to initialise your variables separately to their declaration.</p>
 </div></blockquote>
 <section id="standard-input-output">
 <h2>Стандартный ввод / вывод<a class="headerlink" href="#standard-input-output" title="Permalink to this heading">#</a></h2>
