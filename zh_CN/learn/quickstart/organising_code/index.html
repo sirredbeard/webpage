@@ -869,10 +869,7 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>Compare this <code class="docutils literal notranslate"><span class="pre">print_matrix</span></code> subroutine with that written outside of a module.
-We no longer have to explicitly pass the matrix dimensions and can instead take
-advantage of <em>assumed-shape</em> arguments since the module will generate the required
-explicit interface for us. This results in a much simpler subroutine interface.</p>
+<div><p>将此 <code class="docutils literal notranslate"><span class="pre">print_matrix</span></code> 子例程与在模块外部编写的子例程进行比较，我们不再需要显式传递矩阵维度，而是可以利用 <em>assumed-shape</em> 参数，因为模块将为我们生成所需的显式接口。这导致了一个更简单的子程序接口。</p>
 </div></blockquote>
 <p>要在程序中 <code class="docutils literal notranslate"><span class="pre">use</span></code> 模块：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">use_mod</span>

@@ -869,10 +869,7 @@
 </pre></div>
 </div>
 <blockquote>
-<div><p>Compare this <code class="docutils literal notranslate"><span class="pre">print_matrix</span></code> subroutine with that written outside of a module.
-We no longer have to explicitly pass the matrix dimensions and can instead take
-advantage of <em>assumed-shape</em> arguments since the module will generate the required
-explicit interface for us. This results in a much simpler subroutine interface.</p>
+<div><p>Сравните эту процедуру <code class="docutils literal notranslate"><span class="pre">print_matrix</span></code> с написанной вне модуля. Нам больше не нужно явно передавать размеры матрицы, и вместо этого мы можем воспользоваться <em>assumed-shape</em> аргументами (предполагаемой формы), поскольку модуль сгенерирует для нас необходимый явный интерфейс. Это приводит к значительному упрощению интерфейса процедуры.</p>
 </div></blockquote>
 <p>Чтобы подключить модуль внутри программы, используется оператор <code class="docutils literal notranslate"><span class="pre">use</span></code>:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">use_mod</span>
