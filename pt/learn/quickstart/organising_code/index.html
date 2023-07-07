@@ -46,7 +46,7 @@
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
     <link rel="next" title="Tipos Derivados" href="../derived_types/" />
-    <link rel="prev" title="Operators and flow control" href="../operators_control_flow/" />
+    <link rel="prev" title="Operadores e controle de fluxo" href="../operators_control_flow/" />
 
 <meta
   name="description"
@@ -398,7 +398,7 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../os_setup/">
-   Setting up your OS
+   Organizando seu SO
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -460,7 +460,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../operators_control_flow/">
-     Operators and flow control
+     Operadores e controle de fluxo
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -655,12 +655,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../intrinsics/state/">
-     General and miscellaneous intrinsics
+     Intrínsecos gerais e diversos
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../intrinsics/system/">
-     Accessing external system information
+     Acessando informação externa ao sistema
     </a>
    </li>
    <li class="toctree-l2">
@@ -820,7 +820,7 @@ the dimensions of the array <code class="docutils literal notranslate"><span cla
 <blockquote>
 <div><p>In production code, the intrinsic function <code class="docutils literal notranslate"><span class="pre">norm2</span></code> should be used.</p>
 </div></blockquote>
-<p>To execute this function:</p>
+<p>Para executar essa função:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">run_fcn</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -903,7 +903,7 @@ explicit interface for us. This results in a much simpler subroutine interface.<
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">my_mod</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">public_var</span>
 </pre></div>
 </div>
-<p><strong>Example:</strong> aliased import</p>
+<p><strong>Exemplo:</strong> importação apelidada</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">my_mod</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">printMat</span><span class="o">=&gt;</span><span class="n">print_matrix</span>
 </pre></div>
 </div>

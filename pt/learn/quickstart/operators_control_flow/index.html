@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
-    <title>Operators and flow control &#8212; Fortran Programming Language</title>
+    <title>Operadores e controle de fluxo &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -398,7 +398,7 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../os_setup/">
-   Setting up your OS
+   Organizando seu SO
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -460,7 +460,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Operators and flow control
+     Operadores e controle de fluxo
     </a>
    </li>
    <li class="toctree-l2">
@@ -655,12 +655,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../intrinsics/state/">
-     General and miscellaneous intrinsics
+     Intrínsecos gerais e diversos
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../intrinsics/system/">
-     Accessing external system information
+     Acessando informação externa ao sistema
     </a>
    </li>
    <li class="toctree-l2">
@@ -712,7 +712,7 @@
 <nav id="bd-toc-nav" class="page-toc"><ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Operators and flow control
+   Operadores e controle de fluxo
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -744,7 +744,7 @@
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#conditional-loop-do-while">
-       Conditional loop (
+       Loop condicional (
        <code class="docutils literal notranslate">
         <span class="pre">
          do
@@ -775,12 +775,12 @@
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#nested-loop-control-tags">
-       Nested loop control: tags
+       Controle de loops encadeados: tags
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#parallelizable-loop-do-concurrent">
-       Parallelizable loop (
+       Loop paralelizável (
        <code class="docutils literal notranslate">
         <span class="pre">
          do
@@ -811,7 +811,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="operators-and-flow-control">
-<h1>Operators and flow control<a class="headerlink" href="#operators-and-flow-control" title="Permalink to this heading">#</a></h1>
+<h1>Operadores e controle de fluxo<a class="headerlink" href="#operators-and-flow-control" title="Permalink to this heading">#</a></h1>
 <p>One of the powerful advantages of computer algorithms, compared to simple mathematical formulae,
 comes in the form of program <em>branching</em> whereby the program can decide which instructions to
 execute next based on a logical condition.</p>
@@ -905,7 +905,7 @@ test expression (<code class="docutils literal notranslate"><span class="pre">an
 to make code more readable.</p>
 </div>
 <p>We can add an alternative branch to the construct using the <code class="docutils literal notranslate"><span class="pre">else</span></code> keyword:</p>
-<p><strong>Example:</strong> two-branch <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code></p>
+<p><strong>Exemplo:</strong> dois-caminhos <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code></p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="k">  print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Angle is acute&#39;</span>
 <span class="k">else</span>
@@ -937,7 +937,7 @@ The <code class="docutils literal notranslate"><span class="pre">do</span></code
 is currently executing. In this example we use a common name for this counter variable: <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
 <p>When we define the start of the <code class="docutils literal notranslate"><span class="pre">do</span></code> loop, we use our counter variable name followed by an equals (<code class="docutils literal notranslate"><span class="pre">=</span></code>) sign
 to specify the start value and final value of our counting variable.</p>
-<p><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">do</span></code> loop</p>
+<p><strong>Exemplo:</strong> loop <code class="docutils literal notranslate"><span class="pre">do</span></code></p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span>
@@ -954,7 +954,7 @@ to specify the start value and final value of our counting variable.</p>
 </pre></div>
 </div>
 <section id="conditional-loop-do-while">
-<h3>Conditional loop (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">while</span></code>)<a class="headerlink" href="#conditional-loop-do-while" title="Permalink to this heading">#</a></h3>
+<h3>Loop condicional (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">while</span></code>)<a class="headerlink" href="#conditional-loop-do-while" title="Permalink to this heading">#</a></h3>
 <p>A condition may be added to a <code class="docutils literal notranslate"><span class="pre">do</span></code> loop with the <code class="docutils literal notranslate"><span class="pre">while</span></code> keyword. The loop will be executed while the condition given
 in <code class="docutils literal notranslate"><span class="pre">while()</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">.true.</span></code>.</p>
 <p><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">while()</span></code> loop</p>
@@ -1004,7 +1004,7 @@ with such cases.</p>
 </div>
 </section>
 <section id="nested-loop-control-tags">
-<h3>Nested loop control: tags<a class="headerlink" href="#nested-loop-control-tags" title="Permalink to this heading">#</a></h3>
+<h3>Controle de loops encadeados: tags<a class="headerlink" href="#nested-loop-control-tags" title="Permalink to this heading">#</a></h3>
 <p>A recurring case in any programming language is the use of nested loops. Nested loops refer to loops that exist within another loop. Fortran allows the programmer to <em>tag</em> or <em>name</em> each loop. If loops are tagged, there are two potential benefits:</p>
 <ol class="arabic simple">
 <li><p>The readability of the code may be improved (when the naming is meaningful).</p></li>
@@ -1025,7 +1025,7 @@ with such cases.</p>
 </div>
 </section>
 <section id="parallelizable-loop-do-concurrent">
-<h3>Parallelizable loop (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code>)<a class="headerlink" href="#parallelizable-loop-do-concurrent" title="Permalink to this heading">#</a></h3>
+<h3>Loop paralelizável (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code>)<a class="headerlink" href="#parallelizable-loop-do-concurrent" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code> loop is used to explicitly specify that the <em>inside of the loop has no interdependencies</em>; this informs the compiler that it may use parallelization/<em>SIMD</em> to speed up execution of the loop and conveys programmer intention more clearly. More specifically, this means
 that any given loop iteration does not depend on the prior execution of other loop iterations. It is also necessary that any state changes that may occur must only happen within each <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code> loop.
 These requirements place restrictions on what can be placed within the loop body.</p>

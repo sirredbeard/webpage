@@ -398,7 +398,7 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../os_setup/">
-   Setting up your OS
+   Organizando seu SO
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -460,7 +460,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../quickstart/operators_control_flow/">
-     Operators and flow control
+     Operadores e controle de fluxo
     </a>
    </li>
    <li class="toctree-l2">
@@ -655,12 +655,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../state/">
-     General and miscellaneous intrinsics
+     Intrínsecos gerais e diversos
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../system/">
-     Accessing external system information
+     Acessando informação externa ao sistema
     </a>
    </li>
    <li class="toctree-l2">
@@ -5547,11 +5547,8 @@ is of character type.</p>
 </section>
 <section id="id186">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id186" title="Permalink to this heading">#</a></h3>
-<p>If <strong>dim</strong> is absent, or if <strong>array</strong> has a rank of one, the result is a scalar.</p>
-<p>If <strong>dim</strong> is present, the result is an array with a rank one less than the
-rank of <strong>array</strong>, and a size corresponding to the size of <strong>array</strong> with the
-<strong>dim</strong> dimension removed. In all cases, the result is of the same type and
-kind as <strong>array</strong>.</p>
+<p>Se <strong>dim</strong> estiver ausente, ou se <strong>array</strong> for de primeira ordem, o resultado é um escalar.</p>
+<p>Se <strong>dim</strong> estiver presente, o resultado é uma matriz com uma ordem menor que a de <strong>array</strong>, e um tamanho correspondente ao tamanho de <strong>array</strong> com a dimensão <strong>dim</strong> removida. Em todos os casos, o resultado é do mesmo tipo que <strong>array</strong>.</p>
 </section>
 <section id="id187">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id187" title="Permalink to this heading">#</a></h3>
@@ -5689,12 +5686,8 @@ kind as <strong>array</strong>.</p>
 <p><strong>product</strong>(3) multiplies together all the selected elements of <strong>array</strong>,
 or along dimension <strong>dim</strong> if the corresponding element in <strong>mask</strong>
 is <em>.true.</em>.</p>
-<p>If <strong>dim</strong> is absent, a scalar with the product of all elements in <strong>array</strong> is
-returned. (Note a zero-sized <strong>array</strong> returns <strong>1</strong>).</p>
-<p>When <strong>dim</strong> is present, If the masked array has a dimension of one
-(ie. is a vector) the result is a scalar. Otherwise, an array of rank
-<strong>n-1</strong>, where <strong>n</strong> equals the rank of <strong>array</strong>, and a shape similar
-to that of <strong>array</strong> with dimension <strong>dim</strong> dropped is returned.</p>
+<p>Se <strong>dim</strong> estiver ausente, um escalar com o produto de todos os elementos em <strong>array</strong> é retornado. (Note que um <strong>array</strong> de tamanho zero retorna <strong>1</strong>).</p>
+<p>Quando <strong>dim</strong> estiver presente, se a matriz de máscara tiver dimensão de um (e.x.: for um vetor) o resultado é um escalar. Caso contrário, uma matriz de ordem <strong>n-1</strong>, onde <strong>n</strong> é igual à ordem de <strong>array</strong>, e um formato semelhante ao de <strong>array</strong> com dimensão <strong>dim</strong> removida é retornado.</p>
 </section>
 <section id="id194">
 <h3><strong>Opções</strong><a class="headerlink" href="#id194" title="Permalink to this heading">#</a></h3>
@@ -5705,14 +5698,12 @@ to that of <strong>array</strong> with dimension <strong>dim</strong> dropped is
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>dim</strong></dt><dd><p>shall be a scalar of type <em>integer</em> with a value in the
-range from <strong>1 to n</strong>, where <strong>n</strong> equals the rank of <strong>array</strong>.</p>
+<dt><strong>dim</strong></dt><dd><p>deve ser um escalar do tipo <em>integer</em> com um valor no limite entre <strong>1 a n</strong>, onde <strong>n</strong> é igual à ordem de <strong>array</strong>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>mask</strong></dt><dd><p>shall be of type <em>logical</em> and either be a scalar or an
-array of the same shape as <strong>array</strong>.</p>
+<dt><strong>mask</strong></dt><dd><p>deve ser do tipo <em>logical</em> e ser tanto um escalar ou uma matriz com o mesmo formato de <strong>array</strong>.</p>
 </dd>
 </dl>
 </li>
@@ -5720,7 +5711,7 @@ array of the same shape as <strong>array</strong>.</p>
 </section>
 <section id="id195">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id195" title="Permalink to this heading">#</a></h3>
-<p>The result is of the same type as <strong>array</strong>.</p>
+<p>O resultado é do mesmo tipo de <strong>array</strong>.</p>
 </section>
 <section id="id196">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id196" title="Permalink to this heading">#</a></h3>
@@ -5903,8 +5894,7 @@ dim=3 :( 2 3 )
 </section>
 <section id="id198">
 <h3><strong>Veja Também</strong><a class="headerlink" href="#id198" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#sum"><strong>sum</strong>(3)</a>, note that an element by element multiplication is done
-directly using the star character.</p>
+<p><a class="reference internal" href="#sum"><strong>sum</strong>(3)</a>, note que uma multiplicação elemento por elemento é feita diretamente usando o caractere estrela.</p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
@@ -6162,7 +6152,7 @@ zero means a scalar).</p>
 (of rank one) of constant size of up to 16 non-negative values.</p></li>
 <li><p><strong>pad</strong> is the same type as <strong>source</strong></p></li>
 <li><p><strong>order</strong> is the same shape as <strong>shape</strong></p></li>
-<li><p>The result is an array of shape <strong>shape</strong> with the same type as <strong>source</strong>.</p></li>
+<li><p>O resultado é uma matriz de formato <strong>shape</strong> com o mesmo tipo de <strong>source</strong>.</p></li>
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 </ul>
 </section>
