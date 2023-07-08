@@ -20,7 +20,7 @@ The administrators are responsible for keeping Fortran-lang operational. They ha
 - the fortran-lang.org domain
 - the [@fortranlang](https://twitter.com/fortranlang) Twitter account
 
-- the Fortran-lang [YouTube](https://www.youtube.com/user/Fortran%20Programming%20Language) channel
+- the Fortran-lang [YouTube](https://www.youtube.com/@fortranprogramminglanguage7454) channel
 
 - the Fortran-lang [Mailing-list](https://groups.io/g/fortran-lang)
 
