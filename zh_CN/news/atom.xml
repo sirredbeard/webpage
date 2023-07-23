@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://fortran-lang.org/en/</id>
   <title>Blog</title>
-  <updated>2023-07-22T03:25:08.705294+00:00</updated>
+  <updated>2023-07-23T03:27:17.804931+00:00</updated>
   <link href="https://fortran-lang.org/en/"/>
   <link href="https://fortran-lang.org/en/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.4.post1">ABlog</generator>
@@ -11,7 +11,7 @@
     <title>Fortran newsletter: June 2022</title>
     <updated>2022-06-09T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Ondřej Čertík</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the June edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -30,7 +30,7 @@ Fortran news from the previous month.Here’s what’s new in the fortran-lang.o
     <title>Fortran newsletter: May 2022</title>
     <updated>2022-05-05T00:00:00+00:00</updated>
     <author>
-      <name>Giannis Nikiteas</name>
+      <name>Gagandeep Singh</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the May edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -68,7 +68,7 @@ Fortran news from the previous month.Here’s what’s new in the fortran-lang.o
     <title>Fortran newsletter: March 2022</title>
     <updated>2022-03-09T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Ondřej Čertík</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the March edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -87,7 +87,7 @@ Fortran news from the previous month.Here’s what’s new in the fortran-lang.o
     <title>Fortran newsletter: February 2022</title>
     <updated>2022-02-01T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the February 2022 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -106,7 +106,7 @@ Fortran news from the previous month.Here’s what’s new and ongoing in the fo
     <title>Fortran newsletter: January 2022</title>
     <updated>2022-01-01T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Happy New Year and welcome to the January 2022 edition of the monthly Fortran
 newsletter.
@@ -127,7 +127,7 @@ Fortran news from the previous month.Here’s what’s new and ongoing in the fo
     <title>Fortran-lang: 2021 in review</title>
     <updated>2021-12-29T00:00:00+00:00</updated>
     <author>
-      <name>Laurence Kedward</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;=(Fortran-lang-2021-in-review)&lt;/p&gt;
 &lt;p&gt;With another year behind us, let’s review the progress that the
@@ -183,7 +183,7 @@ Fortran news from the previous month.Here’s what’s new and ongoing in the fo
     <title>Fortran newsletter: November 2021</title>
     <updated>2021-11-01T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Ondřej Čertík</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the November 2021 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -202,7 +202,7 @@ Fortran news from the previous month.本月我们对网站进行了几次更新�
     <title>Fortran newsletter: October 2021</title>
     <updated>2021-10-01T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Ondřej Čertík</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the October 2021 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -221,7 +221,7 @@ Fortran news from the previous month.本月我们对网站进行了几次更新�
     <title>Fortran newsletter: September 2021</title>
     <updated>2021-09-01T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Ondřej Čertík</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the September 2021 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -259,7 +259,7 @@ Fortran news from the previous month.本月我们对网站进行了几次更新�
     <title>Fortran newsletter: July 2021</title>
     <updated>2021-07-01T00:00:00+00:00</updated>
     <author>
-      <name>Laurence Kedward</name>
+      <name>Zachary Moon</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the July 2021 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -339,7 +339,7 @@ Fortran news from the previous month.本月我们对网站进行了几次更新�
     <title>First year of the Fortran website</title>
     <updated>2021-04-20T00:00:00+00:00</updated>
     <author>
-      <name>Brad Richardson</name>
+      <name>Ondřej Čertík</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;In April 2020 we created a website for the Fortran language at
 &lt;a class="reference external" href="https://fortran-lang.org/"&gt;fortran-lang.org&lt;/a&gt;. In exactly one year, it grew to
@@ -423,7 +423,7 @@ and if you have any ideas that are not mentioned, please let us know.</summary>
     <title>Fortran 通讯：2021 年 2 月</title>
     <updated>2021-02-01T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;欢迎阅读 2021 年 2 月版的每月 Fortran 通讯。时事通讯在每个月初发布，详细介绍上个月的 Fortran 新闻。&lt;/p&gt;
 &lt;p&gt;本月我们对网站进行了一些更新：&lt;/p&gt;
@@ -438,7 +438,7 @@ and if you have any ideas that are not mentioned, please let us know.</summary>
     <title>Fortran 通讯：2021 年 1 月</title>
     <updated>2021-01-01T00:00:00+00:00</updated>
     <author>
-      <name>Gary Klimowicz</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;新年快乐！欢迎阅读 2021 年 1 月版的每月 Fortran 通讯。时事通讯在每个月初发布，详细介绍上个月的 Fortran 新闻。&lt;/p&gt;
 &lt;p&gt;本月我们对网站进行了一些更新：&lt;/p&gt;
@@ -453,7 +453,7 @@ and if you have any ideas that are not mentioned, please let us know.</summary>
     <title>Fortran 通讯：2020 年 12 月</title>
     <updated>2020-12-01T00:00:00+00:00</updated>
     <author>
-      <name>Gary Klimowicz</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;欢迎阅读 2020 年 12 月版的每月 Fortran 通讯。时事通讯在每个月初发布，详细介绍上个月的 Fortran 新闻。&lt;/p&gt;
 &lt;p&gt;本月我们对网站进行了一些更新：&lt;/p&gt;
@@ -513,7 +513,7 @@ and if you have any ideas that are not mentioned, please let us know.</summary>
     <title>Fortran 通讯：2020 年 8 月</title>
     <updated>2020-08-01T00:00:00+00:00</updated>
     <author>
-      <name>Laurence Kedward</name>
+      <name>Arjen Markus and Gary Klimowicz</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;欢迎阅读 2020 年 8 月版的每月 Fortran 通讯。时事通讯在每个月的第一个日历日发布，详细介绍上个月的 Fortran 新闻。&lt;/p&gt;
 &lt;p&gt;我们继续在 Fortran-lang 网站上开展工作，包括：&lt;/p&gt;
@@ -528,7 +528,7 @@ and if you have any ideas that are not mentioned, please let us know.</summary>
     <title>Fortran 通讯：2020 年 7 月</title>
     <updated>2020-07-01T00:00:00+00:00</updated>
     <author>
-      <name>Laurence Kedward</name>
+      <name>and Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;欢迎阅读 2020 年 7 月版的每月 Fortran 通讯。时事通讯在每个月的第一个日历日发布，详细介绍上个月的 Fortran 新闻。&lt;/p&gt;
 &lt;p&gt;Fortran-lang 网站上的工作仍在继续，包括一个新的社区页面和其他教程内容：&lt;/p&gt;
@@ -543,7 +543,7 @@ and if you have any ideas that are not mentioned, please let us know.</summary>
     <title>Fortran 通讯：2020 年 6 月</title>
     <updated>2020-06-01T00:00:00+00:00</updated>
     <author>
-      <name>Brad Richardson</name>
+      <name>Jeremie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;欢迎阅读 2020 年 6 月版的每月 Fortran 通讯。时事通讯在每个月的第一个日历日发布，详细介绍上个月的 Fortran 新闻。&lt;/p&gt;
 &lt;p&gt;Fortran 网站自 4 月中旬以来一直在运行，我们已经从社区中得到了很好的反馈。在过去的一个月里，我们更新了 &lt;a class="reference internal" href="../compilers/"&gt;&lt;span class="doc std std-doc"&gt;Compilers&lt;/span&gt;&lt;/a&gt; 页面，该页面现在很全面，包括所有主要的开源和商业编译器。 &lt;a class="reference internal" href="../learn/"&gt;&lt;span class="doc std std-doc"&gt;Learn&lt;/span&gt;&lt;/a&gt; 页面也进行了重大更新 —— 它已经过重新组织，以便于导航，目前提供快速入门教程、Fortran 书籍和其它在线资源。&lt;/p&gt;
