@@ -4638,36 +4638,28 @@ bits from two different sources, generally referred to as bit-blending.
 <strong>merge_bits</strong>(3) performs a masked bit-blend of <strong>i</strong> and <strong>j</strong> using
 the bits of the <strong>mask</strong> value to determine which of the input values
 to copy bits from.</p>
-<p>Specifically, The k-th bit of the result is equal to the k-th bit of
-<strong>i</strong> if the k-th bit of <strong>mask</strong> is <strong>1</strong>; it is equal to the k-th bit
-of <strong>j</strong> otherwise (so all three input values must have the same number
-of bits).</p>
-<p>The resulting value is the same as would result from</p>
+<p>Especificamente, o k-ésimo bit do resultado é igual ao k-ésimo bit de <strong>i</strong> se o k-ésimo bit de <strong>mask</strong> for <strong>1</strong>; ser[a igual ao k-ésimo bit de <strong>j</strong> caso contrário (então todos os três valores de entrada devem ter o mesmo número de bits).</p>
+<p>O valor resultante é o mesmo que resultaria de</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">ior</span><span class="w"> </span><span class="p">(</span><span class="nb">iand</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p">),</span><span class="nb">iand</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="nb">not</span><span class="w"> </span><span class="p">(</span><span class="n">mask</span><span class="p">)))</span>
 </pre></div>
 </div>
-<p>An exception to all values being of the same <em>integer</em> type is that <strong>i</strong>
-or <strong>j</strong> and/or the mask may be a BOZ constant (A BOZ constant means it is
-either a Binary, Octal, or Hexadecimal literal constant). The BOZ values
-are converted to the <em>integer</em> type of the non-BOZ value(s) as if called
-by the intrinsic function <strong>int()</strong> with the kind of the non-BOZ value(s),
-so the BOZ values must be in the range of the type of the result.</p>
+<p>Um exceção para todos os valores é o mesmo tipo <em>integer</em> onde <strong>i</strong> ou <strong>j</strong> e/ou a máscara seja uma constante BOZ (Uma constante BOZ significa ser tanto uma constante literal Binária, Octal, ou Hexadecimal). Os valores BOZ são convertidos para o tipo <em>integer</em> dos valores não BOZ como se fossem chamada pela função intrínseca <strong>int()</strong> com o tipo do(s) valor(es) não BOZ, então os valores BOZ devem estar dentro do limite do tipo do resultado.</p>
 </section>
 <section id="id114">
 <h3><strong>Opções</strong><a class="headerlink" href="#id114" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>i</strong></dt><dd><p>value to select bits from when the associated bit in the mask is <strong>1</strong>.</p>
+<dt><strong>i</strong></dt><dd><p>valor para selecionar bits onde quando o bit associado na máscara é <strong>1</strong>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>j</strong></dt><dd><p>value to select bits from when the associated bit in the mask is <strong>0</strong>.</p>
+<dt><strong>j</strong></dt><dd><p>valor para selecionar bits de onde o bit associado na máscara é <strong>0</strong>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>mask</strong></dt><dd><p>a value whose bits are used as a mask to select bits from <strong>i</strong> and <strong>j</strong></p>
+<dt><strong>mask</strong></dt><dd><p>um valor cujo bits são usados como uma máscara para selecionar bits de <strong>i</strong> e <strong>j</strong></p>
 </dd>
 </dl>
 </li>
@@ -4779,30 +4771,24 @@ so the BOZ values must be in the range of the type of the result.</p>
 the <em>integer</em> <strong>from</strong> to a specified position in another integer <strong>to</strong>
 (which is of the same kind as <strong>from</strong>). It otherwise leaves the bits
 in <strong>to</strong> as-is.</p>
-<p>The bit positions copied must exist within the value of <strong>from</strong>.
-That is, the values of <strong>frompos+len-1</strong> and <strong>topos+len-1</strong> must be
-nonnegative and less than <strong>bit_size</strong>(from).</p>
-<p>The bits are numbered <strong>0</strong> to <strong>bit_size(i)-1</strong>, from right to left.</p>
+<p>As posições de bit copiadas devem existir dentro do valor de <strong>from</strong>. Isso é, os valores de <strong>frompos+len-1</strong> e <strong>topos+len-1</strong> deve ser não negativo e menor que <strong>bit_size</strong>(from).</p>
+<p>Os bits são numerados de <strong>0</strong> à <strong>bit_size(i)-1</strong>, da direita para esquerda.</p>
 </section>
 <section id="id123">
 <h3><strong>Opções</strong><a class="headerlink" href="#id123" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><dl class="simple myst">
-<dt><strong>from</strong></dt><dd><p>An <em>integer</em> to read bits from.</p>
+<dt><strong>from</strong></dt><dd><p>Um <em>integer</em> para ler os bits.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>frompos</strong></dt><dd><p><strong>frompos</strong> is the position of the first bit to copy. It is a
-nonnegative <em>integer</em> value &lt; <strong>bit_size(from)</strong>.</p>
+<dt><strong>frompos</strong></dt><dd><p><strong>frompos</strong> é a posição do primeiro bit para copiar. É um valor <em>integer</em> não negativo menor que <strong>bit_size(from)</strong>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>len</strong></dt><dd><p>A nonnegative <em>integer</em> value that indicates how many bits to
-copy from <strong>from</strong>. It must not specify copying bits past the end
-of <strong>from</strong>. That is, <strong>frompos + len</strong> must be less than or equal
-to <strong>bit_size(from)</strong>.</p>
+<dt><strong>len</strong></dt><dd><p>Um valor <em>integer</em> não negativo que indica quantos bits copiar de <strong>from</strong>. Não deve especificar bits para copiar depois de <strong>from</strong>. Em outras palavras, <strong>frompos + len</strong> deve ser menor ou igual à <strong>bit_size(from)</strong>.</p>
 </dd>
 </dl>
 </li>
