@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="nl">
   <id>https://fortran-lang.org/en/</id>
   <title>Blog</title>
-  <updated>2023-07-25T03:20:46.091016+00:00</updated>
+  <updated>2023-07-25T07:13:12.748146+00:00</updated>
   <link href="https://fortran-lang.org/en/"/>
   <link href="https://fortran-lang.org/en/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.4.post1">ABlog</generator>
@@ -11,7 +11,7 @@
     <title>Fortran newsletter: June 2022</title>
     <updated>2022-06-09T00:00:00+00:00</updated>
     <author>
-      <name>Milan Curcic</name>
+      <name>Henil Panchal</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the June edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -30,7 +30,7 @@ Fortran news from the previous month.Here’s what’s new in the fortran-lang.o
     <title>Fortran newsletter: May 2022</title>
     <updated>2022-05-05T00:00:00+00:00</updated>
     <author>
-      <name>Milan Curcic</name>
+      <name>Gagandeep Singh</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the May edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -202,7 +202,7 @@ Fortran news from the previous month.This month we’ve had several updates to t
     <title>Fortran newsletter: October 2021</title>
     <updated>2021-10-01T00:00:00+00:00</updated>
     <author>
-      <name>Laurence Kedward</name>
+      <name>Ondřej Čertík</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the October 2021 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -581,7 +581,7 @@ and details Fortran news from the previous month.Work has continued on the Fortr
     <title>Fortran newsletter: June 2020</title>
     <updated>2020-06-01T00:00:00+00:00</updated>
     <author>
-      <name>Brad Richardson</name>
+      <name>Jeremie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the June 2020 edition of the monthly Fortran newsletter.
 The newsletter comes out on the first calendar day of every month
