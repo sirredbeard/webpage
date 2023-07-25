@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt">
   <id>https://fortran-lang.org/en/</id>
   <title>Blog</title>
-  <updated>2023-07-24T08:31:37.830893+00:00</updated>
+  <updated>2023-07-25T03:23:00.907951+00:00</updated>
   <link href="https://fortran-lang.org/en/"/>
   <link href="https://fortran-lang.org/en/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.4.post1">ABlog</generator>
@@ -11,7 +11,7 @@
     <title>Fortran newsletter: June 2022</title>
     <updated>2022-06-09T00:00:00+00:00</updated>
     <author>
-      <name>Henil Panchal</name>
+      <name>Milan Curcic</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the June edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -87,7 +87,7 @@ Fortran news from the previous month.Here’s what’s new in the fortran-lang.o
     <title>Boletim Fortran: Fevereiro de 2022</title>
     <updated>2022-02-01T00:00:00+00:00</updated>
     <author>
-      <name>Gagandeep Singh</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the February 2022 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -183,7 +183,7 @@ Fortran news from the previous month.Here’s what’s new and ongoing in the fo
     <title>Boletim Fortran: Novembro de 2021</title>
     <updated>2021-11-01T00:00:00+00:00</updated>
     <author>
-      <name>Alexis Perry-Holby</name>
+      <name>Milan Curcic</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the November 2021 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -389,7 +389,7 @@ Fortran news from the previous month.This month we’ve had several updates to t
     <title>Fortran-lang accepted to Google Summer of Code 2021</title>
     <updated>2021-03-09T00:00:00+00:00</updated>
     <author>
-      <name>Damian Rouson</name>
+      <name>Marshall Ward</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;We are excited to announce that Fortran-lang has been accepted as a &lt;a class="reference external" href="https://summerofcode.withgoogle.com/organizations/6633903353233408"&gt;Google Summer of Code (GSoC) 2021 mentoring organization&lt;/a&gt;! 🎉&lt;/p&gt;
 &lt;p&gt;You can review our project ideas
@@ -446,7 +446,7 @@ Fortran news from the previous month.This month we’ve had a few updates to the
     <title>Boletim Fortran: Janeiro de 2021</title>
     <updated>2021-01-01T00:00:00+00:00</updated>
     <author>
-      <name>Gary Klimowicz</name>
+      <name>Laurence Kedward</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Happy New Year!
 Welcome to the January 2021 edition of the monthly Fortran newsletter.
@@ -467,7 +467,7 @@ Fortran news from the previous month.This month we’ve had a few updates to the
     <title>Boletim Fortran: Dezembro de 2020</title>
     <updated>2020-12-01T00:00:00+00:00</updated>
     <author>
-      <name>Gary Klimowicz</name>
+      <name>Laurence Kedward</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the December 2020 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
@@ -486,7 +486,7 @@ Fortran news from the previous month.This month we’ve had a few updates to the
     <title>Boletim Fortran: Novembro de 2020</title>
     <updated>2020-11-01T00:00:00+00:00</updated>
     <author>
-      <name>Ivan Pribec</name>
+      <name>Laurence Kedward</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the November 2020 edition of the monthly Fortran newsletter.
 The newsletter comes out on the first calendar day of every month and details
@@ -505,7 +505,7 @@ Fortran news from the previous month.This month we’ve had a few additions and 
     <title>Boletim Fortran: Outubro de 2020</title>
     <updated>2020-10-01T00:00:00+00:00</updated>
     <author>
-      <name>Gary Klimowicz</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the October 2020 edition of the monthly Fortran newsletter.
 The newsletter comes out on the first calendar day of every month
@@ -524,7 +524,7 @@ and details Fortran news from the previous month.This month we’ve had only one
     <title>Boletim Fortran: Setembro de 2020</title>
     <updated>2020-09-01T00:00:00+00:00</updated>
     <author>
-      <name>Gary Klimowicz</name>
+      <name>Jérémie Vandenplas</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the September 2020 edition of the monthly Fortran newsletter.
 The newsletter comes out on the first calendar day of every month
@@ -543,7 +543,7 @@ and details Fortran news from the previous month.We continued the work on the Fo
     <title>Boletim Fortran: Agosto de 2020</title>
     <updated>2020-08-01T00:00:00+00:00</updated>
     <author>
-      <name>Arjen Markus and Gary Klimowicz</name>
+      <name>Laurence Kedward</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the August 2020 edition of the monthly Fortran newsletter.
 The newsletter comes out on the first calendar day of every month
@@ -581,7 +581,7 @@ and details Fortran news from the previous month.Work has continued on the Fortr
     <title>Boletim Fortran: Junho de 2020</title>
     <updated>2020-06-01T00:00:00+00:00</updated>
     <author>
-      <name>Jeremie Vandenplas</name>
+      <name>Brad Richardson</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Welcome to the June 2020 edition of the monthly Fortran newsletter.
 The newsletter comes out on the first calendar day of every month
