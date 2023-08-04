@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
-    <title>Fortran newsletter: March 2022 &#8212; Fortran Programming Language</title>
+    <title>Boletim Fortran: Março de 2022 &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -415,14 +415,14 @@
     </span>
   
   
-  <a href="../../author/ondrej-certik/">Ondřej Čertík</a>
+  <a href="../../author/alexis-perry-holby/">Alexis Perry-Holby</a>
   
   ,
   
   
   
   
-  <a href="../../author/alexis-perry-holby/">Alexis Perry-Holby</a>
+  <a href="../../author/ondrej-certik/">Ondřej Čertík</a>
   
   ,
   
@@ -467,19 +467,19 @@
   
   <li>
     <a href="../06-09-Fortran-Newsletter-June-2022/">
-      09 June - Fortran newsletter: June 2022
+      09 June - Boletim Fortran: Junho de 2022
     </a>
   </li>
   
   <li>
     <a href="../05-05-Fortran-Newsletter-May-2022/">
-      05 May - Fortran newsletter: May 2022
+      05 May - Boletim Fortran: Maio de 2022
     </a>
   </li>
   
   <li>
     <a href="../04-07-Fortran-Newsletter-April-2022/">
-      07 April - Fortran newsletter: April 2022
+      07 April - Boletim Fortran: Abril de 2022
     </a>
   </li>
   
@@ -625,7 +625,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="fortran-newsletter-march-2022">
-<h1>Fortran newsletter: March 2022<a class="headerlink" href="#fortran-newsletter-march-2022" title="Permalink to this heading">#</a></h1>
+<h1>Boletim Fortran: Março de 2022<a class="headerlink" href="#fortran-newsletter-march-2022" title="Permalink to this heading">#</a></h1>
 <p>Welcome to the March edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
 Fortran news from the previous month.</p>
@@ -712,10 +712,8 @@ Add note about relocation of manifest reference</p></li>
 </ul>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/fortran-lang/fpm-docs/issues/42">fpm-docs#42</a>: Tradução holandês</p></li>
-<li><p><a class="reference external" href="https://github.com/fortran-lang/fpm-docs/pull/48">fpm-docs#48</a>:
-Chinese translation improvements</p></li>
-<li><p><a class="reference external" href="https://github.com/fortran-lang/fpm-docs/pull/52">fpm-docs#52</a>:
-Update plugin tutorial</p></li>
+<li><p><a class="reference external" href="https://github.com/fortran-lang/fpm-docs/pull/48">fpm-docs#48</a>: Melhoramento na tradução para Chinês</p></li>
+<li><p><a class="reference external" href="https://github.com/fortran-lang/fpm-docs/pull/52">fpm-docs#52</a>: Atualiza tutorial de plugin</p></li>
 </ul>
 <section id="id2">
 <h3>Trabalhos em desenvolvimento<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
@@ -764,15 +762,15 @@ environment in which new open source Fortran projects are created and published 
 <li><p>Adiciona campos de baixo nível</p></li>
 <li><p>Add lowering for basic empty SUBROUTINE</p></li>
 <li><p>Upstream partial lowering of EXIT intrinsic</p></li>
-<li><p>Lower basic STOP statement</p></li>
+<li><p>Declaração STOP básico de baixo nível</p></li>
 <li><p>Declaração PAUSE de baixo nível</p></li>
 <li><p>Add lowering for integer constant</p></li>
 <li><p>Lower integer constant code for STOP stmt</p></li>
 <li><p>Adiciona fir.array_access op</p></li>
-<li><p>Add fir.array_amend operation definition</p></li>
+<li><p>Adiciona definição de operação fir.array_amend</p></li>
 <li><p>Handle logical constant value for quiet in STOP stmt</p></li>
 <li><p>Upstream partial lowering of GET_COMMAND_ARGUMENT intrinsic</p></li>
-<li><p>Basic local variable lowering</p></li>
+<li><p>Variável local básica de baixo nível</p></li>
 <li><p>Add lowering for ASCII character constant</p></li>
 <li><p>Handle character constant for error code in STOP stmt</p></li>
 <li><p>Upstream partial lowering of GET_ENVIRONMENT_VARIABLE intrinsic</p></li>
@@ -780,22 +778,22 @@ environment in which new open source Fortran projects are created and published 
 <li><p>Add support for lowering the goto statement</p></li>
 <li><p>Add type conversion for !fir.box<none></p></li>
 <li><p>Adicionado FIRInlinerInterface</p></li>
-<li><p>Lower simple RETURN statement</p></li>
+<li><p>Declaração de baixo nível RETURN simples</p></li>
 <li><p>Upstream fix to allocmem codegen to deal with missing dimensions for sequence of character types</p></li>
 <li><p>Lower basic function with scalar integer/logical return value</p></li>
 <li><p>Enable scalar real type in lowering</p></li>
 <li><p>Enable complex type in function lowering</p></li>
 <li><p>Handle lowering of ranked array</p></li>
-<li><p>Lower simple scalar assignment</p></li>
+<li><p>Atribuição de baixo nível escalar simples</p></li>
 <li><p>Negação escalar de baixo nível</p></li>
 <li><p>Lower basic binary operation for scalars</p></li>
 <li><p>Initial patch to lower a Fortran intrinsic</p></li>
 <li><p>Constante real de baixo nível</p></li>
 <li><p>Constante complexa de baixo nível</p></li>
 <li><p>Lower function and subroutine calls</p></li>
-<li><p>Handle allocatable dummy arguments</p></li>
+<li><p>Lida com argumentos fictícios alocáveis</p></li>
 <li><p>Lower allocatable assignment for scalar</p></li>
-<li><p>Simple array assignment lowering</p></li>
+<li><p>Atribuição simples de baixo nível de matrizes</p></li>
 <li><p>Lower simple character return</p></li>
 <li><p>Lower Fortran intrinsic to a runtime call/llvm intrinsic</p></li>
 <li><p>Lower integer comparison operation</p></li>
@@ -966,7 +964,7 @@ commenting in any of these repositories:</p>
     
     
     <a href="../04-07-Fortran-Newsletter-April-2022/">
-      <span>Fortran newsletter: April 2022</span>
+      <span>Boletim Fortran: Abril de 2022</span>
       
       <i class="fa fa-arrow-circle-right" ></i>
       
