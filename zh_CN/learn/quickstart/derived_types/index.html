@@ -33,9 +33,6 @@
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -130,9 +127,8 @@
   
   
   
-    <img src="../../../_static/fortran-logo-256x256.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../../_static/fortran-logo-256x256.png" class="logo__image only-dark" alt="Logo image">
   
+    <p class="title logo__title">Fortran Programming Language</p>
   
 </a>
     
@@ -972,8 +968,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">pointer</span></code>，<code class="docutils literal notranslate"><span class="pre">codimension</span></code>，<code class="docutils literal notranslate"><span class="pre">contiguous</span></code>，<code class="docutils literal notranslate"><span class="pre">volatile</span></code>，<code class="docutils literal notranslate"><span class="pre">asynchronous</span></code></p></li>
 </ul>
 <p>常见案例示例：</p>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=type%20%3A%3A%20t_example%0A%20%20%21%201st%20case%3A%20simple%20built-in%20type%20with%20access%20attribute%20and%20%5Binit%5D%0A%20%20integer%2C%20private%20%3A%3A%20i%20%3D%200%0A%20%20%21%20private%20hides%20it%20from%20use%20outside%20of%20the%20t_example%27s%20scope.%0A%20%20%21%20The%20default%20initialization%20%5B%3D0%5D%20is%20the%20%5Binit%5D%20part.%0A%0A%20%20%21%202nd%20case%3A%20protected%0A%20%20integer%2C%20protected%20%3A%3A%20i%0A%20%20%21%20In%20contrary%20to%20private%2C%20protected%20allows%20access%20to%20i%20assigned%20value%20outside%20of%20t_example%0A%20%20%21%20but%20is%20not%20definable%2C%20i.e.%20a%20value%20may%20be%20assigned%20to%20i%20only%20within%20t_example.%0A%0A%20%20%21%203rd%20case%3A%20dynamic%201-D%20array%0A%20%20real%2C%20allocatable%2C%20dimension%28%3A%29%20%3A%3A%20x%0A%20%20%21%20the%20same%20as%0A%20%20real%2C%20allocatable%20%3A%3A%20x%28%3A%29%0A%20%20%21%20This%20parentheses%27%20usage%20implies%20dimension%28%3A%29%20and%20is%20one%20of%20the%20possible%20%5Battr-dependent-spec%5D.%0Aend%20type' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="此代码块的永久链接">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">type</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">t_example</span>
 <span class="w">  </span><span class="c">! 1st case: simple built-in type with access attribute and [init]</span>
 <span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
@@ -993,7 +987,6 @@
 <span class="k">end type</span>
 </pre></div>
 </div>
-</div>
 <blockquote>
 <div><p>以下属性：<code class="docutils literal notranslate"><span class="pre">pointer</span></code>、<code class="docutils literal notranslate"><span class="pre">codimension</span></code>、<code class="docutils literal notranslate"><span class="pre">contiguous</span></code>、<code class="docutils literal notranslate"><span class="pre">volatile</span></code>、<code class="docutils literal notranslate"><span class="pre">asynchronous</span></code> 是 <em>快速入门</em> 教程中不会涉及的高级特性。然而，在这里展示它们，是为了让读者知道这些特征确实存在并能够识别它们。这些特性将在接下来的《高级编程》迷你书中详细介绍。</p>
 </div></blockquote>
@@ -1005,8 +998,8 @@
 <div><p>如果不深入研究现代 Fortran 的 OOP 特性，就不可能完整地描述类型绑定过程。现在我们将专注于一个简单的例子来展示它们的基本用法。</p>
 </div></blockquote>
 <p>这是具有基本类型绑定过程的派生类型的示例：</p>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=module%20m_shapes%0A%20%20implicit%20none%0A%20%20private%0A%20%20public%20t_square%0A%0A%20%20type%20%3A%3A%20t_square%0A%20%20real%20%3A%3A%20side%0A%20%20contains%0A%20%20%20%20procedure%20%3A%3A%20area%20%20%21%20procedure%20declaration%0A%20%20end%20type%0A%0Acontains%0A%0A%20%20%21%20Procedure%20definition%0A%20%20real%20function%20area%28self%29%20result%28res%29%0A%20%20%20%20class%28t_square%29%2C%20intent%28in%29%20%3A%3A%20self%0A%20%20%20%20res%20%3D%20self%25side%2A%2A2%0A%20%20end%20function%0A%0Aend%20module%20m_shapes%0A%0Aprogram%20main%0A%20%20use%20m_shapes%0A%20%20implicit%20none%0A%0A%20%20%21%20Variables%27%20declaration%0A%20%20type%28t_square%29%20%3A%3A%20sq%0A%20%20real%20%3A%3A%20x%2C%20side%0A%0A%20%20%21%20Variables%27%20initialization%0A%20%20side%20%3D%200.5%0A%20%20sq%25side%20%3D%20side%0A%0A%20%20x%20%3D%20sq%25area%28%29%0A%20%20%21%20self%20does%20not%20appear%20here%2C%20it%20has%20been%20passed%20implicitly%0A%0A%20%20%21%20Do%20stuff%20with%20x...%0A%0Aend%20program%20main' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id7" title="此代码块的永久链接">#</a></div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=module%20m_shapes%0A%20%20implicit%20none%0A%20%20private%0A%20%20public%20t_square%0A%0A%20%20type%20%3A%3A%20t_square%0A%20%20real%20%3A%3A%20side%0A%20%20contains%0A%20%20%20%20procedure%20%3A%3A%20area%20%20%21%20procedure%20declaration%0A%20%20end%20type%0A%0Acontains%0A%0A%20%20%21%20Procedure%20definition%0A%20%20real%20function%20area%28self%29%20result%28res%29%0A%20%20%20%20class%28t_square%29%2C%20intent%28in%29%20%3A%3A%20self%0A%20%20%20%20res%20%3D%20self%25side%2A%2A2%0A%20%20end%20function%0A%0Aend%20module%20m_shapes%0A%0Aprogram%20main%0A%20%20use%20m_shapes%0A%20%20implicit%20none%0A%0A%20%20%21%20Variables%27%20declaration%0A%20%20type%28t_square%29%20%3A%3A%20sq%0A%20%20real%20%3A%3A%20x%2C%20side%0A%0A%20%20%21%20Variables%27%20initialization%0A%20%20side%20%3D%200.5%0A%20%20sq%25side%20%3D%20side%0A%0A%20%20x%20%3D%20sq%25area%28%29%0A%20%20%21%20self%20does%20not%20appear%20here%2C%20it%20has%20been%20passed%20implicitly%0A%0A%20%20%21%20Do%20stuff%20with%20x...%0A%0Aend%20program%20main' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="此代码块的永久链接">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">m_shapes</span>
 <span class="w">  </span><span class="k">implicit none</span>
 <span class="k">  private</span>
