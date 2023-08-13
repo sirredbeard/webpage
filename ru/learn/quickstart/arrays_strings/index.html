@@ -768,6 +768,8 @@
 <h1>Объявление массива<a class="headerlink" href="#array-declaration" title="Permalink to this heading">#</a></h1>
 <p>Мы можем объявить массивы любого типа. Существуют два распространённых способа (нотации) для объявления массива: использование атрибута <code class="docutils literal notranslate"><span class="pre">dimension</span></code> или указание размерности массива в круглых скобках после имени переменной обозначающей массив.</p>
 <p><strong>Пример:</strong> объявление статического массива</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20arrays%0A%20%20implicit%20none%0A%0A%20%20%21%201D%20integer%20array%0A%20%20integer%2C%20dimension%2810%29%20%3A%3A%20array1%0A%0A%20%20%21%20An%20equivalent%20array%20declaration%0A%20%20integer%20%3A%3A%20array2%2810%29%0A%0A%20%20%21%202D%20real%20array%0A%20%20real%2C%20dimension%2810%2C%2010%29%20%3A%3A%20array3%0A%0A%20%20%21%20Custom%20lower%20and%20upper%20index%20bounds%0A%20%20real%20%3A%3A%20array4%280%3A9%29%0A%20%20real%20%3A%3A%20array5%28-5%3A5%29%0A%0Aend%20program%20arrays' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id1" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">arrays</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -787,10 +789,13 @@
 <span class="k">end program </span><span class="n">arrays</span>
 </pre></div>
 </div>
+</div>
 <section id="array-slicing">
 <h2>Срез массива<a class="headerlink" href="#array-slicing" title="Permalink to this heading">#</a></h2>
 <p>Мощной особенностью языка Fortran является встроенная поддержка операций над массивами; мы можем выполнять операции над всем массивом или его частью, используя операцию получения среза <em>slicing</em>, указав в скобках после имени массива диапазон индексов, и, если необходимо, шаг, разделив начальный, конечный индексы и шаг двоеточием (<code class="docutils literal notranslate"><span class="pre">:</span></code>):</p>
 <p><strong>Пример:</strong> срез массива</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20array_slice%0A%20%20implicit%20none%0A%0A%20%20integer%20%3A%3A%20i%0A%20%20integer%20%3A%3A%20array1%2810%29%20%20%21%201D%20integer%20array%20of%2010%20elements%0A%20%20integer%20%3A%3A%20array2%2810%2C%2010%29%20%20%21%202D%20integer%20array%20of%20100%20elements%0A%0A%20%20array1%20%3D%20%5B1%2C%202%2C%203%2C%204%2C%205%2C%206%2C%207%2C%208%2C%209%2C%2010%5D%20%20%21%20Array%20constructor%0A%20%20array1%20%3D%20%5B%28i%2C%20i%20%3D%201%2C%2010%29%5D%20%20%21%20Implied%20do%20loop%20constructor%0A%20%20array1%28%3A%29%20%3D%200%20%20%21%20Set%20all%20elements%20to%20zero%0A%20%20array1%281%3A5%29%20%3D%201%20%20%21%20Set%20first%20five%20elements%20to%20one%0A%20%20array1%286%3A%29%20%3D%201%20%20%21%20Set%20all%20elements%20after%20five%20to%20one%0A%0A%20%20print%20%2A%2C%20array1%281%3A10%3A2%29%20%20%21%20Print%20out%20elements%20at%20odd%20indices%0A%20%20print%20%2A%2C%20array2%28%3A%2C1%29%20%20%21%20Print%20out%20the%20first%20column%20in%20a%202D%20array%0A%20%20print%20%2A%2C%20array1%2810%3A1%3A-1%29%20%20%21%20Print%20an%20array%20in%20reverse%0A%0Aend%20program%20array_slice' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id2" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">array_slice</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -811,6 +816,7 @@
 <span class="k">end program </span><span class="n">array_slice</span>
 </pre></div>
 </div>
+</div>
 <blockquote>
 <div><p>Массивы в Fortran хранятся в памяти <em>по столбцам</em>; первый индекс меняется быстрее.</p>
 </div></blockquote>
@@ -821,6 +827,8 @@
 <p>Достаточно часто нам неизвестно какого размера должен быть массив, до запуска программы, например, если мы читаем данные из файла неизвестного размера.</p>
 <p>Для решения этой проблемы нам нужны <code class="docutils literal notranslate"><span class="pre">выделяемые</span></code> (динамические) массивы. Память под них <em>выделяется</em> во время выполнения программы, когда мы узнаём какого размера должен быть массив.</p>
 <p><strong>Пример:</strong> выделяемые (динамические) массивы</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20allocatable%0A%20%20implicit%20none%0A%0A%20%20integer%2C%20allocatable%20%3A%3A%20array1%28%3A%29%0A%20%20integer%2C%20allocatable%20%3A%3A%20array2%28%3A%2C%3A%29%0A%0A%20%20allocate%28array1%2810%29%29%0A%20%20allocate%28array2%2810%2C10%29%29%0A%0A%20%20%21%20...%0A%0A%20%20deallocate%28array1%29%0A%20%20deallocate%28array2%29%0A%0Aend%20program%20allocatable' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program allocatable</span>
 <span class="k">  implicit none</span>
 
@@ -838,11 +846,14 @@
 <span class="k">end program allocatable</span>
 </pre></div>
 </div>
+</div>
 <p>Память выделенная под локальные динамические массивы высвобождается автоматически когда происходит выход из области их видимости.</p>
 </section>
 <section id="character-strings">
 <h2>Символьные строки<a class="headerlink" href="#character-strings" title="Permalink to this heading">#</a></h2>
 <p><strong>Пример:</strong> статические символьные строки</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20string%0A%20%20implicit%20none%0A%0A%20%20character%28len%3D4%29%20%3A%3A%20first_name%0A%20%20character%28len%3D5%29%20%3A%3A%20last_name%0A%20%20character%2810%29%20%3A%3A%20full_name%0A%0A%20%20first_name%20%3D%20%27John%27%0A%20%20last_name%20%3D%20%27Smith%27%0A%0A%20%20%21%20String%20concatenation%0A%20%20full_name%20%3D%20first_name//%27%20%27//last_name%0A%0A%20%20print%20%2A%2C%20full_name%0A%0Aend%20program%20string' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">string</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -861,7 +872,10 @@
 <span class="k">end program </span><span class="n">string</span>
 </pre></div>
 </div>
+</div>
 <p><strong>Пример:</strong> выделяемые (динамические) символьные строки</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20allocatable_string%0A%20%20implicit%20none%0A%0A%20%20character%28%3A%29%2C%20allocatable%20%3A%3A%20first_name%0A%20%20character%28%3A%29%2C%20allocatable%20%3A%3A%20last_name%0A%0A%20%20%21%20Explicit%20allocation%20statement%0A%20%20allocate%28character%284%29%20%3A%3A%20first_name%29%0A%20%20first_name%20%3D%20%27John%27%0A%0A%20%20%21%20Allocation%20on%20assignment%0A%20%20last_name%20%3D%20%27Smith%27%0A%0A%20%20print%20%2A%2C%20first_name//%27%20%27//last_name%0A%0Aend%20program%20allocatable_string' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id5" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">allocatable_string</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -880,11 +894,14 @@
 <span class="k">end program </span><span class="n">allocatable_string</span>
 </pre></div>
 </div>
+</div>
 </section>
 <section id="array-of-strings">
 <h2>Массив строк<a class="headerlink" href="#array-of-strings" title="Permalink to this heading">#</a></h2>
 <p>Массив строк в Fortran может быть представлен как массив переменных символьного типа <code class="docutils literal notranslate"><span class="pre">character</span></code>. Все элементы в массиве типа <code class="docutils literal notranslate"><span class="pre">character</span></code> имеют одинаковую длину. Однако в конструктор массива можно ввести строки разной длины, как показано в примере ниже. Они будут усечены или дополнены пробелами справа, если они длиннее или короче, соответственно, чем объявленная длина <code class="docutils literal notranslate"><span class="pre">character</span></code> (символьного) массива. Наконец, мы используем встроенную функцию <code class="docutils literal notranslate"><span class="pre">trim</span></code>, для удаления лишних пробелов при печати значений в стандартный вывод.</p>
 <p><strong>Пример:</strong> массив строк</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20string_array%0A%20%20implicit%20none%0A%20%20character%28len%3D10%29%2C%20dimension%282%29%20%3A%3A%20keys%2C%20vals%0A%0A%20%20keys%20%3D%20%5Bcharacter%28len%3D10%29%20%3A%3A%20%22user%22%2C%20%22dbname%22%5D%0A%20%20vals%20%3D%20%5Bcharacter%28len%3D10%29%20%3A%3A%20%22ben%22%2C%20%22motivation%22%5D%0A%0A%20%20call%20show%28keys%2C%20vals%29%0A%0A%20%20contains%0A%0A%20%20subroutine%20show%28akeys%2C%20avals%29%0A%20%20%20%20character%28len%3D%2A%29%2C%20intent%28in%29%20%3A%3A%20akeys%28%3A%29%2C%20avals%28%3A%29%0A%20%20%20%20integer%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%3A%20i%0A%0A%20%20%20%20do%20i%20%3D%201%2C%20size%28akeys%29%0A%20%20%20%20%20%20print%20%2A%2C%20trim%28akeys%28i%29%29%2C%20%22%3A%20%22%2C%20trim%28avals%28i%29%29%0A%20%20%20%20end%20do%0A%0A%20%20end%20subroutine%20show%0A%0Aend%20program%20string_array' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">string_array</span>
 <span class="w">  </span><span class="k">implicit none</span>
 <span class="k">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">keys</span><span class="p">,</span><span class="w"> </span><span class="n">vals</span>
@@ -908,6 +925,7 @@
 
 <span class="k">end program </span><span class="n">string_array</span>
 </pre></div>
+</div>
 </div>
 </section>
 </section>

@@ -763,6 +763,8 @@ unless the <code class="docutils literal notranslate"><span class="pre">value</s
 <p>The subroutine input arguments, known as <em>dummy arguments</em>, are specified in parentheses after the subroutine name;
 the dummy argument types and attributes are declared within the body of the subroutine just like local variables.</p>
 <p><strong>Example:</strong></p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=%21%20Print%20matrix%20A%20to%20screen%0Asubroutine%20print_matrix%28n%2Cm%2CA%29%0A%20%20implicit%20none%0A%20%20integer%2C%20intent%28in%29%20%3A%3A%20n%0A%20%20integer%2C%20intent%28in%29%20%3A%3A%20m%0A%20%20real%2C%20intent%28in%29%20%3A%3A%20A%28n%2C%20m%29%0A%0A%20%20integer%20%3A%3A%20i%0A%0A%20%20do%20i%20%3D%201%2C%20n%0A%20%20%20%20print%20%2A%2C%20A%28i%2C%201%3Am%29%0A%20%20end%20do%0A%0Aend%20subroutine%20print_matrix' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! Print matrix A to screen</span>
 <span class="k">subroutine </span><span class="n">print_matrix</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">A</span><span class="p">)</span>
 <span class="w">  </span><span class="k">implicit none</span>
@@ -778,6 +780,7 @@ the dummy argument types and attributes are declared within the body of the subr
 
 <span class="k">end subroutine </span><span class="n">print_matrix</span>
 </pre></div>
+</div>
 </div>
 <p>Note the additional <code class="docutils literal notranslate"><span class="pre">intent</span></code> attribute when declaring the dummy arguments; this optional attribute signifies to the compiler whether the argument
 is ''read-only'' (<code class="docutils literal notranslate"><span class="pre">intent(in)</span></code>) ''write-only'' (<code class="docutils literal notranslate"><span class="pre">intent(out)</span></code>) or ''read-write'' (<code class="docutils literal notranslate"><span class="pre">intent(inout)</span></code>) within the procedure.
@@ -805,6 +808,8 @@ the dimensions of the array <code class="docutils literal notranslate"><span cla
 </div></blockquote>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=%21%20L2%20Norm%20of%20a%20vector%0Afunction%20vector_norm%28n%2Cvec%29%20result%28norm%29%0A%20%20implicit%20none%0A%20%20integer%2C%20intent%28in%29%20%3A%3A%20n%0A%20%20real%2C%20intent%28in%29%20%3A%3A%20vec%28n%29%0A%20%20real%20%3A%3A%20norm%0A%0A%20%20norm%20%3D%20sqrt%28sum%28vec%2A%2A2%29%29%0A%0Aend%20function%20vector_norm' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! L2 Norm of a vector</span>
 <span class="k">function </span><span class="n">vector_norm</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">vec</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">norm</span><span class="p">)</span>
 <span class="w">  </span><span class="k">implicit none</span>
@@ -816,6 +821,7 @@ the dimensions of the array <code class="docutils literal notranslate"><span cla
 
 <span class="k">end function </span><span class="n">vector_norm</span>
 </pre></div>
+</div>
 </div>
 <blockquote>
 <div><p>In production code, the intrinsic function <code class="docutils literal notranslate"><span class="pre">norm2</span></code> should be used.</p>
@@ -853,6 +859,8 @@ They can contain data objects, type definitions, procedures, and interfaces.</p>
 within modules.</p>
 </div></blockquote>
 <p><strong>Example:</strong></p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=module%20my_mod%0A%20%20implicit%20none%0A%0A%20%20private%20%20%21%20All%20entities%20are%20now%20module-private%20by%20default%0A%20%20public%20public_var%2C%20print_matrix%20%20%21%20Explicitly%20export%20public%20entities%0A%0A%20%20real%2C%20parameter%20%3A%3A%20public_var%20%3D%202%0A%20%20integer%20%3A%3A%20private_var%0A%0Acontains%0A%0A%20%20%21%20Print%20matrix%20A%20to%20screen%0A%20%20subroutine%20print_matrix%28A%29%0A%20%20%20%20real%2C%20intent%28in%29%20%3A%3A%20A%28%3A%2C%3A%29%20%20%21%20An%20assumed-shape%20dummy%20argument%0A%0A%20%20%20%20integer%20%3A%3A%20i%0A%0A%20%20%20%20do%20i%20%3D%201%2C%20size%28A%2C1%29%0A%20%20%20%20%20%20print%20%2A%2C%20A%28i%2C%3A%29%0A%20%20%20%20end%20do%0A%0A%20%20end%20subroutine%20print_matrix%0A%0Aend%20module%20my_mod' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">my_mod</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -878,6 +886,7 @@ within modules.</p>
 
 <span class="k">end module </span><span class="n">my_mod</span>
 </pre></div>
+</div>
 </div>
 <blockquote>
 <div><p>Compare this <code class="docutils literal notranslate"><span class="pre">print_matrix</span></code> subroutine with that written outside of a module.

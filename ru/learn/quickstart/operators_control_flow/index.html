@@ -888,10 +888,13 @@
 <h2>Условная конструкция (<code class="docutils literal notranslate"><span class="pre">if</span></code>)<a class="headerlink" href="#conditional-construct-if" title="Permalink to this heading">#</a></h2>
 <p>В следующих примерах условная конструкция <code class="docutils literal notranslate"><span class="pre">if</span></code> используется для вывода сообщения для описания характера переменной <code class="docutils literal notranslate"><span class="pre">angle</span></code> (угол):</p>
 <p><strong>Пример:</strong> одиночная ветвь <code class="docutils literal notranslate"><span class="pre">if</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=if%20%28angle%20%3C%2090.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20acute%27%0Aend%20if' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id1" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="k">  print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Angle is acute&#39;</span>
 <span class="k">end if</span>
 </pre></div>
+</div>
 </div>
 <p>В этом первом примере код внутри конструкции <code class="docutils literal notranslate"><span class="pre">if</span></code> <em>выполняется только если</em> тестовое выражение (<code class="docutils literal notranslate"><span class="pre">angle</span> <span class="pre">&lt;</span> <span class="pre">90.0</span></code>) истинно.</p>
 <div class="admonition tip">
@@ -900,6 +903,8 @@
 </div>
 <p>Мы можем добавить альтернативную ветвь в конструкцию с помощью ключевого слова <code class="docutils literal notranslate"><span class="pre">else</span></code>:</p>
 <p><strong>Example:</strong> две ветви <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=if%20%28angle%20%3C%2090.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20acute%27%0Aelse%0A%20%20print%20%2A%2C%20%27Angle%20is%20obtuse%27%0Aend%20if' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id2" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="k">  print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Angle is acute&#39;</span>
 <span class="k">else</span>
@@ -907,9 +912,12 @@
 <span class="k">end if</span>
 </pre></div>
 </div>
+</div>
 <p>Теперь в конструкции <code class="docutils literal notranslate"><span class="pre">if</span></code> есть две <em>ветви</em>, но <em>выполнятся только одна ветвь</em> в зависимости от логического выражения, следующего за ключевым словом <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
 <p>Мы можем добавить любое количество ветвей с помощью ключевого слова <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code>, чтобы задать больше условий:</p>
 <p><strong>Пример:</strong> множественное ветвление <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=if%20%28angle%20%3C%2090.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20acute%27%0Aelse%20if%20%28angle%20%3C%20180.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20obtuse%27%0Aelse%0A%20%20print%20%2A%2C%20%27Angle%20is%20reflex%27%0Aend%20if' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="k">  print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Angle is acute&#39;</span>
 <span class="k">else if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">18</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
@@ -919,6 +927,7 @@
 <span class="k">end if</span>
 </pre></div>
 </div>
+</div>
 <p>При использовании нескольких условных выражений, каждое условное выражение проверяется только в том случае, если ни одно из предыдущих не было истинно.</p>
 </section>
 <section id="loop-constructs-do">
@@ -926,6 +935,8 @@
 <p>В следуем примере конструкция цикла <code class="docutils literal notranslate"><span class="pre">do</span></code> используется для вывода последовательности чисел. Цикл <code class="docutils literal notranslate"><span class="pre">do</span></code> имеет целочисленную переменную <em>счётчик</em> (счётчик цикла), которая используется для отслеживания того, какая итерация цикла выполняется в данный момент. В этом примере мы используем принятое обычно для такой переменной счётчика имя: <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
 <p>Когда мы определяем начало цикла <code class="docutils literal notranslate"><span class="pre">do</span></code>, мы используем имя нашей переменной счётчика, за которой следует знак присваивания (<code class="docutils literal notranslate"><span class="pre">=</span></code>), чтобы указать начальное и конечное значение нашего счётчика цикла.</p>
 <p><strong>Пример:</strong> цикл <code class="docutils literal notranslate"><span class="pre">do</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%2010%0A%20%20print%20%2A%2C%20i%0Aend%20do' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span>
@@ -933,7 +944,10 @@
 <span class="k">end do</span>
 </pre></div>
 </div>
+</div>
 <p><strong>Пример:</strong> цикл <code class="docutils literal notranslate"><span class="pre">do</span></code> с заданием шага счётчика</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%2010%2C%202%0A%20%20print%20%2A%2C%20i%20%20%21%20Print%20odd%20numbers%0Aend%20do' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id5" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
@@ -941,10 +955,13 @@
 <span class="k">end do</span>
 </pre></div>
 </div>
+</div>
 <section id="conditional-loop-do-while">
 <h3>Цикл с условием (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">while</span></code>)<a class="headerlink" href="#conditional-loop-do-while" title="Permalink to this heading">#</a></h3>
 <p>В цикл <code class="docutils literal notranslate"><span class="pre">do</span></code> можно добавить проверку условия с помощью ключевого слова <code class="docutils literal notranslate"><span class="pre">while</span></code>. Тогда цикл будет выполняться до тех пор, пока условие, заданное в <code class="docutils literal notranslate"><span class="pre">while()</span></code>, истинно (<code class="docutils literal notranslate"><span class="pre">.true.</span></code>).</p>
 <p><strong>Пример:</strong> цикла <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">while()</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ai%20%3D%201%0Ado%20while%20%28i%20%3C%2011%29%0A%20%20print%20%2A%2C%20i%0A%20%20i%20%3D%20i%20%2B%201%0Aend%20do%0A%21%20Here%20i%20%3D%2011' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
@@ -955,12 +972,15 @@
 <span class="c">! Here i = 11</span>
 </pre></div>
 </div>
+</div>
 </section>
 <section id="loop-control-statements-exit-and-cycle">
 <h3>Операторы управления циклом (<code class="docutils literal notranslate"><span class="pre">exit</span></code> and <code class="docutils literal notranslate"><span class="pre">cycle</span></code>)<a class="headerlink" href="#loop-control-statements-exit-and-cycle" title="Permalink to this heading">#</a></h3>
 <p>Часто бывает необходимо остановить выполнение цикла при выполнении какого-либо условия. Fortran предоставляет для таких случаев два оператора исполнения.</p>
 <p><code class="docutils literal notranslate"><span class="pre">exit</span></code> (выход) используется для преждевременного завершения цикла. Он обычно используется внутри условной конструкции <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
 <p><strong>Пример:</strong> цикл с оператором <code class="docutils literal notranslate"><span class="pre">exit</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%20100%0A%20%20if%20%28i%20%3E%2010%29%20then%0A%20%20%20%20exit%20%20%21%20Stop%20printing%20numbers%0A%20%20end%20if%0A%20%20print%20%2A%2C%20i%0Aend%20do%0A%21%20Here%20i%20%3D%2011' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id7" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span>
@@ -972,8 +992,11 @@
 <span class="c">! Here i = 11</span>
 </pre></div>
 </div>
+</div>
 <p>С другой стороны, оператор <code class="docutils literal notranslate"><span class="pre">cycle</span></code> принудительно заставляет программу пропустить выполнение всего, что осталось ниже него и перейти к выполнению следующей итерации цикла.</p>
 <p><strong>Пример:</strong> цикл с оператором <code class="docutils literal notranslate"><span class="pre">cycle</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%2010%0A%20%20if%20%28mod%28i%2C%202%29%20%3D%3D%200%29%20then%0A%20%20%20%20%20%20cycle%20%20%21%20Don%27t%20print%20even%20numbers%0A%20%20end%20if%0A%20%20print%20%2A%2C%20i%0Aend%20do' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id8" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span>
@@ -983,6 +1006,7 @@
 <span class="k">  print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">i</span>
 <span class="k">end do</span>
 </pre></div>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
@@ -997,6 +1021,8 @@
 <li><p>Операторы <code class="docutils literal notranslate"><span class="pre">exit</span></code> и <code class="docutils literal notranslate"><span class="pre">cycle</span></code> могут использоваться с метками, что позволяет очень тонко управлять переходами в циклах.</p></li>
 </ol>
 <p><strong>Пример:</strong> вложенные циклы с метками</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%2C%20j%0A%0Aouter_loop%3A%20do%20i%20%3D%201%2C%2010%0A%20%20inner_loop%3A%20do%20j%20%3D%201%2C%2010%0A%20%20%20%20if%20%28%28j%20%2B%20i%29%20%3E%2010%29%20then%20%20%21%20Print%20only%20pairs%20of%20i%20and%20j%20that%20add%20up%20to%2010%0A%20%20%20%20%20%20cycle%20outer_loop%20%20%21%20Go%20to%20the%20next%20iteration%20of%20the%20outer%20loop%0A%20%20%20%20end%20if%0A%20%20%20%20print%20%2A%2C%20%27I%3D%27%2C%20i%2C%20%27%20J%3D%27%2C%20j%2C%20%27%20Sum%3D%27%2C%20j%20%2B%20i%0A%20%20end%20do%20inner_loop%0Aend%20do%20outer_loop' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id9" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span>
 
 <span class="n">outer_loop</span><span class="p">:</span><span class="w"> </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span>
@@ -1009,6 +1035,7 @@
 <span class="k">end do </span><span class="n">outer_loop</span>
 </pre></div>
 </div>
+</div>
 </section>
 <section id="parallelizable-loop-do-concurrent">
 <h3>Параллельное выполнение цикла (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code>)<a class="headerlink" href="#parallelizable-loop-do-concurrent" title="Permalink to this heading">#</a></h3>
@@ -1017,6 +1044,8 @@
 <div><p>Простая замена цикла <code class="docutils literal notranslate"><span class="pre">do</span></code> на цикл <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code> не гарантирует параллельного выполнения. Приведённое выше объяснение не содержит всех требований, которые должны быть выполнены для написания корректного цикла <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code>. Компиляторы также вольны поступать по своему усмотрению, то есть они могут не оптимизировать цикл (например, при небольшом количестве итераций для выполнения простого вычисления, как в примере ниже). В общем случае для активации возможного распараллеливания циклов <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code> требуются использование дополнительных флагов компиляции.</p>
 </div></blockquote>
 <p><strong>Пример:</strong> цикл <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent()</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=real%2C%20parameter%20%3A%3A%20pi%20%3D%203.14159265%0Ainteger%2C%20parameter%20%3A%3A%20n%20%3D%2010%0Areal%20%3A%3A%20result_sin%28n%29%0Ainteger%20%3A%3A%20i%0A%0Ado%20concurrent%20%28i%20%3D%201%3An%29%20%20%21%20Careful%2C%20the%20syntax%20is%20slightly%20different%0A%20%20result_sin%28i%29%20%3D%20sin%28i%20%2A%20pi/4.%29%0Aend%20do%0A%0Aprint%20%2A%2C%20result_sin' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id10" title="Постоянная ссылка на код">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159265</span>
 <span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
 <span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">result_sin</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -1028,6 +1057,7 @@
 
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">result_sin</span>
 </pre></div>
+</div>
 </div>
 </section>
 </section>
