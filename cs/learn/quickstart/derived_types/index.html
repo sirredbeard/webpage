@@ -1050,8 +1050,6 @@ You can also initialize derived type members by invoking the derived type constr
 <li><p>We now use <code class="docutils literal notranslate"><span class="pre">class(t_square)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">type(t_square)</span></code> in the interface of the <code class="docutils literal notranslate"><span class="pre">area</span></code> function. This allows us to invoke the <code class="docutils literal notranslate"><span class="pre">area</span></code> function with any derived type that extends <code class="docutils literal notranslate"><span class="pre">t_square</span></code>. The keyword <code class="docutils literal notranslate"><span class="pre">class</span></code> introduces the OOP feature polymorphism.</p></li>
 </ul>
 <p>In the above example, the type-bound procedure <code class="docutils literal notranslate"><span class="pre">area</span></code> is defined as a function and can be invoked only in an expression, for example <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">sq%area()</span></code> or <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">*,</span> <span class="pre">sq%area()</span></code>. If you define it instead as a subroutine, you can invoke it from its own <code class="docutils literal notranslate"><span class="pre">call</span></code> statement:</p>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=%21%20Change%20within%20module%0Acontains%0A%20%20subroutine%20area%28self%2C%20x%29%0A%20%20%20%20class%28t_square%29%2C%20intent%28in%29%20%3A%3A%20self%0A%20%20%20%20real%2C%20intent%28out%29%20%3A%3A%20x%0A%20%20%20%20x%20%3D%20self%25side%2A%2A2%0A%20%20end%20subroutine%0A%0A%21%20...%0A%0A%21%20Change%20within%20main%20program%0Acall%20sq%25area%28x%29%0A%0A%21%20Do%20stuff%20with%20x...' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id7" title="Permalink k tomuto kódu">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! Change within module</span>
 <span class="k">contains</span>
 <span class="k">  subroutine </span><span class="n">area</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
@@ -1067,7 +1065,6 @@ You can also initialize derived type members by invoking the derived type constr
 
 <span class="c">! Do stuff with x...</span>
 </pre></div>
-</div>
 </div>
 <p>In contrast to the example with the type-bound function, we now have two arguments:</p>
 <ul class="simple">

@@ -897,6 +897,8 @@ advantage of <em>assumed-shape</em> arguments since the module will generate the
 explicit interface for us. This results in a much simpler subroutine interface.</p>
 </div></blockquote>
 <p>To <code class="docutils literal notranslate"><span class="pre">use</span></code> the module within a program:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20use_mod%0A%20%20use%20my_mod%0A%20%20implicit%20none%0A%0A%20%20real%20%3A%3A%20mat%2810%2C%2010%29%0A%0A%20%20mat%28%3A%2C%3A%29%20%3D%20public_var%0A%0A%20%20call%20print_matrix%28mat%29%0A%0Aend%20program%20use_mod' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Enlace permanente a este código fuente">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">use_mod</span>
 <span class="w">  </span><span class="k">use </span><span class="n">my_mod</span>
 <span class="w">  </span><span class="k">implicit none</span>
@@ -910,13 +912,20 @@ explicit interface for us. This results in a much simpler subroutine interface.<
 <span class="k">end program </span><span class="n">use_mod</span>
 </pre></div>
 </div>
+</div>
 <p><strong>Example:</strong> explicit import list</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=use%20my_mod%2C%20only%3A%20public_var' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id7" title="Enlace permanente a este código fuente">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">my_mod</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">public_var</span>
 </pre></div>
 </div>
+</div>
 <p><strong>Example:</strong> aliased import</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=use%20my_mod%2C%20only%3A%20printMat%3D%3Eprint_matrix' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id8" title="Enlace permanente a este código fuente">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">my_mod</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">printMat</span><span class="o">=&gt;</span><span class="n">print_matrix</span>
 </pre></div>
+</div>
 </div>
 <blockquote>
 <div><p>Each module should be written in a separate <code class="docutils literal notranslate"><span class="pre">.f90</span></code> source file. Modules need to be compiled prior to any program units that <code class="docutils literal notranslate"><span class="pre">use</span></code> them.</p>

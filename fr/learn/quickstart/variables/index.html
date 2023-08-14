@@ -842,8 +842,6 @@ This is commonly referred to as writing to <code class="docutils literal notrans
 </div>
 <p>In a similar way, we can read values from the command window
 using the <code class="docutils literal notranslate"><span class="pre">read</span></code> statement:</p>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20read_value%0A%20%20implicit%20none%0A%20%20integer%20%3A%3A%20age%0A%0A%20%20print%20%2A%2C%20%27Please%20enter%20your%20age%3A%20%27%0A%20%20read%28%2A%2C%2A%29%20age%0A%0A%20%20print%20%2A%2C%20%27Your%20age%20is%3A%20%27%2C%20age%0A%0Aend%20program%20read_value' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Lien permanent vers ce code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">read_value</span>
 <span class="w">  </span><span class="k">implicit none</span>
 <span class="k">  </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">age</span>
@@ -855,7 +853,6 @@ using the <code class="docutils literal notranslate"><span class="pre">read</spa
 
 <span class="k">end program </span><span class="n">read_value</span>
 </pre></div>
-</div>
 </div>
 <p>This input source is commonly referred to as <code class="docutils literal notranslate"><span class="pre">standard</span> <span class="pre">input</span></code> or <code class="docutils literal notranslate"><span class="pre">stdin</span></code>.</p>
 </section>
@@ -888,8 +885,6 @@ using the <code class="docutils literal notranslate"><span class="pre">read</spa
 </table>
 <br>
 <p><strong>Example:</strong></p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20arithmetic%0A%20%20implicit%20none%0A%0A%20%20real%20%3A%3A%20pi%0A%20%20real%20%3A%3A%20radius%0A%20%20real%20%3A%3A%20height%0A%20%20real%20%3A%3A%20area%0A%20%20real%20%3A%3A%20volume%0A%0A%20%20pi%20%3D%203.1415927%0A%0A%20%20print%20%2A%2C%20%27Enter%20cylinder%20base%20radius%3A%27%0A%20%20read%28%2A%2C%2A%29%20radius%0A%0A%20%20print%20%2A%2C%20%27Enter%20cylinder%20height%3A%27%0A%20%20read%28%2A%2C%2A%29%20height%0A%0A%20%20area%20%3D%20pi%20%2A%20radius%2A%2A2%0A%20%20volume%20%3D%20area%20%2A%20height%0A%0A%20%20print%20%2A%2C%20%27Cylinder%20radius%20is%3A%20%27%2C%20radius%0A%20%20print%20%2A%2C%20%27Cylinder%20height%20is%3A%20%27%2C%20height%0A%20%20print%20%2A%2C%20%27Cylinder%20base%20area%20is%3A%20%27%2C%20area%0A%20%20print%20%2A%2C%20%27Cylinder%20volume%20is%3A%20%27%2C%20volume%0A%0Aend%20program%20arithmetic' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Lien permanent vers ce code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">arithmetic</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -918,15 +913,14 @@ using the <code class="docutils literal notranslate"><span class="pre">read</spa
 <span class="k">end program </span><span class="n">arithmetic</span>
 </pre></div>
 </div>
-</div>
 </section>
 <section id="floating-point-precision">
 <h2>Floating-point precision<a class="headerlink" href="#floating-point-precision" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>The desired floating-point precision can be explicitly declared using a <code class="docutils literal notranslate"><span class="pre">kind</span></code> parameter.
 The <code class="docutils literal notranslate"><span class="pre">iso_fortran_env</span></code> intrinsic module provides <code class="docutils literal notranslate"><span class="pre">kind</span></code> parameters for the common 32-bit and 64-bit floating-point types.</p>
 <p><strong>Example:</strong> explicit real <code class="docutils literal notranslate"><span class="pre">kind</span></code></p>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20float%0A%20%20use%2C%20intrinsic%20%3A%3A%20iso_fortran_env%2C%20only%3A%20sp%3D%3Ereal32%2C%20dp%3D%3Ereal64%0A%20%20implicit%20none%0A%0A%20%20real%28sp%29%20%3A%3A%20float32%0A%20%20real%28dp%29%20%3A%3A%20float64%0A%0A%20%20float32%20%3D%201.0_sp%20%20%21%20Explicit%20suffix%20for%20literal%20constants%0A%20%20float64%20%3D%201.0_dp%0A%0Aend%20program%20float' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id5" title="Lien permanent vers ce code">#</a></div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20float%0A%20%20use%2C%20intrinsic%20%3A%3A%20iso_fortran_env%2C%20only%3A%20sp%3D%3Ereal32%2C%20dp%3D%3Ereal64%0A%20%20implicit%20none%0A%0A%20%20real%28sp%29%20%3A%3A%20float32%0A%20%20real%28dp%29%20%3A%3A%20float64%0A%0A%20%20float32%20%3D%201.0_sp%20%20%21%20Explicit%20suffix%20for%20literal%20constants%0A%20%20float64%20%3D%201.0_dp%0A%0Aend%20program%20float' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Lien permanent vers ce code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="nb">float</span>
 <span class="nb">  </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">sp</span><span class="o">=&gt;</span><span class="n">real32</span><span class="p">,</span><span class="w"> </span><span class="n">dp</span><span class="o">=&gt;</span><span class="n">real64</span>
 <span class="w">  </span><span class="k">implicit none</span>
@@ -945,8 +939,8 @@ The <code class="docutils literal notranslate"><span class="pre">iso_fortran_env
 <div><p>Always use a <code class="docutils literal notranslate"><span class="pre">kind</span></code> suffix for floating-point literal constants.</p>
 </div></blockquote>
 <p><strong>Example:</strong> C-interoperable <code class="docutils literal notranslate"><span class="pre">kind</span></code></p>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20float%0A%20%20use%2C%20intrinsic%20%3A%3A%20iso_c_binding%2C%20only%3A%20sp%3D%3Ec_float%2C%20dp%3D%3Ec_double%0A%20%20implicit%20none%0A%0A%20%20real%28sp%29%20%3A%3A%20float32%0A%20%20real%28dp%29%20%3A%3A%20float64%0A%0Aend%20program%20float' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Lien permanent vers ce code">#</a></div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20float%0A%20%20use%2C%20intrinsic%20%3A%3A%20iso_c_binding%2C%20only%3A%20sp%3D%3Ec_float%2C%20dp%3D%3Ec_double%0A%20%20implicit%20none%0A%0A%20%20real%28sp%29%20%3A%3A%20float32%0A%20%20real%28dp%29%20%3A%3A%20float64%0A%0Aend%20program%20float' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Lien permanent vers ce code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="nb">float</span>
 <span class="nb">  </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">sp</span><span class="o">=&gt;</span><span class="kt">c_float</span><span class="p">,</span><span class="w"> </span><span class="n">dp</span><span class="o">=&gt;</span><span class="kt">c_double</span>
 <span class="kt">  </span><span class="k">implicit none</span>
