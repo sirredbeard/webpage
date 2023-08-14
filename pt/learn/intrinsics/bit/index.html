@@ -5533,10 +5533,7 @@ as <strong>array</strong>.</p>
 <section id="id176">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id176" title="Permalink to this heading">#</a></h3>
 <p>O resultado é do mesmo tipo de <strong>array</strong>.</p>
-<p>If <strong>dim</strong> is absent, a scalar with the bitwise <em>xor</em> of all elements in <strong>array</strong>
-is returned. Otherwise, an array of rank <strong>n-1</strong>, where <strong>n</strong> equals the
-rank of <strong>array</strong>, and a shape similar to that of <strong>array</strong> with dimension <strong>dim</strong>
-dropped is returned.</p>
+<p>Se <strong>dim</strong> for ausente, um escalar com a expressão bit a bit <em>xor</em> de todos os elementos no <strong>array</strong> é retornado. Caso contrário, uma matriz de ordem <strong>n-1</strong>, onde <strong>n</strong> é igual à ordem do <strong>array</strong>, e a forma semelhante ao <strong>array</strong> com a dimensão <strong>dim</strong> removida é retornada.</p>
 <p>Case (i): The result of IPARITY (ARRAY) has a value equal to the
 bitwise exclusive OR of all the elements of ARRAY. If
 ARRAY has size zero the result has the value zero.</p>
@@ -5622,7 +5619,7 @@ dimension <strong>dim</strong> if the corresponding element in <strong>mask</str
 <h3><strong>Opções</strong><a class="headerlink" href="#id184" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>array</strong></dt><dd><p>Shall be an array of type <em>integer</em></p>
+<dt><strong>array</strong></dt><dd><p>Deve ser uma matriz do tipo <em>integer</em></p>
 </dd>
 </dl>
 </li>
@@ -5633,8 +5630,7 @@ range from <strong>1 to n</strong>, where <strong>n</strong> equals the rank of 
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>mask</strong></dt><dd><p>(Optional) shall be of type <em>logical</em> and either be a scalar or an
-array of the same shape as <strong>array</strong>.</p>
+<dt><strong>mask</strong></dt><dd><p>(Opcional) deve ser do tipo <em>logical</em> e deve ser ou um escalar ou uma matriz da mesma forma que <strong>array</strong>.</p>
 </dd>
 </dl>
 </li>
@@ -6686,7 +6682,7 @@ It shall be nonnegative and less than or equal to <strong>bit_size(i)</strong>.<
 </section>
 <section id="id266">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id266" title="Permalink to this heading">#</a></h3>
-<p>The return value is of type <em>integer</em> and of the same kind as <strong>i</strong>.</p>
+<p>O valor retornado é do tipo <em>integer</em> e do mesmo tipo que <strong>i</strong>.</p>
 </section>
 <section id="id267">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id267" title="Permalink to this heading">#</a></h3>
