@@ -5624,8 +5624,7 @@ dimension <strong>dim</strong> if the corresponding element in <strong>mask</str
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>dim</strong></dt><dd><p>(Optional) shall be a scalar of type <em>integer</em> with a value in the
-range from <strong>1 to n</strong>, where <strong>n</strong> equals the rank of <strong>array</strong>.</p>
+<dt><strong>dim</strong></dt><dd><p>(Opcional) deve ser um escalar do tipo <em>integer</em> com um valor entre <strong>1 a n</strong>, onde <strong>n</strong> é igual à ordem do <strong>array</strong>.</p>
 </dd>
 </dl>
 </li>
@@ -5639,10 +5638,7 @@ range from <strong>1 to n</strong>, where <strong>n</strong> equals the rank of 
 <section id="id185">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id185" title="Permalink to this heading">#</a></h3>
 <p>O resultado é do mesmo tipo de <strong>array</strong>.</p>
-<p>If <strong>dim</strong> is absent, a scalar with the bitwise <em>all</em> of all elements in
-<strong>array</strong> is returned. Otherwise, an array of rank <strong>n-1</strong>, where <strong>n</strong>
-equals the rank of <strong>array</strong>, and a shape similar to that of <strong>array</strong>
-with dimension <strong>dim</strong> dropped is returned.</p>
+<p>Se <strong>dim</strong> for ausente, um escalar com o <em>all</em> bit a bit de todos os elementos em <strong>array</strong> é retornado. Caso contrário, é retornada uma matriz de ordem <strong>n-1</strong>, onde <strong>n</strong> é igual à ordem de <strong>array</strong>, e com formato semelhante ao <strong>array</strong> com a dimensão <strong>dim</strong> removida.</p>
 </section>
 <section id="id186">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id186" title="Permalink to this heading">#</a></h3>
