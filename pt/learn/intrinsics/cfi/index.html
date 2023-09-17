@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
-    <title>Procedures for binding to C interfaces &#8212; Fortran Programming Language</title>
+    <title>Procedimentos para vincular à interfaces C &#8212; Fortran Programming Language</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -626,7 +626,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Procedures for binding to C interfaces
+     Procedimentos para vincular à interfaces C
     </a>
    </li>
    <li class="toctree-l2">
@@ -1127,7 +1127,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="procedures-for-binding-to-c-interfaces">
-<h1>Procedures for binding to C interfaces<a class="headerlink" href="#procedures-for-binding-to-c-interfaces" title="Permalink to this heading">#</a></h1>
+<h1>Procedimentos para vincular à interfaces C<a class="headerlink" href="#procedures-for-binding-to-c-interfaces" title="Permalink to this heading">#</a></h1>
 <section id="c-associated">
 <h2>c_associated<a class="headerlink" href="#c-associated" title="Permalink to this heading">#</a></h2>
 <section id="name">
@@ -1248,19 +1248,17 @@ an array.</p>
 <h3><strong>Opções</strong><a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>cptr</strong></dt><dd><p>scalar of the type c_ptr. It is <strong>intent(in)</strong>.</p>
+<dt><strong>cptr</strong></dt><dd><p>escalar do tipo c_ptr. É <strong>intent(in)</strong>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>fptr</strong></dt><dd><p>pointer interoperable with <strong>cptr</strong>. it is <strong>intent(out)</strong>.</p>
+<dt><strong>fptr</strong></dt><dd><p>ponteiro interoperável com <strong>cptr</strong>. É <strong>intent(out)</strong>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>shape</strong></dt><dd><p>(Optional) Rank-one array of type <em>integer</em> with <strong>intent(in)</strong> .
-It shall be present if and only if <strong>fptr</strong> is an array. The size
-must be equal to the rank of <strong>fptr</strong>.</p>
+<dt><strong>shape</strong></dt><dd><p>(Opcional) matriz de primeira ordem do tipo <em>integer</em> com <strong>intent(in)</strong>. Será presente se e somente se <strong>fptr</strong> for uma matriz. O tamanho deve ser igual à ordem de <strong>fptr</strong>.</p>
 </dd>
 </dl>
 </li>
@@ -1302,7 +1300,7 @@ must be equal to the rank of <strong>fptr</strong>.</p>
 <h2>c_f_procpointer<a class="headerlink" href="#c-f-procpointer" title="Permalink to this heading">#</a></h2>
 <section id="id9">
 <h3><strong>Nome</strong><a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
-<p><strong>c_f_procpointer</strong>(3) - [ISO_C_BINDING] Convert C into Fortran procedure pointer</p>
+<p><strong>c_f_procpointer</strong>(3) - [ISO_C_BINDING] Converte C em ponteiro de procedimento Fortran</p>
 </section>
 <section id="id10">
 <h3><strong>Synopsis</strong><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
@@ -1328,12 +1326,12 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 <h3><strong>Opções</strong><a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>cptr</strong></dt><dd><p>scalar of the type c_funptr. It is <strong>intent(in)</strong>.</p>
+<dt><strong>cptr</strong></dt><dd><p>escalar do tipo c_funptr. É <strong>intent(in)</strong>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple myst">
-<dt><strong>fptr</strong></dt><dd><p>procedure pointer interoperable with <strong>cptr</strong>. It is <strong>intent(out)</strong>.</p>
+<dt><strong>fptr</strong></dt><dd><p>ponteiro de procedimento interoperável com <strong>cptr</strong>. É <strong>intent(out)</strong>.</p>
 </dd>
 </dl>
 </li>
@@ -1382,7 +1380,7 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 <h2>c_funloc<a class="headerlink" href="#c-funloc" title="Permalink to this heading">#</a></h2>
 <section id="id17">
 <h3><strong>Nome</strong><a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
-<p><strong>c_funloc</strong>(3) - [ISO_C_BINDING] Obtain the C address of a procedure</p>
+<p><strong>c_funloc</strong>(3) - [ISO_C_BINDING] Obtém o endereço C de um procedimento</p>
 </section>
 <section id="id18">
 <h3><strong>Synopsis</strong><a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
@@ -1404,7 +1402,7 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 <h3><strong>Opções</strong><a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
-<dt><strong>x</strong></dt><dd><p>Interoperable function or pointer to such function.</p>
+<dt><strong>x</strong></dt><dd><p>Função interoperável ou ponteiro para tal função.</p>
 </dd>
 </dl>
 </li>
@@ -1412,8 +1410,7 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </section>
 <section id="id22">
 <h3><strong>Resultado</strong><a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
-<p>The return value is of type c_funptr and contains the C address of the
-argument.</p>
+<p>O valor retornado é do tipo c_funptr e contém o endereço C do argumento.</p>
 </section>
 <section id="id23">
 <h3><strong>Exemplos</strong><a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
@@ -1463,7 +1460,7 @@ argument.</p>
 <h2>c_loc<a class="headerlink" href="#c-loc" title="Permalink to this heading">#</a></h2>
 <section id="id26">
 <h3><strong>Nome</strong><a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h3>
-<p><strong>c_loc</strong>(3) - [ISO_C_BINDING] Obtain the C address of an object</p>
+<p><strong>c_loc</strong>(3) - [ISO_C_BINDING] Obtém o endereço C de um objeto</p>
 </section>
 <section id="id27">
 <h3><strong>Synopsis</strong><a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
