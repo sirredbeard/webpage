@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="ru">
+<html lang="ru" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Введение в систему сборки make &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aaa2236b"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/project_make.html" />
     <link rel="index" title="Алфавитный указатель" href="../../../genindex/" />
     <link rel="search" title="Поиск" href="../../../search/" />
@@ -731,7 +730,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="an-introduction-to-make">
-<h1>Введение в систему сборки make<a class="headerlink" href="#an-introduction-to-make" title="Permalink to this heading">#</a></h1>
+<h1>Введение в систему сборки make<a class="headerlink" href="#an-introduction-to-make" title="Link to this heading">#</a></h1>
 <p>Мы кратко рассказали об основах <code class="docutils literal notranslate"><span class="pre">make</span></code>. В этой главе приводятся идеи и стратегии масштабирования использования <code class="docutils literal notranslate"><span class="pre">make</span></code> для более крупных проектов.</p>
 <p>Прежде чем подробнее рассмотреть систему сборки <code class="docutils literal notranslate"><span class="pre">make</span></code>, остановимся на нескольких моментах:</p>
 <ol class="arabic simple">
@@ -746,7 +745,7 @@
 <p>Даже если вы считаете систему сборки <code class="docutils literal notranslate"><span class="pre">make</span></code> неподходящей для сборки вашего проекта, он является <em>инструментом для автоматизации рабочих процессов</em>, определяемых файлами. Возможно, вы сможете использовать её возможности в другом контексте.</p>
 </div>
 <section id="getting-started">
-<h2>Первые шаги<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
+<h2>Первые шаги<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
 <p>В этой части статьи мы будем работать с проектом <a href="https://github.com/jacobwilliams/fortran-csv-module/tree/1.2.0" target="_blank" rel="noopener">Fortran CSV module (v1.2.0)</a>. Наша цель – написать <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> для компиляции этого проекта в статическую библиотеку. Начнём с клонирования репозитория</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jacobwilliams</span><span class="o">/</span><span class="n">fortran</span><span class="o">-</span><span class="n">csv</span><span class="o">-</span><span class="n">module</span> <span class="o">-</span><span class="n">b</span> <span class="mf">1.2.0</span>
 <span class="n">cd</span> <span class="n">fortran</span><span class="o">-</span><span class="n">csv</span><span class="o">-</span><span class="n">module</span>
@@ -858,7 +857,7 @@ gfortran -o src/tests/csv_write_test.exe src/tests/csv_write_test.f90.o libcsv.a
 <p>Следует отметить несколько моментов: сборка с помощью <code class="docutils literal notranslate"><span class="pre">make</span></code> чередует элементы сборки и компиляцию файлов исходного кода, если вы не приложите дополнительные усилия для реализации каталога сборки. Кроме того, сейчас исходные файлы и зависимости указываются явно, что приводит к необходимости написания дополнительных строк даже в случае такого простого примера.</p>
 </section>
 <section id="automatically-generated-dependencies">
-<h2>Автоматически создаваемые зависимости<a class="headerlink" href="#automatically-generated-dependencies" title="Permalink to this heading">#</a></h2>
+<h2>Автоматически создаваемые зависимости<a class="headerlink" href="#automatically-generated-dependencies" title="Link to this heading">#</a></h2>
 <p>Основным недостатком системы сборки <code class="docutils literal notranslate"><span class="pre">make</span></code> при сборке проектов на языке Fortran является отсутствие возможности определения зависимостей от модулей. Обычно это решается либо указанием их вручную, либо автоматическим сканированием исходного кода с помощью внешнего инструмента. Некоторые компиляторы (например, Intel Fortran) также предлагают возможность генерировать список зависимостей в формате проекта <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
 <p>Прежде чем перейти к генерации списка зависимостей, мы опишем концепцию надёжного подхода к проблеме зависимостей. Во-первых, нам нужен подход, который может обрабатывать все исходные файлы, независимо, при этом каждый файл исходного кода предоставляет модуль (<code class="docutils literal notranslate"><span class="pre">module</span></code> ) или требует (<code class="docutils literal notranslate"><span class="pre">use</span></code> ) модули. При создании списка зависимостей известны только имя файла исходного кода и имена файлов модулей, а информация об именах объектных файлов не должна требоваться.</p>
 <p>Если вы посмотрите раздел о зависимостях выше, то заметите, что все зависимости определены между объектными файлами, а не файлами исходного кода. Чтобы изменить это, мы можем создать соответствие между именами файлов исходного кода и именами соответствующих объектных файлов:</p>

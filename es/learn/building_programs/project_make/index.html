@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="es" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>An introduction to make &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=96d5a3fc"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/project_make.html" />
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Búsqueda" href="../../../search/" />
@@ -731,7 +730,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="an-introduction-to-make">
-<h1>An introduction to make<a class="headerlink" href="#an-introduction-to-make" title="Enlace permanente a este encabezado">#</a></h1>
+<h1>An introduction to make<a class="headerlink" href="#an-introduction-to-make" title="Link to this heading">#</a></h1>
 <p>We briefly discussed the basics of <code class="docutils literal notranslate"><span class="pre">make</span></code>. This chapter gives ideas
 and strategies to scale <code class="docutils literal notranslate"><span class="pre">make</span></code> for larger projects.</p>
 <p>Before going into detail with <code class="docutils literal notranslate"><span class="pre">make</span></code>, consider a few points:</p>
@@ -761,7 +760,7 @@ than <code class="docutils literal notranslate"><span class="pre">make</span></c
 <p>Even if you find <code class="docutils literal notranslate"><span class="pre">make</span></code> unsuitable to build your project, it is <em>the</em> tool to automate workflows defined by files. Maybe you can leverage its power in a different context.</p>
 </div>
 <section id="getting-started">
-<h2>Primeros pasos<a class="headerlink" href="#getting-started" title="Enlace permanente a este encabezado">#</a></h2>
+<h2>Primeros pasos<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
 <p>For this part we will work with
 <a href="https://github.com/jacobwilliams/fortran-csv-module/tree/1.2.0" target="_blank" rel="noopener"> the Fortran CSV module (v1.2.0)</a>.
 Our goal is to write a <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> to compile this project to a static library.
@@ -885,7 +884,7 @@ Also, right now the the source files and dependencies are specified explicitly,
 which results in several additional lines even for such a simple project.</p>
 </section>
 <section id="automatically-generated-dependencies">
-<h2>Automatically generated dependencies<a class="headerlink" href="#automatically-generated-dependencies" title="Enlace permanente a este encabezado">#</a></h2>
+<h2>Automatically generated dependencies<a class="headerlink" href="#automatically-generated-dependencies" title="Link to this heading">#</a></h2>
 <p>The main drawback of <code class="docutils literal notranslate"><span class="pre">make</span></code> for Fortran is the missing capability to
 determine module dependencies. This is usually solved by either adding those
 by hand or automatically scanning the source code with an external tool.

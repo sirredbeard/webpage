@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="ru">
+<html lang="ru" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Распространение ваших программ &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aaa2236b"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/distributing.html" />
     <link rel="index" title="Алфавитный указатель" href="../../../genindex/" />
     <link rel="search" title="Поиск" href="../../../search/" />
@@ -726,7 +725,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="distributing-your-programs">
-<h1>Распространение ваших программ<a class="headerlink" href="#distributing-your-programs" title="Permalink to this heading">#</a></h1>
+<h1>Распространение ваших программ<a class="headerlink" href="#distributing-your-programs" title="Link to this heading">#</a></h1>
 <p>Когда вы распространяете свои программы, существует несколько вариантов, из которых вы можете выбрать:</p>
 <ol class="arabic simple">
 <li><p>Распространение всего исходного кода</p></li>
@@ -746,7 +745,7 @@
 <p>Этот вариант представляет собой комбинацию первых двух вариантов. Он возлагает некоторую нагрузку на пользователя, так как он должен создать основную программу, вызывающую ваши подпрограммы надлежащим образом, но ему не нужно много знать о системе сборки, которую вы использовали. Однако вам придётся иметь дело с библиотеками времени выполнения.</p>
 <p>Если вы выберете этот вариант, помимо скомпилированных библиотек, вам также нужно будет предоставить промежуточные файлы модуля. Эти файлы специфичны для компилятора, как и статические библиотеки, которые вы собираете.</p>
 <section id="distributing-the-tabulation-program">
-<h2>Распространение программы создания табличной функции<a class="headerlink" href="#distributing-the-tabulation-program" title="Permalink to this heading">#</a></h2>
+<h2>Распространение программы создания табличной функции<a class="headerlink" href="#distributing-the-tabulation-program" title="Link to this heading">#</a></h2>
 <p>Как показано ранее, программа создания табличной функции может быть собрана с помощью пользовательской функции в динамической библиотеке. Это позволяет:</p>
 <ul class="simple">
 <li><p>Поставлять исполняемый файл (с соответствующими библиотеками времени выполнения)</p></li>

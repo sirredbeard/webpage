@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="zh-CN">
+<html lang="zh-CN" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>矩阵乘法、点积和数组移位 &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=20ebe441"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/intrinsics/transform.html" />
     <link rel="index" title="索引" href="../../../genindex/" />
     <link rel="search" title="搜索" href="../../../search/" />
@@ -1273,15 +1272,15 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="matrix-multiplication-dot-product-and-array-shifts">
-<h1>矩阵乘法、点积和数组移位<a class="headerlink" href="#matrix-multiplication-dot-product-and-array-shifts" title="此标题的永久链接">#</a></h1>
+<h1>矩阵乘法、点积和数组移位<a class="headerlink" href="#matrix-multiplication-dot-product-and-array-shifts" title="Link to this heading">#</a></h1>
 <section id="cshift">
-<h2>cshift<a class="headerlink" href="#cshift" title="此标题的永久链接">#</a></h2>
+<h2>cshift<a class="headerlink" href="#cshift" title="Link to this heading">#</a></h2>
 <section id="name">
-<h3><strong>名称</strong><a class="headerlink" href="#name" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#name" title="Link to this heading">#</a></h3>
 <p><strong>cshift</strong>(3) - [TRANSFORMATIONAL] 数组的循环移位元素</p>
 </section>
 <section id="synopsis">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cshift</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -1294,7 +1293,7 @@
 </div>
 </section>
 <section id="characteristics">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>array</strong> may be any type and rank</p></li>
 <li><p><strong>shift</strong> an <em>integer</em> scalar if <strong>array</strong> has rank one.
@@ -1310,7 +1309,7 @@ If <strong>dim</strong> is absent, it is as if it were present with the value 1.
 :a kind designated as ** may be any supported kind for the type</p>
 </section>
 <section id="description">
-<h3><strong>说明</strong><a class="headerlink" href="#description" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
 <p><strong>cshift</strong>(3) performs a circular shift on elements
 of <strong>array</strong> along the dimension of <strong>dim</strong>. If <strong>dim</strong> is omitted it is
 taken to be <strong>1</strong>. <strong>dim</strong> is a scalar of type <em>integer</em> in the range of
@@ -1322,7 +1321,7 @@ of <strong>array</strong> along the given dimension are shifted. Elements shifte
 out one end of each rank one section are shifted back in the other end.</p>
 </section>
 <section id="options">
-<h3><strong>选项</strong><a class="headerlink" href="#options" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#options" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>数组</strong></dt><dd><p>An array of any type which is to be shifted</p>
@@ -1344,16 +1343,16 @@ to 1.</p>
 </ul>
 </section>
 <section id="result">
-<h3><strong>结果</strong><a class="headerlink" href="#result" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#result" title="Link to this heading">#</a></h3>
 <p>返回与 <strong>array</strong> 参数具有相同类型和维度的数组。</p>
 <p>The rows of an array of rank two may all be shifted by the same amount
 or by different amounts.</p>
 </section>
 </section>
 <section id="id1">
-<h2>cshift<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h2>
+<h2>cshift<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <section id="examples">
-<h3><strong>示例</strong><a class="headerlink" href="#examples" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_cshift</span>
 <span class="k">implicit none</span>
@@ -1402,11 +1401,11 @@ or by different amounts.</p>
 </div>
 </section>
 <section id="standard">
-<h3><strong>标准</strong><a class="headerlink" href="#standard" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#standard" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="see-also">
-<h3><strong>另见</strong><a class="headerlink" href="#see-also" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#eoshift"><strong>eoshift</strong>(3)</a> - End-off shift elements of an array</p></li>
 </ul>
@@ -1423,13 +1422,13 @@ or by different amounts.</p>
 </section>
 </section>
 <section id="dot-product">
-<h2>dot_product<a class="headerlink" href="#dot-product" title="此标题的永久链接">#</a></h2>
+<h2>dot_product<a class="headerlink" href="#dot-product" title="Link to this heading">#</a></h2>
 <section id="id2">
-<h3><strong>名称</strong><a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p><strong>dot_product</strong>(3) - [TRANSFORMATIONAL] Dot product of two vectors</p>
 </section>
 <section id="id3">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span><span class="w"> </span><span class="n">vector_b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1441,7 +1440,7 @@ or by different amounts.</p>
 </div>
 </section>
 <section id="id4">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>vector_a</strong>, <strong>vector_b</strong> may be any numeric or logical type array
 of rank one of the same size</p></li>
@@ -1454,12 +1453,12 @@ type that the other vector is optionally promoted to if they differ.</p></li>
 of rank one and of equal size.</p>
 </section>
 <section id="id5">
-<h3><strong>说明</strong><a class="headerlink" href="#id5" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p><strong>dot_product</strong>(3) computes the dot product
 multiplication of two vectors <strong>vector_a</strong> and <strong>vector_b</strong>.</p>
 </section>
 <section id="id6">
-<h3><strong>选项</strong><a class="headerlink" href="#id6" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>vector_a</strong></dt><dd><p>A rank 1 vector of values</p>
@@ -1476,7 +1475,7 @@ rank-one array of the same size as <strong>vector_a</strong>.</p>
 </ul>
 </section>
 <section id="id7">
-<h3><strong>结果</strong><a class="headerlink" href="#id7" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>If the arguments are numeric, the return value is a scalar of numeric
 type. If the arguments are <em>logical</em>, the
 return value is <em>.true.</em> or <em>.false.</em>.</p>
@@ -1494,7 +1493,7 @@ return value is <em>.true.</em> or <em>.false.</em>.</p>
 </div>
 </section>
 <section id="id8">
-<h3><strong>示例</strong><a class="headerlink" href="#id8" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_dot_prod</span>
 <span class="k">implicit none</span>
@@ -1519,11 +1518,11 @@ return value is <em>.true.</em> or <em>.false.</em>.</p>
 </div>
 </section>
 <section id="id9">
-<h3><strong>标准</strong><a class="headerlink" href="#id9" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id10">
-<h3><strong>另见</strong><a class="headerlink" href="#id10" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#sum"><span class="xref myst"><strong>sum</strong>(3)</span></a>,
 <a class="reference internal" href="#conjg"><span class="xref myst"><strong>conjg</strong>(3)</span></a>,
 <a class="reference internal" href="#any"><span class="xref myst"><strong>any</strong>(3)</span></a></p>
@@ -1531,13 +1530,13 @@ return value is <em>.true.</em> or <em>.false.</em>.</p>
 </section>
 </section>
 <section id="eoshift">
-<h2>eoshift<a class="headerlink" href="#eoshift" title="此标题的永久链接">#</a></h2>
+<h2>eoshift<a class="headerlink" href="#eoshift" title="Link to this heading">#</a></h2>
 <section id="id11">
-<h3><strong>名称</strong><a class="headerlink" href="#id11" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p><strong>eoshift</strong>(3) - [TRANSFORMATIONAL] End-off shift of elements of an array</p>
 </section>
 <section id="id12">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id12" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">eoshift</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="p">[,</span><span class="n">boundary</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1551,7 +1550,7 @@ return value is <em>.true.</em> or <em>.false.</em>.</p>
 </div>
 </section>
 <section id="id13">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id13" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>array</strong> an array of any type</p></li>
 <li><p><strong>shift</strong> is an integer of any kind. It may be a scalar.
@@ -1570,7 +1569,7 @@ argument.</p></li>
 </ul>
 </section>
 <section id="id14">
-<h3><strong>说明</strong><a class="headerlink" href="#id14" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <p><strong>eoshift</strong>(3) performs an end-off shift on elements of <strong>array</strong>
 along the dimension of <strong>dim</strong>.</p>
 <p>Elements shifted out one end of each rank one section are dropped.</p>
@@ -1579,7 +1578,7 @@ along the dimension of <strong>dim</strong>.</p>
 are used.</p>
 </section>
 <section id="id15">
-<h3><strong>选项</strong><a class="headerlink" href="#id15" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>数组</strong></dt><dd><p>array of any type whose elements are to be shifted.
@@ -1628,14 +1627,14 @@ For these types the kind is converted as neccessary to the kind of
 is taken to be <strong>1</strong>.</p>
 </section>
 <section id="id16">
-<h3><strong>结果</strong><a class="headerlink" href="#id16" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>Returns an array of the same characteristics as the input with the
 specified number of elements dropped off along the specified direction
 indicated, backfilling the vacated elements with a value indicated by
 the <strong>boundary</strong> value.</p>
 </section>
 <section id="id17">
-<h3><strong>示例</strong><a class="headerlink" href="#id17" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_eoshift</span>
 <span class="k">implicit none</span>
@@ -1666,25 +1665,25 @@ the <strong>boundary</strong> value.</p>
 </div>
 </section>
 <section id="id18">
-<h3><strong>标准</strong><a class="headerlink" href="#id18" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id19">
-<h3><strong>另见</strong><a class="headerlink" href="#id19" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#dshiftr"><span class="xref myst"><strong>dshiftr</strong>(3)</span></a>,
 <a class="reference internal" href="#dshiftl"><span class="xref myst"><strong>dshiftl</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="matmul">
-<h2>matmul<a class="headerlink" href="#matmul" title="此标题的永久链接">#</a></h2>
+<h2>matmul<a class="headerlink" href="#matmul" title="Link to this heading">#</a></h2>
 <section id="id20">
-<h3><strong>名称</strong><a class="headerlink" href="#id20" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <p><strong>matmul</strong>(3) - [TRANSFORMATIONAL] Numeric or logical matrix
 multiplication</p>
 </section>
 <section id="id21">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id21" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">matmul</span><span class="p">(</span><span class="n">matrix_a</span><span class="p">,</span><span class="n">matrix_b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1697,7 +1696,7 @@ multiplication</p>
 </div>
 </section>
 <section id="id22">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id22" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>matrix_a</strong> is a numeric (<em>integer</em>, <em>real</em>, or <em>complex</em> ) or
 <em>logical</em> array of rank one two.</p></li>
@@ -1718,12 +1717,12 @@ as described below.</p></li>
 </ul>
 </section>
 <section id="id23">
-<h3><strong>说明</strong><a class="headerlink" href="#id23" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <p><strong>matmul</strong>(3) performs a matrix multiplication on numeric or logical
 arguments.</p>
 </section>
 <section id="id24">
-<h3><strong>选项</strong><a class="headerlink" href="#id24" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <ul>
 <li><dl class="simple myst">
 <dt><strong>matrix_a</strong></dt><dd><p>A numeric or logical array with a rank of one or two.</p>
@@ -1742,9 +1741,9 @@ types.</p>
 </ul>
 </section>
 <section id="id25">
-<h3><strong>结果</strong><a class="headerlink" href="#id25" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
 <section id="numeric-arguments">
-<h4><strong>Numeric Arguments</strong><a class="headerlink" href="#numeric-arguments" title="此标题的永久链接">#</a></h4>
+<h4><strong>Numeric Arguments</strong><a class="headerlink" href="#numeric-arguments" title="Link to this heading">#</a></h4>
 <p>If <strong>matrix_a</strong> and <strong>matrix_b</strong> are numeric the result is an
 array containing the conventional matrix product of <strong>matrix_a</strong>
 and <strong>matrix_b</strong>.</p>
@@ -1754,7 +1753,7 @@ and <strong>matrix_b</strong>.</p>
 <li><p>Any vector <strong>B(n)</strong> is treated as a column vector <strong>B(n,1)</strong>.</p></li>
 </ul>
 <section id="shape-and-rank">
-<h5><strong>Shape and Rank</strong><a class="headerlink" href="#shape-and-rank" title="此标题的永久链接">#</a></h5>
+<h5><strong>Shape and Rank</strong><a class="headerlink" href="#shape-and-rank" title="Link to this heading">#</a></h5>
 <p>The shape of the result can then be determined as the number of rows
 of the first matrix and the number of columns of the second; but if
 any argument is of rank one (a vector) the result is also rank one.
@@ -1770,7 +1769,7 @@ the result has shape [n].</p></li>
 </ul>
 </section>
 <section id="values">
-<h5><strong>Values</strong><a class="headerlink" href="#values" title="此标题的永久链接">#</a></h5>
+<h5><strong>Values</strong><a class="headerlink" href="#values" title="Link to this heading">#</a></h5>
 <p>Then element <strong>C(i,j)</strong> of the product is obtained by multiplying
 term-by-term the entries of the ith row of <strong>A</strong> and the jth column
 of <strong>B</strong>, and summing these products. In other words, <strong>C(i,j)</strong>
@@ -1778,9 +1777,9 @@ is the dot product of the ith row of <strong>A</strong> and the jth column of <s
 </section>
 </section>
 <section id="logical-arguments">
-<h4><strong>Logical Arguments</strong><a class="headerlink" href="#logical-arguments" title="此标题的永久链接">#</a></h4>
+<h4><strong>Logical Arguments</strong><a class="headerlink" href="#logical-arguments" title="Link to this heading">#</a></h4>
 <section id="id26">
-<h5><strong>Values</strong><a class="headerlink" href="#id26" title="此标题的永久链接">#</a></h5>
+<h5><strong>Values</strong><a class="headerlink" href="#id26" title="Link to this heading">#</a></h5>
 <p>If <strong>matrix_a</strong> and <strong>matrix_b</strong> are of type logical, the array elements
 of the result are instead:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">Value_of_Element</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">&amp;</span>
@@ -1791,7 +1790,7 @@ of the result are instead:</p>
 </section>
 </section>
 <section id="id27">
-<h3><strong>示例</strong><a class="headerlink" href="#id27" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_matmul</span>
 <span class="k">implicit none</span>
@@ -1908,16 +1907,16 @@ of the result are instead:</p>
 </div>
 </section>
 <section id="id28">
-<h3><strong>标准</strong><a class="headerlink" href="#id28" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id29">
-<h3><strong>另见</strong><a class="headerlink" href="#id29" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#product"><span class="xref myst"><strong>product</strong>(3)</span></a>,
 <a class="reference internal" href="#transpose"><span class="xref myst"><strong>transpose</strong>(3)</span></a></p>
 </section>
 <section id="resources">
-<h3><strong>Resources</strong><a class="headerlink" href="#resources" title="此标题的永久链接">#</a></h3>
+<h3><strong>Resources</strong><a class="headerlink" href="#resources" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Matrix_multiplication">Matrix multiplication : Wikipedia</a></p></li>
 <li><p>The Winograd variant of Strassen’s matrix-matrix multiply algorithm may
@@ -1938,13 +1937,13 @@ be of interest for optimizing multiplication of very large matrices. See</p></li
 </section>
 </section>
 <section id="parity">
-<h2>parity<a class="headerlink" href="#parity" title="此标题的永久链接">#</a></h2>
+<h2>parity<a class="headerlink" href="#parity" title="Link to this heading">#</a></h2>
 <section id="id30">
-<h3><strong>名称</strong><a class="headerlink" href="#id30" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
 <p><strong>parity</strong>(3) - [ARRAY:REDUCTION] Array reduction by .NEQV. operation</p>
 </section>
 <section id="id31">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id31" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parity</span><span class="p">(</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1956,7 +1955,7 @@ be of interest for optimizing multiplication of very large matrices. See</p></li
 </div>
 </section>
 <section id="id32">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id32" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>mask</strong> is a <em>logical</em> array</p></li>
 <li><p><strong>dim</strong> is an integer scalar</p></li>
@@ -1967,13 +1966,13 @@ of <strong>mask</strong> with the dimension specified by <strong>dim</strong> re
 </ul>
 </section>
 <section id="id33">
-<h3><strong>说明</strong><a class="headerlink" href="#id33" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
 <p><strong>parity</strong>(3) calculates the parity array (i.e. the reduction using .neqv.) of
 <strong>mask</strong> along dimension <strong>dim</strong> if <strong>dim</strong> is present and not 1. Otherwise, it
 returns the parity of the entire <strong>mask</strong> array as a scalar.</p>
 </section>
 <section id="id34">
-<h3><strong>选项</strong><a class="headerlink" href="#id34" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>mask</strong></dt><dd><p>应为 <em>logical</em> 类型的数组。</p>
@@ -1989,7 +1988,7 @@ range from <em>1 to n</em>, where <em>n</em> equals the rank of <strong>mask</st
 </ul>
 </section>
 <section id="id35">
-<h3><strong>结果</strong><a class="headerlink" href="#id35" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
 <p>The result is of the same type as <strong>mask</strong>.</p>
 <p>If <strong>dim</strong> is absent, a scalar with the parity of all elements in <strong>mask</strong>
 is returned: <em>.true.</em> if an odd number of elements are <em>.true.</em>
@@ -1998,7 +1997,7 @@ and <em>.false.</em> otherwise.</p>
 result is an array of parity values with dimension <strong>dim</strong> dropped.</p>
 </section>
 <section id="id36">
-<h3><strong>示例</strong><a class="headerlink" href="#id36" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_parity</span>
 <span class="k">implicit none</span>
@@ -2030,11 +2029,11 @@ result is an array of parity values with dimension <strong>dim</strong> dropped.
 </div>
 </section>
 <section id="id37">
-<h3><strong>标准</strong><a class="headerlink" href="#id37" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id38">
-<h3><strong>See also</strong><a class="headerlink" href="#id38" title="此标题的永久链接">#</a></h3>
+<h3><strong>See also</strong><a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#all"><span class="xref myst"><strong>all</strong>(3)</span></a> - Determines if all the values are true</p></li>
 <li><p><a class="reference internal" href="#any"><span class="xref myst"><strong>any</strong>(3)</span></a> - Determines if any of the values in the logical array are <em>.true.</em></p></li>
@@ -2049,13 +2048,13 @@ result is an array of parity values with dimension <strong>dim</strong> dropped.
 </section>
 </section>
 <section id="null">
-<h2>null<a class="headerlink" href="#null" title="此标题的永久链接">#</a></h2>
+<h2>null<a class="headerlink" href="#null" title="Link to this heading">#</a></h2>
 <section id="id39">
-<h3><strong>名称</strong><a class="headerlink" href="#id39" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
 <p><strong>null</strong>(3) - [TRANSFORMATIONAL] 返回非关联指针的函数</p>
 </section>
 <section id="id40">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id40" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">ptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">null</span><span class="p">(</span><span class="w"> </span><span class="p">[</span><span class="n">mold</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2066,20 +2065,20 @@ result is an array of parity values with dimension <strong>dim</strong> dropped.
 </div>
 </section>
 <section id="id41">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id41" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id41" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>mold</strong> is a pointer of any association status and of any type.</p></li>
 <li><p>The result is a disassociated pointer or an unallocated allocatable entity.</p></li>
 </ul>
 </section>
 <section id="id42">
-<h3><strong>说明</strong><a class="headerlink" href="#id42" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
 <p><strong>null</strong>(3) returns a disassociated pointer.</p>
 <p>如果存在 <strong>mold</strong>，则返回相同类型的非关联指针，否则类型由上下文确定。</p>
 <p>在 <em>Fortran 95</em> 中，<strong>mold</strong> 是可选的。请注意，<em>Fortran 2003</em> 包括了需要它的情况。</p>
 </section>
 <section id="id43">
-<h3><strong>选项</strong><a class="headerlink" href="#id43" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>mold</strong></dt><dd><p>a pointer of any association status and of any
@@ -2090,11 +2089,11 @@ type.</p>
 </ul>
 </section>
 <section id="id44">
-<h3><strong>结果</strong><a class="headerlink" href="#id44" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
 <p>解除关联的指针或未分配的可分配实体。</p>
 </section>
 <section id="id45">
-<h3><strong>示例</strong><a class="headerlink" href="#id45" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id45" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">!program demo_null</span>
 <span class="k">module </span><span class="n">showit</span>
@@ -2172,23 +2171,23 @@ type.</p>
 </div>
 </section>
 <section id="id46">
-<h3><strong>标准</strong><a class="headerlink" href="#id46" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id46" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id47">
-<h3><strong>另见</strong><a class="headerlink" href="#id47" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#associated"><span class="xref myst"><strong>associated</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="reduce">
-<h2>reduce<a class="headerlink" href="#reduce" title="此标题的永久链接">#</a></h2>
+<h2>reduce<a class="headerlink" href="#reduce" title="Link to this heading">#</a></h2>
 <section id="id48">
-<h3><strong>名称</strong><a class="headerlink" href="#id48" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id48" title="Link to this heading">#</a></h3>
 <p><strong>reduce</strong>(3) - [TRANSFORMATIONAL] General reduction of an array</p>
 </section>
 <section id="id49">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id49" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id49" title="Link to this heading">#</a></h3>
 <p>这个函数有两种形式：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reduce</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">operation</span><span class="w"> </span><span class="p">[,</span><span class="n">mask</span><span class="p">]</span><span class="w">  </span><span class="p">[,</span><span class="n">identity</span><span class="p">]</span><span class="w">  </span><span class="p">[,</span><span class="n">ordered</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
@@ -2211,7 +2210,7 @@ type.</p>
 </div>
 </section>
 <section id="id50">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id50" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id50" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>array</strong> is an array of any type</p></li>
 <li><p><strong>operation</strong> is a pure function with exactly two arguments</p>
@@ -2230,7 +2229,7 @@ shall the other.</p></li>
 </ul>
 </section>
 <section id="id51">
-<h3><strong>说明</strong><a class="headerlink" href="#id51" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id51" title="Link to this heading">#</a></h3>
 <p><strong>reduce</strong>(3) reduces a list of conditionally selected values from
 an array to a single value by iteratively applying a binary function.</p>
 <p>Common in functional programming, a <strong>reduce</strong> function applies a
@@ -2246,7 +2245,7 @@ as the function is recursively applied to all the remaining selected
 values in the input array.</p>
 </section>
 <section id="id52">
-<h3><strong>选项</strong><a class="headerlink" href="#id52" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id52" title="Link to this heading">#</a></h3>
 <ul>
 <li><dl class="simple myst">
 <dt><strong>数组</strong></dt><dd><p>应该是任何类型的数组，并且维度数为 2。</p>
@@ -2288,12 +2287,12 @@ of <strong>mask</strong> are true, as if **array* was filtered with
 </ul>
 </section>
 <section id="id53">
-<h3><strong>结果</strong><a class="headerlink" href="#id53" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id53" title="Link to this heading">#</a></h3>
 <p>结果与 <strong>array</strong> 具有相同的类型和类型参数。如果 <strong>dim</strong> 没有出现，它是标量。</p>
 <p>如果 <strong>dim</strong> 存在，它指示执行归约的一维，并且结果数组的秩相对于输入数组减一。</p>
 </section>
 <section id="id54">
-<h3><strong>示例</strong><a class="headerlink" href="#id54" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id54" title="Link to this heading">#</a></h3>
 <p>The following examples all use the function MY_MULT, which returns
 the product of its two real arguments.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="k">program </span><span class="n">demo_reduce</span>
@@ -2361,17 +2360,17 @@ the product of its two real arguments.</p>
 </div>
 </section>
 <section id="id55">
-<h3><strong>标准</strong><a class="headerlink" href="#id55" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id55" title="Link to this heading">#</a></h3>
 <p>Fortran 2018</p>
 </section>
 <section id="id56">
-<h3><strong>另见</strong><a class="headerlink" href="#id56" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id56" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#co_reduce"><span class="xref myst">co_reduce(3)</span></a></p></li>
 </ul>
 </section>
 <section id="id57">
-<h3><strong>Resources</strong><a class="headerlink" href="#id57" title="此标题的永久链接">#</a></h3>
+<h3><strong>Resources</strong><a class="headerlink" href="#id57" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Associative_property">associative:wikipedia</a></p></li>
 </ul>

@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="pt">
+<html lang="pt" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../_static/images/favicon.ico" type="image/x-icon">
     <title>índice de pacotes do fortran-lang.org &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/translations.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=aa4fbcf8"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/translations.js?v=3b002d5c"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/community/packages.html" />
     <link rel="index" title="Índice" href="../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../search/" />
@@ -446,9 +445,9 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="fortran-lang-org-package-index">
-<h1>índice de pacotes do fortran-lang.org<a class="headerlink" href="#fortran-lang-org-package-index" title="Permalink to this heading">#</a></h1>
+<h1>índice de pacotes do fortran-lang.org<a class="headerlink" href="#fortran-lang-org-package-index" title="Link to this heading">#</a></h1>
 <section id="package-criteria">
-<h2>Critérios para pacotes<a class="headerlink" href="#package-criteria" title="Permalink to this heading">#</a></h2>
+<h2>Critérios para pacotes<a class="headerlink" href="#package-criteria" title="Link to this heading">#</a></h2>
 <p>Os seguintes critérios são necessário para que os pacotes sejam indexados:</p>
 <ul class="simple">
 <li><p><strong>Relevância</strong>: o pacote deve ser principalmente implementado em Fortran ou prover uma interface Fortran completa para um pacote existente ou que tenha o propósito exclusivo de desenvolvimento de software em Fortran.</p></li>
@@ -477,7 +476,7 @@
 </ul>
 </section>
 <section id="process-for-adding-packages">
-<h2>Processo para adicionar pacotes<a class="headerlink" href="#process-for-adding-packages" title="Permalink to this heading">#</a></h2>
+<h2>Processo para adicionar pacotes<a class="headerlink" href="#process-for-adding-packages" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Usuários devem confirmar que seus projetos atendam aos requisitos mínimos para serem listados no índice de pacotes do Fortran, como descrito nesse documento</p></li>
 <li><p>Usuários devem abrir um pull request usando o template “Package index request”</p></li>
@@ -486,15 +485,15 @@
 </ol>
 </section>
 <section id="package-index-requests">
-<h2>Pedidos de indexação de pacotes<a class="headerlink" href="#package-index-requests" title="Permalink to this heading">#</a></h2>
+<h2>Pedidos de indexação de pacotes<a class="headerlink" href="#package-index-requests" title="Link to this heading">#</a></h2>
 <p>Pedidos de indexação de pacotes são feitos por meio de pull requests para o <a class="reference external" href="https://github.com/fortran-lang/webpage/">repositório fortran-lang.org</a>. Veja <a class="reference external" href="https://guides.github.com/activities/forking/">este guia</a> para orientações em como fazer forks e pull requests.</p>
 <p>Detalhes do pacote são listados no arquivo <code class="docutils literal notranslate"><span class="pre">data/package_index.yml</span></code>.</p>
 <p>Para adicionar um pacote crie uma nova entrada dentro desse arquivo. Os dados do arquivo são ordenados por categorias meramente para auxiliar na navegação, encontre a categoria apropriada para adicionar seu pacote e crie uma nova entrada.</p>
 <section id="after-adding-a-new-entry-to-package-index-run-the-github-action-fortran-packages-before-building-the-sphinx-build">
-<h3>Após adicionar uma nova entrada ao índice de pacotes, rode o github action fortran_packages antes de realizar o build do sphinx.<a class="headerlink" href="#after-adding-a-new-entry-to-package-index-run-the-github-action-fortran-packages-before-building-the-sphinx-build" title="Permalink to this heading">#</a></h3>
+<h3>Após adicionar uma nova entrada ao índice de pacotes, rode o github action fortran_packages antes de realizar o build do sphinx.<a class="headerlink" href="#after-adding-a-new-entry-to-package-index-run-the-github-action-fortran-packages-before-building-the-sphinx-build" title="Link to this heading">#</a></h3>
 </section>
 <section id="github-hosted-packages">
-<h3>Pacotes no Gihub<a class="headerlink" href="#github-hosted-packages" title="Permalink to this heading">#</a></h3>
+<h3>Pacotes no Gihub<a class="headerlink" href="#github-hosted-packages" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Package_name</span><span class="o">&gt;</span>
     <span class="n">github</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">github_user</span><span class="o">&gt;/&lt;</span><span class="n">repository_name</span><span class="o">&gt;</span>
     <span class="n">description</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">single_line_description</span><span class="o">&gt;</span>
@@ -538,7 +537,7 @@
 </ul>
 </section>
 <section id="non-github-hosted-packages">
-<h3>Pacotes fora do GitHub<a class="headerlink" href="#non-github-hosted-packages" title="Permalink to this heading">#</a></h3>
+<h3>Pacotes fora do GitHub<a class="headerlink" href="#non-github-hosted-packages" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Package_name</span><span class="o">&gt;</span>
     <span class="n">url</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">repo_url</span><span class="o">&gt;</span>
     <span class="n">description</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">single_line_description</span><span class="o">&gt;</span>
@@ -556,7 +555,7 @@
 </ul>
 </section>
 <section id="member-review-checklist">
-<h3>Lista de pontos que devem observados durante a revisão<a class="headerlink" href="#member-review-checklist" title="Permalink to this heading">#</a></h3>
+<h3>Lista de pontos que devem observados durante a revisão<a class="headerlink" href="#member-review-checklist" title="Link to this heading">#</a></h3>
 <p>Membros da comunidade revisando pacotes devem cobrir os seguintes pontos:</p>
 <ol class="arabic simple">
 <li><p>Garante que o pacote atenda aos critérios mínimos definidos nesse documento</p></li>

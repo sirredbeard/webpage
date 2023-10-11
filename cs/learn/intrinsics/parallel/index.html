@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="cs">
+<html lang="cs" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Parallel programming using co_arrays and co_indexed arrays &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=12ba2160"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=0275affc"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/intrinsics/parallel.html" />
     <link rel="index" title="Rejstřík" href="../../../genindex/" />
     <link rel="search" title="Vyhledávání" href="../../../search/" />
@@ -2142,15 +2141,15 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="parallel-programming-using-co-arrays-and-co-indexed-arrays">
-<h1>Parallel programming using co_arrays and co_indexed arrays<a class="headerlink" href="#parallel-programming-using-co-arrays-and-co-indexed-arrays" title="Permalink to this heading">#</a></h1>
+<h1>Parallel programming using co_arrays and co_indexed arrays<a class="headerlink" href="#parallel-programming-using-co-arrays-and-co-indexed-arrays" title="Link to this heading">#</a></h1>
 <section id="co-broadcast">
-<h2>co_broadcast<a class="headerlink" href="#co-broadcast" title="Permalink to this heading">#</a></h2>
+<h2>co_broadcast<a class="headerlink" href="#co-broadcast" title="Link to this heading">#</a></h2>
 <section id="name">
-<h3><strong>Name</strong><a class="headerlink" href="#name" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#name" title="Link to this heading">#</a></h3>
 <p><strong>co_broadcast</strong>(3) - [COLLECTIVE] Copy a value to all images the current set of images</p>
 </section>
 <section id="synopsis">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">co_broadcast</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">source_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2159,10 +2158,10 @@
 </div>
 </section>
 <section id="characteristics">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="Link to this heading">#</a></h3>
 </section>
 <section id="description">
-<h3><strong>Description</strong><a class="headerlink" href="#description" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
 <p><strong>co_broadcast</strong>(3) copies the value of argument <strong>a</strong> on the image with image
 index source_image to all images in the current team. <strong>a</strong> becomes defined
 as if by intrinsic assignment. If the execution was successful and <strong>stat</strong>
@@ -2171,7 +2170,7 @@ gets assigned a nonzero value and, if present, <strong>errmsg</strong> gets assi
 value describing the occurred error.</p>
 </section>
 <section id="options">
-<h3><strong>Options</strong><a class="headerlink" href="#options" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#options" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p><strong>intent(inout)</strong> argument; shall have the same dynamic type and
@@ -2199,7 +2198,7 @@ on all images and refer to an image of the current team.</p>
 </ul>
 </section>
 <section id="examples">
-<h3><strong>Examples</strong><a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_broadcast</span>
 <span class="k">implicit none</span>
@@ -2214,11 +2213,11 @@ on all images and refer to an image of the current team.</p>
 </div>
 </section>
 <section id="standard">
-<h3><strong>Standard</strong><a class="headerlink" href="#standard" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#standard" title="Link to this heading">#</a></h3>
 <p>Fortran xx</p>
 </section>
 <section id="see-also">
-<h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-max"><strong>co_max</strong>(3)</a>,
 <a class="reference internal" href="#co-min"><strong>co_min</strong>(3)</a>,
 <a class="reference internal" href="#co-sum"><strong>co_sum</strong>(3)</a>,
@@ -2227,13 +2226,13 @@ on all images and refer to an image of the current team.</p>
 </section>
 </section>
 <section id="co-lbound">
-<h2>co_lbound<a class="headerlink" href="#co-lbound" title="Permalink to this heading">#</a></h2>
+<h2>co_lbound<a class="headerlink" href="#co-lbound" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3><strong>Name</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>co_lbound</strong>(3) - [COLLECTIVE] Lower codimension bounds of an array</p>
 </section>
 <section id="id2">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">co_lbound</span><span class="p">(</span><span class="w"> </span><span class="n">coarray</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2242,15 +2241,15 @@ on all images and refer to an image of the current team.</p>
 </div>
 </section>
 <section id="id3">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 </section>
 <section id="id4">
-<h3><strong>Description</strong><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p><strong>co_lbound</strong>(3) returns the lower bounds of a coarray, or a single
 lower cobound along the <strong>dim</strong> codimension.</p>
 </section>
 <section id="id5">
-<h3><strong>Options</strong><a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>array</strong></dt><dd><p>Shall be an coarray, of any type.</p>
@@ -2271,7 +2270,7 @@ parameter of the result.</p>
 </ul>
 </section>
 <section id="result">
-<h3><strong>Result</strong><a class="headerlink" href="#result" title="Permalink to this heading">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#result" title="Link to this heading">#</a></h3>
 <p>The return value is of type <em>integer</em> and of kind <strong>kind</strong>. If <strong>kind</strong> is absent,
 the return value is of default integer kind. If <strong>dim</strong> is absent, the
 result is an array of the lower cobounds of <strong>coarray</strong>. If <strong>dim</strong> is present,
@@ -2279,24 +2278,24 @@ the result is a scalar corresponding to the lower cobound of the array
 along that codimension.</p>
 </section>
 <section id="id6">
-<h3><strong>Standard</strong><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id7">
-<h3><strong>See Also</strong><a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-ubound"><strong>co_ubound</strong>(3)</a>,
 <a class="reference internal" href="#lbound"><span class="xref myst"><strong>lbound</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="co-max">
-<h2>co_max<a class="headerlink" href="#co-max" title="Permalink to this heading">#</a></h2>
+<h2>co_max<a class="headerlink" href="#co-max" title="Link to this heading">#</a></h2>
 <section id="id8">
-<h3><strong>Name</strong><a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p><strong>co_max</strong>(3) - [COLLECTIVE] Maximal value on the current set of images</p>
 </section>
 <section id="id9">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="k">call </span><span class="n">co_max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">result_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2305,10 +2304,10 @@ along that codimension.</p>
 </div>
 </section>
 <section id="id10">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 </section>
 <section id="id11">
-<h3><strong>Description</strong><a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p><strong>co_max</strong>(3) determines element-wise the maximal value of <strong>a</strong> on all
 images of the current team. If result_image is present, the maximum values
 are returned in <strong>a</strong> on the specified image only and the value of <strong>a</strong>
@@ -2319,7 +2318,7 @@ failed, <strong>stat</strong> gets assigned a nonzero value and, if present, <st
 gets assigned a value describing the occurred error.</p>
 </section>
 <section id="id12">
-<h3><strong>Options</strong><a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>shall be an integer, real or character variable, which has the same
@@ -2347,7 +2346,7 @@ current team.</p>
 </ul>
 </section>
 <section id="id13">
-<h3><strong>Examples</strong><a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_max</span>
 <span class="k">implicit none</span>
@@ -2366,11 +2365,11 @@ current team.</p>
 </div>
 </section>
 <section id="id14">
-<h3><strong>Standard</strong><a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id15">
-<h3><strong>See Also</strong><a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-min"><strong>co_min</strong>(3)</a>,
 <a class="reference internal" href="#co-sum"><strong>co_sum</strong>(3)</a>,
 <a class="reference internal" href="#co-reduce"><strong>co_reduce</strong>(3)</a>,
@@ -2379,13 +2378,13 @@ current team.</p>
 </section>
 </section>
 <section id="co-min">
-<h2>co_min<a class="headerlink" href="#co-min" title="Permalink to this heading">#</a></h2>
+<h2>co_min<a class="headerlink" href="#co-min" title="Link to this heading">#</a></h2>
 <section id="id16">
-<h3><strong>Name</strong><a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p><strong>co_min</strong>(3) - [COLLECTIVE] Minimal value on the current set of images</p>
 </section>
 <section id="id17">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="k">call </span><span class="n">co_min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">result_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2394,10 +2393,10 @@ current team.</p>
 </div>
 </section>
 <section id="id18">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 </section>
 <section id="id19">
-<h3><strong>Description</strong><a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p><strong>co_min</strong>(3) determines element-wise the minimal value of <strong>a</strong> on all
 images of the current team. If result_image is present, the minimal values
 are returned in <strong>a</strong> on the specified image only and the value of <strong>a</strong>
@@ -2408,7 +2407,7 @@ failed, <strong>stat</strong> gets assigned a nonzero value and, if present, <st
 gets assigned a value describing the occurred error.</p>
 </section>
 <section id="id20">
-<h3><strong>Options</strong><a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>shall be an integer, real or character variable, which has the same
@@ -2436,7 +2435,7 @@ current team.</p>
 </ul>
 </section>
 <section id="id21">
-<h3><strong>Examples</strong><a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_min</span>
 <span class="k">implicit none</span>
@@ -2451,11 +2450,11 @@ current team.</p>
 </div>
 </section>
 <section id="id22">
-<h3><strong>Standard</strong><a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id23">
-<h3><strong>See Also</strong><a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-max"><strong>co_max</strong>(3)</a>,
 <a class="reference internal" href="#co-sum"><strong>co_sum</strong>(3)</a>,
 <a class="reference internal" href="#co-reduce"><strong>co_reduce</strong>(3)</a>,
@@ -2464,13 +2463,13 @@ current team.</p>
 </section>
 </section>
 <section id="co-reduce">
-<h2>co_reduce<a class="headerlink" href="#co-reduce" title="Permalink to this heading">#</a></h2>
+<h2>co_reduce<a class="headerlink" href="#co-reduce" title="Link to this heading">#</a></h2>
 <section id="id24">
-<h3><strong>Name</strong><a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <p><strong>co_reduce</strong>(3) - [COLLECTIVE] Reduction of values on the current set of images</p>
 </section>
 <section id="id25">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">co_reduce</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">operation</span><span class="p">,</span><span class="w"> </span><span class="n">result_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2479,10 +2478,10 @@ current team.</p>
 </div>
 </section>
 <section id="id26">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
 </section>
 <section id="id27">
-<h3><strong>Description</strong><a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
 <p><strong>co_reduce</strong>(3) determines element-wise the reduction of the value of <strong>a</strong> on
 all images of the current team. The pure function passed as <strong>operation</strong> is
 used to pairwise reduce the values of <strong>a</strong> by passing either the value of <strong>a</strong>
@@ -2497,7 +2496,7 @@ nonzero value and, if present, <strong>errmsg</strong> gets assigned a value des
 the occurred error.</p>
 </section>
 <section id="id28">
-<h3><strong>Options</strong><a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>is an <strong>intent(inout)</strong> argument and shall be nonpolymorphic. If it
@@ -2539,7 +2538,7 @@ of the current team.</p>
 </ul>
 </section>
 <section id="id29">
-<h3><strong>Examples</strong><a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_reduce</span>
 <span class="k">implicit none</span>
@@ -2564,18 +2563,18 @@ of the current team.</p>
 </div>
 </section>
 <section id="note">
-<h3><strong>Note</strong><a class="headerlink" href="#note" title="Permalink to this heading">#</a></h3>
+<h3><strong>Note</strong><a class="headerlink" href="#note" title="Link to this heading">#</a></h3>
 <p>While the rules permit in principle an intrinsic function, none of the
 intrinsics in the standard fulfill the criteria of having a specific
 function, which takes two arguments of the same type and returning that
 type as a result.</p>
 </section>
 <section id="id30">
-<h3><strong>Standard</strong><a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id31">
-<h3><strong>See Also</strong><a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-min"><strong>co_min</strong>(3)</a>,
 <a class="reference internal" href="#co-max"><strong>co_max</strong>(3)</a>,
 <a class="reference internal" href="#co-sum"><strong>co_sum</strong>(3)</a>,
@@ -2584,13 +2583,13 @@ type as a result.</p>
 </section>
 </section>
 <section id="co-sum">
-<h2>co_sum<a class="headerlink" href="#co-sum" title="Permalink to this heading">#</a></h2>
+<h2>co_sum<a class="headerlink" href="#co-sum" title="Link to this heading">#</a></h2>
 <section id="id32">
-<h3><strong>Name</strong><a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <p><strong>co_sum</strong>(3) - [COLLECTIVE] Sum of values on the current set of images</p>
 </section>
 <section id="id33">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">co_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">result_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2599,10 +2598,10 @@ type as a result.</p>
 </div>
 </section>
 <section id="id34">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 </section>
 <section id="id35">
-<h3><strong>Description</strong><a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
 <p><strong>co_sum</strong>(3) sums up the values of each element of <strong>a</strong> on all images
 of the current team.</p>
 <p>If result_image is present, the summed-up values are returned in <strong>a</strong>
@@ -2615,7 +2614,7 @@ value and, if present, <strong>errmsg</strong> gets assigned a value describing 
 occurred error.</p>
 </section>
 <section id="id36">
-<h3><strong>Options</strong><a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>shall be an integer, real or complex variable, which has the same
@@ -2643,7 +2642,7 @@ current team.</p>
 </ul>
 </section>
 <section id="id37">
-<h3><strong>Examples</strong><a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_sum</span>
 <span class="k">implicit none</span>
@@ -2663,11 +2662,11 @@ current team.</p>
 </div>
 </section>
 <section id="id38">
-<h3><strong>Standard</strong><a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id39">
-<h3><strong>See Also</strong><a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-max"><strong>co_max</strong>(3)</a>,
 <a class="reference internal" href="#co-min"><strong>co_min</strong>(3)</a>,
 <a class="reference internal" href="#co-reduce"><strong>co_reduce</strong>(3)</a>,
@@ -2676,13 +2675,13 @@ current team.</p>
 </section>
 </section>
 <section id="co-ubound">
-<h2>co_ubound<a class="headerlink" href="#co-ubound" title="Permalink to this heading">#</a></h2>
+<h2>co_ubound<a class="headerlink" href="#co-ubound" title="Link to this heading">#</a></h2>
 <section id="id40">
-<h3><strong>Name</strong><a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
 <p><strong>co_ubound</strong>(3) - [COLLECTIVE] Upper codimension bounds of an array</p>
 </section>
 <section id="id41">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id41" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">co_ubound</span><span class="p">(</span><span class="n">coarray</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2691,15 +2690,15 @@ current team.</p>
 </div>
 </section>
 <section id="id42">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
 </section>
 <section id="id43">
-<h3><strong>Description</strong><a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
 <p><strong>co_ubound</strong>(3) returns the upper cobounds of a coarray, or a single
 upper cobound along the <strong>dim</strong> codimension.</p>
 </section>
 <section id="id44">
-<h3><strong>Options</strong><a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>array</strong></dt><dd><p>Shall be an coarray, of any type.</p>
@@ -2720,7 +2719,7 @@ parameter of the result.</p>
 </ul>
 </section>
 <section id="id45">
-<h3><strong>Result</strong><a class="headerlink" href="#id45" title="Permalink to this heading">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id45" title="Link to this heading">#</a></h3>
 <p>The return value is of type <em>integer</em> and of kind <strong>kind</strong>. If <strong>kind</strong> is absent,
 the return value is of default integer kind. If <strong>dim</strong> is absent, the
 result is an array of the lower cobounds of <strong>coarray</strong>. If <strong>dim</strong> is present,
@@ -2728,11 +2727,11 @@ the result is a scalar corresponding to the lower cobound of the array
 along that codimension.</p>
 </section>
 <section id="id46">
-<h3><strong>Standard</strong><a class="headerlink" href="#id46" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id46" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id47">
-<h3><strong>See Also</strong><a class="headerlink" href="#id47" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-lbound"><strong>co_lbound</strong>(3)</a>,
 <a class="reference internal" href="#lbound"><span class="xref myst"><strong>lbound</strong>(3)</span></a>,
 <a class="reference internal" href="#ubound"><span class="xref myst"><strong>ubound</strong>(3)</span></a></p>
@@ -2740,13 +2739,13 @@ along that codimension.</p>
 </section>
 </section>
 <section id="event-query">
-<h2>event_query<a class="headerlink" href="#event-query" title="Permalink to this heading">#</a></h2>
+<h2>event_query<a class="headerlink" href="#event-query" title="Link to this heading">#</a></h2>
 <section id="id48">
-<h3><strong>Name</strong><a class="headerlink" href="#id48" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id48" title="Link to this heading">#</a></h3>
 <p><strong>event_query</strong>(3) - [COLLECTIVE] Query whether a coarray event has occurred</p>
 </section>
 <section id="id49">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id49" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id49" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">event_query</span><span class="p">(</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="nb">count</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2755,10 +2754,10 @@ along that codimension.</p>
 </div>
 </section>
 <section id="id50">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id50" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id50" title="Link to this heading">#</a></h3>
 </section>
 <section id="id51">
-<h3><strong>Description</strong><a class="headerlink" href="#id51" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id51" title="Link to this heading">#</a></h3>
 <p><strong>event_query</strong>(3) assigns the number of events to <strong>count</strong> which have been
 posted to the <strong>event</strong> variable and not yet been removed by calling
 <strong>event_wait</strong>. When <strong>stat</strong> is present and the invocation was successful, it
@@ -2766,7 +2765,7 @@ is assigned the value <strong>0</strong>. If it is present and the invocation ha
 it is assigned a positive value and <strong>count</strong> is assigned the value <strong>-1</strong>.</p>
 </section>
 <section id="id52">
-<h3><strong>Options</strong><a class="headerlink" href="#id52" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id52" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>event</strong></dt><dd><p>(intent(in)) Scalar of type event_type, defined in
@@ -2788,7 +2787,7 @@ iso_fortran_env; shall not be coindexed.</p>
 </ul>
 </section>
 <section id="id53">
-<h3><strong>Examples</strong><a class="headerlink" href="#id53" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id53" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_event_query</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -2806,23 +2805,23 @@ iso_fortran_env; shall not be coindexed.</p>
 </div>
 </section>
 <section id="id54">
-<h3><strong>Standard</strong><a class="headerlink" href="#id54" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id54" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id55">
-<h3><strong>See also</strong><a class="headerlink" href="#id55" title="Permalink to this heading">#</a></h3>
+<h3><strong>See also</strong><a class="headerlink" href="#id55" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#"><span class="xref myst">****(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="image-index">
-<h2>image_index<a class="headerlink" href="#image-index" title="Permalink to this heading">#</a></h2>
+<h2>image_index<a class="headerlink" href="#image-index" title="Link to this heading">#</a></h2>
 <section id="id56">
-<h3><strong>Name</strong><a class="headerlink" href="#id56" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id56" title="Link to this heading">#</a></h3>
 <p><strong>image_index</strong>(3) - [COLLECTIVE] Cosubscript to image index conversion</p>
 </section>
 <section id="id57">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id57" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id57" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">image_index</span><span class="p">(</span><span class="n">coarray</span><span class="p">,</span><span class="w"> </span><span class="n">sub</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2831,14 +2830,14 @@ iso_fortran_env; shall not be coindexed.</p>
 </div>
 </section>
 <section id="id58">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id58" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id58" title="Link to this heading">#</a></h3>
 </section>
 <section id="id59">
-<h3><strong>Description</strong><a class="headerlink" href="#id59" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id59" title="Link to this heading">#</a></h3>
 <p><strong>image_index</strong>(3) returns the image index belonging to a cosubscript.</p>
 </section>
 <section id="id60">
-<h3><strong>Options</strong><a class="headerlink" href="#id60" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id60" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>coarray</strong></dt><dd><p>Coarray of any type.</p>
@@ -2854,13 +2853,13 @@ iso_fortran_env; shall not be coindexed.</p>
 </ul>
 </section>
 <section id="id61">
-<h3><strong>Result</strong><a class="headerlink" href="#id61" title="Permalink to this heading">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id61" title="Link to this heading">#</a></h3>
 <p>Scalar default integer with the value of the image index which
 corresponds to the cosubscripts. For invalid cosubscripts the result is
 zero.</p>
 </section>
 <section id="id62">
-<h3><strong>Examples</strong><a class="headerlink" href="#id62" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id62" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo</span><span class="w"> </span><span class="nb">image_index</span>
 <span class="k">implicit none</span>
@@ -2872,25 +2871,25 @@ zero.</p>
 </div>
 </section>
 <section id="id63">
-<h3><strong>Standard</strong><a class="headerlink" href="#id63" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id63" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id64">
-<h3><strong>See Also</strong><a class="headerlink" href="#id64" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id64" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#this-image"><strong>this_image</strong>(3)</a>,
 <a class="reference internal" href="#num-images"><strong>num_images</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="num-images">
-<h2>num_images<a class="headerlink" href="#num-images" title="Permalink to this heading">#</a></h2>
+<h2>num_images<a class="headerlink" href="#num-images" title="Link to this heading">#</a></h2>
 <section id="id65">
-<h3><strong>Name</strong><a class="headerlink" href="#id65" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id65" title="Link to this heading">#</a></h3>
 <p><strong>num_images</strong>(3) - [COLLECTIVE] Number of images</p>
 </section>
 <section id="id66">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id66" title="Permalink to this heading">#</a></h3>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span>    result = num_images([team|team_number])
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id66" title="Link to this heading">#</a></h3>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">num_images</span><span class="p">([</span><span class="n">team</span><span class="err">|</span><span class="n">team_number</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="kt">integer </span><span class="k">function </span><span class="nb">num_images</span><span class="w"> </span><span class="p">(</span><span class="n">team</span><span class="p">)</span>
@@ -2901,7 +2900,7 @@ zero.</p>
 </div>
 </section>
 <section id="id67">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id67" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id67" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>use of <strong>team</strong> and <strong>team_number</strong> is mutually exclusive</p></li>
 <li><p><strong>team</strong> is is a scalar of of type <strong>TEAM_TYPE</strong> from the intrinsic module ISO_FORTRAN_ENV.</p></li>
@@ -2910,11 +2909,11 @@ zero.</p>
 </ul>
 </section>
 <section id="id68">
-<h3><strong>Description</strong><a class="headerlink" href="#id68" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id68" title="Link to this heading">#</a></h3>
 <p><strong>num_images</strong>(3) Returns the number of images.</p>
 </section>
 <section id="id69">
-<h3><strong>Options</strong><a class="headerlink" href="#id69" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id69" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>team</strong></dt><dd><p>shall be a scalar of type TEAM_TYPE from the intrinsic module
@@ -2932,12 +2931,12 @@ that of the current team.</p>
 </ul>
 </section>
 <section id="id70">
-<h3><strong>Result</strong><a class="headerlink" href="#id70" title="Permalink to this heading">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id70" title="Link to this heading">#</a></h3>
 <p>The number of images in the specified team, or in the current team if
 no team is specified.</p>
 </section>
 <section id="id71">
-<h3><strong>Examples</strong><a class="headerlink" href="#id71" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id71" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_num_images</span>
 <span class="k">implicit none</span>
@@ -2968,25 +2967,25 @@ no team is specified.</p>
 </div>
 </section>
 <section id="id72">
-<h3><strong>Standard</strong><a class="headerlink" href="#id72" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id72" title="Link to this heading">#</a></h3>
 <p>Fortran 2008 . With DISTANCE or FAILED argument, TS 18508</p>
 </section>
 <section id="id73">
-<h3><strong>See Also</strong><a class="headerlink" href="#id73" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id73" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#this-image"><strong>this_image</strong>(3)</a>,
 <a class="reference internal" href="#this_index"><span class="xref myst"><strong>image_index</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="this-image">
-<h2>this_image<a class="headerlink" href="#this-image" title="Permalink to this heading">#</a></h2>
+<h2>this_image<a class="headerlink" href="#this-image" title="Link to this heading">#</a></h2>
 <section id="id74">
-<h3><strong>Name</strong><a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id74" title="Link to this heading">#</a></h3>
 <p><strong>this_image</strong>(3) - [COLLECTIVE] Cosubscript index of this image</p>
 </section>
 <section id="id75">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id75" title="Permalink to this heading">#</a></h3>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span>result = this_image() | = this_image(distance) | = this_image(coarray,dim)
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id75" title="Link to this heading">#</a></h3>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">this_image</span><span class="p">()</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">this_image</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">this_image</span><span class="p">(</span><span class="n">coarray</span><span class="p">,</span><span class="nb">dim</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="kt">integer </span><span class="k">function </span><span class="nb">this_image</span><span class="p">(</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="p">,</span><span class="n">coarray</span><span class="p">,</span><span class="w"> </span><span class="nb">dim</span><span class="w"> </span><span class="p">)</span>
@@ -2998,7 +2997,7 @@ no team is specified.</p>
 </div>
 </section>
 <section id="id76">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id76" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id76" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>coarray</strong> can be of any type. If <strong>dim</strong> is present it is required.</p></li>
@@ -3007,11 +3006,11 @@ no team is specified.</p>
 </ul>
 </section>
 <section id="id77">
-<h3><strong>Description</strong><a class="headerlink" href="#id77" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id77" title="Link to this heading">#</a></h3>
 <p><strong>this_image</strong>(3) returns the cosubscript for this image.</p>
 </section>
 <section id="id78">
-<h3><strong>Options</strong><a class="headerlink" href="#id78" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id78" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>distance</strong></dt><dd><p>Nonnegative scalar <em>integer</em> (not permitted together with <strong>coarray</strong>).</p>
@@ -3031,7 +3030,7 @@ no team is specified.</p>
 </ul>
 </section>
 <section id="id79">
-<h3><strong>Result</strong><a class="headerlink" href="#id79" title="Permalink to this heading">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id79" title="Link to this heading">#</a></h3>
 <p>Default integer. If <strong>coarray</strong> is not present, it is scalar; if <strong>distance</strong> is
 not present or has value <strong>0</strong>, its value is the image index on the invoking
 image for the current team, for values smaller or equal distance to the
@@ -3045,7 +3044,7 @@ present, a scalar is returned, with the value of the <strong>dim</strong> elemen
 <strong>this_image(coarray)</strong>.</p>
 </section>
 <section id="id80">
-<h3><strong>Examples</strong><a class="headerlink" href="#id80" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id80" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_this_image</span>
 <span class="k">implicit none</span>
@@ -3067,24 +3066,24 @@ present, a scalar is returned, with the value of the <strong>dim</strong> elemen
 </div>
 </section>
 <section id="id81">
-<h3><strong>Standard</strong><a class="headerlink" href="#id81" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id81" title="Link to this heading">#</a></h3>
 <p>Fortran 2008. With DISTANCE argument, TS 18508</p>
 </section>
 <section id="id82">
-<h3><strong>See Also</strong><a class="headerlink" href="#id82" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id82" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#num-images"><strong>num_images</strong>(3)</a>,
 <a class="reference internal" href="#image-index"><strong>image_index</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="atomic-and">
-<h2>atomic_and<a class="headerlink" href="#atomic-and" title="Permalink to this heading">#</a></h2>
+<h2>atomic_and<a class="headerlink" href="#atomic-and" title="Link to this heading">#</a></h2>
 <section id="id83">
-<h3><strong>Name</strong><a class="headerlink" href="#id83" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id83" title="Link to this heading">#</a></h3>
 <p><strong>atomic_and</strong>(3) - [ATOMIC:BIT MANIPULATION] Atomic bitwise AND operation</p>
 </section>
 <section id="id84">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id84" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id84" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_and</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -3097,7 +3096,7 @@ present, a scalar is returned, with the value of the <strong>dim</strong> elemen
 </div>
 </section>
 <section id="id85">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id85" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id85" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of integer type with
 atomic_int_kind kind.</p></li>
@@ -3107,7 +3106,7 @@ is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id86">
-<h3><strong>Description</strong><a class="headerlink" href="#id86" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id86" title="Link to this heading">#</a></h3>
 <p><strong>atomic_and</strong>(3) atomically defines <strong>atom</strong> with the bitwise
 <strong>and</strong> between the values of <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the
 invocation was successful, it is assigned the value 0. If it is present
@@ -3117,7 +3116,7 @@ assigned the value of iso_fortran_env’s stat_stopped_image and if
 the remote image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id87">
-<h3><strong>Options</strong><a class="headerlink" href="#id87" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id87" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of integer type with
@@ -3139,7 +3138,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id88">
-<h3><strong>Examples</strong><a class="headerlink" href="#id88" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id88" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_and</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3151,11 +3150,11 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id89">
-<h3><strong>Standard</strong><a class="headerlink" href="#id89" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id89" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id90">
-<h3><strong>See Also</strong><a class="headerlink" href="#id90" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id90" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-fetch-and"><strong>atomic_fetch_and</strong>(3)</a>,
 <a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic-ref"><strong>atomic_ref</strong>(3)</a>,
@@ -3168,13 +3167,13 @@ is converted to the kind of <strong>atom</strong>.</p>
 </section>
 </section>
 <section id="atomic-fetch-and">
-<h2>atomic_fetch_and<a class="headerlink" href="#atomic-fetch-and" title="Permalink to this heading">#</a></h2>
+<h2>atomic_fetch_and<a class="headerlink" href="#atomic-fetch-and" title="Link to this heading">#</a></h2>
 <section id="id91">
-<h3><strong>Name</strong><a class="headerlink" href="#id91" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id91" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_and</strong>(3) - [ATOMIC:BIT MANIPULATION] Atomic bitwise AND operation with prior fetch</p>
 </section>
 <section id="id92">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id92" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id92" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_fetch_and</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3183,10 +3182,10 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id93">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id93" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id93" title="Link to this heading">#</a></h3>
 </section>
 <section id="id94">
-<h3><strong>Description</strong><a class="headerlink" href="#id94" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id94" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_and</strong>(3) atomically stores the value of
 <strong>atom</strong> in <strong>old</strong> and defines <strong>atom</strong> with the bitwise AND between the values of
 <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the invocation was successful,
@@ -3197,7 +3196,7 @@ iso_fortran_env’s stat_stopped_image and if the remote image has
 failed, the value stat_failed_image.</p>
 </section>
 <section id="id95">
-<h3><strong>Options</strong><a class="headerlink" href="#id95" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id95" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of integer type with
@@ -3224,7 +3223,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id96">
-<h3><strong>Examples</strong><a class="headerlink" href="#id96" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id96" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_fetch_and</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3236,11 +3235,11 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id97">
-<h3><strong>Standard</strong><a class="headerlink" href="#id97" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id97" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id98">
-<h3><strong>See Also</strong><a class="headerlink" href="#id98" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id98" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic-and"><strong>atomic_and</strong>(3)</a>,
 <a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>,</p>
@@ -3251,13 +3250,13 @@ is converted to the kind of <strong>atom</strong>.</p>
 </section>
 </section>
 <section id="atomic-fetch-or">
-<h2>atomic_fetch_or<a class="headerlink" href="#atomic-fetch-or" title="Permalink to this heading">#</a></h2>
+<h2>atomic_fetch_or<a class="headerlink" href="#atomic-fetch-or" title="Link to this heading">#</a></h2>
 <section id="id99">
-<h3><strong>Name</strong><a class="headerlink" href="#id99" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id99" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_or</strong>(3) - [ATOMIC:BIT MANIPULATION] Atomic bitwise OR operation with prior fetch</p>
 </section>
 <section id="id100">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id100" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id100" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_fetch_or</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3266,10 +3265,10 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id101">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id101" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id101" title="Link to this heading">#</a></h3>
 </section>
 <section id="id102">
-<h3><strong>Description</strong><a class="headerlink" href="#id102" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id102" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_or</strong>(3) atomically stores the value of
 <strong>atom</strong> in <strong>old</strong> and defines <strong>atom</strong> with the bitwise OR between the values of
 <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the invocation was successful,
@@ -3280,7 +3279,7 @@ iso_fortran_env’s stat_stopped_image and if the remote image has
 failed, the value stat_failed_image.</p>
 </section>
 <section id="id103">
-<h3><strong>Options</strong><a class="headerlink" href="#id103" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id103" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of integer type with
@@ -3307,7 +3306,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id104">
-<h3><strong>Examples</strong><a class="headerlink" href="#id104" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id104" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_fetch_or</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3319,11 +3318,11 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id105">
-<h3><strong>Standard</strong><a class="headerlink" href="#id105" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id105" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id106">
-<h3><strong>See Also</strong><a class="headerlink" href="#id106" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id106" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic-or"><strong>atomic_or</strong>(3)</a>,
 <a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>,</p>
@@ -3334,13 +3333,13 @@ is converted to the kind of <strong>atom</strong>.</p>
 </section>
 </section>
 <section id="atomic-fetch-xor">
-<h2>atomic_fetch_xor<a class="headerlink" href="#atomic-fetch-xor" title="Permalink to this heading">#</a></h2>
+<h2>atomic_fetch_xor<a class="headerlink" href="#atomic-fetch-xor" title="Link to this heading">#</a></h2>
 <section id="id107">
-<h3><strong>Name</strong><a class="headerlink" href="#id107" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id107" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_xor</strong>(3) - [ATOMIC:BIT MANIPULATION] Atomic bitwise XOR operation with prior fetch</p>
 </section>
 <section id="id108">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id108" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id108" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_fetch_xor</span><span class="w"> </span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3349,10 +3348,10 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id109">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id109" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id109" title="Link to this heading">#</a></h3>
 </section>
 <section id="id110">
-<h3><strong>Description</strong><a class="headerlink" href="#id110" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id110" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_xor</strong>(3) atomically stores the value of
 <strong>atom</strong> in <strong>old</strong> and defines <strong>atom</strong> with the bitwise <strong>xor</strong> between the values of
 <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the invocation was successful,
@@ -3363,7 +3362,7 @@ iso_fortran_env’s stat_stopped_image and if the remote image has
 failed, the value stat_failed_image.</p>
 </section>
 <section id="id111">
-<h3><strong>Options</strong><a class="headerlink" href="#id111" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id111" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of integer type with
@@ -3390,7 +3389,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id112">
-<h3><strong>Examples</strong><a class="headerlink" href="#id112" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id112" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_fetch_xor</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3402,11 +3401,11 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id113">
-<h3><strong>Standard</strong><a class="headerlink" href="#id113" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id113" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id114">
-<h3><strong>See Also</strong><a class="headerlink" href="#id114" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id114" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic-xor"><strong>atomic_xor</strong>(3)</a>,
 <a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>,</p>
@@ -3417,13 +3416,13 @@ is converted to the kind of <strong>atom</strong>.</p>
 </section>
 </section>
 <section id="atomic-or">
-<h2>atomic_or<a class="headerlink" href="#atomic-or" title="Permalink to this heading">#</a></h2>
+<h2>atomic_or<a class="headerlink" href="#atomic-or" title="Link to this heading">#</a></h2>
 <section id="id115">
-<h3><strong>Name</strong><a class="headerlink" href="#id115" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id115" title="Link to this heading">#</a></h3>
 <p><strong>atomic_or</strong>(3) - [ATOMIC:BIT MANIPULATION] Atomic bitwise OR operation</p>
 </section>
 <section id="id116">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id116" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id116" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_or</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3436,7 +3435,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id117">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id117" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id117" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of integer type with
 atomic_int_kind kind.</p></li>
@@ -3446,7 +3445,7 @@ is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id118">
-<h3><strong>Description</strong><a class="headerlink" href="#id118" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id118" title="Link to this heading">#</a></h3>
 <p><strong>atomic_or</strong>(3) atomically defines <strong>atom</strong> with the bitwise <strong>or</strong>
 between the values of <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the
 invocation was successful, it is assigned the value <strong>0</strong>. If it is present
@@ -3456,7 +3455,7 @@ assigned the value of iso_fortran_env’s stat_stopped_image and if
 the remote image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id119">
-<h3><strong>Options</strong><a class="headerlink" href="#id119" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id119" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of integer type with
@@ -3478,7 +3477,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id120">
-<h3><strong>Examples</strong><a class="headerlink" href="#id120" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id120" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_or</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3490,11 +3489,11 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id121">
-<h3><strong>Standard</strong><a class="headerlink" href="#id121" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id121" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id122">
-<h3><strong>See Also</strong><a class="headerlink" href="#id122" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id122" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic_fetch"><span class="xref myst"><strong>atomic_fetch_or</strong>(3)</span></a>,</p>
 <p><a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>,
@@ -3505,13 +3504,13 @@ is converted to the kind of <strong>atom</strong>.</p>
 </section>
 </section>
 <section id="atomic-xor">
-<h2>atomic_xor<a class="headerlink" href="#atomic-xor" title="Permalink to this heading">#</a></h2>
+<h2>atomic_xor<a class="headerlink" href="#atomic-xor" title="Link to this heading">#</a></h2>
 <section id="id123">
-<h3><strong>Name</strong><a class="headerlink" href="#id123" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id123" title="Link to this heading">#</a></h3>
 <p><strong>atomic_xor</strong>(3) - [ATOMIC:BIT MANIPULATION] Atomic bitwise OR operation</p>
 </section>
 <section id="id124">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id124" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id124" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_xor</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3524,7 +3523,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id125">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id125" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id125" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of integer type with
 atomic_int_kind kind.</p></li>
@@ -3534,10 +3533,10 @@ is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id126">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id126" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id126" title="Link to this heading">#</a></h3>
 </section>
 <section id="id127">
-<h3><strong>Description</strong><a class="headerlink" href="#id127" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id127" title="Link to this heading">#</a></h3>
 <p><strong>atomic_xor</strong>(3) atomically defines <strong>atom</strong> with the bitwise
 <strong>xor</strong> between the values of <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the
 invocation was successful, it is assigned the value <strong>0</strong>. If it is present
@@ -3547,7 +3546,7 @@ assigned the value of iso_fortran_env’s stat_stopped_image and if
 the remote image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id128">
-<h3><strong>Options</strong><a class="headerlink" href="#id128" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id128" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of integer type with
@@ -3569,7 +3568,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id129">
-<h3><strong>Examples</strong><a class="headerlink" href="#id129" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id129" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_xor</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3581,11 +3580,11 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id130">
-<h3><strong>Standard</strong><a class="headerlink" href="#id130" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id130" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id131">
-<h3><strong>See Also</strong><a class="headerlink" href="#id131" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id131" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic_fetch"><span class="xref myst"><strong>atomic_fetch_xor</strong>(3)</span></a>,
 <a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>,
@@ -3596,13 +3595,13 @@ is converted to the kind of <strong>atom</strong>.</p>
 </section>
 </section>
 <section id="atomic-add">
-<h2>atomic_add<a class="headerlink" href="#atomic-add" title="Permalink to this heading">#</a></h2>
+<h2>atomic_add<a class="headerlink" href="#atomic-add" title="Link to this heading">#</a></h2>
 <section id="id132">
-<h3><strong>Name</strong><a class="headerlink" href="#id132" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id132" title="Link to this heading">#</a></h3>
 <p><strong>atomic_add</strong>(3) - [ATOMIC] Atomic ADD operation</p>
 </section>
 <section id="id133">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id133" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id133" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_add</span><span class="w"> </span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3615,7 +3614,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id134">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id134" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id134" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of integer type with
 atomic_int_kind kind.</p></li>
@@ -3625,7 +3624,7 @@ is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id135">
-<h3><strong>Description</strong><a class="headerlink" href="#id135" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id135" title="Link to this heading">#</a></h3>
 <p><strong>atomic_add</strong>(3) atomically adds the value of VAR to the
 variable <strong>atom</strong>. When <strong>stat</strong> is present and the invocation was successful,
 it is assigned the value 0. If it is present and the invocation has
@@ -3635,7 +3634,7 @@ iso_fortran_env’s STAT_STOPPED_IMAGE and if the remote image has
 failed, the value STAT_FAILED_IMAGE.</p>
 </section>
 <section id="id136">
-<h3><strong>Options</strong><a class="headerlink" href="#id136" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id136" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of integer type with
@@ -3657,7 +3656,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id137">
-<h3><strong>Examples</strong><a class="headerlink" href="#id137" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id137" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_add</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3669,11 +3668,11 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id138">
-<h3><strong>Standard</strong><a class="headerlink" href="#id138" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id138" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id139">
-<h3><strong>See Also</strong><a class="headerlink" href="#id139" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id139" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic_fetch"><span class="xref myst"><strong>atomic_fetch_add</strong>(3)</span></a>,
 <a class="reference internal" href="#atomic-and"><strong>atomic_and</strong>(3)</a>,
@@ -3684,13 +3683,13 @@ is converted to the kind of <strong>atom</strong>.</p>
 </section>
 </section>
 <section id="atomic-cas">
-<h2>atomic_cas<a class="headerlink" href="#atomic-cas" title="Permalink to this heading">#</a></h2>
+<h2>atomic_cas<a class="headerlink" href="#atomic-cas" title="Link to this heading">#</a></h2>
 <section id="id140">
-<h3><strong>Name</strong><a class="headerlink" href="#id140" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id140" title="Link to this heading">#</a></h3>
 <p><strong>atomic_cas</strong>(3) - [ATOMIC] Atomic compare and swap</p>
 </section>
 <section id="id141">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id141" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id141" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_cas</span><span class="w"> </span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="p">,</span><span class="w"> </span><span class="n">compare</span><span class="p">,</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3699,10 +3698,10 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id142">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id142" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id142" title="Link to this heading">#</a></h3>
 </section>
 <section id="id143">
-<h3><strong>Description</strong><a class="headerlink" href="#id143" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id143" title="Link to this heading">#</a></h3>
 <p><strong>atomic_cas</strong>(3) compares the variable <strong>atom</strong> with the value of
 <strong>compare</strong>; if the value is the same, <strong>atom</strong> is set to the value of
 <strong>new</strong>. Additionally, <strong>old</strong> is set to the value of <strong>atom</strong> that was
@@ -3714,7 +3713,7 @@ the value of iso_fortran_env’s stat_stopped_image and if the remote
 image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id144">
-<h3><strong>Options</strong><a class="headerlink" href="#id144" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id144" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of either integer type with
@@ -3747,7 +3746,7 @@ value is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id145">
-<h3><strong>Examples</strong><a class="headerlink" href="#id145" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id145" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_cas</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3759,11 +3758,11 @@ value is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id146">
-<h3><strong>Standard</strong><a class="headerlink" href="#id146" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id146" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id147">
-<h3><strong>See Also</strong><a class="headerlink" href="#id147" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id147" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic-ref"><strong>atomic_ref</strong>(3)</a>,
 <a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a></p>
@@ -3771,13 +3770,13 @@ value is converted to the kind of <strong>atom</strong>.</p>
 </section>
 </section>
 <section id="atomic-define">
-<h2>atomic_define<a class="headerlink" href="#atomic-define" title="Permalink to this heading">#</a></h2>
+<h2>atomic_define<a class="headerlink" href="#atomic-define" title="Link to this heading">#</a></h2>
 <section id="id148">
-<h3><strong>Name</strong><a class="headerlink" href="#id148" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id148" title="Link to this heading">#</a></h3>
 <p><strong>atomic_define</strong>(3) - [ATOMIC] Setting a variable atomically</p>
 </section>
 <section id="id149">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id149" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id149" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="nb">atomic_define</span><span class="w"> </span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3790,7 +3789,7 @@ value is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id150">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id150" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id150" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of either integer type with
@@ -3813,12 +3812,12 @@ is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id151">
-<h3><strong>Description</strong><a class="headerlink" href="#id151" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id151" title="Link to this heading">#</a></h3>
 <p><strong>atomic_define</strong>(3) defines the variable <strong>atom</strong> with the value
 <strong>value</strong> atomically.</p>
 </section>
 <section id="id152">
-<h3><strong>Options</strong><a class="headerlink" href="#id152" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id152" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable to atomically assign the
@@ -3845,7 +3844,7 @@ image has failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id153">
-<h3><strong>Examples</strong><a class="headerlink" href="#id153" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id153" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_define</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3857,11 +3856,11 @@ image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id154">
-<h3><strong>Standard</strong><a class="headerlink" href="#id154" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id154" title="Link to this heading">#</a></h3>
 <p>Fortran 2008 ; with <strong>stat</strong>, TS 18508</p>
 </section>
 <section id="id155">
-<h3><strong>See Also</strong><a class="headerlink" href="#id155" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id155" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-ref"><strong>atomic_ref</strong>(3)</a>,
 <a class="reference internal" href="#atomic-cas"><strong>atomic_cas</strong>(3)</a>,
 <strong>iso_fortran_env</strong>(3),
@@ -3873,13 +3872,13 @@ image has failed, the value stat_failed_image.</p>
 </section>
 </section>
 <section id="atomic-fetch-add">
-<h2>atomic_fetch_add<a class="headerlink" href="#atomic-fetch-add" title="Permalink to this heading">#</a></h2>
+<h2>atomic_fetch_add<a class="headerlink" href="#atomic-fetch-add" title="Link to this heading">#</a></h2>
 <section id="id156">
-<h3><strong>Name</strong><a class="headerlink" href="#id156" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id156" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_add</strong>(3) - [ATOMIC] Atomic ADD operation with prior fetch</p>
 </section>
 <section id="id157">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id157" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id157" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_fetch_add</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3888,10 +3887,10 @@ image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id158">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id158" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id158" title="Link to this heading">#</a></h3>
 </section>
 <section id="id159">
-<h3><strong>Description</strong><a class="headerlink" href="#id159" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id159" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_add</strong>(3) atomically stores the value of <strong>atom</strong> in <strong>old</strong>
 and adds the value of <strong>var</strong> to the variable <strong>atom</strong>. When <strong>stat</strong> is
 present and the invocation was successful, it is assigned the value <strong>0</strong>.
@@ -3901,7 +3900,7 @@ stopped, it is assigned the value of iso_fortran_env’s stat_stopped_image
 and if the remote image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id160">
-<h3><strong>Options</strong><a class="headerlink" href="#id160" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id160" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable of integer type with
@@ -3928,7 +3927,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </ul>
 </section>
 <section id="id161">
-<h3><strong>Examples</strong><a class="headerlink" href="#id161" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id161" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_fetch_add</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3940,11 +3939,11 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id162">
-<h3><strong>Standard</strong><a class="headerlink" href="#id162" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id162" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id163">
-<h3><strong>See Also</strong><a class="headerlink" href="#id163" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id163" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic-add"><strong>atomic_add</strong>(3)</a>,
 <strong>iso_fortran_env</strong>(3),</p>
@@ -3955,13 +3954,13 @@ is converted to the kind of <strong>atom</strong>.</p>
 </section>
 </section>
 <section id="atomic-ref">
-<h2>atomic_ref<a class="headerlink" href="#atomic-ref" title="Permalink to this heading">#</a></h2>
+<h2>atomic_ref<a class="headerlink" href="#atomic-ref" title="Link to this heading">#</a></h2>
 <section id="id164">
-<h3><strong>Name</strong><a class="headerlink" href="#id164" title="Permalink to this heading">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id164" title="Link to this heading">#</a></h3>
 <p><strong>atomic_ref</strong>(3) - [ATOMIC] Obtaining the value of a variable atomically</p>
 </section>
 <section id="id165">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id165" title="Permalink to this heading">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id165" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="nb">atomic_ref</span><span class="p">(</span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3974,7 +3973,7 @@ is converted to the kind of <strong>atom</strong>.</p>
 </div>
 </section>
 <section id="id166">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id166" title="Permalink to this heading">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id166" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of either integer
 type with atomic_int_kind kind or logical type with atomic_logical_kind
@@ -3985,7 +3984,7 @@ different, the value is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id167">
-<h3><strong>Description</strong><a class="headerlink" href="#id167" title="Permalink to this heading">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id167" title="Link to this heading">#</a></h3>
 <p><strong>atomic_ref</strong>(3) atomically assigns the value of the
 variable <strong>atom</strong> to <strong>value</strong>. When <strong>stat</strong> is present and the invocation was
 successful, it is assigned the value <strong>0</strong>. If it is present and the
@@ -3995,7 +3994,7 @@ the value of iso_fortran_env’s <strong>stat_stopped_image</strong> and if the 
 image has failed, the value <strong>stat_failed_image</strong>.</p>
 </section>
 <section id="id168">
-<h3><strong>Options</strong><a class="headerlink" href="#id168" title="Permalink to this heading">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id168" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>value</strong></dt><dd><p>Scalar of the same type as <strong>atom</strong>. If the kind is different, the value
@@ -4018,7 +4017,7 @@ kind.</p>
 </ul>
 </section>
 <section id="id169">
-<h3><strong>Examples</strong><a class="headerlink" href="#id169" title="Permalink to this heading">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id169" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_ref</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -4034,11 +4033,11 @@ kind.</p>
 </div>
 </section>
 <section id="id170">
-<h3><strong>Standard</strong><a class="headerlink" href="#id170" title="Permalink to this heading">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id170" title="Link to this heading">#</a></h3>
 <p>Fortran 2008 ; with STAT, TS 18508</p>
 </section>
 <section id="id171">
-<h3><strong>See Also</strong><a class="headerlink" href="#id171" title="Permalink to this heading">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id171" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic-cas"><strong>atomic_cas</strong>(3)</a>,
 <a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>,</p>

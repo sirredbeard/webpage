@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="de">
+<html lang="de" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Operators and flow control &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=d84e59a1"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=70a09b52"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/quickstart/operators_control_flow.html" />
     <link rel="index" title="Stichwortverzeichnis" href="../../../genindex/" />
     <link rel="search" title="Suche" href="../../../search/" />
@@ -807,7 +806,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="operators-and-flow-control">
-<h1>Operators and flow control<a class="headerlink" href="#operators-and-flow-control" title="Permalink to this heading">#</a></h1>
+<h1>Operators and flow control<a class="headerlink" href="#operators-and-flow-control" title="Link to this heading">#</a></h1>
 <p>One of the powerful advantages of computer algorithms, compared to simple mathematical formulae,
 comes in the form of program <em>branching</em> whereby the program can decide which instructions to
 execute next based on a logical condition.</p>
@@ -818,7 +817,7 @@ execute next based on a logical condition.</p>
 </ul>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="logical-operators">
-<h1>Logical operators<a class="headerlink" href="#logical-operators" title="Permalink to this heading">#</a></h1>
+<h1>Logical operators<a class="headerlink" href="#logical-operators" title="Link to this heading">#</a></h1>
 <p>Before we use a conditional branching operator, we need to be able to form
 a logical expression.</p>
 <p>To form a logical expression, the following set of relational operators are available:</p>
@@ -884,12 +883,12 @@ a logical expression.</p>
 </table>
 <br>
 <section id="conditional-construct-if">
-<h2>Conditional construct (<code class="docutils literal notranslate"><span class="pre">if</span></code>)<a class="headerlink" href="#conditional-construct-if" title="Permalink to this heading">#</a></h2>
+<h2>Conditional construct (<code class="docutils literal notranslate"><span class="pre">if</span></code>)<a class="headerlink" href="#conditional-construct-if" title="Link to this heading">#</a></h2>
 <p>In the following examples, a conditional <code class="docutils literal notranslate"><span class="pre">if</span></code> construct is used to print out a
 message to describe the nature of the <code class="docutils literal notranslate"><span class="pre">angle</span></code> variable:</p>
 <p><strong>Example:</strong> single branch <code class="docutils literal notranslate"><span class="pre">if</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=if%20%28angle%20%3C%2090.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20acute%27%0Aend%20if' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id1" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=if%20%28angle%20%3C%2090.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20acute%27%0Aend%20if' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="k">  print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Angle is acute&#39;</span>
 <span class="k">end if</span>
@@ -906,7 +905,7 @@ to make code more readable.</p>
 <p>We can add an alternative branch to the construct using the <code class="docutils literal notranslate"><span class="pre">else</span></code> keyword:</p>
 <p><strong>Example:</strong> two-branch <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=if%20%28angle%20%3C%2090.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20acute%27%0Aelse%0A%20%20print%20%2A%2C%20%27Angle%20is%20obtuse%27%0Aend%20if' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id2" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=if%20%28angle%20%3C%2090.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20acute%27%0Aelse%0A%20%20print%20%2A%2C%20%27Angle%20is%20obtuse%27%0Aend%20if' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id2" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="k">  print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Angle is acute&#39;</span>
 <span class="k">else</span>
@@ -920,7 +919,7 @@ on the logical expression following the <code class="docutils literal notranslat
 <p>We can actually add any number of branches using <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> to specify more conditions:</p>
 <p><strong>Example:</strong> multi-branch <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=if%20%28angle%20%3C%2090.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20acute%27%0Aelse%20if%20%28angle%20%3C%20180.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20obtuse%27%0Aelse%0A%20%20print%20%2A%2C%20%27Angle%20is%20reflex%27%0Aend%20if' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=if%20%28angle%20%3C%2090.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20acute%27%0Aelse%20if%20%28angle%20%3C%20180.0%29%20then%0A%20%20print%20%2A%2C%20%27Angle%20is%20obtuse%27%0Aelse%0A%20%20print%20%2A%2C%20%27Angle%20is%20reflex%27%0Aend%20if' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">9</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="k">  print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Angle is acute&#39;</span>
 <span class="k">else if</span><span class="w"> </span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">18</span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
@@ -935,7 +934,7 @@ on the logical expression following the <code class="docutils literal notranslat
 expressions have evaluated to true.</p>
 </section>
 <section id="loop-constructs-do">
-<h2>Loop constructs (<code class="docutils literal notranslate"><span class="pre">do</span></code>)<a class="headerlink" href="#loop-constructs-do" title="Permalink to this heading">#</a></h2>
+<h2>Loop constructs (<code class="docutils literal notranslate"><span class="pre">do</span></code>)<a class="headerlink" href="#loop-constructs-do" title="Link to this heading">#</a></h2>
 <p>In the following example, a <code class="docutils literal notranslate"><span class="pre">do</span></code> loop construct is used to print out the numbers in
 a sequence.
 The <code class="docutils literal notranslate"><span class="pre">do</span></code> loop has an integer <em>counter</em> variable which is used to track which iteration of the loop
@@ -944,7 +943,7 @@ is currently executing. In this example we use a common name for this counter va
 to specify the start value and final value of our counting variable.</p>
 <p><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">do</span></code> loop</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%2010%0A%20%20print%20%2A%2C%20i%0Aend%20do' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%2010%0A%20%20print%20%2A%2C%20i%0Aend%20do' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span>
@@ -955,7 +954,7 @@ to specify the start value and final value of our counting variable.</p>
 </div>
 <p><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">do</span></code> loop with skip</p>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%2010%2C%202%0A%20%20print%20%2A%2C%20i%20%20%21%20Print%20odd%20numbers%0Aend%20do' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id5" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%2010%2C%202%0A%20%20print%20%2A%2C%20i%20%20%21%20Print%20odd%20numbers%0Aend%20do' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
@@ -965,12 +964,12 @@ to specify the start value and final value of our counting variable.</p>
 </div>
 </div>
 <section id="conditional-loop-do-while">
-<h3>Conditional loop (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">while</span></code>)<a class="headerlink" href="#conditional-loop-do-while" title="Permalink to this heading">#</a></h3>
+<h3>Conditional loop (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">while</span></code>)<a class="headerlink" href="#conditional-loop-do-while" title="Link to this heading">#</a></h3>
 <p>A condition may be added to a <code class="docutils literal notranslate"><span class="pre">do</span></code> loop with the <code class="docutils literal notranslate"><span class="pre">while</span></code> keyword. The loop will be executed while the condition given
 in <code class="docutils literal notranslate"><span class="pre">while()</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">.true.</span></code>.</p>
 <p><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">while()</span></code> loop</p>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ai%20%3D%201%0Ado%20while%20%28i%20%3C%2011%29%0A%20%20print%20%2A%2C%20i%0A%20%20i%20%3D%20i%20%2B%201%0Aend%20do%0A%21%20Here%20i%20%3D%2011' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ai%20%3D%201%0Ado%20while%20%28i%20%3C%2011%29%0A%20%20print%20%2A%2C%20i%0A%20%20i%20%3D%20i%20%2B%201%0Aend%20do%0A%21%20Here%20i%20%3D%2011' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
@@ -984,13 +983,13 @@ in <code class="docutils literal notranslate"><span class="pre">while()</span></
 </div>
 </section>
 <section id="loop-control-statements-exit-and-cycle">
-<h3>Loop control statements (<code class="docutils literal notranslate"><span class="pre">exit</span></code> and <code class="docutils literal notranslate"><span class="pre">cycle</span></code>)<a class="headerlink" href="#loop-control-statements-exit-and-cycle" title="Permalink to this heading">#</a></h3>
+<h3>Loop control statements (<code class="docutils literal notranslate"><span class="pre">exit</span></code> and <code class="docutils literal notranslate"><span class="pre">cycle</span></code>)<a class="headerlink" href="#loop-control-statements-exit-and-cycle" title="Link to this heading">#</a></h3>
 <p>Most often than not, loops need to be stopped if a condition is met. Fortran provides two executable statements to deal
 with such cases.</p>
 <p><code class="docutils literal notranslate"><span class="pre">exit</span></code> is used to quit the loop prematurely. It is usually enclosed inside an <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
 <p><strong>Example:</strong> loop with <code class="docutils literal notranslate"><span class="pre">exit</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%20100%0A%20%20if%20%28i%20%3E%2010%29%20then%0A%20%20%20%20exit%20%20%21%20Stop%20printing%20numbers%0A%20%20end%20if%0A%20%20print%20%2A%2C%20i%0Aend%20do%0A%21%20Here%20i%20%3D%2011' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id7" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%20100%0A%20%20if%20%28i%20%3E%2010%29%20then%0A%20%20%20%20exit%20%20%21%20Stop%20printing%20numbers%0A%20%20end%20if%0A%20%20print%20%2A%2C%20i%0Aend%20do%0A%21%20Here%20i%20%3D%2011' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id7" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span>
@@ -1006,7 +1005,7 @@ with such cases.</p>
 <p>On the other hand, <code class="docutils literal notranslate"><span class="pre">cycle</span></code> skips whatever is left of the loop and goes into the next cycle.</p>
 <p><strong>Example:</strong> loop with <code class="docutils literal notranslate"><span class="pre">cycle</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%2010%0A%20%20if%20%28mod%28i%2C%202%29%20%3D%3D%200%29%20then%0A%20%20%20%20%20%20cycle%20%20%21%20Don%27t%20print%20even%20numbers%0A%20%20end%20if%0A%20%20print%20%2A%2C%20i%0Aend%20do' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id8" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%0A%0Ado%20i%20%3D%201%2C%2010%0A%20%20if%20%28mod%28i%2C%202%29%20%3D%3D%200%29%20then%0A%20%20%20%20%20%20cycle%20%20%21%20Don%27t%20print%20even%20numbers%0A%20%20end%20if%0A%20%20print%20%2A%2C%20i%0Aend%20do' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id8" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span>
@@ -1024,7 +1023,7 @@ with such cases.</p>
 </div>
 </section>
 <section id="nested-loop-control-tags">
-<h3>Nested loop control: tags<a class="headerlink" href="#nested-loop-control-tags" title="Permalink to this heading">#</a></h3>
+<h3>Nested loop control: tags<a class="headerlink" href="#nested-loop-control-tags" title="Link to this heading">#</a></h3>
 <p>A recurring case in any programming language is the use of nested loops. Nested loops refer to loops that exist within another loop. Fortran allows the programmer to <em>tag</em> or <em>name</em> each loop. If loops are tagged, there are two potential benefits:</p>
 <ol class="arabic simple">
 <li><p>The readability of the code may be improved (when the naming is meaningful).</p></li>
@@ -1032,7 +1031,7 @@ with such cases.</p>
 </ol>
 <p><strong>Example:</strong> tagged nested loops</p>
 <div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%2C%20j%0A%0Aouter_loop%3A%20do%20i%20%3D%201%2C%2010%0A%20%20inner_loop%3A%20do%20j%20%3D%201%2C%2010%0A%20%20%20%20if%20%28%28j%20%2B%20i%29%20%3E%2010%29%20then%20%20%21%20Print%20only%20pairs%20of%20i%20and%20j%20that%20add%20up%20to%2010%0A%20%20%20%20%20%20cycle%20outer_loop%20%20%21%20Go%20to%20the%20next%20iteration%20of%20the%20outer%20loop%0A%20%20%20%20end%20if%0A%20%20%20%20print%20%2A%2C%20%27I%3D%27%2C%20i%2C%20%27%20J%3D%27%2C%20j%2C%20%27%20Sum%3D%27%2C%20j%20%2B%20i%0A%20%20end%20do%20inner_loop%0Aend%20do%20outer_loop' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id9" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=integer%20%3A%3A%20i%2C%20j%0A%0Aouter_loop%3A%20do%20i%20%3D%201%2C%2010%0A%20%20inner_loop%3A%20do%20j%20%3D%201%2C%2010%0A%20%20%20%20if%20%28%28j%20%2B%20i%29%20%3E%2010%29%20then%20%20%21%20Print%20only%20pairs%20of%20i%20and%20j%20that%20add%20up%20to%2010%0A%20%20%20%20%20%20cycle%20outer_loop%20%20%21%20Go%20to%20the%20next%20iteration%20of%20the%20outer%20loop%0A%20%20%20%20end%20if%0A%20%20%20%20print%20%2A%2C%20%27I%3D%27%2C%20i%2C%20%27%20J%3D%27%2C%20j%2C%20%27%20Sum%3D%27%2C%20j%20%2B%20i%0A%20%20end%20do%20inner_loop%0Aend%20do%20outer_loop' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id9" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span>
 
 <span class="n">outer_loop</span><span class="p">:</span><span class="w"> </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span>
@@ -1048,7 +1047,7 @@ with such cases.</p>
 </div>
 </section>
 <section id="parallelizable-loop-do-concurrent">
-<h3>Parallelizable loop (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code>)<a class="headerlink" href="#parallelizable-loop-do-concurrent" title="Permalink to this heading">#</a></h3>
+<h3>Parallelizable loop (<code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code>)<a class="headerlink" href="#parallelizable-loop-do-concurrent" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code> loop is used to explicitly specify that the <em>inside of the loop has no interdependencies</em>; this informs the compiler that it may use parallelization/<em>SIMD</em> to speed up execution of the loop and conveys programmer intention more clearly. More specifically, this means
 that any given loop iteration does not depend on the prior execution of other loop iterations. It is also necessary that any state changes that may occur must only happen within each <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent</span></code> loop.
 These requirements place restrictions on what can be placed within the loop body.</p>
@@ -1061,7 +1060,7 @@ In general, compiler flags are required to activate possible parallelization for
 </div></blockquote>
 <p><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">concurrent()</span></code> loop</p>
 <div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=real%2C%20parameter%20%3A%3A%20pi%20%3D%203.14159265%0Ainteger%2C%20parameter%20%3A%3A%20n%20%3D%2010%0Areal%20%3A%3A%20result_sin%28n%29%0Ainteger%20%3A%3A%20i%0A%0Ado%20concurrent%20%28i%20%3D%201%3An%29%20%20%21%20Careful%2C%20the%20syntax%20is%20slightly%20different%0A%20%20result_sin%28i%29%20%3D%20sin%28i%20%2A%20pi/4.%29%0Aend%20do%0A%0Aprint%20%2A%2C%20result_sin' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id10" title="Link zu diesem Quellcode">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=real%2C%20parameter%20%3A%3A%20pi%20%3D%203.14159265%0Ainteger%2C%20parameter%20%3A%3A%20n%20%3D%2010%0Areal%20%3A%3A%20result_sin%28n%29%0Ainteger%20%3A%3A%20i%0A%0Ado%20concurrent%20%28i%20%3D%201%3An%29%20%20%21%20Careful%2C%20the%20syntax%20is%20slightly%20different%0A%20%20result_sin%28i%29%20%3D%20sin%28i%20%2A%20pi/4.%29%0Aend%20do%0A%0Aprint%20%2A%2C%20result_sin' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id10" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159265</span>
 <span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
 <span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">result_sin</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>

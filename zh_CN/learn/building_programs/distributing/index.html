@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="zh-CN">
+<html lang="zh-CN" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>分发你的程序 &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=20ebe441"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/distributing.html" />
     <link rel="index" title="索引" href="../../../genindex/" />
     <link rel="search" title="搜索" href="../../../search/" />
@@ -726,7 +725,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="distributing-your-programs">
-<h1>分发你的程序<a class="headerlink" href="#distributing-your-programs" title="此标题的永久链接">#</a></h1>
+<h1>分发你的程序<a class="headerlink" href="#distributing-your-programs" title="Link to this heading">#</a></h1>
 <p>分发程序时，你可以选择多种选项：</p>
 <ol class="arabic simple">
 <li><p>分发整个源代码</p></li>
@@ -746,7 +745,7 @@
 <p>此选项是前两个选项的组合。它确实给用户带来了一些负担，因为他们必须创建一个以正确方式调用你的例程的主程序，但他们不需要对你使用的构建系统有太多了解。不过，你将不得不处理运行时库。</p>
 <p>如果选择此选项，除了编译的库之外，你还需要提供模块中间文件。这些文件是特定于编译器的，但你构建的静态库也是如此。</p>
 <section id="distributing-the-tabulation-program">
-<h2>分发制表程序<a class="headerlink" href="#distributing-the-tabulation-program" title="此标题的永久链接">#</a></h2>
+<h2>分发制表程序<a class="headerlink" href="#distributing-the-tabulation-program" title="Link to this heading">#</a></h2>
 <p>如上所示，可以使用动态库中的用户定义函数来构建制表程序。这使你能够：</p>
 <ul class="simple">
 <li><p>运送可执行文件（使用适当的运行时库）</p></li>

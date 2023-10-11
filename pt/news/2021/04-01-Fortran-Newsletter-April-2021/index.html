@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="pt">
+<html lang="pt" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Boletim Fortran: Abril de 2021 &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aa4fbcf8"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=3b002d5c"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/news/2021/04-01-Fortran-Newsletter-April-2021.html" />
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
@@ -411,13 +410,6 @@
     </span>
   
   
-  <a href="../../author/ondrej-certik/">Ondřej Čertík</a>
-  
-  ,
-  
-  
-  
-  
   <a href="../../author/sebastian-ehlert/">Sebastian Ehlert</a>
   
   ,
@@ -433,6 +425,13 @@
   
   
   <a href="../../author/laurence-kedward/">Laurence Kedward</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../../author/ondrej-certik/">Ondřej Čertík</a>
   
   ,
   
@@ -619,12 +618,12 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="fortran-newsletter-april-2021">
-<h1>Boletim Fortran: Abril de 2021<a class="headerlink" href="#fortran-newsletter-april-2021" title="Permalink to this heading">#</a></h1>
+<h1>Boletim Fortran: Abril de 2021<a class="headerlink" href="#fortran-newsletter-april-2021" title="Link to this heading">#</a></h1>
 <p>Welcome to the April 2021 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
 Fortran news from the previous month.</p>
 <section id="fortran-lang-org">
-<h2>fortran-lang.org<a class="headerlink" href="#fortran-lang-org" title="Permalink to this heading">#</a></h2>
+<h2>fortran-lang.org<a class="headerlink" href="#fortran-lang-org" title="Link to this heading">#</a></h2>
 <p>This month we’ve had several updates to the website:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/fortran-lang/fortran-lang.org/pull/229">#229</a>:
@@ -652,7 +651,7 @@ Include learn resources to online courses</p></li>
 We welcome any new contributors to the website and the tutorials page in particular - see the <a class="reference external" href="https://github.com/fortran-lang/fortran-lang.org/blob/HEAD/CONTRIBUTING.md">contributor guide</a> for how to get started.</p>
 </section>
 <section id="fortran-standard-library">
-<h2>Biblioteca Padrão Fortran (Fortran Standard Library)<a class="headerlink" href="#fortran-standard-library" title="Permalink to this heading">#</a></h2>
+<h2>Biblioteca Padrão Fortran (Fortran Standard Library)<a class="headerlink" href="#fortran-standard-library" title="Link to this heading">#</a></h2>
 <p>Here’s what’s new in <code class="docutils literal notranslate"><span class="pre">stdlib</span></code>:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/fortran-lang/stdlib/pull/320">#320</a>:
@@ -707,7 +706,7 @@ in <a class="reference external" href="https://github.com/MarDiehl/stdlib_os">th
 Please try it out and let us know how it works, if there are any issues, or if the API can be improved.</p>
 </section>
 <section id="fortran-package-manager">
-<h2>Gerenciador de Pacotes Fortran<a class="headerlink" href="#fortran-package-manager" title="Permalink to this heading">#</a></h2>
+<h2>Gerenciador de Pacotes Fortran<a class="headerlink" href="#fortran-package-manager" title="Link to this heading">#</a></h2>
 <p>Here’s what’s new in <code class="docutils literal notranslate"><span class="pre">fpm</span></code>:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/fortran-lang/fpm/releases/tag/v0.2.0">Lançamento versão Alpha 0.2.0</a></p></li>
@@ -771,9 +770,9 @@ Its long term goal is to build a rich and decentralized ecosystem of Fortran pac
 environment in which new open source Fortran projects are created and published with ease.</p>
 </section>
 <section id="compilers">
-<h2>Compiladores<a class="headerlink" href="#compilers" title="Permalink to this heading">#</a></h2>
+<h2>Compiladores<a class="headerlink" href="#compilers" title="Link to this heading">#</a></h2>
 <section id="classic-flang">
-<h3>Classic Flang<a class="headerlink" href="#classic-flang" title="Permalink to this heading">#</a></h3>
+<h3>Classic Flang<a class="headerlink" href="#classic-flang" title="Link to this heading">#</a></h3>
 <p>A total of 10 pull requests were merged in February.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/flang-compiler/flang/pull/996">PR#996 tests: one test case supporting PR #966</a></p></li>
@@ -800,7 +799,7 @@ environment in which new open source Fortran projects are created and published 
 </ul>
 </section>
 <section id="llvm-flang">
-<h3>LLVM Flang<a class="headerlink" href="#llvm-flang" title="Permalink to this heading">#</a></h3>
+<h3>LLVM Flang<a class="headerlink" href="#llvm-flang" title="Link to this heading">#</a></h3>
 <p>Atualizações de desenvolvimento recentes:</p>
 <ul class="simple">
 <li><p>Novo Driver:</p>
@@ -848,7 +847,7 @@ environment in which new open source Fortran projects are created and published 
 <p>Call notes will be sent to the <em>flang-dev</em> email list and also recorded <a class="reference external" href="https://docs.google.com/document/d/10T-S2J3GrahpG4Ooif93NSTz2zBW0MQc_RlwHi0-afY">here</a>.</p>
 </section>
 <section id="lfortran">
-<h3>LFortran<a class="headerlink" href="#lfortran" title="Permalink to this heading">#</a></h3>
+<h3>LFortran<a class="headerlink" href="#lfortran" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>LFortran is participating in GSoC under the NumFOCUS and Fortran-lang umbrella, if you are interested, please apply: <a class="reference external" href="https://gitlab.com/lfortran/lfortran/-/wikis/GSoC-2021-Ideas">https://gitlab.com/lfortran/lfortran/-/wikis/GSoC-2021-Ideas</a></p></li>
 <li><p>7 people contributed code in the last month:
@@ -878,7 +877,7 @@ https://lfortran.org for links to all three).</p>
 </section>
 </section>
 <section id="events">
-<h2>Eventos<a class="headerlink" href="#events" title="Permalink to this heading">#</a></h2>
+<h2>Eventos<a class="headerlink" href="#events" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>We had our 10th Fortran Monthly call on March 24.
 You can watch the recording below:</p></li>
@@ -907,7 +906,7 @@ and will be presented by Wadud Miah (<a class="reference external" href="https:/
 join the <a class="reference external" href="https://fortran-lang.discourse.group">Discourse</a> to stay tuned with the future meetings.</p>
 </section>
 <section id="contributors">
-<h2>Colaboradores<a class="headerlink" href="#contributors" title="Permalink to this heading">#</a></h2>
+<h2>Colaboradores<a class="headerlink" href="#contributors" title="Link to this heading">#</a></h2>
 <p>We thank everybody who contributed to fortran-lang in the past month by
 commenting in any of these repositories:</p>
 <ul class="simple">

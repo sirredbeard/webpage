@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="ja">
+<html lang="ja" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Bit-level inquiry and manipulation &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=5f97a571"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/intrinsics/bit.html" />
     <link rel="index" title="索引" href="../../../genindex/" />
     <link rel="search" title="検索" href="../../../search/" />
@@ -2968,15 +2967,15 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="bit-level-inquiry-and-manipulation">
-<h1>Bit-level inquiry and manipulation<a class="headerlink" href="#bit-level-inquiry-and-manipulation" title="この見出しへのパーマリンク">#</a></h1>
+<h1>Bit-level inquiry and manipulation<a class="headerlink" href="#bit-level-inquiry-and-manipulation" title="Link to this heading">#</a></h1>
 <section id="bge">
-<h2>bge<a class="headerlink" href="#bge" title="この見出しへのパーマリンク">#</a></h2>
+<h2>bge<a class="headerlink" href="#bge" title="Link to this heading">#</a></h2>
 <section id="name">
-<h3><strong>Name</strong><a class="headerlink" href="#name" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#name" title="Link to this heading">#</a></h3>
 <p><strong>bge</strong>(3) - [BIT:COMPARE] Bitwise greater than or equal to</p>
 </section>
 <section id="synopsis">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">bge</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2988,7 +2987,7 @@
 </div>
 </section>
 <section id="characteristics">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p>the <em>integer</em> <em>kind</em> of <strong>i</strong> and <strong>j</strong> may not necessarily be
@@ -2999,7 +2998,7 @@ current platform.</p></li>
 </ul>
 </section>
 <section id="description">
-<h3><strong>Description</strong><a class="headerlink" href="#description" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
 <p><strong>bge</strong>(3) Determines whether one <em>integer</em> is bitwise greater than
 or equal to another.</p>
 <p>The bit-level representation of a value is platform dependent. The
@@ -3011,7 +3010,7 @@ transferred to an <em>integer</em> type. The most bits the constant may
 contain is limited by the most bits representable by any <em>integer</em>
 kind supported by the compilation.</p>
 <section id="bit-sequence-comparison">
-<h4>Bit Sequence Comparison<a class="headerlink" href="#bit-sequence-comparison" title="この見出しへのパーマリンク">#</a></h4>
+<h4>Bit Sequence Comparison<a class="headerlink" href="#bit-sequence-comparison" title="Link to this heading">#</a></h4>
 <p>When bit sequences of unequal length are compared, the shorter sequence
 is padded with zero bits on the left to the same length as the longer
 sequence (up to the largest number of bits any available <em>integer</em> kind
@@ -3027,7 +3026,7 @@ unequal position.</p>
 </section>
 </section>
 <section id="options">
-<h3><strong>Options</strong><a class="headerlink" href="#options" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#options" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The value to test if &gt;= <strong>j</strong> based on the bit representation
@@ -3043,12 +3042,12 @@ of the values.</p>
 </ul>
 </section>
 <section id="result">
-<h3><strong>Result</strong><a class="headerlink" href="#result" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#result" title="Link to this heading">#</a></h3>
 <p>Returns <em>.true.</em> if <strong>i</strong> is bit-wise greater than <strong>j</strong> and <em>.false.</em>
 otherwise.</p>
 </section>
 <section id="examples">
-<h3><strong>Examples</strong><a class="headerlink" href="#examples" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_bge</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -3128,11 +3127,11 @@ are just the values expected on Today's most common platforms ...</p>
 </div>
 </section>
 <section id="standard">
-<h3><strong>Standard</strong><a class="headerlink" href="#standard" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#standard" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="see-also">
-<h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#bgt"><strong>bgt</strong>(3)</a>,
 <a class="reference internal" href="#ble"><strong>ble</strong>(3)</a>,
 <a class="reference internal" href="#blt"><strong>blt</strong>(3)</a></p>
@@ -3140,13 +3139,13 @@ are just the values expected on Today's most common platforms ...</p>
 </section>
 </section>
 <section id="bgt">
-<h2>bgt<a class="headerlink" href="#bgt" title="この見出しへのパーマリンク">#</a></h2>
+<h2>bgt<a class="headerlink" href="#bgt" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3><strong>Name</strong><a class="headerlink" href="#id1" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>bgt</strong>(3) - [BIT:COMPARE] Bitwise greater than</p>
 </section>
 <section id="id2">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">bgt</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3158,7 +3157,7 @@ are just the values expected on Today's most common platforms ...</p>
 </div>
 </section>
 <section id="id3">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> is an <em>integer</em> or a boz-literal-constant.</p></li>
 <li><p><strong>j</strong> is an <em>integer</em> or a boz-literal-constant.</p></li>
@@ -3171,12 +3170,12 @@ platform.</p></li>
 </ul>
 </section>
 <section id="id4">
-<h3><strong>Description</strong><a class="headerlink" href="#id4" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p><strong>bgt</strong> determines whether an integer is bitwise greater than another.
 Bit-level representations of values are platform-dependent.</p>
 </section>
 <section id="id5">
-<h3><strong>Options</strong><a class="headerlink" href="#id5" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>reference value to compare against</p>
@@ -3191,7 +3190,7 @@ Bit-level representations of values are platform-dependent.</p>
 </ul>
 </section>
 <section id="id6">
-<h3><strong>Result</strong><a class="headerlink" href="#id6" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>The return value is of type <em>logical</em> and of the default kind. The
 result is true if the sequence of bits represented by <em>i</em> is greater
 than the sequence of bits represented by <em>j</em>, otherwise the result
@@ -3199,7 +3198,7 @@ is false.</p>
 <p>Bits are compared from right to left.</p>
 </section>
 <section id="id7">
-<h3><strong>Examples</strong><a class="headerlink" href="#id7" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_bgt</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -3246,11 +3245,11 @@ is false.</p>
 </div>
 </section>
 <section id="id8">
-<h3><strong>Standard</strong><a class="headerlink" href="#id8" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id9">
-<h3><strong>See Also</strong><a class="headerlink" href="#id9" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#bge"><strong>bge</strong>(3)</a>,
 <a class="reference internal" href="#ble"><strong>ble</strong>(3)</a>,
 <a class="reference internal" href="#blt"><strong>blt</strong>(3)</a></p>
@@ -3258,13 +3257,13 @@ is false.</p>
 </section>
 </section>
 <section id="ble">
-<h2>ble<a class="headerlink" href="#ble" title="この見出しへのパーマリンク">#</a></h2>
+<h2>ble<a class="headerlink" href="#ble" title="Link to this heading">#</a></h2>
 <section id="id10">
-<h3><strong>Name</strong><a class="headerlink" href="#id10" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p><strong>ble</strong>(3) - [BIT:COMPARE] Bitwise less than or equal to</p>
 </section>
 <section id="id11">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id11" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ble</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3276,7 +3275,7 @@ is false.</p>
 </div>
 </section>
 <section id="id12">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id12" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> and <strong>j</strong> may be of any supported <em>integer</em> kind, not
 necessarily the same. An exception is that values may be a
@@ -3286,13 +3285,13 @@ the most bits on the current platform.</p></li>
 </ul>
 </section>
 <section id="id13">
-<h3><strong>Description</strong><a class="headerlink" href="#id13" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p><strong>ble</strong>(3) determines whether an integer is bitwise less than or
 equal to another, assuming any shorter value is padded on the left
 with zeros to the length of the longer value.</p>
 </section>
 <section id="id14">
-<h3><strong>Options</strong><a class="headerlink" href="#id14" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>the value to compare <strong>j</strong> to</p>
@@ -3307,12 +3306,12 @@ with zeros to the length of the longer value.</p>
 </ul>
 </section>
 <section id="id15">
-<h3><strong>Result</strong><a class="headerlink" href="#id15" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p>The return value is <em>.true.</em> if any bit in <strong>j</strong> is less than any bit
 in <strong>i</strong> starting with the rightmost bit and continuing tests leftward.</p>
 </section>
 <section id="id16">
-<h3><strong>Examples</strong><a class="headerlink" href="#id16" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_ble</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -3355,11 +3354,11 @@ in <strong>i</strong> starting with the rightmost bit and continuing tests leftw
 </div>
 </section>
 <section id="id17">
-<h3><strong>Standard</strong><a class="headerlink" href="#id17" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id18">
-<h3><strong>See Also</strong><a class="headerlink" href="#id18" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#bge"><strong>bge</strong>(3)</a>,
 <a class="reference internal" href="#bgt"><strong>bgt</strong>(3)</a>,
 <a class="reference internal" href="#blt"><strong>blt</strong>(3)</a></p>
@@ -3367,13 +3366,13 @@ in <strong>i</strong> starting with the rightmost bit and continuing tests leftw
 </section>
 </section>
 <section id="blt">
-<h2>blt<a class="headerlink" href="#blt" title="この見出しへのパーマリンク">#</a></h2>
+<h2>blt<a class="headerlink" href="#blt" title="Link to this heading">#</a></h2>
 <section id="id19">
-<h3><strong>Name</strong><a class="headerlink" href="#id19" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p><strong>blt</strong>(3) - [BIT:COMPARE] Bitwise less than</p>
 </section>
 <section id="id20">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id20" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">blt</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3385,7 +3384,7 @@ in <strong>i</strong> starting with the rightmost bit and continuing tests leftw
 </div>
 </section>
 <section id="id21">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id21" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> is an <em>integer</em> of any kind or a BOZ-literal-constant</p></li>
 <li><p><strong>j</strong> is an <em>integer</em> of any kind or a BOZ-literal-constant, not
@@ -3396,11 +3395,11 @@ necessarily the same as <strong>i</strong>.</p></li>
 with the most bits on the current platform.</p>
 </section>
 <section id="id22">
-<h3><strong>Description</strong><a class="headerlink" href="#id22" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <p><strong>blt</strong>(3) determines whether an <em>integer</em> is bitwise less than another.</p>
 </section>
 <section id="id23">
-<h3><strong>Options</strong><a class="headerlink" href="#id23" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>Shall be of <em>integer</em> type or a BOZ literal constant.</p>
@@ -3415,11 +3414,11 @@ with the most bits on the current platform.</p>
 </ul>
 </section>
 <section id="id24">
-<h3><strong>Result</strong><a class="headerlink" href="#id24" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <p>The return value is of type <em>logical</em> and of the default kind.</p>
 </section>
 <section id="id25">
-<h3><strong>Examples</strong><a class="headerlink" href="#id25" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_blt</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -3455,11 +3454,11 @@ with the most bits on the current platform.</p>
 </div>
 </section>
 <section id="id26">
-<h3><strong>Standard</strong><a class="headerlink" href="#id26" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id27">
-<h3><strong>See Also</strong><a class="headerlink" href="#id27" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#bge"><strong>bge</strong>(3)</a>,
 <a class="reference internal" href="#bgt"><strong>bgt</strong>(3)</a>,
 <a class="reference internal" href="#ble"><strong>ble</strong>(3)</a></p>
@@ -3467,13 +3466,13 @@ with the most bits on the current platform.</p>
 </section>
 </section>
 <section id="bit-size">
-<h2>bit_size<a class="headerlink" href="#bit-size" title="この見出しへのパーマリンク">#</a></h2>
+<h2>bit_size<a class="headerlink" href="#bit-size" title="Link to this heading">#</a></h2>
 <section id="id28">
-<h3><strong>Name</strong><a class="headerlink" href="#id28" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <p><strong>bit_size</strong>(3) - [BIT:INQUIRY] Bit size inquiry function</p>
 </section>
 <section id="id29">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id29" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">bit_size</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3484,7 +3483,7 @@ with the most bits on the current platform.</p>
 </div>
 </section>
 <section id="id30">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id30" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> shall be of type integer. It may be a scalar or an array.</p></li>
 <li><p>the value of <strong>KIND</strong> is any valid value for an <em>integer</em> kind
@@ -3493,12 +3492,12 @@ parameter on the processor.</p></li>
 </ul>
 </section>
 <section id="id31">
-<h3><strong>Description</strong><a class="headerlink" href="#id31" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
 <p><strong>bit_size</strong>(3) returns the number of bits (integer precision plus
 sign bit) represented by the type of the <em>integer</em> <strong>i</strong>.</p>
 </section>
 <section id="id32">
-<h3><strong>Options</strong><a class="headerlink" href="#id32" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>An <em>integer</em> value of any kind whose size in bits is to be determined.
@@ -3511,12 +3510,12 @@ just a single element is always returned.</p>
 </ul>
 </section>
 <section id="id33">
-<h3><strong>Result</strong><a class="headerlink" href="#id33" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
 <p>The number of bits used to represent a value of the type and kind
 of <em>i</em>. The result is a <em>integer</em> scalar of the same kind as <em>i</em>.</p>
 </section>
 <section id="id34">
-<h3><strong>Examples</strong><a class="headerlink" href="#id34" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_bit_size</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -3549,23 +3548,23 @@ of <em>i</em>. The result is a <em>integer</em> scalar of the same kind as <em>i
 </div>
 </section>
 <section id="id35">
-<h3><strong>Standard</strong><a class="headerlink" href="#id35" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id36">
-<h3><strong>See Also</strong><a class="headerlink" href="#id36" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#"><span class="xref myst">****(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="btest">
-<h2>btest<a class="headerlink" href="#btest" title="この見出しへのパーマリンク">#</a></h2>
+<h2>btest<a class="headerlink" href="#btest" title="Link to this heading">#</a></h2>
 <section id="id37">
-<h3><strong>Name</strong><a class="headerlink" href="#id37" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
 <p><strong>btest</strong>(3) - [BIT:INQUIRY] Tests a bit of an <em>integer</em> value.</p>
 </section>
 <section id="id38">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id38" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">btest</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">pos</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3577,7 +3576,7 @@ of <em>i</em>. The result is a <em>integer</em> scalar of the same kind as <em>i
 </div>
 </section>
 <section id="id39">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id39" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> is an <em>integer</em> of any kind</p></li>
 <li><p><strong>pos</strong> is a <em>integer</em> of any kind</p></li>
@@ -3585,13 +3584,13 @@ of <em>i</em>. The result is a <em>integer</em> scalar of the same kind as <em>i
 </ul>
 </section>
 <section id="id40">
-<h3><strong>Description</strong><a class="headerlink" href="#id40" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
 <p><strong>btest</strong>(3) returns logical <em>.true.</em> if the bit at <strong>pos</strong> in <strong>i</strong> is
 set to 1. Position zero is the right-most bit. Bit position increases
 from right to left up to <strong>bitsize(i)-1</strong>.</p>
 </section>
 <section id="id41">
-<h3><strong>Options</strong><a class="headerlink" href="#id41" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id41" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The <em>integer</em> containing the bit to be tested</p>
@@ -3607,7 +3606,7 @@ value <strong>i</strong>; ie. <strong>0 &lt;= pos &lt;= bit_size(i)</strong>.</p
 </ul>
 </section>
 <section id="id42">
-<h3><strong>Result</strong><a class="headerlink" href="#id42" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
 <p>The result is a <em>logical</em> that has the value <em>.true.</em> if bit position
 <strong>pos</strong> of <strong>i</strong> has the value <strong>1</strong> and the value <em>.false.</em> if bit
 <strong>pos</strong> of <strong>i</strong> has the value <strong>0</strong>.</p>
@@ -3615,7 +3614,7 @@ value <strong>i</strong>; ie. <strong>0 &lt;= pos &lt;= bit_size(i)</strong>.</p
 with the position of the rightmost bit being zero.</p>
 </section>
 <section id="id43">
-<h3><strong>Examples</strong><a class="headerlink" href="#id43" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_btest</span>
 <span class="k">implicit none</span>
@@ -3691,11 +3690,11 @@ with the position of the rightmost bit being zero.</p>
 </div>
 </section>
 <section id="id44">
-<h3><strong>Standard</strong><a class="headerlink" href="#id44" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id45">
-<h3><strong>See Also</strong><a class="headerlink" href="#id45" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id45" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
 <a class="reference internal" href="#ibclr"><strong>ibclr</strong>(3)</a>,
 <a class="reference internal" href="#not"><strong>not</strong>(3)</a>,
@@ -3710,13 +3709,13 @@ with the position of the rightmost bit being zero.</p>
 </section>
 </section>
 <section id="storage-size">
-<h2>storage_size<a class="headerlink" href="#storage-size" title="この見出しへのパーマリンク">#</a></h2>
+<h2>storage_size<a class="headerlink" href="#storage-size" title="Link to this heading">#</a></h2>
 <section id="id46">
-<h3><strong>Name</strong><a class="headerlink" href="#id46" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id46" title="Link to this heading">#</a></h3>
 <p><strong>storage_size</strong>(3) - [BIT:INQUIRY] Storage size in bits</p>
 </section>
 <section id="id47">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id47" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">storage_size</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="p">[,</span><span class="nb">KIND</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3728,7 +3727,7 @@ with the position of the rightmost bit being zero.</p>
 </div>
 </section>
 <section id="id48">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id48" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id48" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>a</strong> may be of any type and kind. If it is polymorphic it shall not
@@ -3743,11 +3742,11 @@ specified, in which case it has the kind specified by <strong>kind</strong>.</p>
 </ul>
 </section>
 <section id="id49">
-<h3><strong>Description</strong><a class="headerlink" href="#id49" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id49" title="Link to this heading">#</a></h3>
 <p><strong>storage_size</strong>(3) returns the storage size of argument <strong>a</strong> in bits.</p>
 </section>
 <section id="id50">
-<h3><strong>Options</strong><a class="headerlink" href="#id50" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id50" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>The entity to determine the storage size of</p>
@@ -3763,7 +3762,7 @@ output value.</p>
 </ul>
 </section>
 <section id="id51">
-<h3><strong>Result</strong><a class="headerlink" href="#id51" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id51" title="Link to this heading">#</a></h3>
 <p>The result value is the size expressed in bits for an element of an
 array that has the dynamic type and type parameters of <strong>a</strong>.</p>
 <p>If the type and type parameters are such that storage association
@@ -3782,7 +3781,7 @@ this function nonetheless returns the size it would take if it were
 stored in memory.</p>
 </section>
 <section id="id52">
-<h3><strong>Examples</strong><a class="headerlink" href="#id52" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id52" title="Link to this heading">#</a></h3>
 <p>Sample program</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_storage_size</span>
 <span class="k">implicit none</span>
@@ -3810,23 +3809,23 @@ stored in memory.</p>
 </div>
 </section>
 <section id="id53">
-<h3><strong>Standard</strong><a class="headerlink" href="#id53" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id53" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id54">
-<h3><strong>See Also</strong><a class="headerlink" href="#id54" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id54" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#c_sizeof"><span class="xref myst"><strong>c_sizeof</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="leadz">
-<h2>leadz<a class="headerlink" href="#leadz" title="この見出しへのパーマリンク">#</a></h2>
+<h2>leadz<a class="headerlink" href="#leadz" title="Link to this heading">#</a></h2>
 <section id="id55">
-<h3><strong>Name</strong><a class="headerlink" href="#id55" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id55" title="Link to this heading">#</a></h3>
 <p><strong>leadz</strong>(3) - [BIT:COUNT] Number of leading zero bits of an integer</p>
 </section>
 <section id="id56">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id56" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id56" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leadz</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3837,18 +3836,18 @@ stored in memory.</p>
 </div>
 </section>
 <section id="id57">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id57" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id57" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> may be an <em>integer</em> of any kind.</p></li>
 <li><p>the return value is a default integer type.</p></li>
 </ul>
 </section>
 <section id="id58">
-<h3><strong>Description</strong><a class="headerlink" href="#id58" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id58" title="Link to this heading">#</a></h3>
 <p><strong>leadz</strong>(3) returns the number of leading zero bits of an integer.</p>
 </section>
 <section id="id59">
-<h3><strong>Options</strong><a class="headerlink" href="#id59" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id59" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p><em>integer</em> to count the leading zero bits of.</p>
@@ -3858,7 +3857,7 @@ stored in memory.</p>
 </ul>
 </section>
 <section id="id60">
-<h3><strong>Result</strong><a class="headerlink" href="#id60" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id60" title="Link to this heading">#</a></h3>
 <p>The number of leading zero bits, taking into account the kind of the
 input value. If all the bits of <strong>i</strong> are zero, the result value is
 <strong>bit_size(i)</strong>.</p>
@@ -3867,7 +3866,7 @@ is the position of the leftmost 1 bit in the input <strong>i</strong>. Positions
 are from 0 to bit-size(), with 0 at the right-most bit.</p>
 </section>
 <section id="id61">
-<h3><strong>Examples</strong><a class="headerlink" href="#id61" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id61" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_leadz</span>
 <span class="k">implicit none</span>
@@ -3905,11 +3904,11 @@ are from 0 to bit-size(), with 0 at the right-most bit.</p>
 </div>
 </section>
 <section id="id62">
-<h3><strong>Standard</strong><a class="headerlink" href="#id62" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id62" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id63">
-<h3><strong>See Also</strong><a class="headerlink" href="#id63" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id63" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#bit-size"><strong>bit_size</strong>(3)</a>,
 <a class="reference internal" href="#popcnt"><strong>popcnt</strong>(3)</a>,
 <a class="reference internal" href="#poppar"><strong>poppar</strong>(3)</a>,
@@ -3918,13 +3917,13 @@ are from 0 to bit-size(), with 0 at the right-most bit.</p>
 </section>
 </section>
 <section id="popcnt">
-<h2>popcnt<a class="headerlink" href="#popcnt" title="この見出しへのパーマリンク">#</a></h2>
+<h2>popcnt<a class="headerlink" href="#popcnt" title="Link to this heading">#</a></h2>
 <section id="id64">
-<h3><strong>Name</strong><a class="headerlink" href="#id64" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id64" title="Link to this heading">#</a></h3>
 <p><strong>popcnt</strong>(3) - [BIT:COUNT] Number of bits set</p>
 </section>
 <section id="id65">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id65" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id65" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">popcnt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3935,19 +3934,19 @@ are from 0 to bit-size(), with 0 at the right-most bit.</p>
 </div>
 </section>
 <section id="id66">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id66" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id66" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> may be an <em>integer</em> of any kind.</p></li>
 <li><p>The return value is an <em>integer</em> of the default integer kind.</p></li>
 </ul>
 </section>
 <section id="id67">
-<h3><strong>Description</strong><a class="headerlink" href="#id67" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id67" title="Link to this heading">#</a></h3>
 <p><strong>popcnt</strong>(3) returns the number of bits set to one in the binary
 representation of an <em>integer</em>.</p>
 </section>
 <section id="id68">
-<h3><strong>Options</strong><a class="headerlink" href="#id68" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id68" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>value to count set bits in</p>
@@ -3957,11 +3956,11 @@ representation of an <em>integer</em>.</p>
 </ul>
 </section>
 <section id="id69">
-<h3><strong>Result</strong><a class="headerlink" href="#id69" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id69" title="Link to this heading">#</a></h3>
 <p>The number of bits set to one in <strong>i</strong>.</p>
 </section>
 <section id="id70">
-<h3><strong>Examples</strong><a class="headerlink" href="#id70" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id70" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_popcnt</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">integer_kinds</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
@@ -3995,11 +3994,11 @@ bit to 1.</p>
 </div>
 </section>
 <section id="id71">
-<h3><strong>Standard</strong><a class="headerlink" href="#id71" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id71" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id72">
-<h3><strong>See Also</strong><a class="headerlink" href="#id72" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id72" title="Link to this heading">#</a></h3>
 <p>There are many procedures that operator or query values at the bit level:</p>
 <p><a class="reference internal" href="#poppar"><strong>poppar</strong>(3)</a>,
 <a class="reference internal" href="#leadz"><strong>leadz</strong>(3)</a>,
@@ -4042,13 +4041,13 @@ bit to 1.</p>
 </section>
 </section>
 <section id="poppar">
-<h2>poppar<a class="headerlink" href="#poppar" title="この見出しへのパーマリンク">#</a></h2>
+<h2>poppar<a class="headerlink" href="#poppar" title="Link to this heading">#</a></h2>
 <section id="id73">
-<h3><strong>Name</strong><a class="headerlink" href="#id73" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id73" title="Link to this heading">#</a></h3>
 <p><strong>poppar</strong>(3) - [BIT:COUNT] Parity of the number of bits set</p>
 </section>
 <section id="id74">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id74" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id74" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poppar</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4059,14 +4058,14 @@ bit to 1.</p>
 </div>
 </section>
 <section id="id75">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id75" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id75" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> is an <em>integer</em> of any kind</p></li>
 <li><p>the return value is a default kind <em>integer</em></p></li>
 </ul>
 </section>
 <section id="id76">
-<h3><strong>Description</strong><a class="headerlink" href="#id76" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id76" title="Link to this heading">#</a></h3>
 <p><strong>poppar</strong>(3) returns the parity of an integer's binary representation
 (i.e., the parity of the number of bits set).</p>
 <p>The parity is expressed as</p>
@@ -4076,7 +4075,7 @@ bit to 1.</p>
 </ul>
 </section>
 <section id="id77">
-<h3><strong>Options</strong><a class="headerlink" href="#id77" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id77" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The value to query for its bit parity</p>
@@ -4086,12 +4085,12 @@ bit to 1.</p>
 </ul>
 </section>
 <section id="id78">
-<h3><strong>Result</strong><a class="headerlink" href="#id78" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id78" title="Link to this heading">#</a></h3>
 <p>The return value is equal to <strong>0</strong> if <strong>i</strong> has an even number of bits
 set and <strong>1</strong> if an odd number of bits are set.</p>
 </section>
 <section id="id79">
-<h3><strong>Examples</strong><a class="headerlink" href="#id79" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id79" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_poppar</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">integer_kinds</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
@@ -4124,11 +4123,11 @@ set and <strong>1</strong> if an odd number of bits are set.</p>
 </div>
 </section>
 <section id="id80">
-<h3><strong>Standard</strong><a class="headerlink" href="#id80" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id80" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id81">
-<h3><strong>See Also</strong><a class="headerlink" href="#id81" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id81" title="Link to this heading">#</a></h3>
 <p>There are many procedures that operator or query values at the bit level:</p>
 <p><a class="reference internal" href="#popcnt"><strong>popcnt</strong>(3)</a>,
 <a class="reference internal" href="#leadz"><strong>leadz</strong>(3)</a>,
@@ -4171,13 +4170,13 @@ set and <strong>1</strong> if an odd number of bits are set.</p>
 </section>
 </section>
 <section id="trailz">
-<h2>trailz<a class="headerlink" href="#trailz" title="この見出しへのパーマリンク">#</a></h2>
+<h2>trailz<a class="headerlink" href="#trailz" title="Link to this heading">#</a></h2>
 <section id="id82">
-<h3><strong>Name</strong><a class="headerlink" href="#id82" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id82" title="Link to this heading">#</a></h3>
 <p><strong>trailz</strong>(3) - [BIT:COUNT] Number of trailing zero bits of an integer</p>
 </section>
 <section id="id83">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id83" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id83" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">trailz</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4188,19 +4187,19 @@ set and <strong>1</strong> if an odd number of bits are set.</p>
 </div>
 </section>
 <section id="id84">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id84" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id84" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> is an <em>integer</em> of any kind.</p></li>
 <li><p>the result is an <em>integer</em> of default kind</p></li>
 </ul>
 </section>
 <section id="id85">
-<h3><strong>Description</strong><a class="headerlink" href="#id85" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id85" title="Link to this heading">#</a></h3>
 <p><strong>trailz</strong>(3) returns the number of trailing zero bits of an <em>integer</em>
 value.</p>
 </section>
 <section id="id86">
-<h3><strong>Options</strong><a class="headerlink" href="#id86" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id86" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>the value to count trailing zero bits in</p>
@@ -4210,7 +4209,7 @@ value.</p>
 </ul>
 </section>
 <section id="id87">
-<h3><strong>Result</strong><a class="headerlink" href="#id87" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id87" title="Link to this heading">#</a></h3>
 <p>The number of trailing rightmost zero bits in an <em>integer</em> value after
 the last non-zero bit.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>       &gt;      right-most non-zero bit
@@ -4227,7 +4226,7 @@ in <strong>i</strong>, starting with the rightmost bit being zero and counting t
 the left.</p>
 </section>
 <section id="id88">
-<h3><strong>Examples</strong><a class="headerlink" href="#id88" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id88" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_trailz</span>
 
@@ -4272,11 +4271,11 @@ the left.</p>
 </div>
 </section>
 <section id="id89">
-<h3><strong>Standard</strong><a class="headerlink" href="#id89" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id89" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id90">
-<h3><strong>See Also</strong><a class="headerlink" href="#id90" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id90" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#bit-size"><strong>bit_size</strong>(3)</a>,
 <a class="reference internal" href="#popcnt"><strong>popcnt</strong>(3)</a>,
 <a class="reference internal" href="#poppar"><strong>poppar</strong>(3)</a>,
@@ -4285,13 +4284,13 @@ the left.</p>
 </section>
 </section>
 <section id="dshiftl">
-<h2>dshiftl<a class="headerlink" href="#dshiftl" title="この見出しへのパーマリンク">#</a></h2>
+<h2>dshiftl<a class="headerlink" href="#dshiftl" title="Link to this heading">#</a></h2>
 <section id="id91">
-<h3><strong>Name</strong><a class="headerlink" href="#id91" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id91" title="Link to this heading">#</a></h3>
 <p><strong>dshiftl</strong>(3) - [BIT:COPY] Combined left shift of the bits of two integers</p>
 </section>
 <section id="id92">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id92" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id92" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">dshiftl</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4304,7 +4303,7 @@ the left.</p>
 </div>
 </section>
 <section id="id93">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id93" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id93" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>the kind of <strong>i</strong>, <strong>j</strong>, and the return value are the same. An
 exception is that one of <strong>i</strong> and <strong>j</strong> may be a BOZ literal constant
@@ -4316,7 +4315,7 @@ first converted as if by the intrinsic function <strong>int</strong>(3) to type
 </ul>
 </section>
 <section id="id94">
-<h3><strong>Description</strong><a class="headerlink" href="#id94" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id94" title="Link to this heading">#</a></h3>
 <p><strong>dshiftl</strong>(3) combines bits of <strong>i</strong> and <strong>j</strong>. The rightmost <strong>shift</strong>
 bits of the result are the leftmost <strong>shift</strong> bits of <strong>j</strong>, and the
 remaining bits are the rightmost <strong>bitsize(i)-shift</strong> of <strong>i</strong>.</p>
@@ -4334,7 +4333,7 @@ bits to the left, and then kept the same number of bits as <strong>i</strong> or
 </pre></div>
 </div>
 <section id="note">
-<h4>NOTE<a class="headerlink" href="#note" title="この見出しへのパーマリンク">#</a></h4>
+<h4>NOTE<a class="headerlink" href="#note" title="Link to this heading">#</a></h4>
 <p>This is equivalent to</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="nb">ior</span><span class="p">(</span><span class="w"> </span><span class="nb">shiftl</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="p">),</span><span class="w"> </span><span class="nb">shiftr</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="nb">bit_size</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">shift</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
@@ -4351,7 +4350,7 @@ be derived that when both <strong>i</strong> and <strong>j</strong> have the sam
 </section>
 </section>
 <section id="id95">
-<h3><strong>Options</strong><a class="headerlink" href="#id95" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id95" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>used to define the left pattern of bits in the combined pattern</p>
@@ -4373,12 +4372,12 @@ not a BOZ literal constant).</p>
 </ul>
 </section>
 <section id="id96">
-<h3><strong>Result</strong><a class="headerlink" href="#id96" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id96" title="Link to this heading">#</a></h3>
 <p>The leftmost <strong>shift</strong> bits of <strong>j</strong> are copied to the rightmost bits
 of the result, and the remaining bits are the rightmost bits of <strong>i</strong>.</p>
 </section>
 <section id="id97">
-<h3><strong>Examples</strong><a class="headerlink" href="#id97" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id97" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_dshiftl</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -4433,23 +4432,23 @@ of the result, and the remaining bits are the rightmost bits of <strong>i</stron
 </div>
 </section>
 <section id="id98">
-<h3><strong>Standard</strong><a class="headerlink" href="#id98" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id98" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id99">
-<h3><strong>See Also</strong><a class="headerlink" href="#id99" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id99" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#dshiftr"><strong>dshiftr</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="dshiftr">
-<h2>dshiftr<a class="headerlink" href="#dshiftr" title="この見出しへのパーマリンク">#</a></h2>
+<h2>dshiftr<a class="headerlink" href="#dshiftr" title="Link to this heading">#</a></h2>
 <section id="id100">
-<h3><strong>Name</strong><a class="headerlink" href="#id100" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id100" title="Link to this heading">#</a></h3>
 <p><strong>dshiftr</strong>(3) - [BIT:COPY] Combined right shift of the bits of two integers</p>
 </section>
 <section id="id101">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id101" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id101" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">dshiftr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4462,7 +4461,7 @@ of the result, and the remaining bits are the rightmost bits of <strong>i</stron
 </div>
 </section>
 <section id="id102">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id102" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id102" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any kind value for the <em>integer</em> type</p></li>
 <li><p>the kind of <strong>i</strong>, <strong>j</strong>, and the return value are the same. An
@@ -4474,7 +4473,7 @@ kind type parameter of the other.</p></li>
 </ul>
 </section>
 <section id="id103">
-<h3><strong>Description</strong><a class="headerlink" href="#id103" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id103" title="Link to this heading">#</a></h3>
 <p><strong>dshiftr</strong>(3) combines bits of <strong>i</strong> and <strong>j</strong>. The leftmost <strong>shift</strong>
 bits of the result are the rightmost <strong>shift</strong> bits of <strong>i</strong>, and the
 remaining bits are the leftmost bits of <strong>j</strong>.</p>
@@ -4500,7 +4499,7 @@ shift&quot;...</p>
 </pre></div>
 </div>
 <section id="id104">
-<h4>NOTE<a class="headerlink" href="#id104" title="この見出しへのパーマリンク">#</a></h4>
+<h4>NOTE<a class="headerlink" href="#id104" title="Link to this heading">#</a></h4>
 <p><strong>dshifr(i,j,shift)</strong> is equivalent to</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="nb">ior</span><span class="p">(</span><span class="nb">shiftl</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="nb">bit_size</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">shift</span><span class="p">),</span><span class="w"> </span><span class="nb">shiftr</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
@@ -4517,7 +4516,7 @@ value</p>
 </section>
 </section>
 <section id="id105">
-<h3><strong>Options</strong><a class="headerlink" href="#id105" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id105" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>left value of the pair of values to be combine-shifted right</p>
@@ -4538,14 +4537,14 @@ of bits in an input value as can be computed by <strong>bit_size</strong>(3).</p
 </ul>
 </section>
 <section id="id106">
-<h3><strong>Result</strong><a class="headerlink" href="#id106" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id106" title="Link to this heading">#</a></h3>
 <p>The result is a combined right shift of <strong>i</strong> and <strong>j</strong> that is the
 same as the bit patterns of the inputs being combined left to right,
 dropping off <strong>shift</strong> bits on the right and then retaining the same
 number of bits as an input value from the rightmost bits.</p>
 </section>
 <section id="id107">
-<h3><strong>Examples</strong><a class="headerlink" href="#id107" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id107" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_dshiftr</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -4596,23 +4595,23 @@ number of bits as an input value from the rightmost bits.</p>
 </div>
 </section>
 <section id="id108">
-<h3><strong>Standard</strong><a class="headerlink" href="#id108" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id108" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id109">
-<h3><strong>See Also</strong><a class="headerlink" href="#id109" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id109" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#dshiftl"><strong>dshiftl</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="merge-bits">
-<h2>merge_bits<a class="headerlink" href="#merge-bits" title="この見出しへのパーマリンク">#</a></h2>
+<h2>merge_bits<a class="headerlink" href="#merge-bits" title="Link to this heading">#</a></h2>
 <section id="id110">
-<h3><strong>Name</strong><a class="headerlink" href="#id110" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id110" title="Link to this heading">#</a></h3>
 <p><strong>merge_bits</strong>(3) - [BIT:COPY] Merge bits using a mask</p>
 </section>
 <section id="id111">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id111" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id111" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">merge_bits</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4623,7 +4622,7 @@ number of bits as an input value from the rightmost bits.</p>
 </div>
 </section>
 <section id="id112">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id112" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id112" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>the result and all input values have the same <em>integer</em> type and
 KIND with the exception that the mask and either <strong>i</strong> or <strong>j</strong> may be
@@ -4631,7 +4630,7 @@ a BOZ constant.</p></li>
 </ul>
 </section>
 <section id="id113">
-<h3><strong>Description</strong><a class="headerlink" href="#id113" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id113" title="Link to this heading">#</a></h3>
 <p>A common graphics operation in Ternary Raster Operations is to combine
 bits from two different sources, generally referred to as bit-blending.
 <strong>merge_bits</strong>(3) performs a masked bit-blend of <strong>i</strong> and <strong>j</strong> using
@@ -4653,7 +4652,7 @@ by the intrinsic function <strong>int()</strong> with the kind of the non-BOZ va
 so the BOZ values must be in the range of the type of the result.</p>
 </section>
 <section id="id114">
-<h3><strong>Options</strong><a class="headerlink" href="#id114" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id114" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>value to select bits from when the associated bit in the mask is <strong>1</strong>.</p>
@@ -4673,11 +4672,11 @@ so the BOZ values must be in the range of the type of the result.</p>
 </ul>
 </section>
 <section id="id115">
-<h3><strong>Result</strong><a class="headerlink" href="#id115" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id115" title="Link to this heading">#</a></h3>
 <p>The bits blended from <strong>i</strong> and <strong>j</strong> using the mask <strong>mask</strong>.</p>
 </section>
 <section id="id116">
-<h3><strong>Examples</strong><a class="headerlink" href="#id116" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id116" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_merge_bits</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w">  </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -4732,23 +4731,23 @@ so the BOZ values must be in the range of the type of the result.</p>
 </div>
 </section>
 <section id="id117">
-<h3><strong>Standard</strong><a class="headerlink" href="#id117" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id117" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id118">
-<h3><strong>See also</strong><a class="headerlink" href="#id118" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See also</strong><a class="headerlink" href="#id118" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#"><span class="xref myst">****(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="mvbits">
-<h2>mvbits<a class="headerlink" href="#mvbits" title="この見出しへのパーマリンク">#</a></h2>
+<h2>mvbits<a class="headerlink" href="#mvbits" title="Link to this heading">#</a></h2>
 <section id="id119">
-<h3><strong>Name</strong><a class="headerlink" href="#id119" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id119" title="Link to this heading">#</a></h3>
 <p><strong>mvbits</strong>(3) - [BIT:COPY] Reproduce bit patterns found in one integer in another</p>
 </section>
 <section id="id120">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id120" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id120" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="k">call </span><span class="nb">mvbits</span><span class="p">(</span><span class="n">from</span><span class="p">,</span><span class="w"> </span><span class="n">frompos</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="p">,</span><span class="w"> </span><span class="n">topos</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4763,7 +4762,7 @@ so the BOZ values must be in the range of the type of the result.</p>
 </div>
 </section>
 <section id="id121">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id121" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id121" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>from</strong> is an <em>integer</em></p></li>
 <li><p><strong>frompos</strong> is an integer</p></li>
@@ -4773,7 +4772,7 @@ so the BOZ values must be in the range of the type of the result.</p>
 </ul>
 </section>
 <section id="id122">
-<h3><strong>Description</strong><a class="headerlink" href="#id122" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id122" title="Link to this heading">#</a></h3>
 <p><strong>mvbits</strong>(3) copies a bit pattern found in a range of adjacent bits in
 the <em>integer</em> <strong>from</strong> to a specified position in another integer <strong>to</strong>
 (which is of the same kind as <strong>from</strong>). It otherwise leaves the bits
@@ -4784,7 +4783,7 @@ nonnegative and less than <strong>bit_size</strong>(from).</p>
 <p>The bits are numbered <strong>0</strong> to <strong>bit_size(i)-1</strong>, from right to left.</p>
 </section>
 <section id="id123">
-<h3><strong>Options</strong><a class="headerlink" href="#id123" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id123" title="Link to this heading">#</a></h3>
 <ul>
 <li><dl class="simple myst">
 <dt><strong>from</strong></dt><dd><p>An <em>integer</em> to read bits from.</p>
@@ -4827,7 +4826,7 @@ the <strong>len</strong> bits of <strong>from</strong> starting at <strong>fromp
 </ul>
 </section>
 <section id="id124">
-<h3><strong>Examples</strong><a class="headerlink" href="#id124" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id124" title="Link to this heading">#</a></h3>
 <p>Sample program that populates a new 32-bit integer with its bytes
 in reverse order from the input value (ie. changes the Endian of the integer).</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_mvbits</span>
@@ -4902,11 +4901,11 @@ in reverse order from the input value (ie. changes the Endian of the integer).</
 </div>
 </section>
 <section id="id125">
-<h3><strong>Standard</strong><a class="headerlink" href="#id125" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id125" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id126">
-<h3><strong>See Also</strong><a class="headerlink" href="#id126" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id126" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
 <a class="reference internal" href="#ibclr"><strong>ibclr</strong>(3)</a>,
 <a class="reference internal" href="#not"><strong>not</strong>(3)</a>,
@@ -4921,13 +4920,13 @@ in reverse order from the input value (ie. changes the Endian of the integer).</
 </section>
 </section>
 <section id="ibits">
-<h2>ibits<a class="headerlink" href="#ibits" title="この見出しへのパーマリンク">#</a></h2>
+<h2>ibits<a class="headerlink" href="#ibits" title="Link to this heading">#</a></h2>
 <section id="id127">
-<h3><strong>Name</strong><a class="headerlink" href="#id127" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id127" title="Link to this heading">#</a></h3>
 <p><strong>ibits</strong>(3) - [BIT:COPY] Extraction of a subset of bits</p>
 </section>
 <section id="id128">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id128" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id128" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibits</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4940,7 +4939,7 @@ in reverse order from the input value (ie. changes the Endian of the integer).</
 </div>
 </section>
 <section id="id129">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id129" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id129" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported <em>integer</em> kind</p></li>
 <li><p><strong>i</strong> may be any supported <em>integer</em> kind as well</p></li>
@@ -4948,7 +4947,7 @@ in reverse order from the input value (ie. changes the Endian of the integer).</
 </ul>
 </section>
 <section id="id130">
-<h3><strong>Description</strong><a class="headerlink" href="#id130" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id130" title="Link to this heading">#</a></h3>
 <p><strong>ibits</strong>(3) extracts a field of bits from <strong>i</strong>, starting
 from bit position <strong>pos</strong> and extending left for a total of <strong>len</strong> bits.</p>
 <p>The result is then right-justified and the remaining left-most bits in the
@@ -4957,7 +4956,7 @@ result are zeroed.</p>
 the positions increment to the left.</p>
 </section>
 <section id="id131">
-<h3><strong>Options</strong><a class="headerlink" href="#id131" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id131" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The value to extract bits from</p>
@@ -4979,12 +4978,12 @@ non-negative.</p>
 <p><strong>pos + len</strong> shall be less than or equal to <strong>bit_size(i)</strong>.</p>
 </section>
 <section id="id132">
-<h3><strong>Result</strong><a class="headerlink" href="#id132" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id132" title="Link to this heading">#</a></h3>
 <p>The return value is composed of the selected bits right-justified,
 left-padded with zeros.</p>
 </section>
 <section id="id133">
-<h3><strong>Examples</strong><a class="headerlink" href="#id133" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id133" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_ibits</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w">  </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -5025,11 +5024,11 @@ left-padded with zeros.</p>
 </div>
 </section>
 <section id="id134">
-<h3><strong>Standard</strong><a class="headerlink" href="#id134" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id134" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id135">
-<h3><strong>See Also</strong><a class="headerlink" href="#id135" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id135" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
 <a class="reference internal" href="#ibclr"><strong>ibclr</strong>(3)</a>,
 <a class="reference internal" href="#not"><strong>not</strong>(3)</a>,
@@ -5044,13 +5043,13 @@ left-padded with zeros.</p>
 </section>
 </section>
 <section id="ibclr">
-<h2>ibclr<a class="headerlink" href="#ibclr" title="この見出しへのパーマリンク">#</a></h2>
+<h2>ibclr<a class="headerlink" href="#ibclr" title="Link to this heading">#</a></h2>
 <section id="id136">
-<h3><strong>Name</strong><a class="headerlink" href="#id136" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id136" title="Link to this heading">#</a></h3>
 <p><strong>ibclr</strong>(3) - [BIT:SET] Clear a bit</p>
 </section>
 <section id="id137">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id137" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id137" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibclr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5062,7 +5061,7 @@ left-padded with zeros.</p>
 </div>
 </section>
 <section id="id138">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id138" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id138" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> shall be type <em>integer</em>.</p></li>
 <li><p><strong>pos</strong> shall be type <em>integer</em>.</p></li>
@@ -5071,12 +5070,12 @@ left-padded with zeros.</p>
 </ul>
 </section>
 <section id="id139">
-<h3><strong>Description</strong><a class="headerlink" href="#id139" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id139" title="Link to this heading">#</a></h3>
 <p><strong>ibclr</strong>(3) returns the value of <strong>i</strong> with the bit at position <strong>pos</strong>
 set to zero.</p>
 </section>
 <section id="id140">
-<h3><strong>Options</strong><a class="headerlink" href="#id140" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id140" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The initial value to be modified</p>
@@ -5093,12 +5092,12 @@ nonnegative and less than <strong>(bit_size(i)</strong>).</p>
 </ul>
 </section>
 <section id="id141">
-<h3><strong>Result</strong><a class="headerlink" href="#id141" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id141" title="Link to this heading">#</a></h3>
 <p>The returned value has the same bit sequence as <strong>i</strong> except the
 designated bit is unconditionally set to <strong>0</strong></p>
 </section>
 <section id="id142">
-<h3><strong>Examples</strong><a class="headerlink" href="#id142" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id142" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_ibclr</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w">  </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -5144,11 +5143,11 @@ designated bit is unconditionally set to <strong>0</strong></p>
 </div>
 </section>
 <section id="id143">
-<h3><strong>Standard</strong><a class="headerlink" href="#id143" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id143" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id144">
-<h3><strong>See Also</strong><a class="headerlink" href="#id144" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id144" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
 <a class="reference internal" href="#not"><strong>not</strong>(3)</a>,
 <a class="reference internal" href="#btest"><strong>btest</strong>(3)</a>,
@@ -5162,13 +5161,13 @@ designated bit is unconditionally set to <strong>0</strong></p>
 </section>
 </section>
 <section id="ibset">
-<h2>ibset<a class="headerlink" href="#ibset" title="この見出しへのパーマリンク">#</a></h2>
+<h2>ibset<a class="headerlink" href="#ibset" title="Link to this heading">#</a></h2>
 <section id="id145">
-<h3><strong>Name</strong><a class="headerlink" href="#id145" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id145" title="Link to this heading">#</a></h3>
 <p><strong>ibset</strong>(3) - [BIT:SET] Set a bit to one in an integer value</p>
 </section>
 <section id="id146">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id146" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id146" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibset</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5180,7 +5179,7 @@ designated bit is unconditionally set to <strong>0</strong></p>
 </div>
 </section>
 <section id="id147">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id147" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id147" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p>The return value is of the same kind as <strong>i</strong>. Otherwise,
@@ -5188,11 +5187,11 @@ any <em>integer</em> kinds are allowed.</p></li>
 </ul>
 </section>
 <section id="id148">
-<h3><strong>Description</strong><a class="headerlink" href="#id148" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id148" title="Link to this heading">#</a></h3>
 <p><strong>ibset</strong>(3) returns the value of <strong>i</strong> with the bit at position <strong>pos</strong> set to one.</p>
 </section>
 <section id="id149">
-<h3><strong>Options</strong><a class="headerlink" href="#id149" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id149" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The initial value to be modified</p>
@@ -5209,12 +5208,12 @@ nonnegative and less than <strong>(bit_size(i)</strong>).</p>
 </ul>
 </section>
 <section id="id150">
-<h3><strong>Result</strong><a class="headerlink" href="#id150" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id150" title="Link to this heading">#</a></h3>
 <p>The returned value has the same bit sequence as <strong>i</strong> except the
 designated bit is unconditionally set to <strong>1</strong>.</p>
 </section>
 <section id="id151">
-<h3><strong>Examples</strong><a class="headerlink" href="#id151" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id151" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_ibset</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w">  </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -5260,11 +5259,11 @@ designated bit is unconditionally set to <strong>1</strong>.</p>
 </div>
 </section>
 <section id="id152">
-<h3><strong>Standard</strong><a class="headerlink" href="#id152" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id152" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id153">
-<h3><strong>See Also</strong><a class="headerlink" href="#id153" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id153" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ibclr"><strong>ibclr</strong>(3)</a></p>
 <p><a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
 <a class="reference internal" href="#not"><strong>not</strong>(3)</a>,
@@ -5278,13 +5277,13 @@ designated bit is unconditionally set to <strong>1</strong>.</p>
 </section>
 </section>
 <section id="maskl">
-<h2>maskl<a class="headerlink" href="#maskl" title="この見出しへのパーマリンク">#</a></h2>
+<h2>maskl<a class="headerlink" href="#maskl" title="Link to this heading">#</a></h2>
 <section id="id154">
-<h3><strong>Name</strong><a class="headerlink" href="#id154" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id154" title="Link to this heading">#</a></h3>
 <p><strong>maskl</strong>(3) - [BIT:SET] Generates a left justified mask</p>
 </section>
 <section id="id155">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id155" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id155" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">maskl</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5296,7 +5295,7 @@ designated bit is unconditionally set to <strong>1</strong>.</p>
 </div>
 </section>
 <section id="id156">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id156" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id156" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>i</strong> is an integer</p></li>
@@ -5307,12 +5306,12 @@ present, which is then used to specify the kind of the result.</p></li>
 </ul>
 </section>
 <section id="id157">
-<h3><strong>Description</strong><a class="headerlink" href="#id157" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id157" title="Link to this heading">#</a></h3>
 <p><strong>maskl</strong>(3) has its leftmost <strong>i</strong> bits set to <strong>1</strong>, and the remaining
 bits set to <strong>0</strong>.</p>
 </section>
 <section id="id158">
-<h3><strong>Options</strong><a class="headerlink" href="#id158" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id158" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>the number of left-most bits to set in the <em>integer</em> result. It
@@ -5337,12 +5336,12 @@ be <em>.true.</em> :</p>
 </ul>
 </section>
 <section id="id159">
-<h3><strong>Result</strong><a class="headerlink" href="#id159" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id159" title="Link to this heading">#</a></h3>
 <p>The leftmost <strong>i</strong> bits of the output <em>integer</em> are set to 1 and the
 other bits are set to 0.</p>
 </section>
 <section id="id160">
-<h3><strong>Examples</strong><a class="headerlink" href="#id160" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id160" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_maskl</span>
 <span class="k">implicit none</span>
@@ -5371,23 +5370,23 @@ other bits are set to 0.</p>
 </div>
 </section>
 <section id="id161">
-<h3><strong>Standard</strong><a class="headerlink" href="#id161" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id161" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id162">
-<h3><strong>See Also</strong><a class="headerlink" href="#id162" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id162" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#maskr"><strong>maskr</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="maskr">
-<h2>maskr<a class="headerlink" href="#maskr" title="この見出しへのパーマリンク">#</a></h2>
+<h2>maskr<a class="headerlink" href="#maskr" title="Link to this heading">#</a></h2>
 <section id="id163">
-<h3><strong>Name</strong><a class="headerlink" href="#id163" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id163" title="Link to this heading">#</a></h3>
 <p><strong>maskr</strong>(3) - [BIT:SET] Generates a right-justified mask</p>
 </section>
 <section id="id164">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id164" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id164" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">maskr</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5399,7 +5398,7 @@ other bits are set to 0.</p>
 </div>
 </section>
 <section id="id165">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id165" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id165" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>i</strong> is an integer</p></li>
@@ -5410,12 +5409,12 @@ present, which is then used to specify the kind of the result.</p></li>
 </ul>
 </section>
 <section id="id166">
-<h3><strong>Description</strong><a class="headerlink" href="#id166" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id166" title="Link to this heading">#</a></h3>
 <p><strong>maskr</strong>(3) generates an <em>integer</em> with its rightmost <strong>i</strong>
 bits set to 1, and the remaining bits set to 0.</p>
 </section>
 <section id="id167">
-<h3><strong>Options</strong><a class="headerlink" href="#id167" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id167" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>the number of right-most bits to set in the <em>integer</em> result. It
@@ -5440,12 +5439,12 @@ be <em>.true.</em> :</p>
 </ul>
 </section>
 <section id="id168">
-<h3><strong>Result</strong><a class="headerlink" href="#id168" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id168" title="Link to this heading">#</a></h3>
 <p>The rightmost <strong>i</strong> bits of the output <em>integer</em> are set to 1 and the
 other bits are set to 0.</p>
 </section>
 <section id="id169">
-<h3><strong>Examples</strong><a class="headerlink" href="#id169" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id169" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_maskr</span>
 <span class="k">implicit none</span>
@@ -5493,24 +5492,24 @@ other bits are set to 0.</p>
 </div>
 </section>
 <section id="id170">
-<h3><strong>Standard</strong><a class="headerlink" href="#id170" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id170" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id171">
-<h3><strong>See Also</strong><a class="headerlink" href="#id171" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id171" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#maskl"><strong>maskl</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="iparity">
-<h2>iparity<a class="headerlink" href="#iparity" title="この見出しへのパーマリンク">#</a></h2>
+<h2>iparity<a class="headerlink" href="#iparity" title="Link to this heading">#</a></h2>
 <section id="id172">
-<h3><strong>Name</strong><a class="headerlink" href="#id172" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id172" title="Link to this heading">#</a></h3>
 <p><strong>iparity</strong>(3) - [BIT:LOGICAL] Bitwise exclusive OR of array elements</p>
 </section>
 <section id="id173">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id173" title="この見出しへのパーマリンク">#</a></h3>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span>    result = iparity( array [,mask] ) | iparity( array, dim [,mask] )
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id173" title="Link to this heading">#</a></h3>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">iparity</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="w"> </span><span class="p">[,</span><span class="n">mask</span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="nb">iparity</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="nb">dim</span><span class="w"> </span><span class="p">[,</span><span class="n">mask</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="nb">KIND</span><span class="p">)</span><span class="w"> </span><span class="k">function </span><span class="nb">iparity</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="nb">dim</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span>
@@ -5527,13 +5526,13 @@ other bits are set to 0.</p>
 </ul>
 </section>
 <section id="id174">
-<h3><strong>Description</strong><a class="headerlink" href="#id174" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id174" title="Link to this heading">#</a></h3>
 <p><strong>iparity</strong>(3) reduces with bitwise <em>xor</em> (exclusive <em>or</em>) the elements
 of <strong>array</strong> along dimension <strong>dim</strong> if the corresponding element in
 <strong>mask</strong> is <em>.true.</em>.</p>
 </section>
 <section id="id175">
-<h3><strong>Options</strong><a class="headerlink" href="#id175" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id175" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>array</strong></dt><dd><p>an array of <em>integer</em> values</p>
@@ -5550,7 +5549,7 @@ as <strong>array</strong>.</p>
 </ul>
 </section>
 <section id="id176">
-<h3><strong>Result</strong><a class="headerlink" href="#id176" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id176" title="Link to this heading">#</a></h3>
 <p>The result is of the same type as <strong>array</strong>.</p>
 <p>If <strong>dim</strong> is absent, a scalar with the bitwise <em>xor</em> of all elements in <strong>array</strong>
 is returned. Otherwise, an array of rank <strong>n-1</strong>, where <strong>n</strong> equals the
@@ -5573,7 +5572,7 @@ if ARRAY has rank one.</p>
 </div>
 </section>
 <section id="id177">
-<h3><strong>Examples</strong><a class="headerlink" href="#id177" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id177" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_iparity</span>
 <span class="k">implicit none</span>
@@ -5590,11 +5589,11 @@ if ARRAY has rank one.</p>
 </div>
 </section>
 <section id="id178">
-<h3><strong>Standard</strong><a class="headerlink" href="#id178" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id178" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id179">
-<h3><strong>See Also</strong><a class="headerlink" href="#id179" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id179" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#iany"><strong>iany</strong>(3)</a>,
 <a class="reference internal" href="#iall"><strong>iall</strong>(3)</a>,
 <a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
@@ -5603,14 +5602,14 @@ if ARRAY has rank one.</p>
 </section>
 </section>
 <section id="iall">
-<h2>iall<a class="headerlink" href="#iall" title="この見出しへのパーマリンク">#</a></h2>
+<h2>iall<a class="headerlink" href="#iall" title="Link to this heading">#</a></h2>
 <section id="id180">
-<h3><strong>Name</strong><a class="headerlink" href="#id180" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id180" title="Link to this heading">#</a></h3>
 <p><strong>iall</strong>(3) - [BIT:LOGICAL] Bitwise and of array elements</p>
 </section>
 <section id="id181">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id181" title="この見出しへのパーマリンク">#</a></h3>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span>    result = iall(array [,mask]) | iall(array ,dim [,mask])
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id181" title="Link to this heading">#</a></h3>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">iall</span><span class="p">(</span><span class="k">array</span><span class="w"> </span><span class="p">[,</span><span class="n">mask</span><span class="p">])</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="nb">iall</span><span class="p">(</span><span class="k">array</span><span class="w"> </span><span class="p">,</span><span class="nb">dim</span><span class="w"> </span><span class="p">[,</span><span class="n">mask</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="nb">KIND</span><span class="p">)</span><span class="w"> </span><span class="k">function </span><span class="nb">iall</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="nb">dim</span><span class="p">,</span><span class="n">mask</span><span class="p">)</span>
@@ -5622,7 +5621,7 @@ if ARRAY has rank one.</p>
 </div>
 </section>
 <section id="id182">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id182" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id182" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>array</strong> must be an <em>integer</em> array</p></li>
@@ -5633,12 +5632,12 @@ if ARRAY has rank one.</p>
 </ul>
 </section>
 <section id="id183">
-<h3><strong>Description</strong><a class="headerlink" href="#id183" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id183" title="Link to this heading">#</a></h3>
 <p><strong>iall</strong>(3) reduces with a bitwise <em>and</em> the elements of <strong>array</strong> along
 dimension <strong>dim</strong> if the corresponding element in <strong>mask</strong> is <em>.true.</em>.</p>
 </section>
 <section id="id184">
-<h3><strong>Options</strong><a class="headerlink" href="#id184" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id184" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>array</strong></dt><dd><p>Shall be an array of type <em>integer</em></p>
@@ -5660,7 +5659,7 @@ array of the same shape as <strong>array</strong>.</p>
 </ul>
 </section>
 <section id="id185">
-<h3><strong>Result</strong><a class="headerlink" href="#id185" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id185" title="Link to this heading">#</a></h3>
 <p>The result is of the same type as <strong>array</strong>.</p>
 <p>If <strong>dim</strong> is absent, a scalar with the bitwise <em>all</em> of all elements in
 <strong>array</strong> is returned. Otherwise, an array of rank <strong>n-1</strong>, where <strong>n</strong>
@@ -5668,7 +5667,7 @@ equals the rank of <strong>array</strong>, and a shape similar to that of <stron
 with dimension <strong>dim</strong> dropped is returned.</p>
 </section>
 <section id="id186">
-<h3><strong>Examples</strong><a class="headerlink" href="#id186" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id186" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_iall</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">integer_kinds</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
@@ -5690,11 +5689,11 @@ with dimension <strong>dim</strong> dropped is returned.</p>
 </div>
 </section>
 <section id="id187">
-<h3><strong>Standard</strong><a class="headerlink" href="#id187" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id187" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id188">
-<h3><strong>See Also</strong><a class="headerlink" href="#id188" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id188" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#iany"><strong>iany</strong>(3)</a>,
 <a class="reference internal" href="#iparity"><strong>iparity</strong>(3)</a>,
 <a class="reference internal" href="#iand"><strong>iand</strong>(3)</a></p>
@@ -5702,13 +5701,13 @@ with dimension <strong>dim</strong> dropped is returned.</p>
 </section>
 </section>
 <section id="iand">
-<h2>iand<a class="headerlink" href="#iand" title="この見出しへのパーマリンク">#</a></h2>
+<h2>iand<a class="headerlink" href="#iand" title="Link to this heading">#</a></h2>
 <section id="id189">
-<h3><strong>Name</strong><a class="headerlink" href="#id189" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id189" title="Link to this heading">#</a></h3>
 <p><strong>iand</strong>(3) - [BIT:LOGICAL] Bitwise logical AND</p>
 </section>
 <section id="id190">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id190" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id190" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">iand</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5720,18 +5719,18 @@ with dimension <strong>dim</strong> dropped is returned.</p>
 </div>
 </section>
 <section id="id191">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id191" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id191" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong>, <strong>j</strong> and the result shall have the same <em>integer</em> type and kind,
 with the exception that one of <strong>i</strong> or <strong>j</strong> may be a BOZ constant.</p></li>
 </ul>
 </section>
 <section id="id192">
-<h3><strong>Description</strong><a class="headerlink" href="#id192" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id192" title="Link to this heading">#</a></h3>
 <p><strong>iand</strong>(3) returns the bitwise logical <strong>and</strong> of two values.</p>
 </section>
 <section id="id193">
-<h3><strong>Options</strong><a class="headerlink" href="#id193" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id193" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>one of the pair of values to compare the bits of</p>
@@ -5749,7 +5748,7 @@ as if by the intrinsic function <strong>int</strong>(3) to type <em>integer</em>
 kind type parameter of the other.</p>
 </section>
 <section id="id194">
-<h3><strong>Result</strong><a class="headerlink" href="#id194" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id194" title="Link to this heading">#</a></h3>
 <p>The result has the value obtained by combining <strong>i</strong> and <strong>i</strong>
 bit-by-bit according to the following table:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>    I  |  J  |  IAND (I, J)
@@ -5765,7 +5764,7 @@ bit-by-bit according to the following table:</p>
 <p>This is commonly called the &quot;bitwise logical AND&quot; of the two values.</p>
 </section>
 <section id="id195">
-<h3><strong>Examples</strong><a class="headerlink" href="#id195" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id195" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_iand</span>
 <span class="k">implicit none</span>
@@ -5785,11 +5784,11 @@ bit-by-bit according to the following table:</p>
 </div>
 </section>
 <section id="id196">
-<h3><strong>Standard</strong><a class="headerlink" href="#id196" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id196" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id197">
-<h3><strong>See Also</strong><a class="headerlink" href="#id197" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id197" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
 <a class="reference internal" href="#ibclr"><strong>ibclr</strong>(3)</a>,
 <a class="reference internal" href="#not"><strong>not</strong>(3)</a>,
@@ -5804,14 +5803,14 @@ bit-by-bit according to the following table:</p>
 </section>
 </section>
 <section id="iany">
-<h2>iany<a class="headerlink" href="#iany" title="この見出しへのパーマリンク">#</a></h2>
+<h2>iany<a class="headerlink" href="#iany" title="Link to this heading">#</a></h2>
 <section id="id198">
-<h3><strong>Name</strong><a class="headerlink" href="#id198" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id198" title="Link to this heading">#</a></h3>
 <p><strong>iany</strong>(3) - [BIT:LOGICAL] Bitwise OR of array elements</p>
 </section>
 <section id="id199">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id199" title="この見出しへのパーマリンク">#</a></h3>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span>    result = iany(array [,mask]) | iany(array ,dim [,mask])
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id199" title="Link to this heading">#</a></h3>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">iany</span><span class="p">(</span><span class="k">array</span><span class="w"> </span><span class="p">[,</span><span class="n">mask</span><span class="p">])</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="nb">iany</span><span class="p">(</span><span class="k">array</span><span class="w"> </span><span class="p">,</span><span class="nb">dim</span><span class="w"> </span><span class="p">[,</span><span class="n">mask</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="nb">KIND</span><span class="p">)</span><span class="w"> </span><span class="k">function </span><span class="nb">iany</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="nb">dim</span><span class="p">,</span><span class="n">mask</span><span class="p">)</span>
@@ -5823,7 +5822,7 @@ bit-by-bit according to the following table:</p>
 </div>
 </section>
 <section id="id200">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id200" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id200" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>array</strong> is an <em>integer</em> array</p></li>
 <li><p><strong>dim</strong> may be of any <em>integer</em> kind.</p></li>
@@ -5836,13 +5835,13 @@ dimension <strong>dim</strong>.</p></li>
 <p>note a kind designated as ** may be any supported kind for the type</p>
 </section>
 <section id="id201">
-<h3><strong>Description</strong><a class="headerlink" href="#id201" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id201" title="Link to this heading">#</a></h3>
 <p><strong>iany</strong>(3) reduces with bitwise <strong>OR</strong> (inclusive <strong>OR</strong>) the
 elements of <strong>array</strong> along dimension <strong>dim</strong> if the corresponding
 element in <strong>mask</strong> is <em>.true.</em>.</p>
 </section>
 <section id="id202">
-<h3><strong>Options</strong><a class="headerlink" href="#id202" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id202" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>array</strong></dt><dd><p>an array of elements to selectively <strong>OR</strong> based on the mask.</p>
@@ -5863,7 +5862,7 @@ of <strong>array</strong>.</p>
 </ul>
 </section>
 <section id="id203">
-<h3><strong>Result</strong><a class="headerlink" href="#id203" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id203" title="Link to this heading">#</a></h3>
 <p>The result is of the same type as <strong>array</strong>.</p>
 <p>If <strong>dim</strong> is absent, a scalar with the bitwise <em>or</em> of all elements in
 <strong>array</strong> is returned. Otherwise, an array of rank <strong>n-1</strong>, where <strong>n</strong>
@@ -5871,7 +5870,7 @@ equals the rank of <strong>array</strong>, and a shape similar to that of <stron
 with dimension <strong>dim</strong> dropped is returned.</p>
 </section>
 <section id="id204">
-<h3><strong>Examples</strong><a class="headerlink" href="#id204" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id204" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_iany</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">integer_kinds</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
@@ -5920,11 +5919,11 @@ with dimension <strong>dim</strong> dropped is returned.</p>
 </div>
 </section>
 <section id="id205">
-<h3><strong>Standard</strong><a class="headerlink" href="#id205" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id205" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id206">
-<h3><strong>See Also</strong><a class="headerlink" href="#id206" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id206" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#iparity"><strong>iparity</strong>(3)</a>,
 <a class="reference internal" href="#iall"><strong>iall</strong>(3)</a>,
 <a class="reference internal" href="#ior"><strong>ior</strong>(3)</a></p>
@@ -5932,13 +5931,13 @@ with dimension <strong>dim</strong> dropped is returned.</p>
 </section>
 </section>
 <section id="ieor">
-<h2>ieor<a class="headerlink" href="#ieor" title="この見出しへのパーマリンク">#</a></h2>
+<h2>ieor<a class="headerlink" href="#ieor" title="Link to this heading">#</a></h2>
 <section id="id207">
-<h3><strong>Name</strong><a class="headerlink" href="#id207" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id207" title="Link to this heading">#</a></h3>
 <p><strong>ieor</strong>(3) - [BIT:LOGICAL] Bitwise exclusive OR</p>
 </section>
 <section id="id208">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id208" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id208" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ieor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5950,7 +5949,7 @@ with dimension <strong>dim</strong> dropped is returned.</p>
 </div>
 </section>
 <section id="id209">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id209" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id209" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong>, <strong>j</strong> and the result must be of the same <em>integer</em> kind.</p></li>
 <li><p>An exception is that one of <strong>i</strong> and <strong>j</strong> may be a BOZ literal
@@ -5958,7 +5957,7 @@ constant</p></li>
 </ul>
 </section>
 <section id="id210">
-<h3><strong>Description</strong><a class="headerlink" href="#id210" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id210" title="Link to this heading">#</a></h3>
 <p><strong>ieor</strong>(3) returns a bitwise exclusive-<strong>or</strong> of <strong>i</strong> and <strong>j</strong>.</p>
 <p>An exclusive OR or &quot;exclusive disjunction&quot; is a logical operation that
 is true if and only if its arguments differ. In this case a one-bit
@@ -5977,7 +5976,7 @@ following table:</p>
 </div>
 </section>
 <section id="id211">
-<h3><strong>Options</strong><a class="headerlink" href="#id211" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id211" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>the first of the two values to XOR</p>
@@ -5995,12 +5994,12 @@ as if by the intrinsic function INT to type integer with the kind
 type parameter of the other.</p>
 </section>
 <section id="id212">
-<h3><strong>Result</strong><a class="headerlink" href="#id212" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id212" title="Link to this heading">#</a></h3>
 <p>If a bit is different at the same location in <strong>i</strong> and <strong>j</strong>
 the corresponding bit in the result is <strong>1</strong>, otherwise it is <strong>0</strong>.</p>
 </section>
 <section id="id213">
-<h3><strong>Examples</strong><a class="headerlink" href="#id213" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id213" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_ieor</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w">  </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -6038,11 +6037,11 @@ the corresponding bit in the result is <strong>1</strong>, otherwise it is <stro
 </div>
 </section>
 <section id="id214">
-<h3><strong>Standard</strong><a class="headerlink" href="#id214" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id214" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id215">
-<h3><strong>See Also</strong><a class="headerlink" href="#id215" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id215" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
 <a class="reference internal" href="#ibclr"><strong>ibclr</strong>(3)</a>,
 <a class="reference internal" href="#not"><strong>not</strong>(3)</a>,
@@ -6057,13 +6056,13 @@ the corresponding bit in the result is <strong>1</strong>, otherwise it is <stro
 </section>
 </section>
 <section id="ior">
-<h2>ior<a class="headerlink" href="#ior" title="この見出しへのパーマリンク">#</a></h2>
+<h2>ior<a class="headerlink" href="#ior" title="Link to this heading">#</a></h2>
 <section id="id216">
-<h3><strong>Name</strong><a class="headerlink" href="#id216" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id216" title="Link to this heading">#</a></h3>
 <p><strong>ior</strong>(3) - [BIT:LOGICAL] Bitwise logical inclusive OR</p>
 </section>
 <section id="id217">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id217" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id217" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -6075,18 +6074,18 @@ the corresponding bit in the result is <strong>1</strong>, otherwise it is <stro
 </div>
 </section>
 <section id="id218">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id218" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id218" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong>, <strong>j</strong> and the result shall have the same <em>integer</em> type and kind,
 with the exception that one of <strong>i</strong> or <strong>j</strong> may be a BOZ constant.</p></li>
 </ul>
 </section>
 <section id="id219">
-<h3><strong>Description</strong><a class="headerlink" href="#id219" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id219" title="Link to this heading">#</a></h3>
 <p><strong>ior</strong>(3) returns the bit-wise Boolean inclusive-or of <strong>i</strong> and <strong>j</strong>.</p>
 </section>
 <section id="id220">
-<h3><strong>Options</strong><a class="headerlink" href="#id220" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id220" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>one of the pair of values to compare the bits of</p>
@@ -6104,7 +6103,7 @@ as if by the intrinsic function <strong>int</strong>(3) to type <em>integer</em>
 kind type parameter of the other.</p>
 </section>
 <section id="id221">
-<h3><strong>Result</strong><a class="headerlink" href="#id221" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id221" title="Link to this heading">#</a></h3>
 <p>The result has the value obtained by combining I and J
 bit-by-bit according to the following table:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>          I   J   IOR (I, J)
@@ -6119,7 +6118,7 @@ result. Otherwise the result bit is zero.</p>
 <p>This is commonly called the &quot;bitwise logical inclusive OR&quot; of the two values.</p>
 </section>
 <section id="id222">
-<h3><strong>Examples</strong><a class="headerlink" href="#id222" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id222" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_ior</span>
 <span class="k">implicit none</span>
@@ -6139,11 +6138,11 @@ result. Otherwise the result bit is zero.</p>
 </div>
 </section>
 <section id="id223">
-<h3><strong>Standard</strong><a class="headerlink" href="#id223" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id223" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id224">
-<h3><strong>See Also</strong><a class="headerlink" href="#id224" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id224" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
 <a class="reference internal" href="#ibclr"><strong>ibclr</strong>(3)</a>,
 <a class="reference internal" href="#not"><strong>not</strong>(3)</a>,
@@ -6158,13 +6157,13 @@ result. Otherwise the result bit is zero.</p>
 </section>
 </section>
 <section id="not">
-<h2>not<a class="headerlink" href="#not" title="この見出しへのパーマリンク">#</a></h2>
+<h2>not<a class="headerlink" href="#not" title="Link to this heading">#</a></h2>
 <section id="id225">
-<h3><strong>Name</strong><a class="headerlink" href="#id225" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id225" title="Link to this heading">#</a></h3>
 <p><strong>not</strong>(3) - [BIT:LOGICAL] Logical negation; flips all bits in an integer</p>
 </section>
 <section id="id226">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id226" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id226" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">not</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -6175,21 +6174,21 @@ result. Otherwise the result bit is zero.</p>
 </div>
 </section>
 <section id="id227">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id227" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id227" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>i</strong> may be an <em>integer</em> of any valid kind</p></li>
 <li><p>The returned <em>integer</em> is of the same kind as the argument <strong>i</strong>.</p></li>
 </ul>
 </section>
 <section id="id228">
-<h3><strong>Description</strong><a class="headerlink" href="#id228" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id228" title="Link to this heading">#</a></h3>
 <p><strong>not</strong>(3) returns the bitwise Boolean inverse of <strong>i</strong>. This is also
 known as the &quot;Bitwise complement&quot; or &quot;Logical negation&quot; of the value.</p>
 <p>If an input bit is a one, that position is a zero on output. Conversely
 any input bit that is zero is a one on output.</p>
 </section>
 <section id="id229">
-<h3><strong>Options</strong><a class="headerlink" href="#id229" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id229" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The value to flip the bits of.</p>
@@ -6199,7 +6198,7 @@ any input bit that is zero is a one on output.</p>
 </ul>
 </section>
 <section id="id230">
-<h3><strong>Result</strong><a class="headerlink" href="#id230" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id230" title="Link to this heading">#</a></h3>
 <p>The result has the value obtained by complementing <strong>i</strong> bit-by-bit
 according to the following truth table:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>   &gt;    I   |  NOT(I)
@@ -6211,7 +6210,7 @@ according to the following truth table:</p>
 <p>That is, every input bit is flipped.</p>
 </section>
 <section id="id231">
-<h3><strong>Examples</strong><a class="headerlink" href="#id231" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id231" title="Link to this heading">#</a></h3>
 <p>Sample program</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_not</span>
 <span class="k">implicit none</span>
@@ -6245,11 +6244,11 @@ according to the following truth table:</p>
 </div>
 </section>
 <section id="id232">
-<h3><strong>Standard</strong><a class="headerlink" href="#id232" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id232" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id233">
-<h3><strong>See Also</strong><a class="headerlink" href="#id233" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id233" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#iand"><strong>iand</strong>(3)</a>,
 <a class="reference internal" href="#ior"><strong>ior</strong>(3)</a>,
 <a class="reference internal" href="#ieor"><strong>ieor</strong>(3)</a>,
@@ -6260,13 +6259,13 @@ according to the following truth table:</p>
 </section>
 </section>
 <section id="ishftc">
-<h2>ishftc<a class="headerlink" href="#ishftc" title="この見出しへのパーマリンク">#</a></h2>
+<h2>ishftc<a class="headerlink" href="#ishftc" title="Link to this heading">#</a></h2>
 <section id="id234">
-<h3><strong>Name</strong><a class="headerlink" href="#id234" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id234" title="Link to this heading">#</a></h3>
 <p><strong>ishftc</strong>(3) - [BIT:SHIFT] Shift rightmost bits circularly, AKA. a logical shift</p>
 </section>
 <section id="id235">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id235" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id235" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ishftc</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="p">[,</span><span class="n">size</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -6279,7 +6278,7 @@ according to the following truth table:</p>
 </div>
 </section>
 <section id="id236">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id236" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id236" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>i</strong> may be an <em>integer</em> of any kind</p></li>
@@ -6288,7 +6287,7 @@ according to the following truth table:</p>
 </ul>
 </section>
 <section id="id237">
-<h3><strong>Description</strong><a class="headerlink" href="#id237" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id237" title="Link to this heading">#</a></h3>
 <p><strong>ishftc</strong>(3) circularly shifts just the specified rightmost bits of
 an integer.</p>
 <p><strong>ishftc</strong>(3) returns a value corresponding to <strong>i</strong> with the rightmost
@@ -6300,7 +6299,7 @@ a value of zero corresponds to no shift, and a value less than zero
 corresponds to a right shift.</p>
 </section>
 <section id="id238">
-<h3><strong>Options</strong><a class="headerlink" href="#id238" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id238" title="Link to this heading">#</a></h3>
 <ul>
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The value specifying the pattern of bits to shift</p>
@@ -6328,7 +6327,7 @@ entire value <strong>i</strong>.</p>
 </ul>
 </section>
 <section id="id239">
-<h3><strong>Result</strong><a class="headerlink" href="#id239" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id239" title="Link to this heading">#</a></h3>
 <p>The result characteristics (kind, shape, size, rank, ...) are the
 same as <strong>i</strong>.</p>
 <p>The result has the value obtained by shifting the <strong>size</strong> rightmost
@@ -6337,7 +6336,7 @@ bits of <strong>i</strong> circularly by <strong>shift</strong> positions.</p>
 <p>The unshifted bits are unaltered.</p>
 </section>
 <section id="id240">
-<h3><strong>Examples</strong><a class="headerlink" href="#id240" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id240" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_ishftc</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -6386,11 +6385,11 @@ bits of <strong>i</strong> circularly by <strong>shift</strong> positions.</p>
 </div>
 </section>
 <section id="id241">
-<h3><strong>Standard</strong><a class="headerlink" href="#id241" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id241" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id242">
-<h3><strong>See Also</strong><a class="headerlink" href="#id242" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id242" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ishft"><strong>ishft</strong>(3)</a> - Logical shift of bits in an integer</p></li>
 <li><p><a class="reference internal" href="#shifta"><strong>shifta</strong>(3)</a> - Right shift with fill</p></li>
@@ -6405,13 +6404,13 @@ bits of <strong>i</strong> circularly by <strong>shift</strong> positions.</p>
 </section>
 </section>
 <section id="ishft">
-<h2>ishft<a class="headerlink" href="#ishft" title="この見出しへのパーマリンク">#</a></h2>
+<h2>ishft<a class="headerlink" href="#ishft" title="Link to this heading">#</a></h2>
 <section id="id243">
-<h3><strong>Name</strong><a class="headerlink" href="#id243" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id243" title="Link to this heading">#</a></h3>
 <p><strong>ishft</strong>(3) - [BIT:SHIFT] Logical shift of bits in an integer</p>
 </section>
 <section id="id244">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id244" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id244" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ishftc</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -6423,7 +6422,7 @@ bits of <strong>i</strong> circularly by <strong>shift</strong> positions.</p>
 </div>
 </section>
 <section id="id245">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id245" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id245" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>i</strong> is an <em>integer</em> of any kind. the kind for <strong>i</strong> dictates the kind of the returned value.</p></li>
@@ -6431,7 +6430,7 @@ bits of <strong>i</strong> circularly by <strong>shift</strong> positions.</p>
 </ul>
 </section>
 <section id="id246">
-<h3><strong>Description</strong><a class="headerlink" href="#id246" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id246" title="Link to this heading">#</a></h3>
 <p><strong>ishft</strong>(3) returns a value corresponding to <strong>i</strong> with all of the
 bits shifted <strong>shift</strong> places left or right as specified by the sign
 and magnitude of <strong>shift</strong>.</p>
@@ -6439,7 +6438,7 @@ and magnitude of <strong>shift</strong>.</p>
 shifted in from the opposite end.</p>
 </section>
 <section id="id247">
-<h3><strong>Options</strong><a class="headerlink" href="#id247" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id247" title="Link to this heading">#</a></h3>
 <ul>
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The value specifying the pattern of bits to shift</p>
@@ -6458,7 +6457,7 @@ greater than <strong>bit_size(i)</strong>, the value is undefined.</p>
 </ul>
 </section>
 <section id="id248">
-<h3><strong>Result</strong><a class="headerlink" href="#id248" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id248" title="Link to this heading">#</a></h3>
 <p>The result has the value obtained by shifting the bits of <strong>i</strong> by <strong>shift</strong> positions.</p>
 <ol class="arabic simple">
 <li><p>If <strong>shift</strong> is positive, the shift is to the left</p></li>
@@ -6469,7 +6468,7 @@ greater than <strong>bit_size(i)</strong>, the value is undefined.</p>
 are lost. Zeros are shifted in from the opposite end.</p>
 </section>
 <section id="id249">
-<h3><strong>Examples</strong><a class="headerlink" href="#id249" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id249" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_ishft</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -6497,23 +6496,23 @@ are lost. Zeros are shifted in from the opposite end.</p>
 </div>
 </section>
 <section id="id250">
-<h3><strong>Standard</strong><a class="headerlink" href="#id250" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id250" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id251">
-<h3><strong>See Also</strong><a class="headerlink" href="#id251" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id251" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ishftc"><strong>ishftc</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="shifta">
-<h2>shifta<a class="headerlink" href="#shifta" title="この見出しへのパーマリンク">#</a></h2>
+<h2>shifta<a class="headerlink" href="#shifta" title="Link to this heading">#</a></h2>
 <section id="id252">
-<h3><strong>Name</strong><a class="headerlink" href="#id252" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id252" title="Link to this heading">#</a></h3>
 <p><strong>shifta</strong>(3) - [BIT:SHIFT] Right shift with fill</p>
 </section>
 <section id="id253">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id253" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id253" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">shifta</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -6525,7 +6524,7 @@ are lost. Zeros are shifted in from the opposite end.</p>
 </div>
 </section>
 <section id="id254">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id254" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id254" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>i</strong> is an <em>integer</em> of any kind</p></li>
@@ -6534,13 +6533,13 @@ are lost. Zeros are shifted in from the opposite end.</p>
 </ul>
 </section>
 <section id="id255">
-<h3><strong>Description</strong><a class="headerlink" href="#id255" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id255" title="Link to this heading">#</a></h3>
 <p><strong>shifta</strong>(3) returns a value corresponding to <strong>i</strong> with all of the
 bits shifted right by <strong>shift</strong> places and the vacated bits on the
 left filled with the value of the original left-most bit.</p>
 </section>
 <section id="id256">
-<h3><strong>Options</strong><a class="headerlink" href="#id256" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id256" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The initial value to shift and fill</p>
@@ -6557,7 +6556,7 @@ or the value is undefined. If <strong>shift</strong> is zero the result is <stro
 </ul>
 </section>
 <section id="id257">
-<h3><strong>Result</strong><a class="headerlink" href="#id257" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id257" title="Link to this heading">#</a></h3>
 <p>The result has the value obtained by shifting the bits of <strong>i</strong> to
 the right <strong>shift</strong> bits and replicating the leftmost bit of <strong>i</strong>
 in the left <strong>shift</strong> bits (Note the leftmost bit in &quot;two's complement&quot;
@@ -6566,7 +6565,7 @@ representation is the sign bit).</p>
 <p>If <strong>shift</strong> is zero the result is <strong>i</strong>.</p>
 </section>
 <section id="id258">
-<h3><strong>Examples</strong><a class="headerlink" href="#id258" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id258" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_shifta</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -6632,11 +6631,11 @@ representation is the sign bit).</p>
 </div>
 </section>
 <section id="id259">
-<h3><strong>Standard</strong><a class="headerlink" href="#id259" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id259" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id260">
-<h3><strong>See Also</strong><a class="headerlink" href="#id260" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id260" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#shiftl"><strong>shiftl</strong>(3)</a>,
 <a class="reference internal" href="#shiftr"><strong>shiftr</strong>(3)</a>,
 <a class="reference internal" href="#ishft"><strong>ishft</strong>(3)</a>,
@@ -6645,13 +6644,13 @@ representation is the sign bit).</p>
 </section>
 </section>
 <section id="shiftl">
-<h2>shiftl<a class="headerlink" href="#shiftl" title="この見出しへのパーマリンク">#</a></h2>
+<h2>shiftl<a class="headerlink" href="#shiftl" title="Link to this heading">#</a></h2>
 <section id="id261">
-<h3><strong>Name</strong><a class="headerlink" href="#id261" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id261" title="Link to this heading">#</a></h3>
 <p><strong>shiftl</strong>(3) - [BIT:SHIFT] Shift bits left</p>
 </section>
 <section id="id262">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id262" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id262" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">shiftl</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -6663,7 +6662,7 @@ representation is the sign bit).</p>
 </div>
 </section>
 <section id="id263">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id263" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id263" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>i</strong> is an <em>integer</em> of any kind</p></li>
@@ -6672,7 +6671,7 @@ representation is the sign bit).</p>
 </ul>
 </section>
 <section id="id264">
-<h3><strong>Description</strong><a class="headerlink" href="#id264" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id264" title="Link to this heading">#</a></h3>
 <p><strong>shiftl</strong>(3) returns a value corresponding to <strong>i</strong> with all of the
 bits shifted left by <strong>shift</strong> places.</p>
 <p>Bits shifted out from the left end are lost, and bits shifted in from
@@ -6688,7 +6687,7 @@ the value is undefined.</p>
 <p>Note the value of the result is the same as <strong>ishft (i, shift)</strong>.</p>
 </section>
 <section id="id265">
-<h3><strong>Options</strong><a class="headerlink" href="#id265" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id265" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The initial value to shift and fill in with zeros</p>
@@ -6704,11 +6703,11 @@ It shall be nonnegative and less than or equal to <strong>bit_size(i)</strong>.<
 </ul>
 </section>
 <section id="id266">
-<h3><strong>Result</strong><a class="headerlink" href="#id266" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id266" title="Link to this heading">#</a></h3>
 <p>The return value is of type <em>integer</em> and of the same kind as <strong>i</strong>.</p>
 </section>
 <section id="id267">
-<h3><strong>Examples</strong><a class="headerlink" href="#id267" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id267" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_shiftl</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -6772,11 +6771,11 @@ It shall be nonnegative and less than or equal to <strong>bit_size(i)</strong>.<
 </div>
 </section>
 <section id="id268">
-<h3><strong>Standard</strong><a class="headerlink" href="#id268" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id268" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id269">
-<h3><strong>See Also</strong><a class="headerlink" href="#id269" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id269" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#shifta"><strong>shifta</strong>(3)</a>,
 <a class="reference internal" href="#shiftr"><strong>shiftr</strong>(3)</a>,
 <a class="reference internal" href="#ishft"><strong>ishft</strong>(3)</a>,
@@ -6785,13 +6784,13 @@ It shall be nonnegative and less than or equal to <strong>bit_size(i)</strong>.<
 </section>
 </section>
 <section id="shiftr">
-<h2>shiftr<a class="headerlink" href="#shiftr" title="この見出しへのパーマリンク">#</a></h2>
+<h2>shiftr<a class="headerlink" href="#shiftr" title="Link to this heading">#</a></h2>
 <section id="id270">
-<h3><strong>Name</strong><a class="headerlink" href="#id270" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id270" title="Link to this heading">#</a></h3>
 <p><strong>shiftr</strong>(3) - [BIT:SHIFT] Shift bits right</p>
 </section>
 <section id="id271">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id271" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id271" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">shiftr</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -6803,7 +6802,7 @@ It shall be nonnegative and less than or equal to <strong>bit_size(i)</strong>.<
 </div>
 </section>
 <section id="id272">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id272" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id272" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>i</strong> is an <em>integer</em> of any kind</p></li>
@@ -6812,7 +6811,7 @@ It shall be nonnegative and less than or equal to <strong>bit_size(i)</strong>.<
 </ul>
 </section>
 <section id="id273">
-<h3><strong>Description</strong><a class="headerlink" href="#id273" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id273" title="Link to this heading">#</a></h3>
 <p><strong>shiftr</strong>(3) returns a value corresponding to <strong>i</strong> with all of the
 bits shifted right by <strong>shift</strong> places.</p>
 <p>If the absolute value of <strong>shift</strong> is greater than <strong>bit_size(i)</strong>,
@@ -6828,7 +6827,7 @@ the left end are set to 0.</p>
 <p>Note the value of the result is the same as <strong>ishft (i, -shift)</strong>.</p>
 </section>
 <section id="id274">
-<h3><strong>Options</strong><a class="headerlink" href="#id274" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id274" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>i</strong></dt><dd><p>The value to shift</p>
@@ -6844,12 +6843,12 @@ It shall be nonnegative and less than or equal to <strong>bit_size(i)</strong>.<
 </ul>
 </section>
 <section id="id275">
-<h3><strong>Result</strong><a class="headerlink" href="#id275" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id275" title="Link to this heading">#</a></h3>
 <p>The remaining bits shifted right <strong>shift</strong> positions.
 Vacated positions on the left are filled with zeros.</p>
 </section>
 <section id="id276">
-<h3><strong>Examples</strong><a class="headerlink" href="#id276" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id276" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_shiftr</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">int8</span><span class="p">,</span><span class="w"> </span><span class="n">int16</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
@@ -6914,11 +6913,11 @@ Vacated positions on the left are filled with zeros.</p>
 </div>
 </section>
 <section id="id277">
-<h3><strong>Standard</strong><a class="headerlink" href="#id277" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id277" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id278">
-<h3><strong>See Also</strong><a class="headerlink" href="#id278" title="この見出しへのパーマリンク">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id278" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#shifta"><strong>shifta</strong>(3)</a>,
 <a class="reference internal" href="#shiftl"><strong>shiftl</strong>(3)</a>,
 <a class="reference internal" href="#ishft"><strong>ishft</strong>(3)</a>,

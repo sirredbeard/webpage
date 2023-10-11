@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="zh-CN">
+<html lang="zh-CN" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Fortran 通讯：2020 年 5 月 &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=20ebe441"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/news/2020/05-01-Fortran-Newsletter-May-2020.html" />
     <link rel="index" title="索引" href="../../../genindex/" />
     <link rel="search" title="搜索" href="../../../search/" />
@@ -574,17 +573,17 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="fortran-newsletter-may-2020">
-<h1>Fortran 通讯：2020 年 5 月<a class="headerlink" href="#fortran-newsletter-may-2020" title="此标题的永久链接">#</a></h1>
+<h1>Fortran 通讯：2020 年 5 月<a class="headerlink" href="#fortran-newsletter-may-2020" title="Link to this heading">#</a></h1>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello, World!&#39;</span>
 </pre></div>
 </div>
 <p>欢迎阅读第一期 Fortran 月刊。它将在每个月的第一个日历日发布，详细介绍上个月的 Fortran 新闻。</p>
 <section id="this-website">
-<h2>本网站<a class="headerlink" href="#this-website" title="此标题的永久链接">#</a></h2>
+<h2>本网站<a class="headerlink" href="#this-website" title="Link to this heading">#</a></h2>
 <p>如果你是从其他地方访问此时事通讯，欢迎访问新的 Fortran 网站。我们在 4 月中旬建立了这个站点，并希望它成为 Internet 上 Fortran 之家，传统上迄今为止还没有。如果你有任何改进建议，请环顾四周并<a class="reference external" href="https://github.com/fortran-lang/fortran-lang.github.io/issues">让我们知道</a>。具体来说，<a class="reference internal" href="../../../learn/"><span class="doc std std-doc">Learn</span></a> 和 <a class="reference internal" href="../../../packages/"><span class="doc std std-doc">Packages</span></a> 是我们将在未来几个月重点关注的页面。请帮助我们让他们变得更好！</p>
 </section>
 <section id="standard-library">
-<h2>标准库<a class="headerlink" href="#standard-library" title="此标题的永久链接">#</a></h2>
+<h2>标准库<a class="headerlink" href="#standard-library" title="Link to this heading">#</a></h2>
 <p>以下是 Fortran 标准库的新增功能：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/fortran-lang/stdlib/pull/172">#172</a> <code class="docutils literal notranslate"><span class="pre">stdlib_experimental_stats</span></code> 模块中的新函数 <code class="docutils literal notranslate"><span class="pre">cov</span></code> 用于计算数组元素的协方差。阅读完整的规范 <a class="reference external" href="https://github.com/fortran-lang/stdlib/blob/HEAD/src/stdlib_experimental_stats.md#cov---covariance-of-array-elements">这里</a>。</p></li>
@@ -594,7 +593,7 @@
 </ul>
 </section>
 <section id="package-manager">
-<h2>包管理器<a class="headerlink" href="#package-manager" title="此标题的永久链接">#</a></h2>
+<h2>包管理器<a class="headerlink" href="#package-manager" title="Link to this heading">#</a></h2>
 <p>在过去的一个月里，我们看到了 <a class="reference external" href="https://github.com/fortran-lang/fpm">Fortran 包管理器 (FPM)</a> 的第一个工作实现。具体来说：</p>
 <ul class="simple">
 <li><p>FPM 支持三个命令：</p>
@@ -618,7 +617,7 @@
 <p>FPM 的短期目标是使具有依赖关系的 Fortran 包的开发和安装更容易。其长期目标是构建一个丰富且分散的 Fortran 软件包生态系统，并创建一个健康的环境，在该环境中轻松创建和发布新的开源 Fortran 项目。</p>
 </section>
 <section id="wg5-convenor-candidates">
-<h2>WG5 召集人候选人<a class="headerlink" href="#wg5-convenor-candidates" title="此标题的永久链接">#</a></h2>
+<h2>WG5 召集人候选人<a class="headerlink" href="#wg5-convenor-candidates" title="Link to this heading">#</a></h2>
 <p>上个月也是 <a class="reference external" href="https://wg5-fortran.org/">WG5</a> 召集人候选人申请下一个 3 年任期（2021 - 2024 年）的截止日期。有两个候选人：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://stevelionel.com">Steve Lionel</a>，也是现任 WG5 召集人，宣布连任。阅读 Steve 的 <a class="reference external" href="https://stevelionel.com/drfortran/2020/04/25/doctor-fortran-in-forward">post</a>，了解他在过去三年中如何指导标准化过程以及他对未来的方向。</p></li>
@@ -626,7 +625,7 @@
 </ul>
 </section>
 <section id="events">
-<h2>活动<a class="headerlink" href="#events" title="此标题的永久链接">#</a></h2>
+<h2>活动<a class="headerlink" href="#events" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://openteams.com">OpenTeams</a> 和 <a class="reference external" href="https://quansight.com">QuanSight</a> 在开源方向网络研讨会的第 40 集中主持了 Ondřej Čertík 和 Milan Curcic。他们谈到了 Fortran 的现状和未来，以及构建 Fortran 社区和开发人员工具。阅读更多相关信息并观看视频 <a class="reference internal" href="#/newsletter/2020/04/18/Fortran-Webinar/"><span class="xref myst">此处</span></a>。</p></li>
 <li><p><a class="reference external" href="https://tcevents.chem.uzh.ch/event/12">FortranCon 2020</a> 将于 7 月 2 日至 4 日在瑞士苏黎世举行。与会者和演讲者都启用了虚拟参与。注册免费，截止日期为 2020 年 6 月 1 日。</p></li>
@@ -634,7 +633,7 @@
 </ul>
 </section>
 <section id="who-s-hiring">
-<h2>谁在招聘？<a class="headerlink" href="#who-s-hiring" title="此标题的永久链接">#</a></h2>
+<h2>谁在招聘？<a class="headerlink" href="#who-s-hiring" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://g.co/kgs/aogdeh">英特尔公司（加利福尼亚州圣克拉拉）：Fortran 软件工程师</a></p></li>
 <li><p><a class="reference external" href="https://g.co/kgs/5X3d2Y">英特尔公司（俄勒冈州希尔斯伯勒）：软件工程师，Fortran</a></p></li>

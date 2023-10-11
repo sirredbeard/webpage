@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="es" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../_static/images/favicon.ico" type="image/x-icon">
     <title>Contribuyendo con fortran-lang.org &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/translations.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=96d5a3fc"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/community/contributing.html" />
     <link rel="index" title="Índice" href="../../genindex/" />
     <link rel="search" title="Búsqueda" href="../../search/" />
@@ -446,14 +445,14 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="contributing-to-fortran-lang-org">
-<h1>Contribuyendo con fortran-lang.org<a class="headerlink" href="#contributing-to-fortran-lang-org" title="Enlace permanente a este encabezado">#</a></h1>
+<h1>Contribuyendo con fortran-lang.org<a class="headerlink" href="#contributing-to-fortran-lang-org" title="Link to this heading">#</a></h1>
 <p>¡Fortran-lang.org es de código abierto y las contribuciones son bienvenidas!</p>
 <ul class="simple">
 <li><p>See <a class="reference internal" href="../packages/"><span class="doc std std-doc">package index guide</span></a> for how to add an entry to the <a class="reference internal" href="../../packages/"><span class="doc std std-doc">Package index</span></a></p></li>
 <li><p>See <a class="reference internal" href="../minibooks/"><span class="doc std std-doc">minibook guide</span></a> for how to write and structure a mini-book tutorial for the <a class="reference internal" href="../../learn/"><span class="doc std std-doc">Learn</span></a> section</p></li>
 </ul>
 <section id="introduction">
-<h2>Introducción<a class="headerlink" href="#introduction" title="Enlace permanente a este encabezado">#</a></h2>
+<h2>Introducción<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p><strong>¿Cómo está escrito el sitio web?</strong></p>
 <p>El contenido del sitio web está escrito principalmente como una combinación de Markdown (extensión Myst), HTML y YAML (para datos). Esta fuente es compilada para producir HTML puro que usted verá en el sitio web final.</p>
 <p>El sitio web es <em>estático</em> lo que significa que una vez creado, el contenido del sitio es el mismo para todos los usuarios; esto contrasta con muchos sitios web que son <em>dinámicos</em>, lo que significa que pueden ofrecer contenido diferente según el usuario y las entradas proporcionadas por el usuario.</p>
@@ -468,7 +467,7 @@ See <a class="reference external" href="https://github.com/fortran-lang/webpage/
 <p>Por lo tanto, como colaborador, solo necesita cargar los cambios en el código fuente del sitio y no el resultado compilado, ya que esto se crea automáticamente a partir del código fuente en la rama predeterminada.</p>
 </section>
 <section id="workflow">
-<h2>Flujo de trabajo<a class="headerlink" href="#workflow" title="Enlace permanente a este encabezado">#</a></h2>
+<h2>Flujo de trabajo<a class="headerlink" href="#workflow" title="Link to this heading">#</a></h2>
 <p>Las contribuciones al sitio web son realizadas mediante solicitudes de integración al repositório de github: <a class="reference external" href="https://github.com/fortran-lang/webpage/">https://github.com/fortran-lang/webpage/</a>.</p>
 <p>El flujo de trabajo para ello es el siguiente:</p>
 <ol class="arabic simple">
@@ -506,9 +505,9 @@ the pull request with “#build_preview”.</p>
 <p><strong>Nota:</strong> si el enlace de vista previa de la solicitud de integración no funciona o no se actualiza después de la reconstrucción, intente agregar un parámetro aleatorio al final de la URL, <em>p. ej.</em> <code class="docutils literal notranslate"><span class="pre">https://fortran-</span> <span class="pre">lang.org/pr/98?v=2</span></code>: el nombre y el valor del parámetro no importan, pero use valores diferentes para cada actualización. Esto obligará a la red de entrega de contenido de GitHub a brindarle una versión actualizada en lugar de una versión almacenada que está desactualizada.</p>
 </section>
 <section id="style-guide">
-<h2>Guía de estilo<a class="headerlink" href="#style-guide" title="Enlace permanente a este encabezado">#</a></h2>
+<h2>Guía de estilo<a class="headerlink" href="#style-guide" title="Link to this heading">#</a></h2>
 <section id="markdown">
-<h3>Markdown<a class="headerlink" href="#markdown" title="Enlace permanente a este encabezado">#</a></h3>
+<h3>Markdown<a class="headerlink" href="#markdown" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Coloque fragmentos de código en <a class="reference external" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting">bloques de código</a>, señalados con marcas de verificación (<code class="docutils literal notranslate"><span class="pre">```</span></code> ). Use el estilo de código en línea (<code class="docutils literal notranslate"><span class="pre">`code`</span></code>) para extractos de código en línea, palabras clave de lenguaje de programación, nombres de variables y nombres de archivos.</p></li>
 <li><p>Have no more than one sentence per source-code line, and break-up long sentences across multiples lines -
@@ -516,7 +515,7 @@ this is important to avoid large git diffs and code review blocks on github.</p>
 </ul>
 </section>
 <section id="external-links">
-<h3>Enlaces externos<a class="headerlink" href="#external-links" title="Enlace permanente a este encabezado">#</a></h3>
+<h3>Enlaces externos<a class="headerlink" href="#external-links" title="Link to this heading">#</a></h3>
 <p>Se recomienda que los hipervínculos fuera del sitio se abran en una nueva pestaña. En <code class="docutils literal notranslate"><span class="pre">Fortran-lang.org</span></code>, todos estos enlaces tendrán automáticamente un sufijo con un icono de nueva pestaña; esto les da a los usuarios del sitio la expectativa previa de que el enlace los llevará fuera del sitio mientras mantiene fortran-lang.org abierto en una pestaña anterior.</p>
 <p><strong>Ejemplo:</strong> Abrir enlace en una pestaña nueva (HTML o Markdown)</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fortran-lang.discourse.group/&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener&quot;</span>
@@ -526,7 +525,7 @@ this is important to avoid large git diffs and code review blocks on github.</p>
 </div>
 </section>
 <section id="internal-site-links">
-<h3>Enlaces internos del sitio web<a class="headerlink" href="#internal-site-links" title="Enlace permanente a este encabezado">#</a></h3>
+<h3>Enlaces internos del sitio web<a class="headerlink" href="#internal-site-links" title="Link to this heading">#</a></h3>
 <p>Los hipervínculos que apuntan a otras partes del sitio web fortran-lang.org deben tener el prefijo <code class="docutils literal notranslate"><span class="pre">{{pathto('index',1)[:-5]}}</span></code>; esto es importante para generar vistas previas de solicitudes de integración (consulte <a class="reference external" href="https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/">aquí </a> para obtener una explicación).</p>
 <p><strong>Example:</strong> markdown link</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Fortran</span><span class="o">-</span><span class="n">lang</span> <span class="n">news</span><span class="p">]({{</span><span class="n">pathto</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[:</span><span class="o">-</span><span class="mi">5</span><span class="p">]}}</span><span class="n">News</span><span class="p">)</span>
@@ -538,7 +537,7 @@ this is important to avoid large git diffs and code review blocks on github.</p>
 </div>
 </section>
 <section id="icon-packs">
-<h3>Paquetes de íconos<a class="headerlink" href="#icon-packs" title="Enlace permanente a este encabezado">#</a></h3>
+<h3>Paquetes de íconos<a class="headerlink" href="#icon-packs" title="Link to this heading">#</a></h3>
 <p>Los íconos son una manera fácil de mejorar la estética de la página al dividir pasajes de texto monótonos y llamar la atención sobre los encabezados o la información clave.</p>
 <p>Hay tres paquetes de íconos disponibles para usar en <code class="docutils literal notranslate"><span class="pre">fortran-lang.org</span></code>:</p>
 <ul class="simple">
@@ -556,7 +555,7 @@ this is important to avoid large git diffs and code review blocks on github.</p>
 <p>Visite los sitios web respectivos para explorar los íconos disponibles.</p>
 </section>
 <section id="page-contents">
-<h3>Contenido de la página<a class="headerlink" href="#page-contents" title="Enlace permanente a este encabezado">#</a></h3>
+<h3>Contenido de la página<a class="headerlink" href="#page-contents" title="Link to this heading">#</a></h3>
 <p>A veces es útil mostrar contenidos de páginas con hipervínculos para páginas extensas. El árbol TOC de la página se ha automatizado y generará el TOC de la página actual. Mientras que el método para generar TOC de todo el directorio en <code class="docutils literal notranslate"><span class="pre">Fortran-lang.org</span></code> es:</p>
 <p><strong>Para páginas en MD:</strong></p>
 <p>add the toc tree directive in md at the end of the index page of the directory with the names of the all files in that directory.</p>
@@ -569,15 +568,15 @@ ARRAY_index
 </section>
 </section>
 <section id="tutorials">
-<h2>Tutoriales<a class="headerlink" href="#tutorials" title="Enlace permanente a este encabezado">#</a></h2>
+<h2>Tutoriales<a class="headerlink" href="#tutorials" title="Link to this heading">#</a></h2>
 <p>Directrices para el contenido de los minilibros.</p>
 <section id="general">
-<h3>General<a class="headerlink" href="#general" title="Enlace permanente a este encabezado">#</a></h3>
+<h3>General<a class="headerlink" href="#general" title="Link to this heading">#</a></h3>
 <p>Utilice el diseño <code class="docutils literal notranslate"><span class="pre">libro</span></code>.</p>
 <p>Siga las <a class="reference internal" href="#markdown">directrices de Markdown</a>.</p>
 </section>
 <section id="code-style">
-<h3>Estilo de código<a class="headerlink" href="#code-style" title="Enlace permanente a este encabezado">#</a></h3>
+<h3>Estilo de código<a class="headerlink" href="#code-style" title="Link to this heading">#</a></h3>
 <p>Use dos espacios para la tabulación, tabulando los cuerpos de las unidades pero manteniendo la declaración <code class="docutils literal notranslate"><span class="pre">contiene</span></code> al mismo nivel que su <code class="docutils literal notranslate"><span class="pre">módulo</span></code> o <code class="docutils literal notranslate"><span class="pre">tipo</span></code>. Intente limitar la longitud de la línea a 90 caracteres. Estas consideraciones deberían hacer que el código sea más legible y fácil de ver en dispositivos con anchos de ventana de visualización más pequeños.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">m</span>
 <span class="w">  </span><span class="k">implicit none</span>
@@ -669,7 +668,7 @@ ARRAY_index
 <p>Estas recomendaciones de estilo de código son similares a las de <a class="reference external" href="https://dftbplus-develguide.readthedocs.io/en/latest/fortranstyle.html">la guía de estilo DFTB+</a>.</p>
 </section>
 <section id="text">
-<h3>Texto<a class="headerlink" href="#text" title="Enlace permanente a este encabezado">#</a></h3>
+<h3>Texto<a class="headerlink" href="#text" title="Link to this heading">#</a></h3>
 <p>Use sentence case (as opposed to title case) for page and section titles.</p>
 <p>Use <em>emphasis</em> (<code class="docutils literal notranslate"><span class="pre">*emphasis*</span></code>/<code class="docutils literal notranslate"><span class="pre">_emphasis_</span></code>, rendered as italic) for key words/phrases when they are first introduced, for emphasis, …</p>
 <p>Avoid use of <strong>strong</strong> (<code class="docutils literal notranslate"><span class="pre">**strong**</span></code>, rendered as bold) within paragraphs, since bold style is used for headings, drawing attention to examples (<strong>Example:</strong>), admonition/aside titles, etc.</p>

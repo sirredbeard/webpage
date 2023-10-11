@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="ru">
+<html lang="ru" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Руководство по стилю оформления кода Fortran &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aaa2236b"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/best_practices/style_guide.html" />
     <link rel="index" title="Алфавитный указатель" href="../../../genindex/" />
     <link rel="search" title="Поиск" href="../../../search/" />
@@ -736,9 +735,9 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="fortran-style-guide">
-<h1>Руководство по стилю оформления кода Fortran<a class="headerlink" href="#fortran-style-guide" title="Permalink to this heading">#</a></h1>
+<h1>Руководство по стилю оформления кода Fortran<a class="headerlink" href="#fortran-style-guide" title="Link to this heading">#</a></h1>
 <section id="naming-convention">
-<h2>Соглашение об именовании<a class="headerlink" href="#naming-convention" title="Permalink to this heading">#</a></h2>
+<h2>Соглашение об именовании<a class="headerlink" href="#naming-convention" title="Link to this heading">#</a></h2>
 <p>В конечном счёте, это вопрос предпочтений. Это руководство по стилю, которое нам нравится и которое, похоже, преобладает в большинстве научных кодов (а также в Fortran standard library), и вы можете следовать ему.</p>
 <ol class="arabic simple">
 <li><p>Используйте строчные буквы для всех конструкций языка Fortran (<code class="docutils literal notranslate"><span class="pre">do</span></code>, <code class="docutils literal notranslate"><span class="pre">subroutine</span></code>, <code class="docutils literal notranslate"><span class="pre">module</span></code>, …).</p></li>
@@ -749,11 +748,11 @@
 <p>Выше приведены общие рекомендации. В целом, выбор правильного имени, безусловно, зависит от усекаемого слова и достаточно ли оставить первый слог. Обычно это так, но, очевидно, не всегда. Поэтому подумайте над тем, чтобы «стараться использовать названия, состоящие из 2 слогов или меньше», так как это может повлиять на наглядность и простоту. Простые и последовательные правила именования являются реальной помощью в этом отношении – как для совместной работы, так и для собственного здравомыслия при возвращении к старому коду, который вы давно не видели.</p>
 </section>
 <section id="indentation">
-<h2>Отступы<a class="headerlink" href="#indentation" title="Permalink to this heading">#</a></h2>
+<h2>Отступы<a class="headerlink" href="#indentation" title="Link to this heading">#</a></h2>
 <p>Используйте последовательные отступы чтобы сделать ваш код читабельным. Размер отступа – это вопрос предпочтений, наиболее распространёнными вариантами являются отступы в два, три или четыре пробела.</p>
 </section>
 <section id="comparison-to-other-languages">
-<h2>Сравнение с другими языками программирования<a class="headerlink" href="#comparison-to-other-languages" title="Permalink to this heading">#</a></h2>
+<h2>Сравнение с другими языками программирования<a class="headerlink" href="#comparison-to-other-languages" title="Link to this heading">#</a></h2>
 <p>С другой стороны, в большинстве других языков программирования, где основное внимание в той или иной форме уделяется определению и использованию больших наборов сложных объектов с множеством свойств и моделей поведения, известных только в коде, в котором они определены (в отличие от определения с помощью одной и той же нотации во всей литературе), имеет смысл использовать более длинные, более наглядные имена. Поэтому соглашения об именовании, которые используются в языках общего назначения, таких как C++ и Python, вполне соответствуют их более общим задачам. Но у Fortran другая задача (численные научные вычисления).</p>
 </section>
 </section>

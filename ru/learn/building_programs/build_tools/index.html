@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="ru">
+<html lang="ru" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Инструменты сборки &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aaa2236b"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/build_tools.html" />
     <link rel="index" title="Алфавитный указатель" href="../../../genindex/" />
     <link rel="search" title="Поиск" href="../../../search/" />
@@ -748,7 +747,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="build-tools">
-<h1>Инструменты сборки<a class="headerlink" href="#build-tools" title="Permalink to this heading">#</a></h1>
+<h1>Инструменты сборки<a class="headerlink" href="#build-tools" title="Link to this heading">#</a></h1>
 <p>Компиляция ваших проектов на языке Fortran вручную может стать довольно сложной задачей по мере роста числа файлов исходного кода и зависимостей в файлах модулей. Поддержка различных компиляторов и компоновщиков или различных платформ может стать все более сложной, если не использовать правильные инструменты для автоматического выполнения этих задач.</p>
 <p>В зависимости от размера и цели вашего проекта могут быть использованы различные варианты автоматизации сборки.</p>
 <p>Прежде всего, ваша интегрированная среда разработки (IDE), возможно, предоставляет способ сборки вашей программы. Популярным кроссплатформенным инструментом является <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> от Microsoft, но существуют и другие, такие как <a href="https://atom.io/" target="_blank" rel="noopener">Atom</a>, <a href="https://www.eclipse.org/photran/" target="_blank" rel="noopener">Eclipse Photran</a>, и <a href="http://www.codeblocks.org/" target="_blank" rel="noopener">Code::Blocks</a>. Они предлагают пользовательский интерфейс, но часто очень специфичны для компилятора и платформы.</p>
@@ -757,7 +756,7 @@
 <p>Какой из этих инструментов лучше выбрать для ваших проектов, зависит от многих факторов. Выбирайте инструмент сборки, с которым вам удобно работать, он не должен мешать вам во время разработки. Если тратить больше времени на работу с инструментом сборки, чем на саму разработку, то это может быстро надоесть.</p>
 <p>Также обратите внимание на доступность инструментов сборки. Если их использование ограничено одной IDE, смогут ли все разработчики вашего проекта получить к ним доступ? Если вы используете определённую систему сборки, работает ли она на всех платформах, для которых вы разрабатываете? Насколько велик входной порог для ваших инструментов сборки? Предварительно узнайте о кривой обучения для инструментов сборки – идеальный инструмент сборки будет бесполезен, если сначала вам сначала придётся изучить сложный язык программирования, чтобы добавить новый файл исходного кода. Наконец, посмотрите, какие другие проекты вы используете как зависимости и какие используют (или будут использовать) ваш проект как зависимость.</p>
 <section id="using-make-as-build-tool">
-<h2>Использование make как инструмент сборки<a class="headerlink" href="#using-make-as-build-tool" title="Permalink to this heading">#</a></h2>
+<h2>Использование make как инструмент сборки<a class="headerlink" href="#using-make-as-build-tool" title="Link to this heading">#</a></h2>
 <p>Наиболее известная и часто используемая система сборки называется <code class="docutils literal notranslate"><span class="pre">make</span></code>. Она выполняет действия, следуя правилам, определенным в конфигурационном файле, называемом <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> или <code class="docutils literal notranslate"><span class="pre">makefile</span></code>, что обычно приводит к компиляции программы из предоставленного исходного кода.</p>
 <div class="admonition tip">
 <p class="admonition-title">Совет</p>
@@ -893,7 +892,7 @@ gfortran -o my_prog tabulate.o functions.o
 <p>Вы обнаружите, что <code class="docutils literal notranslate"><span class="pre">make</span></code> является удобным инструментом для автоматизации коротких взаимозависимых рабочих процессов и создания небольших проектов. Но для больших проектов вы, вероятно, вскоре столкнётесь с некоторыми его ограничениями. Поэтому обычно <code class="docutils literal notranslate"><span class="pre">make</span></code> используется не сам по себе, а в сочетании с другими инструментами для создания файла <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> полностью или создания его фрагментов.</p>
 </div>
 <section id="recursively-expanded-variables">
-<h3>Рекурсивно расширяемые переменные<a class="headerlink" href="#recursively-expanded-variables" title="Permalink to this heading">#</a></h3>
+<h3>Рекурсивно расширяемые переменные<a class="headerlink" href="#recursively-expanded-variables" title="Link to this heading">#</a></h3>
 <p>Во многих проектах часто встречаются рекурсивно расширяемые переменные (объявление с использованием оператора <code class="docutils literal notranslate"><span class="pre">=</span></code> вместо <code class="docutils literal notranslate"><span class="pre">:=</span></code>). Рекурсивное расширение ваших переменных позволяет объявлять их не по порядку и делать другие хитрые трюки с использованием <code class="docutils literal notranslate"><span class="pre">make</span></code>, так как они определяются как правила, которые расширяются во время выполнения, а не во время анализа.</p>
 <p>Например, объявление и использование ваших флагов компиляции Fortran с помощью приведённого ниже фрагмента будет работать совершенно нормально:</p>
 <div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nf">all</span><span class="o">:</span>
@@ -930,7 +929,7 @@ gfortran -o my_prog tabulate.o functions.o
 <p>Вы можете использовать любой вид переменных, который вам больше нравится, но смешивать их использование следует с осторожностью. Важно знать о различиях между этими двумя видами и о соответствующих последствиях.</p>
 </section>
 <section id="comments-and-whitespace">
-<h3>Комментарии и символ пробела<a class="headerlink" href="#comments-and-whitespace" title="Permalink to this heading">#</a></h3>
+<h3>Комментарии и символ пробела<a class="headerlink" href="#comments-and-whitespace" title="Link to this heading">#</a></h3>
 <p>Есть некоторые предостережения по поводу символа пробела и комментариев, которые могут время от времени проявляться при использовании <code class="docutils literal notranslate"><span class="pre">make</span></code>. Во-первых, утилита <code class="docutils literal notranslate"><span class="pre">make</span></code> не знает ни одного типа данных, кроме строк и разделителем по умолчанию является пробел. Это означает, что <code class="docutils literal notranslate"><span class="pre">make</span></code> будет испытывать трудности при попытке собрать проект, в именах файлов которого используются символы пробела. Если вы столкнулись с такой проблемой, то переименование файла, возможно, будет самым простым её решением.</p>
 <p>Другая распространённая проблема – символы пробела в начале и конце строки. Если их ввести, то <code class="docutils literal notranslate"><span class="pre">make</span></code> воспримет их как часть строки и это повлияет на содержимое этих строк внутри файла <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
 <p>Такое может произойти при добавлении комментария</p>
@@ -955,7 +954,7 @@ gfortran -o my_prog tabulate.o functions.o
 </section>
 </section>
 <section id="the-meson-build-system">
-<h2>Система сборки meson<a class="headerlink" href="#the-meson-build-system" title="Permalink to this heading">#</a></h2>
+<h2>Система сборки meson<a class="headerlink" href="#the-meson-build-system" title="Link to this heading">#</a></h2>
 <p>После того, как вы изучили основы <code class="docutils literal notranslate"><span class="pre">make</span></code>,которую мы называем низкоуровневой системой сборки, мы ознакомим вас с <code class="docutils literal notranslate"><span class="pre">meson</span></code>, высокоуровневой системой сборки. В то время как в низкоуровневой системе сборки вы указываете, как собрать вашу программу, в высокоуровневой системе сборки вы можете указать, что собирать. Высокоуровневая система сборки определит как создать файлы сборки для низкоуровневой системы сборки и сгенерирует их за вас.</p>
 <p>Существует множество высокоуровневых систем сборки, но мы остановимся на <code class="docutils literal notranslate"><span class="pre">meson</span></code> , потому что она построена так, чтобы быть особенно удобной для пользователя. Низкоуровневая система сборки, используемая в <code class="docutils literal notranslate"><span class="pre">meson</span></code> по умолчанию, называется <code class="docutils literal notranslate"><span class="pre">ninja</span></code>.</p>
 <p>Давайте посмотрим на готовый файл <code class="docutils literal notranslate"><span class="pre">meson.build</span></code>:</p>
@@ -1001,7 +1000,7 @@ Found ninja-1.10.0 at /usr/bin/ninja
 <p>Документация системы сборки <code class="docutils literal notranslate"><span class="pre">meson</span></code> доступна на <a href="https://mesonbuild.com/" target="_blank" rel="noopener">веб-странице meson-build</a>.</p>
 </section>
 <section id="creating-a-cmake-project">
-<h2>Создание проекта в системе сборки CMake<a class="headerlink" href="#creating-a-cmake-project" title="Permalink to this heading">#</a></h2>
+<h2>Создание проекта в системе сборки CMake<a class="headerlink" href="#creating-a-cmake-project" title="Link to this heading">#</a></h2>
 <p>Подобно <code class="docutils literal notranslate"><span class="pre">meson</span></code>, система сборки CMake является высокоуровневой и часто используется для сборки проектов на языке Fortran.</p>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>

@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="bn">
+<html lang="bn" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Arrays and strings &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=89ddfaae"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=9fadd974"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/quickstart/arrays_strings.html" />
     <link rel="index" title="ইনডেক্স" href="../../../genindex/" />
     <link rel="search" title="অনুসন্ধান" href="../../../search/" />
@@ -753,7 +752,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="arrays-and-strings">
-<h1>Arrays and strings<a class="headerlink" href="#arrays-and-strings" title="Permalink to this heading">#</a></h1>
+<h1>Arrays and strings<a class="headerlink" href="#arrays-and-strings" title="Link to this heading">#</a></h1>
 <p>More often than not, we need to store and operate on long lists of numbers as opposed to just the single scalar variables
 that we have been using so far; in computer programming such lists are called <em>arrays</em>.</p>
 <p>Arrays are <em>multidimensional</em> variables that contain more than one value
@@ -764,12 +763,12 @@ that the first element along any dimension is at index 1.</p>
 </div></blockquote>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="array-declaration">
-<h1>Array declaration<a class="headerlink" href="#array-declaration" title="Permalink to this heading">#</a></h1>
+<h1>Array declaration<a class="headerlink" href="#array-declaration" title="Link to this heading">#</a></h1>
 <p>We can declare arrays of any type. There are two common notations for declaring array variables:
 using the <code class="docutils literal notranslate"><span class="pre">dimension</span></code> attribute or by appending the array dimensions in parentheses to the variable name.</p>
 <p><strong>Example:</strong> static array declaration</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20arrays%0A%20%20implicit%20none%0A%0A%20%20%21%201D%20integer%20array%0A%20%20integer%2C%20dimension%2810%29%20%3A%3A%20array1%0A%0A%20%20%21%20An%20equivalent%20array%20declaration%0A%20%20integer%20%3A%3A%20array2%2810%29%0A%0A%20%20%21%202D%20real%20array%0A%20%20real%2C%20dimension%2810%2C%2010%29%20%3A%3A%20array3%0A%0A%20%20%21%20Custom%20lower%20and%20upper%20index%20bounds%0A%20%20real%20%3A%3A%20array4%280%3A9%29%0A%20%20real%20%3A%3A%20array5%28-5%3A5%29%0A%0Aend%20program%20arrays' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20arrays%0A%20%20implicit%20none%0A%0A%20%20%21%201D%20integer%20array%0A%20%20integer%2C%20dimension%2810%29%20%3A%3A%20array1%0A%0A%20%20%21%20An%20equivalent%20array%20declaration%0A%20%20integer%20%3A%3A%20array2%2810%29%0A%0A%20%20%21%202D%20real%20array%0A%20%20real%2C%20dimension%2810%2C%2010%29%20%3A%3A%20array3%0A%0A%20%20%21%20Custom%20lower%20and%20upper%20index%20bounds%0A%20%20real%20%3A%3A%20array4%280%3A9%29%0A%20%20real%20%3A%3A%20array5%28-5%3A5%29%0A%0Aend%20program%20arrays' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">arrays</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -791,12 +790,12 @@ using the <code class="docutils literal notranslate"><span class="pre">dimension
 </div>
 </div>
 <section id="array-slicing">
-<h2>Array slicing<a class="headerlink" href="#array-slicing" title="Permalink to this heading">#</a></h2>
+<h2>Array slicing<a class="headerlink" href="#array-slicing" title="Link to this heading">#</a></h2>
 <p>A powerful feature of the Fortran language is its built-in support for array operations;
 we can perform operations on all or part of an array using array <em>slicing</em> notation:</p>
 <p><strong>Example:</strong> array slicing</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20array_slice%0A%20%20implicit%20none%0A%0A%20%20integer%20%3A%3A%20i%0A%20%20integer%20%3A%3A%20array1%2810%29%20%20%21%201D%20integer%20array%20of%2010%20elements%0A%20%20integer%20%3A%3A%20array2%2810%2C%2010%29%20%20%21%202D%20integer%20array%20of%20100%20elements%0A%0A%20%20array1%20%3D%20%5B1%2C%202%2C%203%2C%204%2C%205%2C%206%2C%207%2C%208%2C%209%2C%2010%5D%20%20%21%20Array%20constructor%0A%20%20array1%20%3D%20%5B%28i%2C%20i%20%3D%201%2C%2010%29%5D%20%20%21%20Implied%20do%20loop%20constructor%0A%20%20array1%28%3A%29%20%3D%200%20%20%21%20Set%20all%20elements%20to%20zero%0A%20%20array1%281%3A5%29%20%3D%201%20%20%21%20Set%20first%20five%20elements%20to%20one%0A%20%20array1%286%3A%29%20%3D%201%20%20%21%20Set%20all%20elements%20after%20five%20to%20one%0A%0A%20%20print%20%2A%2C%20array1%281%3A10%3A2%29%20%20%21%20Print%20out%20elements%20at%20odd%20indices%0A%20%20print%20%2A%2C%20array2%28%3A%2C1%29%20%20%21%20Print%20out%20the%20first%20column%20in%20a%202D%20array%0A%20%20print%20%2A%2C%20array1%2810%3A1%3A-1%29%20%20%21%20Print%20an%20array%20in%20reverse%0A%0Aend%20program%20array_slice' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20array_slice%0A%20%20implicit%20none%0A%0A%20%20integer%20%3A%3A%20i%0A%20%20integer%20%3A%3A%20array1%2810%29%20%20%21%201D%20integer%20array%20of%2010%20elements%0A%20%20integer%20%3A%3A%20array2%2810%2C%2010%29%20%20%21%202D%20integer%20array%20of%20100%20elements%0A%0A%20%20array1%20%3D%20%5B1%2C%202%2C%203%2C%204%2C%205%2C%206%2C%207%2C%208%2C%209%2C%2010%5D%20%20%21%20Array%20constructor%0A%20%20array1%20%3D%20%5B%28i%2C%20i%20%3D%201%2C%2010%29%5D%20%20%21%20Implied%20do%20loop%20constructor%0A%20%20array1%28%3A%29%20%3D%200%20%20%21%20Set%20all%20elements%20to%20zero%0A%20%20array1%281%3A5%29%20%3D%201%20%20%21%20Set%20first%20five%20elements%20to%20one%0A%20%20array1%286%3A%29%20%3D%201%20%20%21%20Set%20all%20elements%20after%20five%20to%20one%0A%0A%20%20print%20%2A%2C%20array1%281%3A10%3A2%29%20%20%21%20Print%20out%20elements%20at%20odd%20indices%0A%20%20print%20%2A%2C%20array2%28%3A%2C1%29%20%20%21%20Print%20out%20the%20first%20column%20in%20a%202D%20array%0A%20%20print%20%2A%2C%20array1%2810%3A1%3A-1%29%20%20%21%20Print%20an%20array%20in%20reverse%0A%0Aend%20program%20array_slice' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id2" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">array_slice</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -824,7 +823,7 @@ index varies fastest.</p>
 </div></blockquote>
 </section>
 <section id="allocatable-dynamic-arrays">
-<h2>Allocatable (dynamic) arrays<a class="headerlink" href="#allocatable-dynamic-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Allocatable (dynamic) arrays<a class="headerlink" href="#allocatable-dynamic-arrays" title="Link to this heading">#</a></h2>
 <p>So far we have specified the size of our array in our program code---this
 type of array is known as a <em>static</em> array since its size is fixed when
 we compile our program.</p>
@@ -833,7 +832,7 @@ we compile our program.</p>
 These are <em>allocated</em> while the program is running once we know how big the array needs to be.</p>
 <p><strong>Example:</strong> allocatable arrays</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20allocatable%0A%20%20implicit%20none%0A%0A%20%20integer%2C%20allocatable%20%3A%3A%20array1%28%3A%29%0A%20%20integer%2C%20allocatable%20%3A%3A%20array2%28%3A%2C%3A%29%0A%0A%20%20allocate%28array1%2810%29%29%0A%20%20allocate%28array2%2810%2C10%29%29%0A%0A%20%20%21%20...%0A%0A%20%20deallocate%28array1%29%0A%20%20deallocate%28array2%29%0A%0Aend%20program%20allocatable' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20allocatable%0A%20%20implicit%20none%0A%0A%20%20integer%2C%20allocatable%20%3A%3A%20array1%28%3A%29%0A%20%20integer%2C%20allocatable%20%3A%3A%20array2%28%3A%2C%3A%29%0A%0A%20%20allocate%28array1%2810%29%29%0A%20%20allocate%28array2%2810%2C10%29%29%0A%0A%20%20%21%20...%0A%0A%20%20deallocate%28array1%29%0A%20%20deallocate%28array2%29%0A%0Aend%20program%20allocatable' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program allocatable</span>
 <span class="k">  implicit none</span>
 
@@ -856,10 +855,10 @@ These are <em>allocated</em> while the program is running once we know how big t
 when they go out of scope.</p>
 </section>
 <section id="character-strings">
-<h2>Character strings<a class="headerlink" href="#character-strings" title="Permalink to this heading">#</a></h2>
+<h2>Character strings<a class="headerlink" href="#character-strings" title="Link to this heading">#</a></h2>
 <p><strong>Example:</strong> static character string</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20string%0A%20%20implicit%20none%0A%0A%20%20character%28len%3D4%29%20%3A%3A%20first_name%0A%20%20character%28len%3D5%29%20%3A%3A%20last_name%0A%20%20character%2810%29%20%3A%3A%20full_name%0A%0A%20%20first_name%20%3D%20%27John%27%0A%20%20last_name%20%3D%20%27Smith%27%0A%0A%20%20%21%20String%20concatenation%0A%20%20full_name%20%3D%20first_name//%27%20%27//last_name%0A%0A%20%20print%20%2A%2C%20full_name%0A%0Aend%20program%20string' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20string%0A%20%20implicit%20none%0A%0A%20%20character%28len%3D4%29%20%3A%3A%20first_name%0A%20%20character%28len%3D5%29%20%3A%3A%20last_name%0A%20%20character%2810%29%20%3A%3A%20full_name%0A%0A%20%20first_name%20%3D%20%27John%27%0A%20%20last_name%20%3D%20%27Smith%27%0A%0A%20%20%21%20String%20concatenation%0A%20%20full_name%20%3D%20first_name//%27%20%27//last_name%0A%0A%20%20print%20%2A%2C%20full_name%0A%0Aend%20program%20string' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">string</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -881,7 +880,7 @@ when they go out of scope.</p>
 </div>
 <p><strong>Example:</strong> allocatable character string</p>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20allocatable_string%0A%20%20implicit%20none%0A%0A%20%20character%28%3A%29%2C%20allocatable%20%3A%3A%20first_name%0A%20%20character%28%3A%29%2C%20allocatable%20%3A%3A%20last_name%0A%0A%20%20%21%20Explicit%20allocation%20statement%0A%20%20allocate%28character%284%29%20%3A%3A%20first_name%29%0A%20%20first_name%20%3D%20%27John%27%0A%0A%20%20%21%20Allocation%20on%20assignment%0A%20%20last_name%20%3D%20%27Smith%27%0A%0A%20%20print%20%2A%2C%20first_name//%27%20%27//last_name%0A%0Aend%20program%20allocatable_string' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id5" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20allocatable_string%0A%20%20implicit%20none%0A%0A%20%20character%28%3A%29%2C%20allocatable%20%3A%3A%20first_name%0A%20%20character%28%3A%29%2C%20allocatable%20%3A%3A%20last_name%0A%0A%20%20%21%20Explicit%20allocation%20statement%0A%20%20allocate%28character%284%29%20%3A%3A%20first_name%29%0A%20%20first_name%20%3D%20%27John%27%0A%0A%20%20%21%20Allocation%20on%20assignment%0A%20%20last_name%20%3D%20%27Smith%27%0A%0A%20%20print%20%2A%2C%20first_name//%27%20%27//last_name%0A%0Aend%20program%20allocatable_string' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">allocatable_string</span>
 <span class="w">  </span><span class="k">implicit none</span>
 
@@ -903,7 +902,7 @@ when they go out of scope.</p>
 </div>
 </section>
 <section id="array-of-strings">
-<h2>Array of strings<a class="headerlink" href="#array-of-strings" title="Permalink to this heading">#</a></h2>
+<h2>Array of strings<a class="headerlink" href="#array-of-strings" title="Link to this heading">#</a></h2>
 <p>An array of strings can be expressed in Fortran as an array of <code class="docutils literal notranslate"><span class="pre">character</span></code> variables.
 All elements in a <code class="docutils literal notranslate"><span class="pre">character</span></code> array have equal length.
 However, strings of varying lengths can be provided as input to the array constructor, as shown in the example below.
@@ -911,7 +910,7 @@ They will be truncated or right-padded with spaces if they are longer or shorter
 Finally, we use the intrinsic function <code class="docutils literal notranslate"><span class="pre">trim</span></code> to remove any excess spaces when printing the values to the standard output.</p>
 <p><strong>Example:</strong> string array</p>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20string_array%0A%20%20implicit%20none%0A%20%20character%28len%3D10%29%2C%20dimension%282%29%20%3A%3A%20keys%2C%20vals%0A%0A%20%20keys%20%3D%20%5Bcharacter%28len%3D10%29%20%3A%3A%20%22user%22%2C%20%22dbname%22%5D%0A%20%20vals%20%3D%20%5Bcharacter%28len%3D10%29%20%3A%3A%20%22ben%22%2C%20%22motivation%22%5D%0A%0A%20%20call%20show%28keys%2C%20vals%29%0A%0A%20%20contains%0A%0A%20%20subroutine%20show%28akeys%2C%20avals%29%0A%20%20%20%20character%28len%3D%2A%29%2C%20intent%28in%29%20%3A%3A%20akeys%28%3A%29%2C%20avals%28%3A%29%0A%20%20%20%20integer%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%3A%20i%0A%0A%20%20%20%20do%20i%20%3D%201%2C%20size%28akeys%29%0A%20%20%20%20%20%20print%20%2A%2C%20trim%28akeys%28i%29%29%2C%20%22%3A%20%22%2C%20trim%28avals%28i%29%29%0A%20%20%20%20end%20do%0A%0A%20%20end%20subroutine%20show%0A%0Aend%20program%20string_array' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=program%20string_array%0A%20%20implicit%20none%0A%20%20character%28len%3D10%29%2C%20dimension%282%29%20%3A%3A%20keys%2C%20vals%0A%0A%20%20keys%20%3D%20%5Bcharacter%28len%3D10%29%20%3A%3A%20%22user%22%2C%20%22dbname%22%5D%0A%20%20vals%20%3D%20%5Bcharacter%28len%3D10%29%20%3A%3A%20%22ben%22%2C%20%22motivation%22%5D%0A%0A%20%20call%20show%28keys%2C%20vals%29%0A%0A%20%20contains%0A%0A%20%20subroutine%20show%28akeys%2C%20avals%29%0A%20%20%20%20character%28len%3D%2A%29%2C%20intent%28in%29%20%3A%3A%20akeys%28%3A%29%2C%20avals%28%3A%29%0A%20%20%20%20integer%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%3A%20i%0A%0A%20%20%20%20do%20i%20%3D%201%2C%20size%28akeys%29%0A%20%20%20%20%20%20print%20%2A%2C%20trim%28akeys%28i%29%29%2C%20%22%3A%20%22%2C%20trim%28avals%28i%29%29%0A%20%20%20%20end%20do%0A%0A%20%20end%20subroutine%20show%0A%0Aend%20program%20string_array' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">string_array</span>
 <span class="w">  </span><span class="k">implicit none</span>
 <span class="k">  </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">keys</span><span class="p">,</span><span class="w"> </span><span class="n">vals</span>

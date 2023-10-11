@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="fr">
+<html lang="fr" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Manipulation and properties of numeric values &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=a82a8355"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=d99ca74e"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/intrinsics/numeric.html" />
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Recherche" href="../../../search/" />
@@ -2106,15 +2105,15 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="manipulation-and-properties-of-numeric-values">
-<h1>Manipulation and properties of numeric values<a class="headerlink" href="#manipulation-and-properties-of-numeric-values" title="Lien permanent vers cette rubrique">#</a></h1>
+<h1>Manipulation and properties of numeric values<a class="headerlink" href="#manipulation-and-properties-of-numeric-values" title="Link to this heading">#</a></h1>
 <section id="abs">
-<h2>abs<a class="headerlink" href="#abs" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>abs<a class="headerlink" href="#abs" title="Link to this heading">#</a></h2>
 <section id="name">
-<h3><strong>Name</strong><a class="headerlink" href="#name" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#name" title="Link to this heading">#</a></h3>
 <p><strong>abs</strong>(3) - [NUMERIC] Absolute value</p>
 </section>
 <section id="synopsis">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2125,7 +2124,7 @@
 </div>
 </section>
 <section id="characteristics">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="Link to this heading">#</a></h3>
 <ul>
 <li><p><strong>a</strong> may be any <em>real</em>, <em>integer</em>, or <em>complex</em> value.</p></li>
 <li><p>If <strong>a</strong> is <em>complex</em> the returned value will be a <em>real</em> with the
@@ -2135,7 +2134,7 @@ same kind as <strong>a</strong>.</p>
 </ul>
 </section>
 <section id="description">
-<h3><strong>Description</strong><a class="headerlink" href="#description" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
 <p><strong>abs</strong>(3) computes the absolute value of numeric argument <strong>a</strong>.</p>
 <p>In mathematics, the absolute value or modulus of a real number <strong>x</strong>,
 denoted <strong>|x|</strong>, is the magnitude of <strong>x</strong> without regard to its sign.</p>
@@ -2146,7 +2145,7 @@ is the x value and the imaginary value is the y value for the point
 &lt;x,y&gt;.</p>
 </section>
 <section id="options">
-<h3><strong>Options</strong><a class="headerlink" href="#options" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#options" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>The value to compute the absolute value of.</p>
@@ -2156,7 +2155,7 @@ is the x value and the imaginary value is the y value for the point
 </ul>
 </section>
 <section id="result">
-<h3><strong>Result</strong><a class="headerlink" href="#result" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#result" title="Link to this heading">#</a></h3>
 <p>If <strong>a</strong> is of type <em>integer</em> or <em>real</em>, the value of the result
 is the absolute value <strong>|a|</strong> and of the same type and kind as the
 input argument.</p>
@@ -2175,7 +2174,7 @@ the result of <strong>abs</strong>(3) is the (positive) magnitude of the distanc
 of the value from the origin.</p>
 </section>
 <section id="examples">
-<h3><strong>Examples</strong><a class="headerlink" href="#examples" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_abs</span>
 <span class="k">implicit none</span>
@@ -2245,23 +2244,23 @@ of the value from the origin.</p>
 </div>
 </section>
 <section id="standard">
-<h3><strong>Standard</strong><a class="headerlink" href="#standard" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#standard" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="see-also">
-<h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#sign"><strong>sign</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="aint">
-<h2>aint<a class="headerlink" href="#aint" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>aint<a class="headerlink" href="#aint" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3><strong>Name</strong><a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>aint</strong>(3) - [NUMERIC] Truncate toward zero to a whole number</p>
 </section>
 <section id="id2">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">aint</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -2273,7 +2272,7 @@ of the value from the origin.</p>
 </div>
 </section>
 <section id="id3">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p>the result is a real of the default kind unless <strong>kind</strong> is specified.</p></li>
@@ -2282,11 +2281,11 @@ kind parameter of the result.</p></li>
 </ul>
 </section>
 <section id="id4">
-<h3><strong>Description</strong><a class="headerlink" href="#id4" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p><strong>aint</strong>(3) truncates its argument toward zero to a whole number.</p>
 </section>
 <section id="id5">
-<h3><strong>Options</strong><a class="headerlink" href="#id5" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>the <em>real</em> value to truncate.</p>
@@ -2301,7 +2300,7 @@ kind parameter of the result.</p></li>
 </ul>
 </section>
 <section id="id6">
-<h3><strong>Result</strong><a class="headerlink" href="#id6" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>The sign is the same as the sign of <strong>x</strong> unless the magnitude of <strong>x</strong>
 is less than one, in which case zero is returned.</p>
 <p>Otherwise <strong>aint</strong>(3) returns the largest whole number that does not
@@ -2309,7 +2308,7 @@ exceed the magnitude of <strong>x</strong> with the same sign as the input.</p>
 <p>That is, it truncates the value towards zero.</p>
 </section>
 <section id="id7">
-<h3><strong>Examples</strong><a class="headerlink" href="#id7" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_aint</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">sp</span><span class="o">=&gt;</span><span class="n">real32</span><span class="p">,</span><span class="w"> </span><span class="n">dp</span><span class="o">=&gt;</span><span class="n">real64</span>
@@ -2347,11 +2346,11 @@ exceed the magnitude of <strong>x</strong> with the same sign as the input.</p>
 </div>
 </section>
 <section id="id8">
-<h3><strong>Standard</strong><a class="headerlink" href="#id8" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="id9">
-<h3><strong>See Also</strong><a class="headerlink" href="#id9" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#anint"><strong>anint</strong>(3)</a>,
 <a class="reference internal" href="#int"><span class="xref myst"><strong>int</strong>(3)</span></a>,
 <a class="reference internal" href="#nint"><span class="xref myst"><strong>nint</strong>(3)</span></a>,
@@ -2362,13 +2361,13 @@ exceed the magnitude of <strong>x</strong> with the same sign as the input.</p>
 </section>
 </section>
 <section id="anint">
-<h2>anint<a class="headerlink" href="#anint" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>anint<a class="headerlink" href="#anint" title="Link to this heading">#</a></h2>
 <section id="id10">
-<h3><strong>Name</strong><a class="headerlink" href="#id10" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p><strong>anint</strong>(3) - [NUMERIC] Real nearest whole number</p>
 </section>
 <section id="id11">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id11" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">anint</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -2380,7 +2379,7 @@ exceed the magnitude of <strong>x</strong> with the same sign as the input.</p>
 </div>
 </section>
 <section id="id12">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id12" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>a</strong> is type <em>real</em> of any kind</p></li>
 <li><p><strong>KIND</strong> is a scalar integer constant expression.</p></li>
@@ -2389,14 +2388,14 @@ unless specified by <strong>kind</strong>.</p></li>
 </ul>
 </section>
 <section id="id13">
-<h3><strong>Description</strong><a class="headerlink" href="#id13" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p><strong>anint</strong>(3) rounds its argument to the nearest whole number.</p>
 <p>Unlike <strong>nint</strong>(3) which returns an <em>integer</em> the full range or real
 values can be returned (<em>integer</em> types typically have a smaller range
 of values than <em>real</em> types).</p>
 </section>
 <section id="id14">
-<h3><strong>Options</strong><a class="headerlink" href="#id14" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>the value to round</p>
@@ -2411,7 +2410,7 @@ of values than <em>real</em> types).</p>
 </ul>
 </section>
 <section id="id15">
-<h3><strong>Result</strong><a class="headerlink" href="#id15" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p>The return value is the real whole number nearest <strong>a</strong>.</p>
 <p>If <strong>a</strong> is greater than zero, <strong>anint(a)</strong>(3) returns <strong>aint(a + 0.5)</strong>.</p>
 <p>If <strong>a</strong> is less than or equal to zero then it returns <strong>aint(a - 0.5)</strong>,
@@ -2421,7 +2420,7 @@ except <strong>aint</strong> specifies that for |<strong>a</strong>| &lt; 1 the 
 or disable support of negative zero.</p>
 </section>
 <section id="id16">
-<h3><strong>Examples</strong><a class="headerlink" href="#id16" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_anint</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">real32</span><span class="p">,</span><span class="w"> </span><span class="n">real64</span><span class="p">,</span><span class="w"> </span><span class="n">real128</span>
@@ -2478,11 +2477,11 @@ or disable support of negative zero.</p>
 </div>
 </section>
 <section id="id17">
-<h3><strong>Standard</strong><a class="headerlink" href="#id17" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="id18">
-<h3><strong>See Also</strong><a class="headerlink" href="#id18" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#aint"><strong>aint</strong>(3)</a>,
 <a class="reference internal" href="#int"><span class="xref myst"><strong>int</strong>(3)</span></a>,
 <a class="reference internal" href="#nint"><span class="xref myst"><strong>nint</strong>(3)</span></a>,
@@ -2493,13 +2492,13 @@ or disable support of negative zero.</p>
 </section>
 </section>
 <section id="ceiling">
-<h2>ceiling<a class="headerlink" href="#ceiling" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>ceiling<a class="headerlink" href="#ceiling" title="Link to this heading">#</a></h2>
 <section id="id19">
-<h3><strong>Name</strong><a class="headerlink" href="#id19" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p><strong>ceiling</strong>(3) - [NUMERIC] Integer ceiling function</p>
 </section>
 <section id="id20">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id20" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ceiling</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -2511,7 +2510,7 @@ or disable support of negative zero.</p>
 </div>
 </section>
 <section id="id21">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id21" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>** a is of type <em>real</em></p></li>
 <li><p><strong>KIND</strong> shall be a scalar integer constant expression.
@@ -2521,13 +2520,13 @@ specified</p></li>
 </ul>
 </section>
 <section id="id22">
-<h3><strong>Description</strong><a class="headerlink" href="#id22" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <p><strong>ceiling</strong>(3) returns the least integer greater than or equal to <strong>a</strong>.</p>
 <p>On the number line -n &lt;– 0 -&gt; +n the value returned is always at or
 to the right of the input value.</p>
 </section>
 <section id="id23">
-<h3><strong>Options</strong><a class="headerlink" href="#id23" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>A <em>real</em> value to produce a ceiling for.</p>
@@ -2542,7 +2541,7 @@ to the right of the input value.</p>
 </ul>
 </section>
 <section id="id24">
-<h3><strong>Result</strong><a class="headerlink" href="#id24" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <p>The result will be the <em>integer</em> value equal to <strong>a</strong> or the least
 integer greater than <strong>a</strong> if the input value is not equal to a
 whole number.</p>
@@ -2551,7 +2550,7 @@ whole number.</p>
 <em>integer</em> type.</p>
 </section>
 <section id="id25">
-<h3><strong>Examples</strong><a class="headerlink" href="#id25" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_ceiling</span>
 <span class="k">implicit none</span>
@@ -2594,11 +2593,11 @@ whole number.</p>
 </div>
 </section>
 <section id="id26">
-<h3><strong>Standard</strong><a class="headerlink" href="#id26" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id27">
-<h3><strong>See Also</strong><a class="headerlink" href="#id27" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#floor"><strong>floor</strong>(3)</a>,
 <a class="reference internal" href="#nint"><span class="xref myst"><strong>nint</strong>(3)</span></a></p>
 <p><a class="reference internal" href="#aint"><strong>aint</strong>(3)</a>,
@@ -2609,13 +2608,13 @@ whole number.</p>
 </section>
 </section>
 <section id="conjg">
-<h2>conjg<a class="headerlink" href="#conjg" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>conjg<a class="headerlink" href="#conjg" title="Link to this heading">#</a></h2>
 <section id="id28">
-<h3><strong>Name</strong><a class="headerlink" href="#id28" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <p><strong>conjg</strong>(3) - [NUMERIC] Complex conjugate of a complex value</p>
 </section>
 <section id="id29">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id29" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">conjg</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2626,14 +2625,14 @@ whole number.</p>
 </div>
 </section>
 <section id="id30">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id30" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>z</strong> is a <em>complex</em> value of any valid kind.</p></li>
 <li><p>The returned value has the same <em>complex</em> type as the input.</p></li>
 </ul>
 </section>
 <section id="id31">
-<h3><strong>Description</strong><a class="headerlink" href="#id31" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
 <p><strong>conjg</strong>(3) returns the complex conjugate of the <em>complex</em> value <strong>z</strong>.</p>
 <p>That is, If <strong>z</strong> is the <em>complex</em> value <strong>(x, y)</strong> then the result is
 <strong>(x, -y)</strong>.</p>
@@ -2645,7 +2644,7 @@ element-by-element conjugation of <strong>array</strong>; not the conjugate tran
 of the <strong>array</strong> .</p>
 </section>
 <section id="id32">
-<h3><strong>Options</strong><a class="headerlink" href="#id32" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>z</strong></dt><dd><p>The value to create the conjugate of.</p>
@@ -2655,14 +2654,14 @@ of the <strong>array</strong> .</p>
 </ul>
 </section>
 <section id="id33">
-<h3><strong>Result</strong><a class="headerlink" href="#id33" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
 <p>Returns a value equal to the input value except the sign of
 the imaginary component is the opposite of the input value.</p>
 <p>That is, if <strong>z</strong> has the value <strong>(x,y)</strong>, the result has the value
 <strong>(x, -y)</strong>.</p>
 </section>
 <section id="id34">
-<h3><strong>Examples</strong><a class="headerlink" href="#id34" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_conjg</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">real_kinds</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
@@ -2717,11 +2716,11 @@ the imaginary component is the opposite of the input value.</p>
 </div>
 </section>
 <section id="id35">
-<h3><strong>Standard</strong><a class="headerlink" href="#id35" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="id36">
-<h3><strong>See Also</strong><a class="headerlink" href="#id36" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#aimag"><span class="xref myst"><strong>aimag</strong>(3)</span></a> - Imaginary part of complex number</p></li>
 <li><p><a class="reference internal" href="#cmplx"><span class="xref myst"><strong>cmplx</strong>(3)</span></a> - Complex conversion function</p></li>
@@ -2765,13 +2764,13 @@ logical expressions:</p>
 </section>
 </section>
 <section id="dim">
-<h2>dim<a class="headerlink" href="#dim" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>dim<a class="headerlink" href="#dim" title="Link to this heading">#</a></h2>
 <section id="id37">
-<h3><strong>Name</strong><a class="headerlink" href="#id37" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
 <p><strong>dim</strong>(3) - [NUMERIC] Positive difference of X - Y</p>
 </section>
 <section id="id38">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id38" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">dim</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2782,7 +2781,7 @@ logical expressions:</p>
 </div>
 </section>
 <section id="id39">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id39" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> and <strong>y</strong> may be any <em>real</em> or <em>integer</em> but of the same type
 and kind</p></li>
@@ -2790,7 +2789,7 @@ and kind</p></li>
 </ul>
 </section>
 <section id="id40">
-<h3><strong>Description</strong><a class="headerlink" href="#id40" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
 <p><strong>dim</strong>(3) returns the maximum of <strong>x - y</strong> and zero.
 That is, it returns the difference <strong>x - y</strong> if the result is positive;
 otherwise it returns zero. It is equivalent to</p>
@@ -2799,7 +2798,7 @@ otherwise it returns zero. It is equivalent to</p>
 </div>
 </section>
 <section id="id41">
-<h3><strong>Options</strong><a class="headerlink" href="#id41" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id41" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>the subtrahend, ie. the number being subtracted from.</p>
@@ -2814,11 +2813,11 @@ otherwise it returns zero. It is equivalent to</p>
 </ul>
 </section>
 <section id="id42">
-<h3><strong>Result</strong><a class="headerlink" href="#id42" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
 <p>Returns the difference <strong>x - y</strong> or zero, whichever is larger.</p>
 </section>
 <section id="id43">
-<h3><strong>Examples</strong><a class="headerlink" href="#id43" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_dim</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">real64</span>
@@ -2850,23 +2849,23 @@ otherwise it returns zero. It is equivalent to</p>
 </div>
 </section>
 <section id="id44">
-<h3><strong>Standard</strong><a class="headerlink" href="#id44" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="id45">
-<h3><strong>See Also</strong><a class="headerlink" href="#id45" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id45" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#"><span class="xref myst">****(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="dprod">
-<h2>dprod<a class="headerlink" href="#dprod" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>dprod<a class="headerlink" href="#dprod" title="Link to this heading">#</a></h2>
 <section id="id46">
-<h3><strong>Name</strong><a class="headerlink" href="#id46" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id46" title="Link to this heading">#</a></h3>
 <p><strong>dprod</strong>(3) - [NUMERIC] Double precision real product</p>
 </section>
 <section id="id47">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id47" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">dprod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2879,7 +2878,7 @@ otherwise it returns zero. It is equivalent to</p>
 </div>
 </section>
 <section id="id48">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id48" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id48" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> is a default real.</p></li>
 <li><p><strong>y</strong> is a default real.</p></li>
@@ -2889,7 +2888,7 @@ otherwise it returns zero. It is equivalent to</p>
 can affect this function.</p>
 </section>
 <section id="id49">
-<h3><strong>Description</strong><a class="headerlink" href="#id49" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id49" title="Link to this heading">#</a></h3>
 <p><strong>dprod</strong>(3) produces a <em>doubleprecision</em> product of default <em>real</em>
 values <strong>x</strong> and <strong>y</strong>.</p>
 <p>That is, it is expected to convert the arguments to double precision
@@ -2903,7 +2902,7 @@ rather than in single precision then converted to double precision;
 but is only a recommendation.</p>
 </section>
 <section id="id50">
-<h3><strong>Options</strong><a class="headerlink" href="#id50" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id50" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>the multiplier</p>
@@ -2918,12 +2917,12 @@ but is only a recommendation.</p>
 </ul>
 </section>
 <section id="id51">
-<h3><strong>Result</strong><a class="headerlink" href="#id51" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id51" title="Link to this heading">#</a></h3>
 <p>The returned value of the product should have the same value as
 <strong>dble(x)*dble(y)</strong>.</p>
 </section>
 <section id="id52">
-<h3><strong>Examples</strong><a class="headerlink" href="#id52" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id52" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_dprod</span>
 <span class="k">implicit none</span>
@@ -2969,25 +2968,25 @@ but is only a recommendation.</p>
 </div>
 </section>
 <section id="id53">
-<h3><strong>Standard</strong><a class="headerlink" href="#id53" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id53" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="id54">
-<h3><strong>See Also</strong><a class="headerlink" href="#id54" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id54" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#dble"><span class="xref myst"><strong>dble</strong>(3)</span></a>
 <a class="reference internal" href="#real"><span class="xref myst"><strong>real</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="floor">
-<h2>floor<a class="headerlink" href="#floor" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>floor<a class="headerlink" href="#floor" title="Link to this heading">#</a></h2>
 <section id="id55">
-<h3><strong>Name</strong><a class="headerlink" href="#id55" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id55" title="Link to this heading">#</a></h3>
 <p><strong>floor</strong>(3) - [NUMERIC] Function to return largest integral value
 not greater than argument</p>
 </section>
 <section id="id56">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id56" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id56" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">floor</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -2999,7 +2998,7 @@ not greater than argument</p>
 </div>
 </section>
 <section id="id57">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id57" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id57" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>a</strong> is a <em>real</em> of any kind</p></li>
@@ -3008,7 +3007,7 @@ not greater than argument</p>
 </ul>
 </section>
 <section id="id58">
-<h3><strong>Description</strong><a class="headerlink" href="#id58" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id58" title="Link to this heading">#</a></h3>
 <p><strong>floor</strong>(3) returns the greatest integer less than or equal to <strong>a</strong>.</p>
 <p>In other words, it picks the whole number at or to the left of the value on
 the number line.</p>
@@ -3017,7 +3016,7 @@ does not exceed the range of the output value, as the range of values supported
 by <em>real</em> values is typically larger than the range for <em>integers</em>.</p>
 </section>
 <section id="id59">
-<h3><strong>Options</strong><a class="headerlink" href="#id59" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id59" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>The value to operate on. Valid values are restricted by the size of
@@ -3035,7 +3034,7 @@ indicating the kind parameter of the result.</p>
 </ul>
 </section>
 <section id="id60">
-<h3><strong>Result</strong><a class="headerlink" href="#id60" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id60" title="Link to this heading">#</a></h3>
 <p>The return value is of type <em>integer(kind)</em> if <strong>kind</strong> is present and of
 default-kind <em>integer</em> otherwise.</p>
 <p>The result is undefined if it cannot be represented in the specified
@@ -3048,7 +3047,7 @@ removed.</p>
 input value.</p>
 </section>
 <section id="id61">
-<h3><strong>Examples</strong><a class="headerlink" href="#id61" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id61" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_floor</span>
 <span class="k">implicit none</span>
@@ -3082,11 +3081,11 @@ input value.</p>
 </div>
 </section>
 <section id="id62">
-<h3><strong>Standard</strong><a class="headerlink" href="#id62" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id62" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id63">
-<h3><strong>See Also</strong><a class="headerlink" href="#id63" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id63" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#ceiling"><strong>ceiling</strong>(3)</a>,
 <a class="reference internal" href="#nint"><span class="xref myst"><strong>nint</strong>(3)</span></a>,
 <a class="reference internal" href="#aint"><strong>aint</strong>(3)</a>,
@@ -3108,13 +3107,13 @@ end function floor
 </section>
 </section>
 <section id="max">
-<h2>max<a class="headerlink" href="#max" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>max<a class="headerlink" href="#max" title="Link to this heading">#</a></h2>
 <section id="id64">
-<h3><strong>Name</strong><a class="headerlink" href="#id64" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id64" title="Link to this heading">#</a></h3>
 <p><strong>max</strong>(3) - [NUMERIC] Maximum value of an argument list</p>
 </section>
 <section id="id65">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id65" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id65" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="w"> </span><span class="n">a2</span><span class="p">,</span><span class="w"> </span><span class="n">a3</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 </pre></div>
 </div>
@@ -3130,7 +3129,7 @@ end function floor
 </div>
 </section>
 <section id="id66">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id66" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id66" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>a3, a3, a4, …</strong> must be of the same type and kind as <strong>a1</strong></p></li>
 <li><p>the arguments may (all) be <em>integer</em>, <em>real</em> or <em>character</em></p></li>
@@ -3140,7 +3139,7 @@ end function floor
 </ul>
 </section>
 <section id="id67">
-<h3><strong>Description</strong><a class="headerlink" href="#id67" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id67" title="Link to this heading">#</a></h3>
 <p><strong>max</strong>(3) returns the argument with the largest (most positive) value.</p>
 <p>For arguments of character type, the result is as if the arguments had
 been successively compared with the intrinsic operational operators,
@@ -3157,7 +3156,7 @@ elementally with arrays.</p>
 <p>See maxval(3) for simply getting the max value of an array.</p>
 </section>
 <section id="id68">
-<h3><strong>Options</strong><a class="headerlink" href="#id68" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id68" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a1</strong></dt><dd><p>The first argument determines the type and kind of the returned
@@ -3176,7 +3175,7 @@ the set of values to find the maximum (most positive) value of.</p>
 </ul>
 </section>
 <section id="id69">
-<h3><strong>Result</strong><a class="headerlink" href="#id69" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id69" title="Link to this heading">#</a></h3>
 <p>The return value corresponds to an array of the same shape of any
 array argument, or a scalar if all arguments are scalar.</p>
 <p>The returned value when any argument is an array will be an array of
@@ -3185,7 +3184,7 @@ that location, treating all the scalar values as arrays of that same
 shape with all elements set to the scalar value.</p>
 </section>
 <section id="id70">
-<h3><strong>Examples</strong><a class="headerlink" href="#id70" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id70" title="Link to this heading">#</a></h3>
 <p>Sample program</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_max</span>
 <span class="k">implicit none</span>
@@ -3259,11 +3258,11 @@ shape with all elements set to the scalar value.</p>
 </div>
 </section>
 <section id="id71">
-<h3><strong>Standard</strong><a class="headerlink" href="#id71" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id71" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="id72">
-<h3><strong>See Also</strong><a class="headerlink" href="#id72" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id72" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#maxloc"><span class="xref myst"><strong>maxloc</strong>(3)</span></a>,
 <a class="reference internal" href="#minloc"><span class="xref myst"><strong>minloc</strong>(3)</span></a>,
 <a class="reference internal" href="#maxval"><span class="xref myst"><strong>maxval</strong>(3)</span></a>,
@@ -3273,13 +3272,13 @@ shape with all elements set to the scalar value.</p>
 </section>
 </section>
 <section id="min">
-<h2>min<a class="headerlink" href="#min" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>min<a class="headerlink" href="#min" title="Link to this heading">#</a></h2>
 <section id="id73">
-<h3><strong>Name</strong><a class="headerlink" href="#id73" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id73" title="Link to this heading">#</a></h3>
 <p><strong>min</strong>(3) - [NUMERIC] Minimum value of an argument list</p>
 </section>
 <section id="id74">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id74" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id74" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="w"> </span><span class="n">a2</span><span class="p">,</span><span class="w"> </span><span class="n">a3</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3295,19 +3294,19 @@ shape with all elements set to the scalar value.</p>
 </div>
 </section>
 <section id="id75">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id75" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id75" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>TYPE</strong> may be <em>integer</em>, <em>real</em> or <em>character</em>.</p></li>
 </ul>
 </section>
 <section id="id76">
-<h3><strong>Description</strong><a class="headerlink" href="#id76" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id76" title="Link to this heading">#</a></h3>
 <p><strong>min</strong>(3) returns the argument with the smallest (most negative) value.</p>
 <p>See <strong>max</strong>(3) for an extended example of the behavior of <strong>min</strong>(3) as
 and <strong>max</strong>(3).</p>
 </section>
 <section id="id77">
-<h3><strong>Options</strong><a class="headerlink" href="#id77" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id77" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a1</strong></dt><dd><p>the first element of the set of values to determine the minimum of.</p>
@@ -3323,12 +3322,12 @@ set of values to find the minimum of.</p>
 </ul>
 </section>
 <section id="id78">
-<h3><strong>Result</strong><a class="headerlink" href="#id78" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id78" title="Link to this heading">#</a></h3>
 <p>The return value corresponds to the minimum value among the arguments,
 and has the same type and kind as the first argument.</p>
 </section>
 <section id="id79">
-<h3><strong>Examples</strong><a class="headerlink" href="#id79" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id79" title="Link to this heading">#</a></h3>
 <p>Sample program</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_min</span>
 <span class="k">implicit none</span>
@@ -3342,11 +3341,11 @@ and has the same type and kind as the first argument.</p>
 </div>
 </section>
 <section id="id80">
-<h3><strong>Standard</strong><a class="headerlink" href="#id80" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id80" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="id81">
-<h3><strong>See Also</strong><a class="headerlink" href="#id81" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id81" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#maxloc"><span class="xref myst"><strong>maxloc</strong>(3)</span></a>,
 <a class="reference internal" href="#minloc"><span class="xref myst"><strong>minloc</strong>(3)</span></a>,
 <a class="reference internal" href="#minval"><span class="xref myst"><strong>minval</strong>(3)</span></a>,
@@ -3355,13 +3354,13 @@ and has the same type and kind as the first argument.</p>
 </section>
 </section>
 <section id="mod">
-<h2>mod<a class="headerlink" href="#mod" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>mod<a class="headerlink" href="#mod" title="Link to this heading">#</a></h2>
 <section id="id82">
-<h3><strong>Name</strong><a class="headerlink" href="#id82" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id82" title="Link to this heading">#</a></h3>
 <p><strong>mod</strong>(3) - [NUMERIC] Remainder function</p>
 </section>
 <section id="id83">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id83" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id83" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">mod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3373,14 +3372,14 @@ and has the same type and kind as the first argument.</p>
 </div>
 </section>
 <section id="id84">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id84" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id84" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The result and arguments are all of the same type and kind.</p></li>
 <li><p>The type may be any kind of <em>real</em> or <em>integer</em>.</p></li>
 </ul>
 </section>
 <section id="id85">
-<h3><strong>Description</strong><a class="headerlink" href="#id85" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id85" title="Link to this heading">#</a></h3>
 <p><strong>mod</strong>(3) computes the remainder of the division of <strong>a</strong> by <strong>p</strong>.</p>
 <p>In mathematics, the remainder is the amount « left over » after
 performing some computation. In arithmetic, the remainder is the
@@ -3395,7 +3394,7 @@ https://en.wikipedia.org/wiki/Remainder</p></li>
 </ul>
 </section>
 <section id="id86">
-<h3><strong>Options</strong><a class="headerlink" href="#id86" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id86" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>The dividend</p>
@@ -3410,7 +3409,7 @@ https://en.wikipedia.org/wiki/Remainder</p></li>
 </ul>
 </section>
 <section id="id87">
-<h3><strong>Result</strong><a class="headerlink" href="#id87" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id87" title="Link to this heading">#</a></h3>
 <p>The return value is the result of <strong>a - (int(a/p) * p)</strong>.</p>
 <p>As can be seen by the formula the sign of <strong>p</strong> is canceled out.
 Therefore the returned value always has the sign of <strong>a</strong>.</p>
@@ -3418,7 +3417,7 @@ Therefore the returned value always has the sign of <strong>a</strong>.</p>
 of <strong>p</strong>, as the result has been reduced by all multiples of <strong>p</strong>.</p>
 </section>
 <section id="id88">
-<h3><strong>Examples</strong><a class="headerlink" href="#id88" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id88" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_mod</span>
 <span class="k">implicit none</span>
@@ -3460,11 +3459,11 @@ of <strong>p</strong>, as the result has been reduced by all multiples of <stron
 </div>
 </section>
 <section id="id89">
-<h3><strong>Standard</strong><a class="headerlink" href="#id89" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id89" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="id90">
-<h3><strong>See Also</strong><a class="headerlink" href="#id90" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id90" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#modulo"><strong>modulo</strong>(3)</a> - Modulo function</p></li>
 <li><p><a class="reference internal" href="#aint"><strong>aint</strong>(3)</a> - truncate toward zero to a whole <em>real</em> number</p></li>
@@ -3476,13 +3475,13 @@ of <strong>p</strong>, as the result has been reduced by all multiples of <stron
 </section>
 </section>
 <section id="modulo">
-<h2>modulo<a class="headerlink" href="#modulo" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>modulo<a class="headerlink" href="#modulo" title="Link to this heading">#</a></h2>
 <section id="id91">
-<h3><strong>Name</strong><a class="headerlink" href="#id91" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id91" title="Link to this heading">#</a></h3>
 <p><strong>modulo</strong>(3) - [NUMERIC] Modulo function</p>
 </section>
 <section id="id92">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id92" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id92" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">modulo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3494,7 +3493,7 @@ of <strong>p</strong>, as the result has been reduced by all multiples of <stron
 </div>
 </section>
 <section id="id93">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id93" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id93" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>a</strong> may be any kind of <em>real</em> or <em>integer</em>.</p></li>
 <li><p><strong>p</strong> is the same type and kind as <strong>a</strong></p></li>
@@ -3502,11 +3501,11 @@ of <strong>p</strong>, as the result has been reduced by all multiples of <stron
 </ul>
 </section>
 <section id="id94">
-<h3><strong>Description</strong><a class="headerlink" href="#id94" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id94" title="Link to this heading">#</a></h3>
 <p><strong>modulo</strong>(3) computes the <strong>a</strong> modulo <strong>p</strong>.</p>
 </section>
 <section id="id95">
-<h3><strong>Options</strong><a class="headerlink" href="#id95" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id95" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>the value to take the <strong>modulo</strong> of</p>
@@ -3522,7 +3521,7 @@ It shall not be zero.</p>
 </ul>
 </section>
 <section id="id96">
-<h3><strong>Result</strong><a class="headerlink" href="#id96" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id96" title="Link to this heading">#</a></h3>
 <p>The type and kind of the result are those of the arguments.</p>
 <ul class="simple">
 <li><p>If <strong>a</strong> and <strong>p</strong> are of type <em>integer</em>: <strong>modulo(a,p)</strong> has the value of
@@ -3534,7 +3533,7 @@ It shall not be zero.</p>
 magnitude of <strong>p</strong>.</p>
 </section>
 <section id="id97">
-<h3><strong>Examples</strong><a class="headerlink" href="#id97" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id97" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_modulo</span>
 <span class="k">implicit none</span>
@@ -3560,23 +3559,23 @@ magnitude of <strong>p</strong>.</p>
 </div>
 </section>
 <section id="id98">
-<h3><strong>Standard</strong><a class="headerlink" href="#id98" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id98" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id99">
-<h3><strong>See Also</strong><a class="headerlink" href="#id99" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id99" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#mod"><strong>mod</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="sign">
-<h2>sign<a class="headerlink" href="#sign" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>sign<a class="headerlink" href="#sign" title="Link to this heading">#</a></h2>
 <section id="id100">
-<h3><strong>Name</strong><a class="headerlink" href="#id100" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id100" title="Link to this heading">#</a></h3>
 <p><strong>sign</strong>(3) - [NUMERIC] Sign copying function</p>
 </section>
 <section id="id101">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id101" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id101" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sign</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3587,7 +3586,7 @@ magnitude of <strong>p</strong>.</p>
 </div>
 </section>
 <section id="id102">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id102" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id102" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>a</strong> shall be of type integer or real.</p></li>
 <li><p><strong>b</strong> shall be of the same type as <strong>a</strong>.</p></li>
@@ -3595,7 +3594,7 @@ magnitude of <strong>p</strong>.</p>
 </ul>
 </section>
 <section id="id103">
-<h3><strong>Description</strong><a class="headerlink" href="#id103" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id103" title="Link to this heading">#</a></h3>
 <p><strong>sign</strong>(3) returns a value with the magnitude of <em>a</em> but with the
 sign of <em>b</em>.</p>
 <p>For processors that distinguish between positive and negative zeros
@@ -3604,7 +3603,7 @@ sign of <em>b</em>.</p>
 distinguishable.</p>
 </section>
 <section id="id104">
-<h3><strong>Options</strong><a class="headerlink" href="#id104" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id104" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>The value whose magnitude will be returned.</p>
@@ -3619,7 +3618,7 @@ distinguishable.</p>
 </ul>
 </section>
 <section id="id105">
-<h3><strong>Result</strong><a class="headerlink" href="#id105" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id105" title="Link to this heading">#</a></h3>
 <p>a value with the magnitude of <strong>a</strong> with the sign of <strong>b</strong>. That is,</p>
 <ul class="simple">
 <li><p>If <em>b &gt;= 0</em> then the result is <em>abs(a)</em></p></li>
@@ -3630,7 +3629,7 @@ result is <em>-abs(a)</em></p></li>
 </ul>
 </section>
 <section id="id106">
-<h3><strong>Examples</strong><a class="headerlink" href="#id106" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id106" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_sign</span>
 <span class="k">implicit none</span>
@@ -3666,23 +3665,23 @@ result is <em>-abs(a)</em></p></li>
 </div>
 </section>
 <section id="id107">
-<h3><strong>Standard</strong><a class="headerlink" href="#id107" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id107" title="Link to this heading">#</a></h3>
 <p>FORTRAN 77</p>
 </section>
 <section id="id108">
-<h3><strong>See also</strong><a class="headerlink" href="#id108" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See also</strong><a class="headerlink" href="#id108" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#abs"><strong>abs</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="cshift">
-<h2>cshift<a class="headerlink" href="#cshift" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>cshift<a class="headerlink" href="#cshift" title="Link to this heading">#</a></h2>
 <section id="id109">
-<h3><strong>Name</strong><a class="headerlink" href="#id109" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id109" title="Link to this heading">#</a></h3>
 <p><strong>cshift</strong>(3) - [TRANSFORMATIONAL] Circular shift elements of an array</p>
 </section>
 <section id="id110">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id110" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id110" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cshift</span><span class="p">(</span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -3695,7 +3694,7 @@ result is <em>-abs(a)</em></p></li>
 </div>
 </section>
 <section id="id111">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id111" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id111" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>array</strong> may be any type and rank</p></li>
 <li><p><strong>shift</strong> an <em>integer</em> scalar if <strong>array</strong> has rank one.
@@ -3711,7 +3710,7 @@ If <strong>dim</strong> is absent, it is as if it were present with the value 1.
 :a kind designated as ** may be any supported kind for the type</p>
 </section>
 <section id="id112">
-<h3><strong>Description</strong><a class="headerlink" href="#id112" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id112" title="Link to this heading">#</a></h3>
 <p><strong>cshift</strong>(3) performs a circular shift on elements
 of <strong>array</strong> along the dimension of <strong>dim</strong>. If <strong>dim</strong> is omitted it is
 taken to be <strong>1</strong>. <strong>dim</strong> is a scalar of type <em>integer</em> in the range of
@@ -3723,7 +3722,7 @@ of <strong>array</strong> along the given dimension are shifted. Elements shifte
 out one end of each rank one section are shifted back in the other end.</p>
 </section>
 <section id="id113">
-<h3><strong>Options</strong><a class="headerlink" href="#id113" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id113" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>array</strong></dt><dd><p>An array of any type which is to be shifted</p>
@@ -3745,16 +3744,16 @@ to 1.</p>
 </ul>
 </section>
 <section id="id114">
-<h3><strong>Result</strong><a class="headerlink" href="#id114" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id114" title="Link to this heading">#</a></h3>
 <p>Returns an array of same type and rank as the <strong>array</strong> argument.</p>
 <p>The rows of an array of rank two may all be shifted by the same amount
 or by different amounts.</p>
 </section>
 </section>
 <section id="id115">
-<h2>cshift<a class="headerlink" href="#id115" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>cshift<a class="headerlink" href="#id115" title="Link to this heading">#</a></h2>
 <section id="id116">
-<h3><strong>Examples</strong><a class="headerlink" href="#id116" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id116" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_cshift</span>
 <span class="k">implicit none</span>
@@ -3803,11 +3802,11 @@ or by different amounts.</p>
 </div>
 </section>
 <section id="id117">
-<h3><strong>Standard</strong><a class="headerlink" href="#id117" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id117" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id118">
-<h3><strong>See Also</strong><a class="headerlink" href="#id118" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id118" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#eoshift"><strong>eoshift</strong>(3)</a> - End-off shift elements of an array</p></li>
 </ul>
@@ -3824,13 +3823,13 @@ or by different amounts.</p>
 </section>
 </section>
 <section id="dot-product">
-<h2>dot_product<a class="headerlink" href="#dot-product" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>dot_product<a class="headerlink" href="#dot-product" title="Link to this heading">#</a></h2>
 <section id="id119">
-<h3><strong>Name</strong><a class="headerlink" href="#id119" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id119" title="Link to this heading">#</a></h3>
 <p><strong>dot_product</strong>(3) - [TRANSFORMATIONAL] Dot product of two vectors</p>
 </section>
 <section id="id120">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id120" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id120" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">dot_product</span><span class="p">(</span><span class="n">vector_a</span><span class="p">,</span><span class="w"> </span><span class="n">vector_b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3842,7 +3841,7 @@ or by different amounts.</p>
 </div>
 </section>
 <section id="id121">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id121" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id121" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>vector_a</strong>, <strong>vector_b</strong> may be any numeric or logical type array
 of rank one of the same size</p></li>
@@ -3855,12 +3854,12 @@ type that the other vector is optionally promoted to if they differ.</p></li>
 of rank one and of equal size.</p>
 </section>
 <section id="id122">
-<h3><strong>Description</strong><a class="headerlink" href="#id122" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id122" title="Link to this heading">#</a></h3>
 <p><strong>dot_product</strong>(3) computes the dot product
 multiplication of two vectors <strong>vector_a</strong> and <strong>vector_b</strong>.</p>
 </section>
 <section id="id123">
-<h3><strong>Options</strong><a class="headerlink" href="#id123" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id123" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>vector_a</strong></dt><dd><p>A rank 1 vector of values</p>
@@ -3877,7 +3876,7 @@ rank-one array of the same size as <strong>vector_a</strong>.</p>
 </ul>
 </section>
 <section id="id124">
-<h3><strong>Result</strong><a class="headerlink" href="#id124" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id124" title="Link to this heading">#</a></h3>
 <p>If the arguments are numeric, the return value is a scalar of numeric
 type. If the arguments are <em>logical</em>, the
 return value is <em>.true.</em> or <em>.false.</em>.</p>
@@ -3895,7 +3894,7 @@ return value is <em>.true.</em> or <em>.false.</em>.</p>
 </div>
 </section>
 <section id="id125">
-<h3><strong>Examples</strong><a class="headerlink" href="#id125" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id125" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_dot_prod</span>
 <span class="k">implicit none</span>
@@ -3920,11 +3919,11 @@ return value is <em>.true.</em> or <em>.false.</em>.</p>
 </div>
 </section>
 <section id="id126">
-<h3><strong>Standard</strong><a class="headerlink" href="#id126" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id126" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id127">
-<h3><strong>See Also</strong><a class="headerlink" href="#id127" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id127" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#sum"><span class="xref myst"><strong>sum</strong>(3)</span></a>,
 <a class="reference internal" href="#conjg"><strong>conjg</strong>(3)</a>,
 <a class="reference internal" href="#any"><span class="xref myst"><strong>any</strong>(3)</span></a></p>
@@ -3932,13 +3931,13 @@ return value is <em>.true.</em> or <em>.false.</em>.</p>
 </section>
 </section>
 <section id="eoshift">
-<h2>eoshift<a class="headerlink" href="#eoshift" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>eoshift<a class="headerlink" href="#eoshift" title="Link to this heading">#</a></h2>
 <section id="id128">
-<h3><strong>Name</strong><a class="headerlink" href="#id128" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id128" title="Link to this heading">#</a></h3>
 <p><strong>eoshift</strong>(3) - [TRANSFORMATIONAL] End-off shift of elements of an array</p>
 </section>
 <section id="id129">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id129" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id129" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">eoshift</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="p">[,</span><span class="n">boundary</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3952,7 +3951,7 @@ return value is <em>.true.</em> or <em>.false.</em>.</p>
 </div>
 </section>
 <section id="id130">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id130" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id130" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>array</strong> an array of any type</p></li>
 <li><p><strong>shift</strong> is an integer of any kind. It may be a scalar.
@@ -3971,7 +3970,7 @@ argument.</p></li>
 </ul>
 </section>
 <section id="id131">
-<h3><strong>Description</strong><a class="headerlink" href="#id131" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id131" title="Link to this heading">#</a></h3>
 <p><strong>eoshift</strong>(3) performs an end-off shift on elements of <strong>array</strong>
 along the dimension of <strong>dim</strong>.</p>
 <p>Elements shifted out one end of each rank one section are dropped.</p>
@@ -3980,7 +3979,7 @@ along the dimension of <strong>dim</strong>.</p>
 are used.</p>
 </section>
 <section id="id132">
-<h3><strong>Options</strong><a class="headerlink" href="#id132" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id132" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>array</strong></dt><dd><p>array of any type whose elements are to be shifted.
@@ -4029,14 +4028,14 @@ For these types the kind is converted as neccessary to the kind of
 is taken to be <strong>1</strong>.</p>
 </section>
 <section id="id133">
-<h3><strong>Result</strong><a class="headerlink" href="#id133" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id133" title="Link to this heading">#</a></h3>
 <p>Returns an array of the same characteristics as the input with the
 specified number of elements dropped off along the specified direction
 indicated, backfilling the vacated elements with a value indicated by
 the <strong>boundary</strong> value.</p>
 </section>
 <section id="id134">
-<h3><strong>Examples</strong><a class="headerlink" href="#id134" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id134" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_eoshift</span>
 <span class="k">implicit none</span>
@@ -4067,25 +4066,25 @@ the <strong>boundary</strong> value.</p>
 </div>
 </section>
 <section id="id135">
-<h3><strong>Standard</strong><a class="headerlink" href="#id135" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id135" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id136">
-<h3><strong>See Also</strong><a class="headerlink" href="#id136" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id136" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#dshiftr"><span class="xref myst"><strong>dshiftr</strong>(3)</span></a>,
 <a class="reference internal" href="#dshiftl"><span class="xref myst"><strong>dshiftl</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="matmul">
-<h2>matmul<a class="headerlink" href="#matmul" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>matmul<a class="headerlink" href="#matmul" title="Link to this heading">#</a></h2>
 <section id="id137">
-<h3><strong>Name</strong><a class="headerlink" href="#id137" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id137" title="Link to this heading">#</a></h3>
 <p><strong>matmul</strong>(3) - [TRANSFORMATIONAL] Numeric or logical matrix
 multiplication</p>
 </section>
 <section id="id138">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id138" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id138" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">matmul</span><span class="p">(</span><span class="n">matrix_a</span><span class="p">,</span><span class="n">matrix_b</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4098,7 +4097,7 @@ multiplication</p>
 </div>
 </section>
 <section id="id139">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id139" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id139" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>matrix_a</strong> is a numeric (<em>integer</em>, <em>real</em>, or <em>complex</em> ) or
 <em>logical</em> array of rank one two.</p></li>
@@ -4119,12 +4118,12 @@ as described below.</p></li>
 </ul>
 </section>
 <section id="id140">
-<h3><strong>Description</strong><a class="headerlink" href="#id140" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id140" title="Link to this heading">#</a></h3>
 <p><strong>matmul</strong>(3) performs a matrix multiplication on numeric or logical
 arguments.</p>
 </section>
 <section id="id141">
-<h3><strong>Options</strong><a class="headerlink" href="#id141" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id141" title="Link to this heading">#</a></h3>
 <ul>
 <li><dl class="simple myst">
 <dt><strong>matrix_a</strong></dt><dd><p>A numeric or logical array with a rank of one or two.</p>
@@ -4143,9 +4142,9 @@ types.</p>
 </ul>
 </section>
 <section id="id142">
-<h3><strong>Result</strong><a class="headerlink" href="#id142" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id142" title="Link to this heading">#</a></h3>
 <section id="numeric-arguments">
-<h4><strong>Numeric Arguments</strong><a class="headerlink" href="#numeric-arguments" title="Lien permanent vers cette rubrique">#</a></h4>
+<h4><strong>Numeric Arguments</strong><a class="headerlink" href="#numeric-arguments" title="Link to this heading">#</a></h4>
 <p>If <strong>matrix_a</strong> and <strong>matrix_b</strong> are numeric the result is an
 array containing the conventional matrix product of <strong>matrix_a</strong>
 and <strong>matrix_b</strong>.</p>
@@ -4155,7 +4154,7 @@ and <strong>matrix_b</strong>.</p>
 <li><p>Any vector <strong>B(n)</strong> is treated as a column vector <strong>B(n,1)</strong>.</p></li>
 </ul>
 <section id="shape-and-rank">
-<h5><strong>Shape and Rank</strong><a class="headerlink" href="#shape-and-rank" title="Lien permanent vers cette rubrique">#</a></h5>
+<h5><strong>Shape and Rank</strong><a class="headerlink" href="#shape-and-rank" title="Link to this heading">#</a></h5>
 <p>The shape of the result can then be determined as the number of rows
 of the first matrix and the number of columns of the second; but if
 any argument is of rank one (a vector) the result is also rank one.
@@ -4171,7 +4170,7 @@ the result has shape [n].</p></li>
 </ul>
 </section>
 <section id="values">
-<h5><strong>Values</strong><a class="headerlink" href="#values" title="Lien permanent vers cette rubrique">#</a></h5>
+<h5><strong>Values</strong><a class="headerlink" href="#values" title="Link to this heading">#</a></h5>
 <p>Then element <strong>C(i,j)</strong> of the product is obtained by multiplying
 term-by-term the entries of the ith row of <strong>A</strong> and the jth column
 of <strong>B</strong>, and summing these products. In other words, <strong>C(i,j)</strong>
@@ -4179,9 +4178,9 @@ is the dot product of the ith row of <strong>A</strong> and the jth column of <s
 </section>
 </section>
 <section id="logical-arguments">
-<h4><strong>Logical Arguments</strong><a class="headerlink" href="#logical-arguments" title="Lien permanent vers cette rubrique">#</a></h4>
+<h4><strong>Logical Arguments</strong><a class="headerlink" href="#logical-arguments" title="Link to this heading">#</a></h4>
 <section id="id143">
-<h5><strong>Values</strong><a class="headerlink" href="#id143" title="Lien permanent vers cette rubrique">#</a></h5>
+<h5><strong>Values</strong><a class="headerlink" href="#id143" title="Link to this heading">#</a></h5>
 <p>If <strong>matrix_a</strong> and <strong>matrix_b</strong> are of type logical, the array elements
 of the result are instead:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">Value_of_Element</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">&amp;</span>
@@ -4192,7 +4191,7 @@ of the result are instead:</p>
 </section>
 </section>
 <section id="id144">
-<h3><strong>Examples</strong><a class="headerlink" href="#id144" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id144" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_matmul</span>
 <span class="k">implicit none</span>
@@ -4309,16 +4308,16 @@ of the result are instead:</p>
 </div>
 </section>
 <section id="id145">
-<h3><strong>Standard</strong><a class="headerlink" href="#id145" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id145" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id146">
-<h3><strong>See Also</strong><a class="headerlink" href="#id146" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id146" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#product"><span class="xref myst"><strong>product</strong>(3)</span></a>,
 <a class="reference internal" href="#transpose"><span class="xref myst"><strong>transpose</strong>(3)</span></a></p>
 </section>
 <section id="resources">
-<h3><strong>Resources</strong><a class="headerlink" href="#resources" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Resources</strong><a class="headerlink" href="#resources" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Matrix_multiplication">Matrix multiplication : Wikipedia</a></p></li>
 <li><p>The Winograd variant of Strassen’s matrix-matrix multiply algorithm may
@@ -4339,13 +4338,13 @@ be of interest for optimizing multiplication of very large matrices. See</p></li
 </section>
 </section>
 <section id="parity">
-<h2>parity<a class="headerlink" href="#parity" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>parity<a class="headerlink" href="#parity" title="Link to this heading">#</a></h2>
 <section id="id147">
-<h3><strong>Name</strong><a class="headerlink" href="#id147" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id147" title="Link to this heading">#</a></h3>
 <p><strong>parity</strong>(3) - [ARRAY:REDUCTION] Array reduction by .NEQV. operation</p>
 </section>
 <section id="id148">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id148" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id148" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parity</span><span class="p">(</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4357,7 +4356,7 @@ be of interest for optimizing multiplication of very large matrices. See</p></li
 </div>
 </section>
 <section id="id149">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id149" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id149" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>mask</strong> is a <em>logical</em> array</p></li>
 <li><p><strong>dim</strong> is an integer scalar</p></li>
@@ -4368,13 +4367,13 @@ of <strong>mask</strong> with the dimension specified by <strong>dim</strong> re
 </ul>
 </section>
 <section id="id150">
-<h3><strong>Description</strong><a class="headerlink" href="#id150" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id150" title="Link to this heading">#</a></h3>
 <p><strong>parity</strong>(3) calculates the parity array (i.e. the reduction using .neqv.) of
 <strong>mask</strong> along dimension <strong>dim</strong> if <strong>dim</strong> is present and not 1. Otherwise, it
 returns the parity of the entire <strong>mask</strong> array as a scalar.</p>
 </section>
 <section id="id151">
-<h3><strong>Options</strong><a class="headerlink" href="#id151" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id151" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>mask</strong></dt><dd><p>Shall be an array of type <em>logical</em>.</p>
@@ -4390,7 +4389,7 @@ range from <em>1 to n</em>, where <em>n</em> equals the rank of <strong>mask</st
 </ul>
 </section>
 <section id="id152">
-<h3><strong>Result</strong><a class="headerlink" href="#id152" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id152" title="Link to this heading">#</a></h3>
 <p>The result is of the same type as <strong>mask</strong>.</p>
 <p>If <strong>dim</strong> is absent, a scalar with the parity of all elements in <strong>mask</strong>
 is returned: <em>.true.</em> if an odd number of elements are <em>.true.</em>
@@ -4399,7 +4398,7 @@ and <em>.false.</em> otherwise.</p>
 result is an array of parity values with dimension <strong>dim</strong> dropped.</p>
 </section>
 <section id="id153">
-<h3><strong>Examples</strong><a class="headerlink" href="#id153" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id153" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_parity</span>
 <span class="k">implicit none</span>
@@ -4431,11 +4430,11 @@ result is an array of parity values with dimension <strong>dim</strong> dropped.
 </div>
 </section>
 <section id="id154">
-<h3><strong>Standard</strong><a class="headerlink" href="#id154" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id154" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id155">
-<h3><strong>See also</strong><a class="headerlink" href="#id155" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See also</strong><a class="headerlink" href="#id155" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#all"><span class="xref myst"><strong>all</strong>(3)</span></a> - Determines if all the values are true</p></li>
 <li><p><a class="reference internal" href="#any"><span class="xref myst"><strong>any</strong>(3)</span></a> - Determines if any of the values in the logical array are <em>.true.</em></p></li>
@@ -4450,13 +4449,13 @@ result is an array of parity values with dimension <strong>dim</strong> dropped.
 </section>
 </section>
 <section id="null">
-<h2>null<a class="headerlink" href="#null" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>null<a class="headerlink" href="#null" title="Link to this heading">#</a></h2>
 <section id="id156">
-<h3><strong>Name</strong><a class="headerlink" href="#id156" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Name</strong><a class="headerlink" href="#id156" title="Link to this heading">#</a></h3>
 <p><strong>null</strong>(3) - [TRANSFORMATIONAL] Function that returns a disassociated pointer</p>
 </section>
 <section id="id157">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id157" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id157" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">ptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">null</span><span class="p">(</span><span class="w"> </span><span class="p">[</span><span class="n">mold</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4467,14 +4466,14 @@ result is an array of parity values with dimension <strong>dim</strong> dropped.
 </div>
 </section>
 <section id="id158">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id158" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id158" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>mold</strong> is a pointer of any association status and of any type.</p></li>
 <li><p>The result is a disassociated pointer or an unallocated allocatable entity.</p></li>
 </ul>
 </section>
 <section id="id159">
-<h3><strong>Description</strong><a class="headerlink" href="#id159" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Description</strong><a class="headerlink" href="#id159" title="Link to this heading">#</a></h3>
 <p><strong>null</strong>(3) returns a disassociated pointer.</p>
 <p>If <strong>mold</strong> is present, a disassociated pointer of the same type is
 returned, otherwise the type is determined by context.</p>
@@ -4482,7 +4481,7 @@ returned, otherwise the type is determined by context.</p>
 includes cases where it is required.</p>
 </section>
 <section id="id160">
-<h3><strong>Options</strong><a class="headerlink" href="#id160" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Options</strong><a class="headerlink" href="#id160" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>mold</strong></dt><dd><p>a pointer of any association status and of any
@@ -4493,11 +4492,11 @@ type.</p>
 </ul>
 </section>
 <section id="id161">
-<h3><strong>Result</strong><a class="headerlink" href="#id161" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Result</strong><a class="headerlink" href="#id161" title="Link to this heading">#</a></h3>
 <p>A disassociated pointer or an unallocated allocatable entity.</p>
 </section>
 <section id="id162">
-<h3><strong>Examples</strong><a class="headerlink" href="#id162" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Examples</strong><a class="headerlink" href="#id162" title="Link to this heading">#</a></h3>
 <p>Sample program:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">!program demo_null</span>
 <span class="k">module </span><span class="n">showit</span>
@@ -4575,11 +4574,11 @@ type.</p>
 </div>
 </section>
 <section id="id163">
-<h3><strong>Standard</strong><a class="headerlink" href="#id163" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>Standard</strong><a class="headerlink" href="#id163" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id164">
-<h3><strong>See Also</strong><a class="headerlink" href="#id164" title="Lien permanent vers cette rubrique">#</a></h3>
+<h3><strong>See Also</strong><a class="headerlink" href="#id164" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#associated"><span class="xref myst"><strong>associated</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>

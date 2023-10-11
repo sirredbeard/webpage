@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Derived Types &#8212; Fortran Programming Language</title>
 <script>
@@ -24,20 +23,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=33a0c708"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/quickstart/derived_types.html" />
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
@@ -745,13 +744,13 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="derived-types">
-<h1>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this heading">#</a></h1>
+<h1>Derived Types<a class="headerlink" href="#derived-types" title="Link to this heading">#</a></h1>
 <p>As discussed previously in <a class="reference internal" href="../variables/"><span class="doc std std-doc">Variables</span></a>, there are five built-in data types in Fortran. A <em>derived type</em> is a special form of data type that can encapsulate other built-in types as well as other derived types. It could be considered equivalent to <em>struct</em> in the C and C++ programming languages.</p>
 <section id="a-quick-take-on-derived-types">
-<h2>A quick take on derived types<a class="headerlink" href="#a-quick-take-on-derived-types" title="Permalink to this heading">#</a></h2>
+<h2>A quick take on derived types<a class="headerlink" href="#a-quick-take-on-derived-types" title="Link to this heading">#</a></h2>
 <p>Here’s an example of a basic derived type:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=type%20%3A%3A%20t_pair%0A%20%20integer%20%3A%3A%20i%0A%20%20real%20%3A%3A%20x%0Aend%20type' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=type%20%3A%3A%20t_pair%0A%20%20integer%20%3A%3A%20i%0A%20%20real%20%3A%3A%20x%0Aend%20type' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">type</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">t_pair</span>
 <span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 <span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span>
@@ -780,7 +779,7 @@ You can also initialize derived type members by invoking the derived type constr
 </div>
 <p>Example with default initialization:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=type%20%3A%3A%20t_pair%0A%20%20integer%20%3A%3A%20i%20%3D%201%0A%20%20real%20%3A%3A%20x%20%3D%200.5%0Aend%20type%0A%0Atype%28t_pair%29%20%3A%3A%20pair%0Apair%20%3D%20t_pair%28%29%20%20%20%20%20%20%20%21%20pair%25i%20is%201%2C%20pair%25x%20is%200.5%0Apair%20%3D%20t_pair%28i%3D2%29%20%20%20%20%21%20pair%25i%20is%202%2C%20pair%25x%20is%200.5%0Apair%20%3D%20t_pair%28x%3D2.7%29%20%20%21%20pair%25i%20is%201%2C%20pair%25x%20is%202.7' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=type%20%3A%3A%20t_pair%0A%20%20integer%20%3A%3A%20i%20%3D%201%0A%20%20real%20%3A%3A%20x%20%3D%200.5%0Aend%20type%0A%0Atype%28t_pair%29%20%3A%3A%20pair%0Apair%20%3D%20t_pair%28%29%20%20%20%20%20%20%20%21%20pair%25i%20is%201%2C%20pair%25x%20is%200.5%0Apair%20%3D%20t_pair%28i%3D2%29%20%20%20%20%21%20pair%25i%20is%202%2C%20pair%25x%20is%200.5%0Apair%20%3D%20t_pair%28x%3D2.7%29%20%20%21%20pair%25i%20is%201%2C%20pair%25x%20is%202.7' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id2" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">type</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">t_pair</span>
 <span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 <span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span>
@@ -795,7 +794,7 @@ You can also initialize derived type members by invoking the derived type constr
 </div>
 </section>
 <section id="derived-types-in-detail">
-<h2>Derived types in detail<a class="headerlink" href="#derived-types-in-detail" title="Permalink to this heading">#</a></h2>
+<h2>Derived types in detail<a class="headerlink" href="#derived-types-in-detail" title="Link to this heading">#</a></h2>
 <p>The full syntax of a derived type with all optional properties is presented below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span> <span class="p">[,</span><span class="n">attribute</span><span class="o">-</span><span class="nb">list</span><span class="p">]</span> <span class="p">::</span> <span class="n">name</span> <span class="p">[(</span><span class="n">parameterized</span><span class="o">-</span><span class="n">declaration</span><span class="o">-</span><span class="nb">list</span><span class="p">)]</span>
   <span class="p">[</span><span class="n">parameterized</span><span class="o">-</span><span class="n">definition</span><span class="o">-</span><span class="n">statements</span><span class="p">]</span>
@@ -808,7 +807,7 @@ You can also initialize derived type members by invoking the derived type constr
 </div>
 </section>
 <section id="options-to-declare-a-derived-type">
-<h2>Options to declare a derived type<a class="headerlink" href="#options-to-declare-a-derived-type" title="Permalink to this heading">#</a></h2>
+<h2>Options to declare a derived type<a class="headerlink" href="#options-to-declare-a-derived-type" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">attribute-list</span></code> may refer to the following:</p>
 <ul class="simple">
 <li><p><em>access-type</em> that is either <code class="docutils literal notranslate"><span class="pre">public</span></code> or <code class="docutils literal notranslate"><span class="pre">private</span></code></p></li>
@@ -822,7 +821,7 @@ You can also initialize derived type members by invoking the derived type constr
 <p>The <code class="docutils literal notranslate"><span class="pre">sequence</span></code> attribute may be used only to declare that the following members should be accessed in the same order as they are defined within the derived type.</p>
 <p>Example with <code class="docutils literal notranslate"><span class="pre">sequence</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=type%20%3A%3A%20t_pair%0A%20%20sequence%0A%20%20integer%20%3A%3A%20i%0A%20%20real%20%3A%3A%20x%0Aend%20type%0A%21%20Initialize%0Atype%28t_pair%29%20%3A%3A%20pair%0Apair%20%3D%20t_pair%281%2C%200.5%29' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=type%20%3A%3A%20t_pair%0A%20%20sequence%0A%20%20integer%20%3A%3A%20i%0A%20%20real%20%3A%3A%20x%0Aend%20type%0A%21%20Initialize%0Atype%28t_pair%29%20%3A%3A%20pair%0Apair%20%3D%20t_pair%281%2C%200.5%29' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id3" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">type</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">t_pair</span>
 <span class="w">  </span><span class="k">sequence</span>
 <span class="k">  </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
@@ -863,7 +862,7 @@ You can also initialize derived type members by invoking the derived type constr
 <p><code class="docutils literal notranslate"><span class="pre">parameterized-declaration-list</span></code> is an optional feature. If used, then the parameters must be listed in place of <code class="docutils literal notranslate"><span class="pre">[parameterized-definition-statements]</span></code> and must be either <code class="docutils literal notranslate"><span class="pre">len</span></code> or <code class="docutils literal notranslate"><span class="pre">kind</span></code> parameters or both.</p>
 <p>Example of a derived type with <code class="docutils literal notranslate"><span class="pre">parameterized-declaration-list</span></code> and with the attribute <code class="docutils literal notranslate"><span class="pre">public</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=module%20m_matrix%0A%20implicit%20none%0A%20private%0A%0A%20type%2C%20public%20%3A%3A%20t_matrix%28rows%2C%20cols%2C%20k%29%0A%20%20%20integer%2C%20len%20%3A%3A%20rows%2C%20cols%0A%20%20%20integer%2C%20kind%20%3A%3A%20k%20%3D%20kind%280.0%29%0A%20%20%20real%28kind%3Dk%29%2C%20dimension%28rows%2C%20cols%29%20%3A%3A%20values%0A%20end%20type%0A%0Aend%20module%20m_matrix%0A%0Aprogram%20test_matrix%0A%20use%20m_matrix%0A%20implicit%20none%0A%0A%20type%28t_matrix%28rows%3D5%2C%20cols%3D5%29%29%20%3A%3A%20m%0A%0Aend%20program%20test_matrix' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=module%20m_matrix%0A%20implicit%20none%0A%20private%0A%0A%20type%2C%20public%20%3A%3A%20t_matrix%28rows%2C%20cols%2C%20k%29%0A%20%20%20integer%2C%20len%20%3A%3A%20rows%2C%20cols%0A%20%20%20integer%2C%20kind%20%3A%3A%20k%20%3D%20kind%280.0%29%0A%20%20%20real%28kind%3Dk%29%2C%20dimension%28rows%2C%20cols%29%20%3A%3A%20values%0A%20end%20type%0A%0Aend%20module%20m_matrix%0A%0Aprogram%20test_matrix%0A%20use%20m_matrix%0A%20implicit%20none%0A%0A%20type%28t_matrix%28rows%3D5%2C%20cols%3D5%29%29%20%3A%3A%20m%0A%0Aend%20program%20test_matrix' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">m_matrix</span>
 <span class="w"> </span><span class="k">implicit none</span>
 <span class="k"> private</span>
@@ -895,7 +894,7 @@ You can also initialize derived type members by invoking the derived type constr
 <p>The attribute <code class="docutils literal notranslate"><span class="pre">extends</span></code> was added in the F2003 standard and introduces an important feature of the object oriented paradigm (OOP), namely inheritance. It allows code reusability by letting child types derive from extensible parent types: <code class="docutils literal notranslate"><span class="pre">type,</span> <span class="pre">extends(parent)</span> <span class="pre">::</span> <span class="pre">child</span></code>. Here, <code class="docutils literal notranslate"><span class="pre">child</span></code> inherits all the members and functionality from <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">::</span> <span class="pre">parent</span></code>.</p>
 <p>Example with the attribute <code class="docutils literal notranslate"><span class="pre">extends</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=module%20m_employee%0A%20%20implicit%20none%0A%20%20private%0A%20%20public%20t_date%2C%20t_address%2C%20t_person%2C%20t_employee%0A%20%20%21%20Note%20another%20way%20of%20using%20the%20public%20attribute%3A%0A%20%20%21%20gathering%20all%20public%20data%20types%20in%20one%20place.%0A%0A%20%20type%20%3A%3A%20t_date%0A%20%20%20%20integer%20%3A%3A%20year%2C%20month%2C%20day%0A%20%20end%20type%0A%0A%20%20type%20%3A%3A%20t_address%0A%20%20%20%20character%28len%3D%3A%29%2C%20allocatable%20%3A%3A%20city%2C%20road_name%0A%20%20%20%20integer%20%3A%3A%20house_number%0A%20%20end%20type%0A%0A%20%20type%2C%20extends%28t_address%29%20%3A%3A%20t_person%0A%20%20%20%20character%28len%3D%3A%29%2C%20allocatable%20%3A%3A%20first_name%2C%20last_name%2C%20e_mail%0A%20%20end%20type%0A%0A%20%20type%2C%20extends%28t_person%29%20%20%3A%3A%20t_employee%0A%20%20%20%20type%28t_date%29%20%3A%3A%20hired_date%0A%20%20%20%20character%28len%3D%3A%29%2C%20allocatable%20%3A%3A%20position%0A%20%20%20%20real%20%3A%3A%20monthly_salary%0A%20%20end%20type%0A%0Aend%20module%20m_employee%0A%0Aprogram%20test_employee%0A%20%20use%20m_employee%0A%20%20implicit%20none%0A%20%20type%28t_employee%29%20%3A%3A%20employee%0A%0A%20%20%21%20Initialization%0A%0A%20%20%21%20t_employee%20has%20access%20to%20type%28t_date%29%20members%20not%20because%20of%20extends%0A%20%20%21%20but%20because%20a%20type%28t_date%29%20was%20declared%20within%20t_employee.%0A%20%20employee%25hired_date%25year%20%20%3D%202020%0A%20%20employee%25hired_date%25month%20%3D%201%0A%20%20employee%25hired_date%25day%20%20%20%3D%2020%0A%0A%20%20%21%20t_employee%20has%20access%20to%20t_person%2C%20and%20inherits%20its%20members%20due%20to%20extends.%0A%20%20employee%25first_name%20%3D%20%27John%27%0A%20%20employee%25last_name%20%20%3D%20%27Doe%27%0A%0A%20%20%21%20t_employee%20has%20access%20to%20t_address%2C%20because%20it%20inherits%20from%20t_person%2C%0A%20%20%21%20which%20in%20return%20inherits%20from%20t_address.%0A%20%20employee%25city%20%20%20%20%20%20%20%20%20%3D%20%27London%27%0A%20%20employee%25road_name%20%20%20%20%3D%20%27BigBen%27%0A%20%20employee%25house_number%20%3D%201%0A%0A%20%20%21%20t_employee%20has%20access%20to%20its%20defined%20members.%0A%20%20employee%25position%20%20%20%20%20%20%20%3D%20%27Intern%27%0A%20%20employee%25monthly_salary%20%3D%200.0%0A%0Aend%20program%20test_employee' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id5" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=module%20m_employee%0A%20%20implicit%20none%0A%20%20private%0A%20%20public%20t_date%2C%20t_address%2C%20t_person%2C%20t_employee%0A%20%20%21%20Note%20another%20way%20of%20using%20the%20public%20attribute%3A%0A%20%20%21%20gathering%20all%20public%20data%20types%20in%20one%20place.%0A%0A%20%20type%20%3A%3A%20t_date%0A%20%20%20%20integer%20%3A%3A%20year%2C%20month%2C%20day%0A%20%20end%20type%0A%0A%20%20type%20%3A%3A%20t_address%0A%20%20%20%20character%28len%3D%3A%29%2C%20allocatable%20%3A%3A%20city%2C%20road_name%0A%20%20%20%20integer%20%3A%3A%20house_number%0A%20%20end%20type%0A%0A%20%20type%2C%20extends%28t_address%29%20%3A%3A%20t_person%0A%20%20%20%20character%28len%3D%3A%29%2C%20allocatable%20%3A%3A%20first_name%2C%20last_name%2C%20e_mail%0A%20%20end%20type%0A%0A%20%20type%2C%20extends%28t_person%29%20%20%3A%3A%20t_employee%0A%20%20%20%20type%28t_date%29%20%3A%3A%20hired_date%0A%20%20%20%20character%28len%3D%3A%29%2C%20allocatable%20%3A%3A%20position%0A%20%20%20%20real%20%3A%3A%20monthly_salary%0A%20%20end%20type%0A%0Aend%20module%20m_employee%0A%0Aprogram%20test_employee%0A%20%20use%20m_employee%0A%20%20implicit%20none%0A%20%20type%28t_employee%29%20%3A%3A%20employee%0A%0A%20%20%21%20Initialization%0A%0A%20%20%21%20t_employee%20has%20access%20to%20type%28t_date%29%20members%20not%20because%20of%20extends%0A%20%20%21%20but%20because%20a%20type%28t_date%29%20was%20declared%20within%20t_employee.%0A%20%20employee%25hired_date%25year%20%20%3D%202020%0A%20%20employee%25hired_date%25month%20%3D%201%0A%20%20employee%25hired_date%25day%20%20%20%3D%2020%0A%0A%20%20%21%20t_employee%20has%20access%20to%20t_person%2C%20and%20inherits%20its%20members%20due%20to%20extends.%0A%20%20employee%25first_name%20%3D%20%27John%27%0A%20%20employee%25last_name%20%20%3D%20%27Doe%27%0A%0A%20%20%21%20t_employee%20has%20access%20to%20t_address%2C%20because%20it%20inherits%20from%20t_person%2C%0A%20%20%21%20which%20in%20return%20inherits%20from%20t_address.%0A%20%20employee%25city%20%20%20%20%20%20%20%20%20%3D%20%27London%27%0A%20%20employee%25road_name%20%20%20%20%3D%20%27BigBen%27%0A%20%20employee%25house_number%20%3D%201%0A%0A%20%20%21%20t_employee%20has%20access%20to%20its%20defined%20members.%0A%20%20employee%25position%20%20%20%20%20%20%20%3D%20%27Intern%27%0A%20%20employee%25monthly_salary%20%3D%200.0%0A%0Aend%20program%20test_employee' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">m_employee</span>
 <span class="w">  </span><span class="k">implicit none</span>
 <span class="k">  private</span>
@@ -957,7 +956,7 @@ You can also initialize derived type members by invoking the derived type constr
 </div>
 </section>
 <section id="options-to-declare-members-of-a-derived-type">
-<h2>Options to declare members of a derived type<a class="headerlink" href="#options-to-declare-members-of-a-derived-type" title="Permalink to this heading">#</a></h2>
+<h2>Options to declare members of a derived type<a class="headerlink" href="#options-to-declare-members-of-a-derived-type" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">[member-variables]</span></code> refers to the declaration of all the member data types. These data types can be of any built-in data type, and/or of other derived types, as already showcased in the above examples. However, member-variables can have their own extensive syntax, in form of:
 <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">[,member-attributes]</span> <span class="pre">::</span> <span class="pre">name[attr-dependent-spec][init]</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">type</span></code>: any built-in type or other derived type</p>
@@ -993,14 +992,14 @@ You can also initialize derived type members by invoking the derived type constr
 </div></blockquote>
 </section>
 <section id="type-bound-procedures">
-<h2>Type-bound procedures<a class="headerlink" href="#type-bound-procedures" title="Permalink to this heading">#</a></h2>
+<h2>Type-bound procedures<a class="headerlink" href="#type-bound-procedures" title="Link to this heading">#</a></h2>
 <p>A derived type can contain functions or subroutines that are <em>bound</em> to it. We’ll refer to them as <em>type-bound procedures</em>. Type-bound procedures follow the <code class="docutils literal notranslate"><span class="pre">contains</span></code> statement that, in turn, follows all member variable declarations.</p>
 <blockquote>
 <div><p>It is impossible to describe type-bound procedures in full without delving into OOP features of modern Fortran. For now we’ll focus on a simple example to show their basic use.</p>
 </div></blockquote>
 <p>Here’s an example of a derived type with a basic type-bound procedure:</p>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=module%20m_shapes%0A%20%20implicit%20none%0A%20%20private%0A%20%20public%20t_square%0A%0A%20%20type%20%3A%3A%20t_square%0A%20%20real%20%3A%3A%20side%0A%20%20contains%0A%20%20%20%20procedure%20%3A%3A%20area%20%20%21%20procedure%20declaration%0A%20%20end%20type%0A%0Acontains%0A%0A%20%20%21%20Procedure%20definition%0A%20%20real%20function%20area%28self%29%20result%28res%29%0A%20%20%20%20class%28t_square%29%2C%20intent%28in%29%20%3A%3A%20self%0A%20%20%20%20res%20%3D%20self%25side%2A%2A2%0A%20%20end%20function%0A%0Aend%20module%20m_shapes%0A%0Aprogram%20main%0A%20%20use%20m_shapes%0A%20%20implicit%20none%0A%0A%20%20%21%20Variables%27%20declaration%0A%20%20type%28t_square%29%20%3A%3A%20sq%0A%20%20real%20%3A%3A%20x%2C%20side%0A%0A%20%20%21%20Variables%27%20initialization%0A%20%20side%20%3D%200.5%0A%20%20sq%25side%20%3D%20side%0A%0A%20%20x%20%3D%20sq%25area%28%29%0A%20%20%21%20self%20does%20not%20appear%20here%2C%20it%20has%20been%20passed%20implicitly%0A%0A%20%20%21%20Do%20stuff%20with%20x...%0A%0Aend%20program%20main' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><a href='https://play.fortran-lang.org/?code=module%20m_shapes%0A%20%20implicit%20none%0A%20%20private%0A%20%20public%20t_square%0A%0A%20%20type%20%3A%3A%20t_square%0A%20%20real%20%3A%3A%20side%0A%20%20contains%0A%20%20%20%20procedure%20%3A%3A%20area%20%20%21%20procedure%20declaration%0A%20%20end%20type%0A%0Acontains%0A%0A%20%20%21%20Procedure%20definition%0A%20%20real%20function%20area%28self%29%20result%28res%29%0A%20%20%20%20class%28t_square%29%2C%20intent%28in%29%20%3A%3A%20self%0A%20%20%20%20res%20%3D%20self%25side%2A%2A2%0A%20%20end%20function%0A%0Aend%20module%20m_shapes%0A%0Aprogram%20main%0A%20%20use%20m_shapes%0A%20%20implicit%20none%0A%0A%20%20%21%20Variables%27%20declaration%0A%20%20type%28t_square%29%20%3A%3A%20sq%0A%20%20real%20%3A%3A%20x%2C%20side%0A%0A%20%20%21%20Variables%27%20initialization%0A%20%20side%20%3D%200.5%0A%20%20sq%25side%20%3D%20side%0A%0A%20%20x%20%3D%20sq%25area%28%29%0A%20%20%21%20self%20does%20not%20appear%20here%2C%20it%20has%20been%20passed%20implicitly%0A%0A%20%20%21%20Do%20stuff%20with%20x...%0A%0Aend%20program%20main' target='_blank'>Fortran Playground</a></span><a class="headerlink" href="#id6" title="Link to this code">#</a></div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">m_shapes</span>
 <span class="w">  </span><span class="k">implicit none</span>
 <span class="k">  private</span>

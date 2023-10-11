@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="zh-CN">
+<html lang="zh-CN" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>使用 co_arrays 和 co_indexed 数组进行并行编程 &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=20ebe441"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/intrinsics/parallel.html" />
     <link rel="index" title="索引" href="../../../genindex/" />
     <link rel="search" title="搜索" href="../../../search/" />
@@ -2142,15 +2141,15 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="parallel-programming-using-co-arrays-and-co-indexed-arrays">
-<h1>使用 co_arrays 和 co_indexed 数组进行并行编程<a class="headerlink" href="#parallel-programming-using-co-arrays-and-co-indexed-arrays" title="此标题的永久链接">#</a></h1>
+<h1>使用 co_arrays 和 co_indexed 数组进行并行编程<a class="headerlink" href="#parallel-programming-using-co-arrays-and-co-indexed-arrays" title="Link to this heading">#</a></h1>
 <section id="co-broadcast">
-<h2>co_broadcast<a class="headerlink" href="#co-broadcast" title="此标题的永久链接">#</a></h2>
+<h2>co_broadcast<a class="headerlink" href="#co-broadcast" title="Link to this heading">#</a></h2>
 <section id="name">
-<h3><strong>名称</strong><a class="headerlink" href="#name" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#name" title="Link to this heading">#</a></h3>
 <p><strong>co_broadcast</strong>(3) - [COLLECTIVE] 将值从当前镜像复制到所有镜像</p>
 </section>
 <section id="synopsis">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">co_broadcast</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">source_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2159,10 +2158,10 @@
 </div>
 </section>
 <section id="characteristics">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="Link to this heading">#</a></h3>
 </section>
 <section id="description">
-<h3><strong>说明</strong><a class="headerlink" href="#description" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
 <p><strong>co_broadcast</strong>(3) copies the value of argument <strong>a</strong> on the image with image
 index source_image to all images in the current team. <strong>a</strong> becomes defined
 as if by intrinsic assignment. If the execution was successful and <strong>stat</strong>
@@ -2171,7 +2170,7 @@ gets assigned a nonzero value and, if present, <strong>errmsg</strong> gets assi
 value describing the occurred error.</p>
 </section>
 <section id="options">
-<h3><strong>选项</strong><a class="headerlink" href="#options" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#options" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p><strong>intent(inout)</strong> 参数；在当前组的所有镜像上应具有相同的动态类型和类型参数。如果它是一个数组，它应该在所有镜像上具有相同的形状。</p>
@@ -2196,7 +2195,7 @@ value describing the occurred error.</p>
 </ul>
 </section>
 <section id="examples">
-<h3><strong>示例</strong><a class="headerlink" href="#examples" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_broadcast</span>
 <span class="k">implicit none</span>
@@ -2211,11 +2210,11 @@ value describing the occurred error.</p>
 </div>
 </section>
 <section id="standard">
-<h3><strong>标准</strong><a class="headerlink" href="#standard" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#standard" title="Link to this heading">#</a></h3>
 <p>Fortran xx</p>
 </section>
 <section id="see-also">
-<h3><strong>另见</strong><a class="headerlink" href="#see-also" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-max"><strong>co_max</strong>(3)</a>,
 <a class="reference internal" href="#co-min"><strong>co_min</strong>(3)</a>,
 <a class="reference internal" href="#co-sum"><strong>co_sum</strong>(3)</a>,
@@ -2224,13 +2223,13 @@ value describing the occurred error.</p>
 </section>
 </section>
 <section id="co-lbound">
-<h2>co_lbound<a class="headerlink" href="#co-lbound" title="此标题的永久链接">#</a></h2>
+<h2>co_lbound<a class="headerlink" href="#co-lbound" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3><strong>名称</strong><a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>co_lbound</strong>(3) - [COLLECTIVE] 数组的下维数边界</p>
 </section>
 <section id="id2">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">co_lbound</span><span class="p">(</span><span class="w"> </span><span class="n">coarray</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2239,15 +2238,15 @@ value describing the occurred error.</p>
 </div>
 </section>
 <section id="id3">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 </section>
 <section id="id4">
-<h3><strong>说明</strong><a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p><strong>co_lbound</strong>(3) returns the lower bounds of a coarray, or a single
 lower cobound along the <strong>dim</strong> codimension.</p>
 </section>
 <section id="id5">
-<h3><strong>选项</strong><a class="headerlink" href="#id5" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>数组</strong></dt><dd><p>应为任何类型的coarray。</p>
@@ -2267,27 +2266,27 @@ lower cobound along the <strong>dim</strong> codimension.</p>
 </ul>
 </section>
 <section id="result">
-<h3><strong>结果</strong><a class="headerlink" href="#result" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#result" title="Link to this heading">#</a></h3>
 <p>返回值的类型为_integer_，种类为<strong>kind</strong>。如果没有指定<strong>kind</strong>，则返回值为默认的整型。如果没有指定<strong>dim</strong>，则结果是<strong>corray</strong>的下限数组。如果指定了<strong>dim</strong>，则结果是对应于数组沿该维的下限的标量。</p>
 </section>
 <section id="id6">
-<h3><strong>标准</strong><a class="headerlink" href="#id6" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id7">
-<h3><strong>另见</strong><a class="headerlink" href="#id7" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-ubound"><strong>co_ubound</strong>(3)</a>，<a class="reference internal" href="#lbound"><span class="xref myst"><strong>lbound</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="co-max">
-<h2>co_max<a class="headerlink" href="#co-max" title="此标题的永久链接">#</a></h2>
+<h2>co_max<a class="headerlink" href="#co-max" title="Link to this heading">#</a></h2>
 <section id="id8">
-<h3><strong>名称</strong><a class="headerlink" href="#id8" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p><strong>co_max</strong>(3) - [集合] 当前镜像集上的最大值</p>
 </section>
 <section id="id9">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id9" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="k">call </span><span class="n">co_max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">result_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2296,10 +2295,10 @@ lower cobound along the <strong>dim</strong> codimension.</p>
 </div>
 </section>
 <section id="id10">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id10" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 </section>
 <section id="id11">
-<h3><strong>说明</strong><a class="headerlink" href="#id11" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p><strong>co_max</strong>(3) determines element-wise the maximal value of <strong>a</strong> on all
 images of the current team. If result_image is present, the maximum values
 are returned in <strong>a</strong> on the specified image only and the value of <strong>a</strong>
@@ -2310,7 +2309,7 @@ failed, <strong>stat</strong> gets assigned a nonzero value and, if present, <st
 gets assigned a value describing the occurred error.</p>
 </section>
 <section id="id12">
-<h3><strong>选项</strong><a class="headerlink" href="#id12" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>应为整数，实数或字符变量，在并行的所有镜像上具有相同的类型和类型参数。</p>
@@ -2335,7 +2334,7 @@ gets assigned a value describing the occurred error.</p>
 </ul>
 </section>
 <section id="id13">
-<h3><strong>示例</strong><a class="headerlink" href="#id13" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_max</span>
 <span class="k">implicit none</span>
@@ -2354,11 +2353,11 @@ gets assigned a value describing the occurred error.</p>
 </div>
 </section>
 <section id="id14">
-<h3><strong>标准</strong><a class="headerlink" href="#id14" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id15">
-<h3><strong>另见</strong><a class="headerlink" href="#id15" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-min"><strong>co_min</strong>(3)</a>,
 <a class="reference internal" href="#co-sum"><strong>co_sum</strong>(3)</a>,
 <a class="reference internal" href="#co-reduce"><strong>co_reduce</strong>(3)</a>,
@@ -2367,13 +2366,13 @@ gets assigned a value describing the occurred error.</p>
 </section>
 </section>
 <section id="co-min">
-<h2>co_min<a class="headerlink" href="#co-min" title="此标题的永久链接">#</a></h2>
+<h2>co_min<a class="headerlink" href="#co-min" title="Link to this heading">#</a></h2>
 <section id="id16">
-<h3><strong>名称</strong><a class="headerlink" href="#id16" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p><strong>co_min</strong>(3) - [集合]当前镜像集上的最小值</p>
 </section>
 <section id="id17">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id17" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="k">call </span><span class="n">co_min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">result_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2382,10 +2381,10 @@ gets assigned a value describing the occurred error.</p>
 </div>
 </section>
 <section id="id18">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id18" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 </section>
 <section id="id19">
-<h3><strong>说明</strong><a class="headerlink" href="#id19" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p><strong>co_min</strong>(3) determines element-wise the minimal value of <strong>a</strong> on all
 images of the current team. If result_image is present, the minimal values
 are returned in <strong>a</strong> on the specified image only and the value of <strong>a</strong>
@@ -2396,7 +2395,7 @@ failed, <strong>stat</strong> gets assigned a nonzero value and, if present, <st
 gets assigned a value describing the occurred error.</p>
 </section>
 <section id="id20">
-<h3><strong>选项</strong><a class="headerlink" href="#id20" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>应为整数，实数或字符变量，在并行的所有镜像上具有相同的类型和类型参数。</p>
@@ -2421,7 +2420,7 @@ gets assigned a value describing the occurred error.</p>
 </ul>
 </section>
 <section id="id21">
-<h3><strong>示例</strong><a class="headerlink" href="#id21" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_min</span>
 <span class="k">implicit none</span>
@@ -2436,11 +2435,11 @@ gets assigned a value describing the occurred error.</p>
 </div>
 </section>
 <section id="id22">
-<h3><strong>标准</strong><a class="headerlink" href="#id22" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id23">
-<h3><strong>另见</strong><a class="headerlink" href="#id23" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-max"><strong>co_max</strong>(3)</a>,
 <a class="reference internal" href="#co-sum"><strong>co_sum</strong>(3)</a>,
 <a class="reference internal" href="#co-reduce"><strong>co_reduce</strong>(3)</a>,
@@ -2449,13 +2448,13 @@ gets assigned a value describing the occurred error.</p>
 </section>
 </section>
 <section id="co-reduce">
-<h2>co_reduce<a class="headerlink" href="#co-reduce" title="此标题的永久链接">#</a></h2>
+<h2>co_reduce<a class="headerlink" href="#co-reduce" title="Link to this heading">#</a></h2>
 <section id="id24">
-<h3><strong>名称</strong><a class="headerlink" href="#id24" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <p><strong>co_reduce</strong>(3) - [集合] 缩减当前镜像集上的值</p>
 </section>
 <section id="id25">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id25" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">co_reduce</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">operation</span><span class="p">,</span><span class="w"> </span><span class="n">result_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2464,10 +2463,10 @@ gets assigned a value describing the occurred error.</p>
 </div>
 </section>
 <section id="id26">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id26" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
 </section>
 <section id="id27">
-<h3><strong>说明</strong><a class="headerlink" href="#id27" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
 <p><strong>co_reduce</strong>(3) determines element-wise the reduction of the value of <strong>a</strong> on
 all images of the current team. The pure function passed as <strong>operation</strong> is
 used to pairwise reduce the values of <strong>a</strong> by passing either the value of <strong>a</strong>
@@ -2482,7 +2481,7 @@ nonzero value and, if present, <strong>errmsg</strong> gets assigned a value des
 the occurred error.</p>
 </section>
 <section id="id28">
-<h3><strong>选项</strong><a class="headerlink" href="#id28" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>是**intent(inout)**参数，并且应该是非多态的。如果是动态数组，则应该已经分配；如果是指针，则应该已经关联。<strong>a</strong>在并行的所有镜像上应具有相同的类型和类型参数；如果是数组，则在所有镜像上应具有相同的维度。</p>
@@ -2512,7 +2511,7 @@ the occurred error.</p>
 </ul>
 </section>
 <section id="id29">
-<h3><strong>示例</strong><a class="headerlink" href="#id29" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_reduce</span>
 <span class="k">implicit none</span>
@@ -2537,15 +2536,15 @@ the occurred error.</p>
 </div>
 </section>
 <section id="note">
-<h3><strong>Note</strong><a class="headerlink" href="#note" title="此标题的永久链接">#</a></h3>
+<h3><strong>Note</strong><a class="headerlink" href="#note" title="Link to this heading">#</a></h3>
 <p>虽然规则原则上允许使用内部函数，但标准的内部函数都不满足具有特定函数的标准，该特定函数接受相同类型的两个参数并返回该类型。</p>
 </section>
 <section id="id30">
-<h3><strong>标准</strong><a class="headerlink" href="#id30" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id31">
-<h3><strong>另见</strong><a class="headerlink" href="#id31" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-min"><strong>co_min</strong>(3)</a>,
 <a class="reference internal" href="#co-max"><strong>co_max</strong>(3)</a>,
 <a class="reference internal" href="#co-sum"><strong>co_sum</strong>(3)</a>,
@@ -2554,13 +2553,13 @@ the occurred error.</p>
 </section>
 </section>
 <section id="co-sum">
-<h2>co_sum<a class="headerlink" href="#co-sum" title="此标题的永久链接">#</a></h2>
+<h2>co_sum<a class="headerlink" href="#co-sum" title="Link to this heading">#</a></h2>
 <section id="id32">
-<h3><strong>名称</strong><a class="headerlink" href="#id32" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <p><strong>co_sum</strong>(3) - [集合] 当前镜像集上的值之和</p>
 </section>
 <section id="id33">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id33" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">co_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">result_image</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="n">errmsg</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2569,10 +2568,10 @@ the occurred error.</p>
 </div>
 </section>
 <section id="id34">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id34" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 </section>
 <section id="id35">
-<h3><strong>说明</strong><a class="headerlink" href="#id35" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
 <p><strong>co_sum</strong>(3) sums up the values of each element of <strong>a</strong> on all images
 of the current team.</p>
 <p>If result_image is present, the summed-up values are returned in <strong>a</strong>
@@ -2585,7 +2584,7 @@ value and, if present, <strong>errmsg</strong> gets assigned a value describing 
 occurred error.</p>
 </section>
 <section id="id36">
-<h3><strong>选项</strong><a class="headerlink" href="#id36" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>a</strong></dt><dd><p>应为整数、实数或复数变量，在编队的所有镜像上具有相同的类型和种类参数。</p>
@@ -2610,7 +2609,7 @@ occurred error.</p>
 </ul>
 </section>
 <section id="id37">
-<h3><strong>示例</strong><a class="headerlink" href="#id37" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_co_sum</span>
 <span class="k">implicit none</span>
@@ -2630,11 +2629,11 @@ occurred error.</p>
 </div>
 </section>
 <section id="id38">
-<h3><strong>标准</strong><a class="headerlink" href="#id38" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id39">
-<h3><strong>另见</strong><a class="headerlink" href="#id39" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-max"><strong>co_max</strong>(3)</a>,
 <a class="reference internal" href="#co-min"><strong>co_min</strong>(3)</a>,
 <a class="reference internal" href="#co-reduce"><strong>co_reduce</strong>(3)</a>,
@@ -2643,13 +2642,13 @@ occurred error.</p>
 </section>
 </section>
 <section id="co-ubound">
-<h2>co_ubound<a class="headerlink" href="#co-ubound" title="此标题的永久链接">#</a></h2>
+<h2>co_ubound<a class="headerlink" href="#co-ubound" title="Link to this heading">#</a></h2>
 <section id="id40">
-<h3><strong>名称</strong><a class="headerlink" href="#id40" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
 <p><strong>co_ubound</strong>(3) - [集合] co_array的上界</p>
 </section>
 <section id="id41">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id41" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id41" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">co_ubound</span><span class="p">(</span><span class="n">coarray</span><span class="w"> </span><span class="p">[,</span><span class="nb">dim</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="nb">kind</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2658,15 +2657,15 @@ occurred error.</p>
 </div>
 </section>
 <section id="id42">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id42" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
 </section>
 <section id="id43">
-<h3><strong>说明</strong><a class="headerlink" href="#id43" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
 <p><strong>co_ubound</strong>(3) returns the upper cobounds of a coarray, or a single
 upper cobound along the <strong>dim</strong> codimension.</p>
 </section>
 <section id="id44">
-<h3><strong>选项</strong><a class="headerlink" href="#id44" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>数组</strong></dt><dd><p>应为任何类型的coarray。</p>
@@ -2686,15 +2685,15 @@ upper cobound along the <strong>dim</strong> codimension.</p>
 </ul>
 </section>
 <section id="id45">
-<h3><strong>结果</strong><a class="headerlink" href="#id45" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id45" title="Link to this heading">#</a></h3>
 <p>返回值的类型为_integer_，种类为<strong>kind</strong>。如果没有指定<strong>kind</strong>，则返回值为默认的整型。如果没有指定<strong>dim</strong>，则结果是<strong>corray</strong>的下限数组。如果指定了<strong>dim</strong>，则结果是对应于数组沿该维的下限的标量。</p>
 </section>
 <section id="id46">
-<h3><strong>标准</strong><a class="headerlink" href="#id46" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id46" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id47">
-<h3><strong>另见</strong><a class="headerlink" href="#id47" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#co-lbound"><strong>co_lbound</strong>(3)</a>,
 <a class="reference internal" href="#lbound"><span class="xref myst"><strong>lbound</strong>(3)</span></a>,
 <a class="reference internal" href="#ubound"><span class="xref myst"><strong>ubound</strong>(3)</span></a></p>
@@ -2702,13 +2701,13 @@ upper cobound along the <strong>dim</strong> codimension.</p>
 </section>
 </section>
 <section id="event-query">
-<h2>event_query<a class="headerlink" href="#event-query" title="此标题的永久链接">#</a></h2>
+<h2>event_query<a class="headerlink" href="#event-query" title="Link to this heading">#</a></h2>
 <section id="id48">
-<h3><strong>名称</strong><a class="headerlink" href="#id48" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id48" title="Link to this heading">#</a></h3>
 <p><strong>event_query</strong>(3) - [集合] 查询是否已发生coarray事件</p>
 </section>
 <section id="id49">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id49" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id49" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">event_query</span><span class="p">(</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="nb">count</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2717,10 +2716,10 @@ upper cobound along the <strong>dim</strong> codimension.</p>
 </div>
 </section>
 <section id="id50">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id50" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id50" title="Link to this heading">#</a></h3>
 </section>
 <section id="id51">
-<h3><strong>说明</strong><a class="headerlink" href="#id51" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id51" title="Link to this heading">#</a></h3>
 <p><strong>event_query</strong>(3) assigns the number of events to <strong>count</strong> which have been
 posted to the <strong>event</strong> variable and not yet been removed by calling
 <strong>event_wait</strong>. When <strong>stat</strong> is present and the invocation was successful, it
@@ -2728,7 +2727,7 @@ is assigned the value <strong>0</strong>. If it is present and the invocation ha
 it is assigned a positive value and <strong>count</strong> is assigned the value <strong>-1</strong>.</p>
 </section>
 <section id="id52">
-<h3><strong>选项</strong><a class="headerlink" href="#id52" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id52" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>event</strong></dt><dd><p>(intent(in)) 在iso_fortran_env中定义的 event_type类型的标量不应编入共索引。</p>
@@ -2748,7 +2747,7 @@ it is assigned a positive value and <strong>count</strong> is assigned the value
 </ul>
 </section>
 <section id="id53">
-<h3><strong>示例</strong><a class="headerlink" href="#id53" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id53" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_event_query</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -2766,23 +2765,23 @@ it is assigned a positive value and <strong>count</strong> is assigned the value
 </div>
 </section>
 <section id="id54">
-<h3><strong>标准</strong><a class="headerlink" href="#id54" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id54" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id55">
-<h3><strong>See also</strong><a class="headerlink" href="#id55" title="此标题的永久链接">#</a></h3>
+<h3><strong>See also</strong><a class="headerlink" href="#id55" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#"><span class="xref myst">****(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="image-index">
-<h2>image_index<a class="headerlink" href="#image-index" title="此标题的永久链接">#</a></h2>
+<h2>image_index<a class="headerlink" href="#image-index" title="Link to this heading">#</a></h2>
 <section id="id56">
-<h3><strong>名称</strong><a class="headerlink" href="#id56" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id56" title="Link to this heading">#</a></h3>
 <p><strong>image_index</strong>(3) - [集合] 下标到镜像索引的转换</p>
 </section>
 <section id="id57">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id57" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id57" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">image_index</span><span class="p">(</span><span class="n">coarray</span><span class="p">,</span><span class="w"> </span><span class="n">sub</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2791,14 +2790,14 @@ it is assigned a positive value and <strong>count</strong> is assigned the value
 </div>
 </section>
 <section id="id58">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id58" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id58" title="Link to this heading">#</a></h3>
 </section>
 <section id="id59">
-<h3><strong>说明</strong><a class="headerlink" href="#id59" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id59" title="Link to this heading">#</a></h3>
 <p><strong>image_index</strong>(3) returns the image index belonging to a cosubscript.</p>
 </section>
 <section id="id60">
-<h3><strong>选项</strong><a class="headerlink" href="#id60" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id60" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>coarray</strong></dt><dd><p>任意类型的coarray.</p>
@@ -2813,11 +2812,11 @@ it is assigned a positive value and <strong>count</strong> is assigned the value
 </ul>
 </section>
 <section id="id61">
-<h3><strong>结果</strong><a class="headerlink" href="#id61" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id61" title="Link to this heading">#</a></h3>
 <p>标量默认整数，其镜像索引值与子下标相对应。对于无效的子下标，结果为零。</p>
 </section>
 <section id="id62">
-<h3><strong>示例</strong><a class="headerlink" href="#id62" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id62" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo</span><span class="w"> </span><span class="nb">image_index</span>
 <span class="k">implicit none</span>
@@ -2829,25 +2828,25 @@ it is assigned a positive value and <strong>count</strong> is assigned the value
 </div>
 </section>
 <section id="id63">
-<h3><strong>标准</strong><a class="headerlink" href="#id63" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id63" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id64">
-<h3><strong>另见</strong><a class="headerlink" href="#id64" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id64" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#this-image"><strong>this_image</strong>(3)</a>,
 <a class="reference internal" href="#num-images"><strong>num_images</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="num-images">
-<h2>num_images<a class="headerlink" href="#num-images" title="此标题的永久链接">#</a></h2>
+<h2>num_images<a class="headerlink" href="#num-images" title="Link to this heading">#</a></h2>
 <section id="id65">
-<h3><strong>名称</strong><a class="headerlink" href="#id65" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id65" title="Link to this heading">#</a></h3>
 <p><strong>num_images</strong>(3) - [集合] 镜像的数量</p>
 </section>
 <section id="id66">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id66" title="此标题的永久链接">#</a></h3>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span>    result = num_images([team|team_number])
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id66" title="Link to this heading">#</a></h3>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">num_images</span><span class="p">([</span><span class="n">team</span><span class="err">|</span><span class="n">team_number</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="kt">integer </span><span class="k">function </span><span class="nb">num_images</span><span class="w"> </span><span class="p">(</span><span class="n">team</span><span class="p">)</span>
@@ -2858,7 +2857,7 @@ it is assigned a positive value and <strong>count</strong> is assigned the value
 </div>
 </section>
 <section id="id67">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id67" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id67" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>use of <strong>team</strong> and <strong>team_number</strong> is mutually exclusive</p></li>
 <li><p><strong>team</strong> is is a scalar of of type <strong>TEAM_TYPE</strong> from the intrinsic module ISO_FORTRAN_ENV.</p></li>
@@ -2867,11 +2866,11 @@ it is assigned a positive value and <strong>count</strong> is assigned the value
 </ul>
 </section>
 <section id="id68">
-<h3><strong>说明</strong><a class="headerlink" href="#id68" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id68" title="Link to this heading">#</a></h3>
 <p><strong>num_images</strong>(3) Returns the number of images.</p>
 </section>
 <section id="id69">
-<h3><strong>选项</strong><a class="headerlink" href="#id69" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id69" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>team</strong></dt><dd><p>shall be a scalar of type TEAM_TYPE from the intrinsic module
@@ -2889,12 +2888,12 @@ that of the current team.</p>
 </ul>
 </section>
 <section id="id70">
-<h3><strong>结果</strong><a class="headerlink" href="#id70" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id70" title="Link to this heading">#</a></h3>
 <p>The number of images in the specified team, or in the current team if
 no team is specified.</p>
 </section>
 <section id="id71">
-<h3><strong>示例</strong><a class="headerlink" href="#id71" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id71" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_num_images</span>
 <span class="k">implicit none</span>
@@ -2925,25 +2924,25 @@ no team is specified.</p>
 </div>
 </section>
 <section id="id72">
-<h3><strong>标准</strong><a class="headerlink" href="#id72" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id72" title="Link to this heading">#</a></h3>
 <p>Fortran 2008 . With DISTANCE or FAILED argument, TS 18508</p>
 </section>
 <section id="id73">
-<h3><strong>另见</strong><a class="headerlink" href="#id73" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id73" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#this-image"><strong>this_image</strong>(3)</a>,
 <a class="reference internal" href="#this_index"><span class="xref myst"><strong>image_index</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions (license: MIT) &#64;urbanjost</em></p>
 </section>
 </section>
 <section id="this-image">
-<h2>this_image<a class="headerlink" href="#this-image" title="此标题的永久链接">#</a></h2>
+<h2>this_image<a class="headerlink" href="#this-image" title="Link to this heading">#</a></h2>
 <section id="id74">
-<h3><strong>名称</strong><a class="headerlink" href="#id74" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id74" title="Link to this heading">#</a></h3>
 <p><strong>this_image</strong>(3) - [COLLECTIVE] 此镜像的下标索引</p>
 </section>
 <section id="id75">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id75" title="此标题的永久链接">#</a></h3>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span>result = this_image() | = this_image(distance) | = this_image(coarray,dim)
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id75" title="Link to this heading">#</a></h3>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">this_image</span><span class="p">()</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">this_image</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">this_image</span><span class="p">(</span><span class="n">coarray</span><span class="p">,</span><span class="nb">dim</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="kt">integer </span><span class="k">function </span><span class="nb">this_image</span><span class="p">(</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="p">,</span><span class="n">coarray</span><span class="p">,</span><span class="w"> </span><span class="nb">dim</span><span class="w"> </span><span class="p">)</span>
@@ -2955,7 +2954,7 @@ no team is specified.</p>
 </div>
 </section>
 <section id="id76">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id76" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id76" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>a kind designated as ** may be any supported kind for the type</p></li>
 <li><p><strong>coarray</strong> can be of any type. If <strong>dim</strong> is present it is required.</p></li>
@@ -2964,11 +2963,11 @@ no team is specified.</p>
 </ul>
 </section>
 <section id="id77">
-<h3><strong>说明</strong><a class="headerlink" href="#id77" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id77" title="Link to this heading">#</a></h3>
 <p><strong>this_image</strong>(3) returns the cosubscript for this image.</p>
 </section>
 <section id="id78">
-<h3><strong>选项</strong><a class="headerlink" href="#id78" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id78" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>distance</strong></dt><dd><p>Nonnegative scalar <em>integer</em> (not permitted together with <strong>coarray</strong>).</p>
@@ -2988,11 +2987,11 @@ no team is specified.</p>
 </ul>
 </section>
 <section id="id79">
-<h3><strong>结果</strong><a class="headerlink" href="#id79" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id79" title="Link to this heading">#</a></h3>
 <p>默认整数。如果 <strong>coarray</strong> 不存在，它是标量；如果 <strong>distance</strong> 不存在或值为 <strong>0</strong>，它的值是当前团队调用图像上的镜像索引，对于与初始团队的距离更小或相等的值，它返回镜像索引与调用团队距离<strong>距离</strong>的祖先团队。如果<strong>距离</strong>大于到初始团队的距离，则返回初始团队的镜像索引。否则，当 <strong>coarray</strong> 存在时，如果 <strong>dim</strong> 不存在，则返回具有 corank 元素的 rank-1 数组，其中包含指定调用镜像的 <strong>coarray</strong> 的共同下标。如果存在 <strong>dim</strong>，则返回一个标量，其中包含 <strong>this_image(coarray)</strong> 的 <strong>dim</strong> 元素的值。</p>
 </section>
 <section id="id80">
-<h3><strong>示例</strong><a class="headerlink" href="#id80" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id80" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_this_image</span>
 <span class="k">implicit none</span>
@@ -3014,24 +3013,24 @@ no team is specified.</p>
 </div>
 </section>
 <section id="id81">
-<h3><strong>标准</strong><a class="headerlink" href="#id81" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id81" title="Link to this heading">#</a></h3>
 <p>Fortran 2008. With DISTANCE argument, TS 18508</p>
 </section>
 <section id="id82">
-<h3><strong>另见</strong><a class="headerlink" href="#id82" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id82" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#num-images"><strong>num_images</strong>(3)</a>,
 <a class="reference internal" href="#image-index"><strong>image_index</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="atomic-and">
-<h2>atomic_and<a class="headerlink" href="#atomic-and" title="此标题的永久链接">#</a></h2>
+<h2>atomic_and<a class="headerlink" href="#atomic-and" title="Link to this heading">#</a></h2>
 <section id="id83">
-<h3><strong>名称</strong><a class="headerlink" href="#id83" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id83" title="Link to this heading">#</a></h3>
 <p><strong>atomic_and</strong>(3) - [ATOMIC:BIT MANIPULATION] 原子按位与运算</p>
 </section>
 <section id="id84">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id84" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id84" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_and</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -3044,7 +3043,7 @@ no team is specified.</p>
 </div>
 </section>
 <section id="id85">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id85" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id85" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of integer type with
 atomic_int_kind kind.</p></li>
@@ -3054,7 +3053,7 @@ is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id86">
-<h3><strong>说明</strong><a class="headerlink" href="#id86" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id86" title="Link to this heading">#</a></h3>
 <p><strong>atomic_and</strong>(3) atomically defines <strong>atom</strong> with the bitwise
 <strong>and</strong> between the values of <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the
 invocation was successful, it is assigned the value 0. If it is present
@@ -3064,7 +3063,7 @@ assigned the value of iso_fortran_env’s stat_stopped_image and if
 the remote image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id87">
-<h3><strong>选项</strong><a class="headerlink" href="#id87" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id87" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型的标量 coarray 或 coindexed 变量。</p>
@@ -3084,7 +3083,7 @@ the remote image has failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id88">
-<h3><strong>示例</strong><a class="headerlink" href="#id88" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id88" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_and</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3096,23 +3095,23 @@ the remote image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id89">
-<h3><strong>标准</strong><a class="headerlink" href="#id89" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id89" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id90">
-<h3><strong>另见</strong><a class="headerlink" href="#id90" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id90" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-fetch-and"><strong>atomic_fetch_and</strong>(3)</a>，<a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>，<a class="reference internal" href="#atomic-ref"><strong>atomic_ref</strong>(3)</a>，<a class="reference internal" href="#atomic-cas"><strong>atomic_cas</strong>(3)</a>，<strong>iso_fortran_env</strong>(3)，<a class="reference internal" href="#atomic-add"><strong>atomic_add</strong>(3)</a>，<a class="reference internal" href="#atomic-or"><strong>atomic_or</strong>(3)</a>，<a class="reference internal" href="#atomic-xor"><strong>atomic_xor</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="atomic-fetch-and">
-<h2>atomic_fetch_and<a class="headerlink" href="#atomic-fetch-and" title="此标题的永久链接">#</a></h2>
+<h2>atomic_fetch_and<a class="headerlink" href="#atomic-fetch-and" title="Link to this heading">#</a></h2>
 <section id="id91">
-<h3><strong>名称</strong><a class="headerlink" href="#id91" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id91" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_and</strong>(3) - [ATOMIC:BIT MANIPULATION] 原子按位与操作与先前提取</p>
 </section>
 <section id="id92">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id92" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id92" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_fetch_and</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3121,10 +3120,10 @@ the remote image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id93">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id93" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id93" title="Link to this heading">#</a></h3>
 </section>
 <section id="id94">
-<h3><strong>说明</strong><a class="headerlink" href="#id94" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id94" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_and</strong>(3) atomically stores the value of
 <strong>atom</strong> in <strong>old</strong> and defines <strong>atom</strong> with the bitwise AND between the values of
 <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the invocation was successful,
@@ -3135,7 +3134,7 @@ iso_fortran_env’s stat_stopped_image and if the remote image has
 failed, the value stat_failed_image.</p>
 </section>
 <section id="id95">
-<h3><strong>选项</strong><a class="headerlink" href="#id95" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id95" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型的标量 coarray 或 coindexed 变量。</p>
@@ -3160,7 +3159,7 @@ failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id96">
-<h3><strong>示例</strong><a class="headerlink" href="#id96" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id96" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_fetch_and</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3172,11 +3171,11 @@ failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id97">
-<h3><strong>标准</strong><a class="headerlink" href="#id97" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id97" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id98">
-<h3><strong>另见</strong><a class="headerlink" href="#id98" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id98" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic-and"><strong>atomic_and</strong>(3)</a>,
 <a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>,</p>
@@ -3187,13 +3186,13 @@ failed, the value stat_failed_image.</p>
 </section>
 </section>
 <section id="atomic-fetch-or">
-<h2>atomic_fetch_or<a class="headerlink" href="#atomic-fetch-or" title="此标题的永久链接">#</a></h2>
+<h2>atomic_fetch_or<a class="headerlink" href="#atomic-fetch-or" title="Link to this heading">#</a></h2>
 <section id="id99">
-<h3><strong>名称</strong><a class="headerlink" href="#id99" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id99" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_or</strong>(3) - [ATOMIC:BIT MANIPULATION] 原子按位或操作与先前提取</p>
 </section>
 <section id="id100">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id100" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id100" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_fetch_or</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3202,10 +3201,10 @@ failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id101">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id101" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id101" title="Link to this heading">#</a></h3>
 </section>
 <section id="id102">
-<h3><strong>说明</strong><a class="headerlink" href="#id102" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id102" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_or</strong>(3) atomically stores the value of
 <strong>atom</strong> in <strong>old</strong> and defines <strong>atom</strong> with the bitwise OR between the values of
 <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the invocation was successful,
@@ -3216,7 +3215,7 @@ iso_fortran_env’s stat_stopped_image and if the remote image has
 failed, the value stat_failed_image.</p>
 </section>
 <section id="id103">
-<h3><strong>选项</strong><a class="headerlink" href="#id103" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id103" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型的标量 coarray 或 coindexed 变量。</p>
@@ -3241,7 +3240,7 @@ failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id104">
-<h3><strong>示例</strong><a class="headerlink" href="#id104" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id104" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_fetch_or</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3253,11 +3252,11 @@ failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id105">
-<h3><strong>标准</strong><a class="headerlink" href="#id105" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id105" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id106">
-<h3><strong>另见</strong><a class="headerlink" href="#id106" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id106" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>，<a class="reference internal" href="#atomic-or"><strong>atomic_or</strong>(3)</a>，<a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>，</p>
 <p><a class="reference internal" href="#atomic-fetch-add"><strong>atomic_fetch_add</strong>(3)</a>,
 <a class="reference internal" href="#atomic-fetch-and"><strong>atomic_fetch_and</strong>(3)</a>,</p>
@@ -3266,13 +3265,13 @@ failed, the value stat_failed_image.</p>
 </section>
 </section>
 <section id="atomic-fetch-xor">
-<h2>atomic_fetch_xor<a class="headerlink" href="#atomic-fetch-xor" title="此标题的永久链接">#</a></h2>
+<h2>atomic_fetch_xor<a class="headerlink" href="#atomic-fetch-xor" title="Link to this heading">#</a></h2>
 <section id="id107">
-<h3><strong>名称</strong><a class="headerlink" href="#id107" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id107" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_xor</strong>(3) - [ATOMIC:BIT MANIPULATION] 原子按位异或运算，先取</p>
 </section>
 <section id="id108">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id108" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id108" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_fetch_xor</span><span class="w"> </span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3281,10 +3280,10 @@ failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id109">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id109" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id109" title="Link to this heading">#</a></h3>
 </section>
 <section id="id110">
-<h3><strong>说明</strong><a class="headerlink" href="#id110" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id110" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_xor</strong>(3) atomically stores the value of
 <strong>atom</strong> in <strong>old</strong> and defines <strong>atom</strong> with the bitwise <strong>xor</strong> between the values of
 <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the invocation was successful,
@@ -3295,7 +3294,7 @@ iso_fortran_env’s stat_stopped_image and if the remote image has
 failed, the value stat_failed_image.</p>
 </section>
 <section id="id111">
-<h3><strong>选项</strong><a class="headerlink" href="#id111" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id111" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型的标量 coarray 或 coindexed 变量。</p>
@@ -3320,7 +3319,7 @@ failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id112">
-<h3><strong>示例</strong><a class="headerlink" href="#id112" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id112" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_fetch_xor</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3332,11 +3331,11 @@ failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id113">
-<h3><strong>标准</strong><a class="headerlink" href="#id113" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id113" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id114">
-<h3><strong>另见</strong><a class="headerlink" href="#id114" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id114" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>，<a class="reference internal" href="#atomic-xor"><strong>atomic_xor</strong>(3)</a>，<a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>，</p>
 <p><a class="reference internal" href="#atomic-fetch-add"><strong>atomic_fetch_add</strong>(3)</a>,
 <a class="reference internal" href="#atomic-fetch-and"><strong>atomic_fetch_and</strong>(3)</a>,</p>
@@ -3345,13 +3344,13 @@ failed, the value stat_failed_image.</p>
 </section>
 </section>
 <section id="atomic-or">
-<h2>atomic_or<a class="headerlink" href="#atomic-or" title="此标题的永久链接">#</a></h2>
+<h2>atomic_or<a class="headerlink" href="#atomic-or" title="Link to this heading">#</a></h2>
 <section id="id115">
-<h3><strong>名称</strong><a class="headerlink" href="#id115" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id115" title="Link to this heading">#</a></h3>
 <p><strong>atomic_or</strong>(3) - [ATOMIC:BIT MANIPULATION] 原子按位或运算</p>
 </section>
 <section id="id116">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id116" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id116" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_or</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3364,7 +3363,7 @@ failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id117">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id117" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id117" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of integer type with
 atomic_int_kind kind.</p></li>
@@ -3374,7 +3373,7 @@ is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id118">
-<h3><strong>说明</strong><a class="headerlink" href="#id118" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id118" title="Link to this heading">#</a></h3>
 <p><strong>atomic_or</strong>(3) atomically defines <strong>atom</strong> with the bitwise <strong>or</strong>
 between the values of <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the
 invocation was successful, it is assigned the value <strong>0</strong>. If it is present
@@ -3384,7 +3383,7 @@ assigned the value of iso_fortran_env’s stat_stopped_image and if
 the remote image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id119">
-<h3><strong>选项</strong><a class="headerlink" href="#id119" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id119" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型的标量 coarray 或 coindexed 变量。</p>
@@ -3404,7 +3403,7 @@ the remote image has failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id120">
-<h3><strong>示例</strong><a class="headerlink" href="#id120" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id120" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_or</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3416,11 +3415,11 @@ the remote image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id121">
-<h3><strong>标准</strong><a class="headerlink" href="#id121" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id121" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id122">
-<h3><strong>另见</strong><a class="headerlink" href="#id122" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id122" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic_fetch"><span class="xref myst"><strong>atomic_fetch_or</strong>(3)</span></a>,</p>
 <p><a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>,
@@ -3431,13 +3430,13 @@ the remote image has failed, the value stat_failed_image.</p>
 </section>
 </section>
 <section id="atomic-xor">
-<h2>atomic_xor<a class="headerlink" href="#atomic-xor" title="此标题的永久链接">#</a></h2>
+<h2>atomic_xor<a class="headerlink" href="#atomic-xor" title="Link to this heading">#</a></h2>
 <section id="id123">
-<h3><strong>名称</strong><a class="headerlink" href="#id123" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id123" title="Link to this heading">#</a></h3>
 <p><strong>atomic_xor</strong>(3) - [ATOMIC:BIT MANIPULATION] 原子按位或运算</p>
 </section>
 <section id="id124">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id124" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id124" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_xor</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3450,7 +3449,7 @@ the remote image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id125">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id125" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id125" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of integer type with
 atomic_int_kind kind.</p></li>
@@ -3460,10 +3459,10 @@ is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id126">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id126" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id126" title="Link to this heading">#</a></h3>
 </section>
 <section id="id127">
-<h3><strong>说明</strong><a class="headerlink" href="#id127" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id127" title="Link to this heading">#</a></h3>
 <p><strong>atomic_xor</strong>(3) atomically defines <strong>atom</strong> with the bitwise
 <strong>xor</strong> between the values of <strong>atom</strong> and <strong>value</strong>. When <strong>stat</strong> is present and the
 invocation was successful, it is assigned the value <strong>0</strong>. If it is present
@@ -3473,7 +3472,7 @@ assigned the value of iso_fortran_env’s stat_stopped_image and if
 the remote image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id128">
-<h3><strong>选项</strong><a class="headerlink" href="#id128" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id128" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型的标量 coarray 或 coindexed 变量。</p>
@@ -3493,7 +3492,7 @@ the remote image has failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id129">
-<h3><strong>示例</strong><a class="headerlink" href="#id129" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id129" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_xor</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3505,23 +3504,23 @@ the remote image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id130">
-<h3><strong>标准</strong><a class="headerlink" href="#id130" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id130" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id131">
-<h3><strong>另见</strong><a class="headerlink" href="#id131" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id131" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>，<a class="reference internal" href="#atomic_fetch"><span class="xref myst"><strong>atomic_fetch_xor</strong>(3)</span></a>，<a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>，<a class="reference internal" href="#atomic-add"><strong>atomic_add</strong>(3)</a>，<a class="reference internal" href="#atomic-or"><strong>atomic_or</strong>(3)</a>，<a class="reference internal" href="#atomic-xor"><strong>atomic_xor</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="atomic-add">
-<h2>atomic_add<a class="headerlink" href="#atomic-add" title="此标题的永久链接">#</a></h2>
+<h2>atomic_add<a class="headerlink" href="#atomic-add" title="Link to this heading">#</a></h2>
 <section id="id132">
-<h3><strong>名称</strong><a class="headerlink" href="#id132" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id132" title="Link to this heading">#</a></h3>
 <p><strong>atomic_add</strong>(3) - [ATOMIC] 原子级加操作</p>
 </section>
 <section id="id133">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id133" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id133" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_add</span><span class="w"> </span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3534,7 +3533,7 @@ the remote image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id134">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id134" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id134" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of integer type with
 atomic_int_kind kind.</p></li>
@@ -3544,7 +3543,7 @@ is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id135">
-<h3><strong>说明</strong><a class="headerlink" href="#id135" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id135" title="Link to this heading">#</a></h3>
 <p><strong>atomic_add</strong>(3) atomically adds the value of VAR to the
 variable <strong>atom</strong>. When <strong>stat</strong> is present and the invocation was successful,
 it is assigned the value 0. If it is present and the invocation has
@@ -3554,7 +3553,7 @@ iso_fortran_env’s STAT_STOPPED_IMAGE and if the remote image has
 failed, the value STAT_FAILED_IMAGE.</p>
 </section>
 <section id="id136">
-<h3><strong>选项</strong><a class="headerlink" href="#id136" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id136" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型的标量 coarray 或 coindexed 变量。</p>
@@ -3574,7 +3573,7 @@ failed, the value STAT_FAILED_IMAGE.</p>
 </ul>
 </section>
 <section id="id137">
-<h3><strong>示例</strong><a class="headerlink" href="#id137" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id137" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_add</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3586,23 +3585,23 @@ failed, the value STAT_FAILED_IMAGE.</p>
 </div>
 </section>
 <section id="id138">
-<h3><strong>标准</strong><a class="headerlink" href="#id138" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id138" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id139">
-<h3><strong>另见</strong><a class="headerlink" href="#id139" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id139" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>，<a class="reference internal" href="#atomic_fetch"><span class="xref myst"><strong>atomic_fetch_add</strong>(3)</span></a>，<a class="reference internal" href="#atomic-and"><strong>atomic_and</strong>(3)</a>，<a class="reference internal" href="#atomic-or"><strong>atomic_or</strong>(3)</a>，<a class="reference internal" href="#atomic-xor"><strong>atomic_xor</strong>(3)</a> <strong>iso_fortran_env</strong>(3)，</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="atomic-cas">
-<h2>atomic_cas<a class="headerlink" href="#atomic-cas" title="此标题的永久链接">#</a></h2>
+<h2>atomic_cas<a class="headerlink" href="#atomic-cas" title="Link to this heading">#</a></h2>
 <section id="id140">
-<h3><strong>名称</strong><a class="headerlink" href="#id140" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id140" title="Link to this heading">#</a></h3>
 <p><strong>atomic_cas</strong>(3) - [ATOMIC] 原子级比较和交换</p>
 </section>
 <section id="id141">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id141" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id141" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_cas</span><span class="w"> </span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="p">,</span><span class="w"> </span><span class="n">compare</span><span class="p">,</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3611,10 +3610,10 @@ failed, the value STAT_FAILED_IMAGE.</p>
 </div>
 </section>
 <section id="id142">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id142" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id142" title="Link to this heading">#</a></h3>
 </section>
 <section id="id143">
-<h3><strong>说明</strong><a class="headerlink" href="#id143" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id143" title="Link to this heading">#</a></h3>
 <p><strong>atomic_cas</strong>(3) compares the variable <strong>atom</strong> with the value of
 <strong>compare</strong>; if the value is the same, <strong>atom</strong> is set to the value of
 <strong>new</strong>. Additionally, <strong>old</strong> is set to the value of <strong>atom</strong> that was
@@ -3626,7 +3625,7 @@ the value of iso_fortran_env’s stat_stopped_image and if the remote
 image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id144">
-<h3><strong>选项</strong><a class="headerlink" href="#id144" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id144" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型或具有 atomic_logical_kind 类型的逻辑类型的标量 coarray 或 coindexed 变量。</p>
@@ -3656,7 +3655,7 @@ image has failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id145">
-<h3><strong>示例</strong><a class="headerlink" href="#id145" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id145" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_cas</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3668,11 +3667,11 @@ image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id146">
-<h3><strong>标准</strong><a class="headerlink" href="#id146" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id146" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id147">
-<h3><strong>另见</strong><a class="headerlink" href="#id147" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id147" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>,
 <a class="reference internal" href="#atomic-ref"><strong>atomic_ref</strong>(3)</a>,
 <a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a></p>
@@ -3680,13 +3679,13 @@ image has failed, the value stat_failed_image.</p>
 </section>
 </section>
 <section id="atomic-define">
-<h2>atomic_define<a class="headerlink" href="#atomic-define" title="此标题的永久链接">#</a></h2>
+<h2>atomic_define<a class="headerlink" href="#atomic-define" title="Link to this heading">#</a></h2>
 <section id="id148">
-<h3><strong>名称</strong><a class="headerlink" href="#id148" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id148" title="Link to this heading">#</a></h3>
 <p><strong>atomic_define</strong>(3) - [ATOMIC] 以原子方式设置变量</p>
 </section>
 <section id="id149">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id149" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id149" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="nb">atomic_define</span><span class="w"> </span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3699,7 +3698,7 @@ image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id150">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id150" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id150" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型或具有 atomic_logical_kind 类型的逻辑类型的标量 coarray 或 coindexed 变量。</p>
@@ -3719,12 +3718,12 @@ image has failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id151">
-<h3><strong>说明</strong><a class="headerlink" href="#id151" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id151" title="Link to this heading">#</a></h3>
 <p><strong>atomic_define</strong>(3) defines the variable <strong>atom</strong> with the value
 <strong>value</strong> atomically.</p>
 </section>
 <section id="id152">
-<h3><strong>选项</strong><a class="headerlink" href="#id152" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id152" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>Scalar coarray or coindexed variable to atomically assign the
@@ -3751,7 +3750,7 @@ image has failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id153">
-<h3><strong>示例</strong><a class="headerlink" href="#id153" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id153" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_define</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3763,23 +3762,23 @@ image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id154">
-<h3><strong>标准</strong><a class="headerlink" href="#id154" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id154" title="Link to this heading">#</a></h3>
 <p>Fortran 2008 ; with <strong>stat</strong>, TS 18508</p>
 </section>
 <section id="id155">
-<h3><strong>另见</strong><a class="headerlink" href="#id155" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id155" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-ref"><strong>atomic_ref</strong>(3)</a>，<a class="reference internal" href="#atomic-cas"><strong>atomic_cas</strong>(3)</a>，<strong>iso_fortran_env</strong>(3)，<a class="reference internal" href="#atomic-add"><strong>atomic_add</strong>(3)</a>，<a class="reference internal" href="#atomic-and"><strong>atomic_and</strong>(3)</a>，<a class="reference internal" href="#atomic-or"><strong>atomic_or</strong>(3)</a>，<a class="reference internal" href="#atomic-xor"><strong>atomic_xor</strong>(3)</a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="atomic-fetch-add">
-<h2>atomic_fetch_add<a class="headerlink" href="#atomic-fetch-add" title="此标题的永久链接">#</a></h2>
+<h2>atomic_fetch_add<a class="headerlink" href="#atomic-fetch-add" title="Link to this heading">#</a></h2>
 <section id="id156">
-<h3><strong>名称</strong><a class="headerlink" href="#id156" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id156" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_add</strong>(3) - [ATOMIC] 原子 ADD 操作与先前的 fetch</p>
 </section>
 <section id="id157">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id157" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id157" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="n">atomic_fetch_add</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3788,10 +3787,10 @@ image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id158">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id158" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id158" title="Link to this heading">#</a></h3>
 </section>
 <section id="id159">
-<h3><strong>说明</strong><a class="headerlink" href="#id159" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id159" title="Link to this heading">#</a></h3>
 <p><strong>atomic_fetch_add</strong>(3) atomically stores the value of <strong>atom</strong> in <strong>old</strong>
 and adds the value of <strong>var</strong> to the variable <strong>atom</strong>. When <strong>stat</strong> is
 present and the invocation was successful, it is assigned the value <strong>0</strong>.
@@ -3801,7 +3800,7 @@ stopped, it is assigned the value of iso_fortran_env’s stat_stopped_image
 and if the remote image has failed, the value stat_failed_image.</p>
 </section>
 <section id="id160">
-<h3><strong>选项</strong><a class="headerlink" href="#id160" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id160" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>atom</strong></dt><dd><p>具有 atomic_int_kind 类型的整数类型的标量 coarray 或 coindexed 变量。 atomic_logical_kind 种类。</p>
@@ -3826,7 +3825,7 @@ and if the remote image has failed, the value stat_failed_image.</p>
 </ul>
 </section>
 <section id="id161">
-<h3><strong>示例</strong><a class="headerlink" href="#id161" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id161" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_fetch_add</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3838,11 +3837,11 @@ and if the remote image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id162">
-<h3><strong>标准</strong><a class="headerlink" href="#id162" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id162" title="Link to this heading">#</a></h3>
 <p>TS 18508</p>
 </section>
 <section id="id163">
-<h3><strong>另见</strong><a class="headerlink" href="#id163" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id163" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>，<a class="reference internal" href="#atomic-add"><strong>atomic_add</strong>(3)</a>，<strong>iso_fortran_env</strong>(3)，</p>
 <p><a class="reference internal" href="#atomic-fetch-and"><strong>atomic_fetch_and</strong>(3)</a>，<a class="reference internal" href="#atomic-fetch-or"><strong>atomic_fetch_or</strong>(3)</a>，</p>
 <p><a class="reference internal" href="#atomic-fetch-xor"><strong>atomic_fetch_xor</strong>(3)</a></p>
@@ -3850,13 +3849,13 @@ and if the remote image has failed, the value stat_failed_image.</p>
 </section>
 </section>
 <section id="atomic-ref">
-<h2>atomic_ref<a class="headerlink" href="#atomic-ref" title="此标题的永久链接">#</a></h2>
+<h2>atomic_ref<a class="headerlink" href="#atomic-ref" title="Link to this heading">#</a></h2>
 <section id="id164">
-<h3><strong>名称</strong><a class="headerlink" href="#id164" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id164" title="Link to this heading">#</a></h3>
 <p><strong>atomic_ref</strong>(3) - [ATOMIC] 以原子方式获取变量的值</p>
 </section>
 <section id="id165">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id165" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id165" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="nb">atomic_ref</span><span class="p">(</span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="p">[,</span><span class="nb">stat</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3869,7 +3868,7 @@ and if the remote image has failed, the value stat_failed_image.</p>
 </div>
 </section>
 <section id="id166">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id166" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id166" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>atom</strong> is a scalar coarray or coindexed variable of either integer
 type with atomic_int_kind kind or logical type with atomic_logical_kind
@@ -3880,7 +3879,7 @@ different, the value is converted to the kind of <strong>atom</strong>.</p></li>
 </ul>
 </section>
 <section id="id167">
-<h3><strong>说明</strong><a class="headerlink" href="#id167" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id167" title="Link to this heading">#</a></h3>
 <p><strong>atomic_ref</strong>(3) atomically assigns the value of the
 variable <strong>atom</strong> to <strong>value</strong>. When <strong>stat</strong> is present and the invocation was
 successful, it is assigned the value <strong>0</strong>. If it is present and the
@@ -3890,7 +3889,7 @@ the value of iso_fortran_env’s <strong>stat_stopped_image</strong> and if the 
 image has failed, the value <strong>stat_failed_image</strong>.</p>
 </section>
 <section id="id168">
-<h3><strong>选项</strong><a class="headerlink" href="#id168" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id168" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>value</strong></dt><dd><p>与<strong>atom</strong> 类型相同的标量。如果种类不同，则将值转换为<strong>原子</strong>的种类。</p>
@@ -3910,7 +3909,7 @@ image has failed, the value <strong>stat_failed_image</strong>.</p>
 </ul>
 </section>
 <section id="id169">
-<h3><strong>示例</strong><a class="headerlink" href="#id169" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id169" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_atomic_ref</span>
 <span class="k">use </span><span class="n">iso_fortran_env</span>
@@ -3926,11 +3925,11 @@ image has failed, the value <strong>stat_failed_image</strong>.</p>
 </div>
 </section>
 <section id="id170">
-<h3><strong>标准</strong><a class="headerlink" href="#id170" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id170" title="Link to this heading">#</a></h3>
 <p>Fortran 2008 ; with STAT, TS 18508</p>
 </section>
 <section id="id171">
-<h3><strong>另见</strong><a class="headerlink" href="#id171" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id171" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#atomic-define"><strong>atomic_define</strong>(3)</a>，<a class="reference internal" href="#atomic-cas"><strong>atomic_cas</strong>(3)</a>，<a class="reference internal" href="#"><span class="xref myst"><strong>iso_fortran_env</strong>(3)</span></a>，</p>
 <p><a class="reference internal" href="#atomic-add"><strong>atomic_fetch_add</strong>(3)</a>，<a class="reference internal" href="#atomic-and"><strong>atomic_fetch_and</strong>(3)</a>，</p>
 <p><a class="reference internal" href="#atomic-or"><strong>atomic_fetch_or</strong>(3)</a>，<a class="reference internal" href="#atomic-xor"><strong>atomic_fetch_xor</strong>(3)</a></p>

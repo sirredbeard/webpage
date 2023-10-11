@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../_static/images/favicon.ico" type="image/x-icon">
     <title>Python Fortran Rosetta Stone &#8212; Fortran Programming Language</title>
 <script>
@@ -24,20 +23,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=33a0c708"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/rosetta_stone.html" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
@@ -711,18 +710,18 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="python-fortran-rosetta-stone">
-<h1>Python Fortran Rosetta Stone<a class="headerlink" href="#python-fortran-rosetta-stone" title="Permalink to this heading">#</a></h1>
+<h1>Python Fortran Rosetta Stone<a class="headerlink" href="#python-fortran-rosetta-stone" title="Link to this heading">#</a></h1>
 <p>Python with NumPy and Fortran are very similar in terms of
 expressiveness and features. This rosetta stone shows how to implement
 many common idioms in both languages side by side.</p>
 <section id="how-to-execute-code-snippets">
-<h2>How to Execute Code Snippets<a class="headerlink" href="#how-to-execute-code-snippets" title="Permalink to this heading">#</a></h2>
+<h2>How to Execute Code Snippets<a class="headerlink" href="#how-to-execute-code-snippets" title="Link to this heading">#</a></h2>
 <p>Consider for example the following code snippets:</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">,</span> <span class="nb">sum</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
@@ -736,7 +735,7 @@ many common idioms in both languages side by side.</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id2" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="nb">shape</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -759,7 +758,7 @@ how this works). Compile using <code class="docutils literal notranslate"><span 
 example to produce the executable with a different name).</p>
 </section>
 <section id="arrays">
-<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h2>
+<h2>Arrays<a class="headerlink" href="#arrays" title="Link to this heading">#</a></h2>
 <p>Arrays are builtin in Fortran, and available in the NumPy module in
 Python. The usage is identical, except for the following differences:</p>
 <blockquote>
@@ -806,7 +805,7 @@ multiplication</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id3" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">,</span> <span class="nb">sum</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
@@ -820,7 +819,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id4" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="nb">shape</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -835,7 +834,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id5" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">reshape</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">reshape</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">reshape</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>
@@ -850,7 +849,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id6" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id6" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">),</span><span class="w"> </span><span class="n">b</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
 <span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">])</span>
@@ -866,7 +865,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id7" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id7" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[1 2 3]
 [4 5 6]
 
@@ -878,7 +877,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id8" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id8" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1           2           3
 4           5           6
 
@@ -890,7 +889,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id9" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id9" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="nb">max</span><span class="p">,</span> <span class="nb">min</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
@@ -907,7 +906,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id10" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id10" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="nb">shape</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -925,7 +924,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id11">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id11" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id11" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>(2, 3)
 2
 3
@@ -941,7 +940,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id12">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id12" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id12" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2 3
 2
 3
@@ -957,7 +956,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id13">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id13" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id13" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="nb">all</span><span class="p">,</span> <span class="nb">any</span>
 <span class="n">i</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="nb">all</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -968,7 +967,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id14">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id14" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id14" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
 <span class="k">all</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">])</span>
@@ -979,7 +978,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id15">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id15" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id15" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">empty</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -992,7 +991,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id16">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id16" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id16" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="n">b</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">]</span>
 <span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
@@ -1009,7 +1008,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id17">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id17" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id17" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">empty</span>                     
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>     
 <span class="n">b</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>                                  
@@ -1026,7 +1025,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id18">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id18" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id18" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="n">b</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">]</span>
 <span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
@@ -1043,7 +1042,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id19">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id19" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id19" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="nb">sum</span><span class="p">,</span> <span class="n">ones</span><span class="p">,</span> <span class="n">size</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
@@ -1056,7 +1055,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id20">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id20" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id20" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">]</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -1069,7 +1068,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id21">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id21" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id21" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">dot</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
@@ -1081,7 +1080,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id22">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id22" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id22" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">b</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
 <span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
@@ -1094,7 +1093,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id23">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id23" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id23" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[[ 2  6]
 [12 20]]
 [[10 13]
@@ -1105,7 +1104,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id24">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id24" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id24" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2          12           6          20
 10          22          13          29
 </pre></div>
@@ -1114,7 +1113,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id25">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id25" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id25" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">pi</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">array</span><span class="p">([(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">pi</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)])</span>
@@ -1125,7 +1124,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id26">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id26" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id26" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">types</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span>
 <span class="k">use </span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">pi</span>
 <span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
@@ -1141,12 +1140,12 @@ multiplication</p></li>
 </div>
 </div>
 <section id="some-indexing-examples">
-<h3>Some indexing examples<a class="headerlink" href="#some-indexing-examples" title="Permalink to this heading">#</a></h3>
+<h3>Some indexing examples<a class="headerlink" href="#some-indexing-examples" title="Link to this heading">#</a></h3>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id27">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id27" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id27" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
@@ -1160,7 +1159,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id28">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id28" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id28" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="w"> </span><span class="n">b</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
 <span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span>
@@ -1179,7 +1178,7 @@ multiplication</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id29">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id29" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id29" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[1 2 3]
 [1 2 3]
 [1 2]
@@ -1190,7 +1189,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id30">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id30" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id30" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1           2           3
 1           2           3
 1           2
@@ -1206,7 +1205,7 @@ multiplication</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id31">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id31" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id31" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1214,7 +1213,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id32">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id32" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id32" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">(:</span><span class="n">n</span><span class="p">)</span><span class="w">     </span><span class="c">! assuming starting index 1 (default)</span>
 <span class="n">a</span><span class="p">(:</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c">! assuming starting index m</span>
 </pre></div>
@@ -1228,7 +1227,7 @@ multiplication</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id33">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id33" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id33" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="n">n</span><span class="p">:]</span> <span class="c1"># equivalent to a[size(a)-n:]</span>
 </pre></div>
 </div>
@@ -1236,7 +1235,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id34">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id34" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id34" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">-</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">:)</span>
 </pre></div>
 </div>
@@ -1249,7 +1248,7 @@ multiplication</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id35">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id35" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id35" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1257,7 +1256,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id36">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id36" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id36" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1270,7 +1269,7 @@ multiplication</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id37">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id37" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id37" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">n</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1278,7 +1277,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id38">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id38" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id38" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1292,7 +1291,7 @@ multiplication</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id39">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id39" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id39" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Not possible (arrays start at 0 index)</span>
 </pre></div>
 </div>
@@ -1300,7 +1299,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id40">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id40" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id40" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">(</span><span class="o">-</span><span class="n">n</span><span class="p">:</span><span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1313,7 +1312,7 @@ multiplication</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id41">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id41" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id41" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>                                     
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>            
     <span class="n">r</span> <span class="o">*=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  
@@ -1323,7 +1322,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id42">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id42" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id42" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="w">    </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -1339,7 +1338,7 @@ multiplication</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id43">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id43" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id43" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
     <span class="n">r</span> <span class="o">*=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -1349,7 +1348,7 @@ multiplication</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id44">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id44" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id44" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 <span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span>
 <span class="w">    </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -1366,7 +1365,7 @@ parts are:</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id45">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id45" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id45" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span> <span class="p">:</span><span class="n">i</span><span class="p">]</span>
 <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="p">]</span>
 <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">:</span> <span class="p">]</span>
@@ -1376,7 +1375,7 @@ parts are:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id46">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id46" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id46" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">(</span><span class="w"> </span><span class="p">:</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">:</span><span class="w">   </span><span class="p">)</span>
@@ -1391,7 +1390,7 @@ parts are:</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id47">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id47" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id47" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">:,</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">u</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">dy2</span> <span class="o">+</span>
     <span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">dx2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">dx2</span><span class="o">+</span><span class="n">dy2</span><span class="p">))</span>
 </pre></div>
@@ -1400,7 +1399,7 @@ parts are:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id48">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id48" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id48" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 <span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 <span class="n">u</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">nx</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="n">ny</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">u</span><span class="p">(</span><span class="mi">3</span><span class="p">:,</span><span class="mi">2</span><span class="p">:</span><span class="n">ny</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">u</span><span class="p">(:</span><span class="n">ny</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="n">ny</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">*</span><span class="n">dy2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">&amp;</span>
@@ -1414,13 +1413,13 @@ parts are:</p>
 </section>
 </section>
 <section id="modules">
-<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">#</a></h2>
+<h2>Modules<a class="headerlink" href="#modules" title="Link to this heading">#</a></h2>
 <p>Comparison of Fortran and Python import statements:</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id49">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id49" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id49" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">A</span> <span class="kn">import</span> <span class="n">foo</span>
 <span class="kn">from</span> <span class="nn">A</span> <span class="kn">import</span> <span class="n">foo</span> <span class="k">as</span> <span class="n">Afoo</span>
 <span class="kn">from</span> <span class="nn">A</span> <span class="kn">import</span> <span class="o">*</span>
@@ -1430,7 +1429,7 @@ parts are:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id50">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id50" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id50" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">foo</span>
 <span class="k">use </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">Afoo</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">foo</span>
 <span class="k">use </span><span class="n">A</span>
@@ -1445,7 +1444,7 @@ parts are:</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id51">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id51" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id51" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">A</span>
 <span class="kn">import</span> <span class="nn">ALongName</span> <span class="k">as</span> <span class="nn">A</span>
 </pre></div>
@@ -1454,7 +1453,7 @@ parts are:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id52">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id52" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id52" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -1494,7 +1493,7 @@ recommended)</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id53">
-<div class="code-block-caption"><span class="caption-text">Python a.py</span><a class="headerlink" href="#id53" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python a.py</span><a class="headerlink" href="#id53" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                            
@@ -1508,7 +1507,7 @@ recommended)</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id54">
-<div class="code-block-caption"><span class="caption-text">Fortran a.f90</span><a class="headerlink" href="#id54" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran a.f90</span><a class="headerlink" href="#id54" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">a</span>
 <span class="k">implicit none</span>
 
@@ -1538,7 +1537,7 @@ recommended)</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id55">
-<div class="code-block-caption"><span class="caption-text">Python main.py</span><a class="headerlink" href="#id55" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python main.py</span><a class="headerlink" href="#id55" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a</span> <span class="kn">import</span> <span class="n">f</span><span class="p">,</span> <span class="n">i</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
@@ -1549,7 +1548,7 @@ recommended)</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id56">
-<div class="code-block-caption"><span class="caption-text">Fortran main.f90</span><a class="headerlink" href="#id56" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran main.f90</span><a class="headerlink" href="#id56" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">main</span>
 <span class="k">use </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">i</span>
 <span class="k">implicit none</span>
@@ -1566,7 +1565,7 @@ recommended)</p></li>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id57">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id57" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id57" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>8
 5
 </pre></div>
@@ -1575,7 +1574,7 @@ recommended)</p></li>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id58">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id58" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id58" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>8
 5
 </pre></div>
@@ -1592,7 +1591,7 @@ code snippet just by appending <code class="docutils literal notranslate"><span 
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id59">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id59" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id59" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">]</span>
 
 <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
@@ -1608,7 +1607,7 @@ code snippet just by appending <code class="docutils literal notranslate"><span 
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id60">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id60" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id60" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">a</span>
 <span class="k">implicit none</span>
 <span class="k">private</span>
@@ -1642,7 +1641,7 @@ is used, the symbol <code class="docutils literal notranslate"><span class="pre"
 is used, the symbols <code class="docutils literal notranslate"><span class="pre">g</span></code> can still be imported.</p>
 </section>
 <section id="floating-point-numbers">
-<h2>Floating Point Numbers<a class="headerlink" href="#floating-point-numbers" title="Permalink to this heading">#</a></h2>
+<h2>Floating Point Numbers<a class="headerlink" href="#floating-point-numbers" title="Link to this heading">#</a></h2>
 <p>Both NumPy and Fortran can work with any specified precision and if no
 precision is specified, then the default platform precision is used.</p>
 <p>In Python, the default precision is typically double precision, while in
@@ -1654,7 +1653,7 @@ documentation.</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id61">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id61" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id61" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">float32</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">float32</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span>
 </pre></div>
@@ -1663,7 +1662,7 @@ documentation.</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id62">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id62" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id62" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">f</span>
 <span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.1</span>
 </pre></div>
@@ -1676,7 +1675,7 @@ documentation.</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id63">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id63" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id63" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>f = 1.1            # 1.1
 f = 1e8            # 100000000.0
 f = float(1) / 2   # 0.5
@@ -1688,7 +1687,7 @@ f = float(5)       # 5.0
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id64">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id64" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id64" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">dp</span><span class="o">=</span><span class="nb">kind</span><span class="p">(</span><span class="mf">0.d0</span><span class="p">)</span>
 <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">f</span>
 <span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.1_dp</span><span class="w">             </span><span class="c">! 1.1</span>
@@ -1711,7 +1710,7 @@ corruption), so one <em>always</em> needs to specify the precision.</p>
 <p>In all Fortran code snippets below, it is assumed, that you did
 <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">types,</span> <span class="pre">only:</span> <span class="pre">dp</span></code>. The <code class="docutils literal notranslate"><span class="pre">types.f90</span></code> module is:</p>
 <div class="literal-block-wrapper docutils container" id="id65">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id65" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id65" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">types</span>
 <span class="k">implicit none</span>
 <span class="k">private</span>
@@ -1724,7 +1723,7 @@ corruption), so one <em>always</em> needs to specify the precision.</p>
 </div>
 </section>
 <section id="math-and-complex-numbers">
-<h2>Math and Complex Numbers<a class="headerlink" href="#math-and-complex-numbers" title="Permalink to this heading">#</a></h2>
+<h2>Math and Complex Numbers<a class="headerlink" href="#math-and-complex-numbers" title="Link to this heading">#</a></h2>
 <p>Fortran has builtin mathematical functions, in Python one has to import
 them from the <code class="docutils literal notranslate"><span class="pre">math</span></code> module or (for the more advanced functions) from
 the SciPy package. Fortran doesn’t include constants, so one has to use
@@ -1734,7 +1733,7 @@ the <code class="docutils literal notranslate"><span class="pre">constants.f90</
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id66">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id66" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id66" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">e</span>
 <span class="n">I</span> <span class="o">=</span> <span class="mi">1</span><span class="n">j</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">**</span><span class="p">(</span><span class="n">I</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1747,7 +1746,7 @@ the <code class="docutils literal notranslate"><span class="pre">constants.f90</
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id67">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id67" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id67" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">pi</span><span class="p">,</span><span class="w"> </span><span class="n">e</span>
 <span class="kt">complex</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="o">**</span><span class="p">(</span><span class="n">I</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
@@ -1764,7 +1763,7 @@ the <code class="docutils literal notranslate"><span class="pre">constants.f90</
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id68">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id68" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id68" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1.22460635382e-16j
 -1.0
 (4+5j)
@@ -1775,7 +1774,7 @@ the <code class="docutils literal notranslate"><span class="pre">constants.f90</
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id69">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id69" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id69" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>(  0.0000000000000000     , 1.22460635382237726E-016)
 -1.0000000000000000
 (  4.0000000    ,  5.0000000    )
@@ -1788,7 +1787,7 @@ the <code class="docutils literal notranslate"><span class="pre">constants.f90</
 </div>
 <p>Fortran module <code class="docutils literal notranslate"><span class="pre">constants.f90</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id70">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id70" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id70" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">constants</span>
 <span class="k">use </span><span class="n">types</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span>
 <span class="k">implicit none</span>
@@ -1805,7 +1804,7 @@ the <code class="docutils literal notranslate"><span class="pre">constants.f90</
 </div>
 </section>
 <section id="strings-and-formatting">
-<h2>Strings and Formatting<a class="headerlink" href="#strings-and-formatting" title="Permalink to this heading">#</a></h2>
+<h2>Strings and Formatting<a class="headerlink" href="#strings-and-formatting" title="Link to this heading">#</a></h2>
 <p>The functionality of both Python and Fortran is pretty much equivalent,
 only the syntax is a litte different.</p>
 <p>In both Python and Fortran, strings can be delimited by either <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or
@@ -1815,7 +1814,7 @@ only the syntax is a litte different.</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id71">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id71" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id71" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Integer&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;and float&quot;</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="s2">&quot;works fine.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Integer &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; and float &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mf">5.5</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Integer </span><span class="si">%d</span><span class="s2"> and float </span><span class="si">%f</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">))</span>
@@ -1825,7 +1824,7 @@ only the syntax is a litte different.</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id72">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id72" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id72" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">utils</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">str</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Integer&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;and float&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">5.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;works fine.&quot;</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Integer &quot;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">str</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="s2">&quot; and float &quot;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">str</span><span class="p">(</span><span class="mf">5.5_dp</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="s2">&quot;.&quot;</span>
@@ -1840,7 +1839,7 @@ only the syntax is a litte different.</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id73">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id73" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id73" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Integer 5 and float 5.5 works fine.
 Integer 5 and float 5.5.
 Integer 5 and float 5.500000.
@@ -1850,7 +1849,7 @@ Integer 5 and float 5.500000.
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id74">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id74" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id74" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Integer           5 and float   5.5000000     works fine.
 Integer 5 and float 5.500000.
 Integer 5 and float 5.500000.
@@ -1865,7 +1864,7 @@ Integer 5 and float 5.500000.
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id75">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id75" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id75" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%3d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="mi">5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%03d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="mi">5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="s2">&quot;text&quot;</span><span class="p">)</span>
@@ -1877,7 +1876,7 @@ Integer 5 and float 5.500000.
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id76">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id76" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id76" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;(i3)&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(i3.3)&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(a)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;text&quot;</span>
@@ -1893,7 +1892,7 @@ Integer 5 and float 5.500000.
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id77">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id77" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id77" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5
 005
 text
@@ -1905,7 +1904,7 @@ text
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id78">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id78" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id78" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>5
 005
 text
@@ -1919,14 +1918,14 @@ text
 </div>
 </section>
 <section id="nested-functions">
-<h2>Nested Functions<a class="headerlink" href="#nested-functions" title="Permalink to this heading">#</a></h2>
+<h2>Nested Functions<a class="headerlink" href="#nested-functions" title="Link to this heading">#</a></h2>
 <p>Both Python and Fortran allow nested functions that can access the outer
 function’s namespace:</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id79">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id79" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id79" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>                   
     <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                                    
         <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span>                    
@@ -1937,7 +1936,7 @@ function’s namespace:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id80">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id80" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id80" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">foo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
 <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="mf">1._dp</span><span class="p">),</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="mf">2._dp</span><span class="p">),</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="mf">3._dp</span><span class="p">)</span>
@@ -1961,7 +1960,7 @@ function’s namespace:</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id81">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id81" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id81" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">foo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -1970,7 +1969,7 @@ function’s namespace:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id82">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id82" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id82" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">call </span><span class="n">foo</span><span class="p">(</span><span class="mf">1._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">2._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">1._dp</span><span class="p">)</span>
 <span class="k">call </span><span class="n">foo</span><span class="p">(</span><span class="mf">2._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">2._dp</span><span class="p">,</span><span class="w"> </span><span class="mf">1._dp</span><span class="p">)</span>
 </pre></div>
@@ -1983,7 +1982,7 @@ function’s namespace:</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id83">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id83" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id83" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>4 9 16
 5 13 25
 </pre></div>
@@ -1992,7 +1991,7 @@ function’s namespace:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id84">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id84" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id84" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>4.0000000000000000        9.0000000000000000        16.000000000000000
 5.0000000000000000        13.000000000000000        25.000000000000000
 </pre></div>
@@ -2006,7 +2005,7 @@ function’s namespace:</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id85">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id85" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id85" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simpson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>                       
     <span class="k">return</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span> <span class="o">*</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">f</span><span class="p">((</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>    
                                                 
@@ -2021,7 +2020,7 @@ function’s namespace:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id86">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id86" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id86" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span><span class="w"> </span><span class="k">function </span><span class="n">simpson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>
 <span class="k">interface</span>
@@ -2059,7 +2058,7 @@ function’s namespace:</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id87">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id87" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id87" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)</span>
 <span class="n">foo</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.</span><span class="p">)</span>
 </pre></div>
@@ -2068,7 +2067,7 @@ function’s namespace:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id88">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id88" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id88" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">call </span><span class="n">foo</span><span class="p">(</span><span class="mf">0.5_dp</span><span class="p">,</span><span class="w"> </span><span class="mf">1._dp</span><span class="p">)</span>
 <span class="k">call </span><span class="n">foo</span><span class="p">(</span><span class="mf">0.5_dp</span><span class="p">,</span><span class="w"> </span><span class="mf">2._dp</span><span class="p">)</span>
 </pre></div>
@@ -2081,7 +2080,7 @@ function’s namespace:</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id89">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id89" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id89" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1.0471975512
 1.28244712915e-16
 6.41223564574e-17
@@ -2092,7 +2091,7 @@ function’s namespace:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id90">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id90" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id90" title="Link to this code">#</a></div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1.0471975511965976
 1.28244712914785977E-016
 6.41223564573929883E-017
@@ -2105,13 +2104,13 @@ function’s namespace:</p>
 </div>
 </section>
 <section id="control-flow-in-loops">
-<h2>Control flow in loops<a class="headerlink" href="#control-flow-in-loops" title="Permalink to this heading">#</a></h2>
+<h2>Control flow in loops<a class="headerlink" href="#control-flow-in-loops" title="Link to this heading">#</a></h2>
 <p>The common loop types in Python and Fortran are the <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">do</span></code> loops
 respectively. It is possible to skip a single loop or to stop the
 execution of a loop in both languages but the statements to do so
 differ.</p>
 <section id="break-and-exit-statements">
-<h3>break and exit statements<a class="headerlink" href="#break-and-exit-statements" title="Permalink to this heading">#</a></h3>
+<h3>break and exit statements<a class="headerlink" href="#break-and-exit-statements" title="Link to this heading">#</a></h3>
 <p>In Python, <code class="docutils literal notranslate"><span class="pre">break</span></code> is used to stop the execution of the innermost loop.
 In Fortran, this is accomplished by the <code class="docutils literal notranslate"><span class="pre">exit</span></code> statement. For named
 loops, it is possible to specify which loop is affected by appending its
@@ -2122,7 +2121,7 @@ interactive session.</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id91">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id91" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id91" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>                  
     <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">:</span>                                       
         <span class="k">break</span>                       
@@ -2133,7 +2132,7 @@ interactive session.</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id92">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id92" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id92" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">loop_name</span><span class="p">:</span><span class="w"> </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">exit </span><span class="n">loop_name</span>
 <span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">i</span>
@@ -2146,7 +2145,7 @@ interactive session.</p>
 </div>
 </section>
 <section id="continue-and-cycle-statements">
-<h3>continue and cycle statements<a class="headerlink" href="#continue-and-cycle-statements" title="Permalink to this heading">#</a></h3>
+<h3>continue and cycle statements<a class="headerlink" href="#continue-and-cycle-statements" title="Link to this heading">#</a></h3>
 <p>Python’s <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement is used to skip the rest of a loop body.
 The loop then continues at its next iteration cycle. Fortran’s
 <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement does not do anything and one should use <code class="docutils literal notranslate"><span class="pre">cycle</span></code>
@@ -2156,7 +2155,7 @@ affected by appending its name to the <code class="docutils literal notranslate"
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id93">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id93" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id93" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>                 
     <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>                   
         <span class="k">continue</span>                   
@@ -2167,7 +2166,7 @@ affected by appending its name to the <code class="docutils literal notranslate"
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id94">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id94" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id94" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="n">loop_name</span><span class="p">:</span><span class="w"> </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">modulo</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">cycle </span><span class="n">loop_name</span>
 <span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">i</span>
@@ -2181,15 +2180,15 @@ affected by appending its name to the <code class="docutils literal notranslate"
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
 <section id="mandelbrot-set">
-<h3>Mandelbrot Set<a class="headerlink" href="#mandelbrot-set" title="Permalink to this heading">#</a></h3>
+<h3>Mandelbrot Set<a class="headerlink" href="#mandelbrot-set" title="Link to this heading">#</a></h3>
 <p>Here is a real world program written in NumPy and translated to Fortran.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id95">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id95" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id95" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">ITERATIONS</span> <span class="o">=</span> <span class="mi">100</span>
@@ -2219,7 +2218,7 @@ affected by appending its name to the <code class="docutils literal notranslate"
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id96">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id96" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id96" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">Mandelbrot</span>
 <span class="k">use </span><span class="n">types</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span>
 <span class="k">use </span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">I</span>
@@ -2266,7 +2265,7 @@ version, you need <code class="docutils literal notranslate"><span class="pre">t
 versions generate equivalent <code class="docutils literal notranslate"><span class="pre">fractal.dat</span></code> and <code class="docutils literal notranslate"><span class="pre">coord.dat</span></code> files.</p>
 <p>The generated fractal can be viewed by (you need matplotlib):</p>
 <div class="literal-block-wrapper docutils container" id="id97">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id97" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id97" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">loadtxt</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -2312,7 +2311,7 @@ versions generate equivalent <code class="docutils literal notranslate"><span cl
 </table>
 </section>
 <section id="least-squares-fitting">
-<h3>Least Squares Fitting<a class="headerlink" href="#least-squares-fitting" title="Permalink to this heading">#</a></h3>
+<h3>Least Squares Fitting<a class="headerlink" href="#least-squares-fitting" title="Link to this heading">#</a></h3>
 <p>In Python we use Minpack via <a class="reference external" href="http://www.scipy.org/">SciPy</a>, in Fortran
 we use <a class="reference external" href="https://github.com/fortran-lang/minpack">Minpack</a> directly. We first
 create a module <code class="docutils literal notranslate"><span class="pre">find_fit_module</span></code> with a function <code class="docutils literal notranslate"><span class="pre">find_fit</span></code>:</p>
@@ -2320,7 +2319,7 @@ create a module <code class="docutils literal notranslate"><span class="pre">fin
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id98">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id98" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id98" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">leastsq</span>
 
@@ -2339,7 +2338,7 @@ create a module <code class="docutils literal notranslate"><span class="pre">fin
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id99">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id99" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id99" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">module </span><span class="n">find_fit_module</span>
 <span class="k">use </span><span class="n">minpack</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">lmdif1</span>
 <span class="k">use </span><span class="n">types</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span>
@@ -2398,7 +2397,7 @@ a list of primes:</p>
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id100">
-<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id100" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Python</span><a class="headerlink" href="#id100" title="Link to this code">#</a></div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">size</span><span class="p">,</span> <span class="n">log</span>
 <span class="kn">from</span> <span class="nn">find_fit_module</span> <span class="kn">import</span> <span class="n">find_fit</span>
 
@@ -2417,7 +2416,7 @@ a list of primes:</p>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <div class="literal-block-wrapper docutils container" id="id101">
-<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id101" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Fortran</span><a class="headerlink" href="#id101" title="Link to this code">#</a></div>
 <div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">example_primes</span>
 <span class="k">use </span><span class="n">find_fit_module</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">find_fit</span>
 <span class="k">use </span><span class="n">types</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span>

@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="ru">
+<html lang="ru" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Установка GFortran &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aaa2236b"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/os_setup/install_gfortran.html" />
     <link rel="index" title="Алфавитный указатель" href="../../../genindex/" />
     <link rel="search" title="Поиск" href="../../../search/" />
@@ -797,10 +796,10 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="installing-gfortran">
-<h1>Установка GFortran<a class="headerlink" href="#installing-gfortran" title="Permalink to this heading">#</a></h1>
+<h1>Установка GFortran<a class="headerlink" href="#installing-gfortran" title="Link to this heading">#</a></h1>
 <p>GFortran – название проекта <a class="reference external" href="https://gcc.gnu.org/fortran/">GNU Fortran project</a>. Главная <a class="reference external" href="https://gcc.gnu.org/wiki/GFortran">wiki-страница</a> предлагает множество полезных ссылок на статьи о GFortran, а также о Fortran в целом. В данном руководстве процесс установки GFortran в Windows, Linux, macOS и OpenBSD представлен в удобном для новичков формате на основе информации с сайта <a class="reference external" href="https://gcc.gnu.org/wiki/GFortranBinaries">GFortranBinaries</a>.</p>
 <section id="windows">
-<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h2>
+<h2>Windows<a class="headerlink" href="#windows" title="Link to this heading">#</a></h2>
 <p>Три источника предлагают быстрый и простой способ установки компилятора GFortran в Windows:</p>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="http://www.equation.com/servlet/equation.cmd?fa=fortran">http://www.equation.com</a> предоставляет 32 и 64-битные x86-совместимые исполняемые файлы для компилятора GCC версии 12.1.</p></li>
@@ -809,7 +808,7 @@
 </ol>
 <p>Во всех вышеперечисленных вариантах процесс установки прост – просто скачайте программу установки и следуйте указаниям мастера установки.</p>
 <section id="unix-like-development-on-windows">
-<h3>Unix-подобная разработка в Windows<a class="headerlink" href="#unix-like-development-on-windows" title="Permalink to this heading">#</a></h3>
+<h3>Unix-подобная разработка в Windows<a class="headerlink" href="#unix-like-development-on-windows" title="Link to this heading">#</a></h3>
 <p>Для тех кто знаком с unix-подобной средой разработки, в Windows доступно несколько вариантов эмуляции, каждый из которых предоставляет пакеты для компилятора gfortran:</p>
 <ul class="simple">
 <li><p><strong>Cygwin:</strong> среда выполнения, которая предоставляет POSIX-совместимое окружение в Windows.</p></li>
@@ -821,9 +820,9 @@
 </section>
 </section>
 <section id="linux">
-<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">#</a></h2>
+<h2>Linux<a class="headerlink" href="#linux" title="Link to this heading">#</a></h2>
 <section id="debian-based-debian-ubuntu-mint-etc">
-<h3>Дистрибутивы на основе Debian (Debian, Ubuntu, Mint и др.)<a class="headerlink" href="#debian-based-debian-ubuntu-mint-etc" title="Permalink to this heading">#</a></h3>
+<h3>Дистрибутивы на основе Debian (Debian, Ubuntu, Mint и др.)<a class="headerlink" href="#debian-based-debian-ubuntu-mint-etc" title="Link to this heading">#</a></h3>
 <p>Проверьте, установлен ли у вас компилятор gfortran, выполнив в командной строке</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which<span class="w"> </span>gfortran
 </pre></div>
@@ -849,7 +848,7 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <p>Наконец, вы можете переключаться между различными версиями компилятора или установить версию по умолчанию с помощью команды <strong>update-alternatives</strong> (<a class="reference external" href="https://manpages.ubuntu.com/manpages/jammy/en/man1/update-alternatives.1.html">см. manpage</a>). Существует множество онлайн-уроков по использованию этой команды. Хорошо структурированное руководство на примере языков C и C++ можно найти <a class="reference external" href="https://linuxconfig.org/how-to-switch-between-multiple-gcc-and-g-compiler-versions-on-ubuntu-22-04-lts-jammy-jellyfish">здесь</a>. Вы можете применить ту же логику, заменив названия <code class="docutils literal notranslate"><span class="pre">gcc</span></code> и <code class="docutils literal notranslate"><span class="pre">g++</span></code> на <code class="docutils literal notranslate"><span class="pre">gfortran</span></code>.</p>
 </section>
 <section id="rpm-based-red-hat-enterprise-linux-centos-fedora-opensuse">
-<h3>Дистрибутивы на основе RPM (Red Hat Enterprise Linux, CentOS, Fedora, openSUSE)<a class="headerlink" href="#rpm-based-red-hat-enterprise-linux-centos-fedora-opensuse" title="Permalink to this heading">#</a></h3>
+<h3>Дистрибутивы на основе RPM (Red Hat Enterprise Linux, CentOS, Fedora, openSUSE)<a class="headerlink" href="#rpm-based-red-hat-enterprise-linux-centos-fedora-opensuse" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>gcc-gfortran
 </pre></div>
 </div>
@@ -859,37 +858,37 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 </div>
 </section>
 <section id="arch-based-arch-linux-endeavouros-manjaro-etc">
-<h3>Дистрибутивы на основе Arch (Arch Linux, EndeavourOS, Manjaro и др.)<a class="headerlink" href="#arch-based-arch-linux-endeavouros-manjaro-etc" title="Permalink to this heading">#</a></h3>
+<h3>Дистрибутивы на основе Arch (Arch Linux, EndeavourOS, Manjaro и др.)<a class="headerlink" href="#arch-based-arch-linux-endeavouros-manjaro-etc" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>gcc-fortran
 </pre></div>
 </div>
 </section>
 </section>
 <section id="macos">
-<h2>macOS<a class="headerlink" href="#macos" title="Permalink to this heading">#</a></h2>
+<h2>macOS<a class="headerlink" href="#macos" title="Link to this heading">#</a></h2>
 <section id="xcode">
-<h3>Xcode<a class="headerlink" href="#xcode" title="Permalink to this heading">#</a></h3>
+<h3>Xcode<a class="headerlink" href="#xcode" title="Link to this heading">#</a></h3>
 <p>Если у вас установлен Xcode, то откройте окно ввода команд и наберите:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>xcode-select<span class="w"> </span>--install
 </pre></div>
 </div>
 </section>
 <section id="binaries">
-<h3>Готовые бинарные сборки<a class="headerlink" href="#binaries" title="Permalink to this heading">#</a></h3>
+<h3>Готовые бинарные сборки<a class="headerlink" href="#binaries" title="Link to this heading">#</a></h3>
 <p>Посетите <a class="reference external" href="https://github.com/fxcoudert/gfortran-for-macOS/releases">fxcoudert/gfortran-for-macOS</a> для установки готовых бинарных сборок (исполняемых файлов).</p>
 </section>
 <section id="homebrew">
-<h3>Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this heading">#</a></h3>
+<h3>Homebrew<a class="headerlink" href="#homebrew" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>gcc
 </pre></div>
 </div>
 </section>
 <section id="fink">
-<h3>Fink<a class="headerlink" href="#fink" title="Permalink to this heading">#</a></h3>
+<h3>Fink<a class="headerlink" href="#fink" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://pdb.finkproject.org/pdb/browse.php?summary=GNU+Compiler+Collection+Version">Ссылка</a> на пакет GNU-gcc</p>
 </section>
 <section id="macports">
-<h3>MacPorts<a class="headerlink" href="#macports" title="Permalink to this heading">#</a></h3>
+<h3>MacPorts<a class="headerlink" href="#macports" title="Link to this heading">#</a></h3>
 <p>Поиск доступных версий gcc:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>port<span class="w"> </span>search<span class="w"> </span>gcc
 </pre></div>
@@ -901,7 +900,7 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 </section>
 </section>
 <section id="openbsd">
-<h2>OpenBSD<a class="headerlink" href="#openbsd" title="Permalink to this heading">#</a></h2>
+<h2>OpenBSD<a class="headerlink" href="#openbsd" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg_add<span class="w"> </span>g95
 </pre></div>
 </div>
@@ -912,7 +911,7 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 </section>
 <hr class="docutils" />
 <section id="opencoarrays">
-<h2>OpenCoarrays<a class="headerlink" href="#opencoarrays" title="Permalink to this heading">#</a></h2>
+<h2>OpenCoarrays<a class="headerlink" href="#opencoarrays" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="http://www.opencoarrays.org/">OpenCoarrays</a> – проект программного обеспечения с открытым исходным кодом, который предоставляет бинарный интерфейс приложения (ABI), используемый внешним интерфейсом GNU Compiler Collection (GCC) Fortran для сборки исполняемых приложений, которые используют возможности параллельного программирования стандарта Fortran 2018. Поскольку OpenCoarrays не является отдельным компилятором, мы упоминаем его здесь, в разделе о gfortran.</p>
 <p>Хотя вы можете скомпилировать в gfortran совершенно корректный код с использованием комассивов (coarrays), но сгенерированные исполняемые файлы будут работать только в одном образе – image (<em>image</em> – термин языка Fortran для параллельного процесса), то есть, в последовательном режиме выполнения. OpenCoarrays позволяет выполнять код параллельно на машинах с общей и распределённой памятью, подобно интерфейсу MPI:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cafrun<span class="w"> </span>-n<span class="w"> </span>&lt;number_of_images&gt;<span class="w"> </span>&lt;executable_name&gt;

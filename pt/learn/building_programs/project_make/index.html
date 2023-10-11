@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="pt">
+<html lang="pt" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Um introdução ao make &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aa4fbcf8"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=3b002d5c"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/project_make.html" />
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
@@ -731,7 +730,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="an-introduction-to-make">
-<h1>Um introdução ao make<a class="headerlink" href="#an-introduction-to-make" title="Permalink to this heading">#</a></h1>
+<h1>Um introdução ao make<a class="headerlink" href="#an-introduction-to-make" title="Link to this heading">#</a></h1>
 <p>Discutimos brevemente o básico do <code class="docutils literal notranslate"><span class="pre">make</span></code>. Esse capítulos dá ideias e estratégias de escalas <code class="docutils literal notranslate"><span class="pre">make</span></code> para projetos maiores.</p>
 <p>Antes de irmos aos detalhes com <code class="docutils literal notranslate"><span class="pre">make</span></code>, considere alguns pontos:</p>
 <ol class="arabic simple">
@@ -746,7 +745,7 @@
 <p>Mesmo se você achar <code class="docutils literal notranslate"><span class="pre">make</span></code> inadequado para gerar o build do seu projeto, essa é <em>a</em> ferramenta para automatizar fluxos de trabalho definidos pelos arquivos. Talvez você possa utilizar de seu poder em um contexto diferente.</p>
 </div>
 <section id="getting-started">
-<h2>Começando<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
+<h2>Começando<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
 <p>Para essa parte, trabalharemos com <a href="https://github.com/jacobwilliams/fortran-csv-module/tree/1.2.0" target="_blank" rel="noopener"> o Fortran CSV module (v1.2.0)</a>. Nosso objetivo é criar um <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> para compilar esse projeto em uma biblioteca estática. Comece clonando o repositório</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jacobwilliams</span><span class="o">/</span><span class="n">fortran</span><span class="o">-</span><span class="n">csv</span><span class="o">-</span><span class="n">module</span> <span class="o">-</span><span class="n">b</span> <span class="mf">1.2.0</span>
 <span class="n">cd</span> <span class="n">fortran</span><span class="o">-</span><span class="n">csv</span><span class="o">-</span><span class="n">module</span>
@@ -858,7 +857,7 @@ gfortran -o src/tests/csv_write_test.exe src/tests/csv_write_test.f90.o libcsv.a
 <p>Há algumas coisas para notar aqui, o build <code class="docutils literal notranslate"><span class="pre">make</span></code> geralmente interlaça os artefatos do build e o código fonte, a não ser que você implemente o diretório de build. Além disso, os arquivos fonte e dependências são especificadas explicitamente, o que resulta em diversas linhas adicionais mesmo para tal projeto simples.</p>
 </section>
 <section id="automatically-generated-dependencies">
-<h2>Dependências geradas automaticamente<a class="headerlink" href="#automatically-generated-dependencies" title="Permalink to this heading">#</a></h2>
+<h2>Dependências geradas automaticamente<a class="headerlink" href="#automatically-generated-dependencies" title="Link to this heading">#</a></h2>
 <p>A principal desvantagem do <code class="docutils literal notranslate"><span class="pre">make</span></code> para Fortran é a falta da capacidade de determinar dependências de módulo. Isso é geralmente resolvido seja adicionando à mão ou escaneando automaticamente o código fonte com uma ferramenta externa. Alguns compiladores (como o compilador Intel Fortran) também oferece a geração de dependências no formato <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
 <p>Antes de aprofundar na geração de dependências, vamos delinear o conceito de uma medida robusta para o problema de dependência. Primeiro, queremos uma abordagem que consiga processar todos os arquivos fonte independentemente, enquanto cada arquivo fonte fornece (<code class="docutils literal notranslate"><span class="pre">module</span></code>) ou requer (<code class="docutils literal notranslate"><span class="pre">use</span></code>) módulos. Quando gerando as dependências apenas o nome do arquivo fonte e os arquivos módulo são conhecidos, e nenhuma informação dos nomes dos arquivos objeto deve ser necessária.</p>
 <p>Se você checar a seção de dependência acima você notará que todas as dependências são definidas entre arquivos objeto ao invés de arquivos fonte. Para mudar isso, podemos gerar uma relação dos arquivos fonte com seus respectivos arquivos objeto:</p>

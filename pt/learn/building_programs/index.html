@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="pt">
+<html lang="pt" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../_static/images/favicon.ico" type="image/x-icon">
     <title>Compilando programas &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/translations.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=aa4fbcf8"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/translations.js?v=3b002d5c"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/index.html" />
     <link rel="index" title="Índice" href="../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../search/" />
@@ -712,12 +711,12 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="building-programs">
-<h1>Compilando programas<a class="headerlink" href="#building-programs" title="Permalink to this heading">#</a></h1>
+<h1>Compilando programas<a class="headerlink" href="#building-programs" title="Link to this heading">#</a></h1>
 <p>Linguagens como Fortran, C, C++ e Java, para nomear algumas, compartilham certas características, você escreve o código na sua linguagem de preferência mas então faz o build do programa executável a partir do código fonte. Outras linguagens são interpretadas - o código fonte é analisado por um programa especial e é tomado como instruções diretas. Dois exemplos simples desse tipo de linguagem: Arquivos batch do Windows e shell scripts do Linux.</p>
 <p>Nesse tutotiral nos concentraremos no primeiro tipo de linguagens, com Fortran como o principal exemplo. Uma vantagem de linguagens compiladas é que o processo de build necessário para o build do programa executável é usado para transformar o código fonte legível para humanos em um programa eficiente que pode ser usado para rodar no computador.</p>
 <p>Observação: este tutorial dá exemplos para sistemas operacionais Windows e Linux, contudo o fluxo de trabalho e princípios gerais se aplicam ao macOS.</p>
 <section id="compiled-languages">
-<h2>Linguagens compiladas<a class="headerlink" href="#compiled-languages" title="Permalink to this heading">#</a></h2>
+<h2>Linguagens compiladas<a class="headerlink" href="#compiled-languages" title="Link to this heading">#</a></h2>
 <p>Vejamos um exemplo simples:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">hello</span>
 <span class="w">    </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Hello!&#39;</span>

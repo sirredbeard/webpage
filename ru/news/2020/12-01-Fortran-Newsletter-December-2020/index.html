@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="ru">
+<html lang="ru" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Fortran newsletter: December 2020 &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aaa2236b"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/news/2020/12-01-Fortran-Newsletter-December-2020.html" />
     <link rel="index" title="Алфавитный указатель" href="../../../genindex/" />
     <link rel="search" title="Поиск" href="../../../search/" />
@@ -411,7 +410,14 @@
     </span>
   
   
-  <a href="../../author/ondrej-certik/">Ondřej Čertík</a>
+  <a href="../../author/gary-klimowicz/">Gary Klimowicz</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../../author/laurence-kedward/">Laurence Kedward</a>
   
   ,
   
@@ -425,7 +431,7 @@
   
   
   
-  <a href="../../author/gary-klimowicz/">Gary Klimowicz</a>
+  <a href="../../author/ondrej-certik/">Ondřej Čertík</a>
   
   ,
   
@@ -433,13 +439,6 @@
   
   
   <a href="../../author/milan-curcic/">Milan Curcic</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../../author/laurence-kedward/">Laurence Kedward</a>
   
   
   
@@ -614,12 +613,12 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="fortran-newsletter-december-2020">
-<h1>Fortran newsletter: December 2020<a class="headerlink" href="#fortran-newsletter-december-2020" title="Permalink to this heading">#</a></h1>
+<h1>Fortran newsletter: December 2020<a class="headerlink" href="#fortran-newsletter-december-2020" title="Link to this heading">#</a></h1>
 <p>Welcome to the December 2020 edition of the monthly Fortran newsletter.
 The newsletter comes out at the beginning of every month and details
 Fortran news from the previous month.</p>
 <section id="fortran-lang-org">
-<h2>fortran-lang.org<a class="headerlink" href="#fortran-lang-org" title="Permalink to this heading">#</a></h2>
+<h2>fortran-lang.org<a class="headerlink" href="#fortran-lang-org" title="Link to this heading">#</a></h2>
 <p>This month we’ve had a few updates to the website:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/fortran-lang/fortran-lang.org/pull/156">#156</a>:
@@ -638,7 +637,7 @@ In-depth introduction for Fortran with Make.</p></li>
 We welcome any new contributors to the website and the tutorials page in particular - see the <a class="reference external" href="https://github.com/fortran-lang/fortran-lang.org/blob/HEAD/CONTRIBUTING.md">contributor guide</a> for how to get started.</p>
 </section>
 <section id="fortran-standard-library">
-<h2>Fortran Standard Library<a class="headerlink" href="#fortran-standard-library" title="Permalink to this heading">#</a></h2>
+<h2>Fortran Standard Library<a class="headerlink" href="#fortran-standard-library" title="Link to this heading">#</a></h2>
 <p>Here’s what’s new in <code class="docutils literal notranslate"><span class="pre">stdlib</span></code>:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/fortran-lang/stdlib/pull/239">#239</a>: Implementation of bitsets in <code class="docutils literal notranslate"><span class="pre">stdlib_bitsets</span></code>.</p></li>
@@ -667,7 +666,7 @@ in <a class="reference external" href="https://github.com/MarDiehl/stdlib_os">th
 Please try it out and let us know how it works, if there are any issues, or if the API can be improved.</p>
 </section>
 <section id="fortran-package-manager">
-<h2>Fortran Package Manager<a class="headerlink" href="#fortran-package-manager" title="Permalink to this heading">#</a></h2>
+<h2>Fortran Package Manager<a class="headerlink" href="#fortran-package-manager" title="Link to this heading">#</a></h2>
 <p>Here’s what’s new in <code class="docutils literal notranslate"><span class="pre">fpm</span></code>:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/fortran-lang/fpm/pull/259">#259</a>: Update the instructions for building from source in README.md.</p></li>
@@ -712,9 +711,9 @@ Its long term goal is to build a rich and decentralized ecosystem of Fortran pac
 environment in which new open source Fortran projects are created and published with ease.</p>
 </section>
 <section id="compilers">
-<h2>Компиляторы<a class="headerlink" href="#compilers" title="Permalink to this heading">#</a></h2>
+<h2>Компиляторы<a class="headerlink" href="#compilers" title="Link to this heading">#</a></h2>
 <section id="classic-flang">
-<h3>Classic Flang<a class="headerlink" href="#classic-flang" title="Permalink to this heading">#</a></h3>
+<h3>Classic Flang<a class="headerlink" href="#classic-flang" title="Link to this heading">#</a></h3>
 <p>We continue to evaluate and merge pull requests into Classic Flang. Recently merged pull requests into Classic Flang include:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/flang-compiler/flang/pull/883">PR#883: Flang generated executable does not show result variable of function</a></p></li>
@@ -740,7 +739,7 @@ for the next pull requests to be validated and merged. Our next calls are Wednes
 <a class="reference external" href="https://docs.google.com/document/d/1-OuiKx4d7O6eLEJDBDKSRnSiUO2rgRR-c2Ga4AkrzOI">here</a>.</p>
 </section>
 <section id="llvm-flang">
-<h3>LLVM Flang<a class="headerlink" href="#llvm-flang" title="Permalink to this heading">#</a></h3>
+<h3>LLVM Flang<a class="headerlink" href="#llvm-flang" title="Link to this heading">#</a></h3>
 <p>Work continues on LLVM Flang, concentrating on semantics, lowering and runtime. Significant contributions are being made for OpenMP and OpenACC support.</p>
 <p>In conjunction with the MLIR-based code from the <em>fir-dev</em> fork (the Fortran IR used for lowering), Flang can compile and run most F77 programs, including the Fortran Compiler Validation Suite (FCVS).</p>
 <p>Pat McCormick is (still) working on an RFC for the merge of the lowering code
@@ -766,7 +765,7 @@ in the fir-dev fork into LLVM master. (This was interrupted by Supercomputing 20
 </section>
 </section>
 <section id="events">
-<h2>Events<a class="headerlink" href="#events" title="Permalink to this heading">#</a></h2>
+<h2>Events<a class="headerlink" href="#events" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Brian Friesen (Lawrence Berkeley National Laboratory) was selected to be the new Chair of PL22.3 (J3, US Standards Committee).
 Brian will serve in his first term until November 2023. Congratulations, Brian!</p></li>
@@ -778,7 +777,7 @@ You can watch the recording below:</p></li>
 join the <a class="reference external" href="https://fortran-lang.discourse.group">Discourse</a> to stay tuned with the future meetings.</p>
 </section>
 <section id="contributors">
-<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading">#</a></h2>
+<h2>Contributors<a class="headerlink" href="#contributors" title="Link to this heading">#</a></h2>
 <p>We thank everybody who contributed to fortran-lang in the past month by
 commenting in any of these repositories:</p>
 <ul class="simple">

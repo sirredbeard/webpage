@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="zh-CN">
+<html lang="zh-CN" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>绑定到 C 接口的过程 &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=20ebe441"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/intrinsics/cfi.html" />
     <link rel="index" title="索引" href="../../../genindex/" />
     <link rel="search" title="搜索" href="../../../search/" />
@@ -1127,15 +1126,15 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="procedures-for-binding-to-c-interfaces">
-<h1>绑定到 C 接口的过程<a class="headerlink" href="#procedures-for-binding-to-c-interfaces" title="此标题的永久链接">#</a></h1>
+<h1>绑定到 C 接口的过程<a class="headerlink" href="#procedures-for-binding-to-c-interfaces" title="Link to this heading">#</a></h1>
 <section id="c-associated">
-<h2>c_associated<a class="headerlink" href="#c-associated" title="此标题的永久链接">#</a></h2>
+<h2>c_associated<a class="headerlink" href="#c-associated" title="Link to this heading">#</a></h2>
 <section id="name">
-<h3><strong>名称</strong><a class="headerlink" href="#name" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#name" title="Link to this heading">#</a></h3>
 <p><strong>c_associated</strong>(3) - [ISO_C_BINDING] C 指针的状态</p>
 </section>
 <section id="synopsis">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">c_associated</span><span class="p">(</span><span class="n">c_prt_1</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">c_ptr_2</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1147,7 +1146,7 @@
 </div>
 </section>
 <section id="characteristics">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>c_ptr_1</strong> is a scalar of the type c_ptr or c_funptr.</p></li>
 <li><p><strong>c_ptr_2</strong> is a scalar of the same type as c_ptr_1.</p></li>
@@ -1155,13 +1154,13 @@
 </ul>
 </section>
 <section id="description">
-<h3><strong>说明</strong><a class="headerlink" href="#description" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
 <p><strong>c_associated</strong>(3) determines the status of the
 C pointer c_ptr_1 or if c_ptr_1 is associated with the target
 c_ptr_2.</p>
 </section>
 <section id="options">
-<h3><strong>选项</strong><a class="headerlink" href="#options" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#options" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>c_ptr_1</strong></dt><dd><p>C pointer to test for being a C NULL pointer, or to test if
@@ -1177,13 +1176,13 @@ pointing to the same association as <strong>c_ptr_2</strong> when present.</p>
 </ul>
 </section>
 <section id="result">
-<h3><strong>结果</strong><a class="headerlink" href="#result" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#result" title="Link to this heading">#</a></h3>
 <p>The return value is of type <em>logical</em>; it is <em>.false</em>. if either c_ptr_1
 is a C NULL pointer or if c_ptr1 and c_ptr_2 point to different
 addresses.</p>
 </section>
 <section id="examples">
-<h3><strong>示例</strong><a class="headerlink" href="#examples" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_c_associated</span>
 
@@ -1203,23 +1202,23 @@ addresses.</p>
 </div>
 </section>
 <section id="standard">
-<h3><strong>标准</strong><a class="headerlink" href="#standard" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#standard" title="Link to this heading">#</a></h3>
 <p>Fortran 2003</p>
 </section>
 <section id="see-also">
-<h3><strong>另见</strong><a class="headerlink" href="#see-also" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#c-loc"><strong>c_loc</strong>(3)</a>，<a class="reference internal" href="#c-funloc"><strong>c_funloc</strong>(3)</a>，<strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="c-f-pointer">
-<h2>c_f_pointer<a class="headerlink" href="#c-f-pointer" title="此标题的永久链接">#</a></h2>
+<h2>c_f_pointer<a class="headerlink" href="#c-f-pointer" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3><strong>名称</strong><a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>c_f_pointer</strong>(3) - [ISO_C_BINDING] 将 C 指针转换为 Fortran 指针</p>
 </section>
 <section id="id2">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="nb">c_f_pointer</span><span class="p">(</span><span class="n">cptr</span><span class="p">,</span><span class="w"> </span><span class="n">fptr</span><span class="w"> </span><span class="p">[,</span><span class="nb">shape</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1232,18 +1231,18 @@ addresses.</p>
 </div>
 </section>
 <section id="id3">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>The Fortran pointer <strong>fprt</strong> must be interoperable with <strong>cptr</strong></p>
 <p><strong>shape</strong> is only specified if <strong>fptr</strong> is an array.</p>
 </section>
 <section id="id4">
-<h3><strong>说明</strong><a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p><strong>c_f_pointer</strong>(3) assigns the target (the C pointer <strong>cptr</strong>) to the
 Fortran pointer <strong>fptr</strong> and specifies its shape if <strong>fptr</strong> points to
 an array.</p>
 </section>
 <section id="id5">
-<h3><strong>选项</strong><a class="headerlink" href="#id5" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>cptr</strong></dt><dd><p>c_ptr 类型的标量。它是 <strong>intent(in)</strong> 的。</p>
@@ -1263,7 +1262,7 @@ an array.</p>
 </ul>
 </section>
 <section id="id6">
-<h3><strong>示例</strong><a class="headerlink" href="#id6" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_c_f_pointer</span>
 <span class="k">use </span><span class="nb">iso_c_binding</span>
@@ -1283,23 +1282,23 @@ an array.</p>
 </div>
 </section>
 <section id="id7">
-<h3><strong>标准</strong><a class="headerlink" href="#id7" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>Fortran 2003</p>
 </section>
 <section id="id8">
-<h3><strong>另见</strong><a class="headerlink" href="#id8" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#c-loc"><strong>c_loc</strong>(3)</a>，<a class="reference internal" href="#c-f-procpointer"><strong>c_f_procpointer</strong>(3)</a>，<strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="c-f-procpointer">
-<h2>c_f_procpointer<a class="headerlink" href="#c-f-procpointer" title="此标题的永久链接">#</a></h2>
+<h2>c_f_procpointer<a class="headerlink" href="#c-f-procpointer" title="Link to this heading">#</a></h2>
 <section id="id9">
-<h3><strong>名称</strong><a class="headerlink" href="#id9" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p><strong>c_f_procpointer</strong>(3) - [ISO_C_BINDING] 将 C 函数指针转换为 Fortran 过程指针</p>
 </section>
 <section id="id10">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id10" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">call </span><span class="nb">c_f_procpointer</span><span class="p">(</span><span class="n">cptr</span><span class="p">,</span><span class="w"> </span><span class="n">fptr</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1311,15 +1310,15 @@ an array.</p>
 </div>
 </section>
 <section id="id11">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id11" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 </section>
 <section id="id12">
-<h3><strong>说明</strong><a class="headerlink" href="#id12" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <p><strong>c_f_procpointer</strong>(3) assigns the target of the C function
 pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</strong>.</p>
 </section>
 <section id="id13">
-<h3><strong>选项</strong><a class="headerlink" href="#id13" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>cptr</strong></dt><dd><p>c_funptr 类型的标量。它是**intent(in)**的。</p>
@@ -1334,7 +1333,7 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </ul>
 </section>
 <section id="id14">
-<h3><strong>示例</strong><a class="headerlink" href="#id14" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_c_f_procpointer</span>
 <span class="k">use </span><span class="nb">iso_c_binding</span>
@@ -1361,23 +1360,23 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </div>
 </section>
 <section id="id15">
-<h3><strong>标准</strong><a class="headerlink" href="#id15" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p>Fortran 2003</p>
 </section>
 <section id="id16">
-<h3><strong>另见</strong><a class="headerlink" href="#id16" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#c-loc"><strong>c_loc</strong>(3)</a>，<a class="reference internal" href="#c-f-pointer"><strong>c_f_pointer</strong>(3)</a>，<strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="c-funloc">
-<h2>c_funloc<a class="headerlink" href="#c-funloc" title="此标题的永久链接">#</a></h2>
+<h2>c_funloc<a class="headerlink" href="#c-funloc" title="Link to this heading">#</a></h2>
 <section id="id17">
-<h3><strong>名称</strong><a class="headerlink" href="#id17" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p><strong>c_funloc</strong>(3) - [ISO_C_BINDING] 获取一个过程的C地址</p>
 </section>
 <section id="id18">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id18" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">c_funloc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1386,14 +1385,14 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </div>
 </section>
 <section id="id19">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id19" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 </section>
 <section id="id20">
-<h3><strong>说明</strong><a class="headerlink" href="#id20" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <p><strong>c_funloc</strong>(3) determines the C address of the argument.</p>
 </section>
 <section id="id21">
-<h3><strong>选项</strong><a class="headerlink" href="#id21" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>可互操作的函数或指向此类函数的指针。</p>
@@ -1403,11 +1402,11 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </ul>
 </section>
 <section id="id22">
-<h3><strong>结果</strong><a class="headerlink" href="#id22" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <p>返回值是 c_funptr 类型，包含参数的 C 地址。</p>
 </section>
 <section id="id23">
-<h3><strong>示例</strong><a class="headerlink" href="#id23" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! program demo_c_funloc and module</span>
 <span class="k">module </span><span class="n">x</span>
@@ -1437,24 +1436,24 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </div>
 </section>
 <section id="id24">
-<h3><strong>标准</strong><a class="headerlink" href="#id24" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <p>Fortran 2003</p>
 </section>
 <section id="id25">
-<h3><strong>另见</strong><a class="headerlink" href="#id25" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#c-associated"><strong>c_associated</strong>(3)</a>，<a class="reference internal" href="#c-loc"><strong>c_loc</strong>(3)</a>，<a class="reference internal" href="#c-f-pointer"><strong>c_f_pointer</strong>(3)</a>，</p>
 <p><a class="reference internal" href="#c-f-procpointer"><strong>c_f_procpointer</strong>(3)</a>，<strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="c-loc">
-<h2>c_loc<a class="headerlink" href="#c-loc" title="此标题的永久链接">#</a></h2>
+<h2>c_loc<a class="headerlink" href="#c-loc" title="Link to this heading">#</a></h2>
 <section id="id26">
-<h3><strong>名称</strong><a class="headerlink" href="#id26" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
 <p><strong>c_loc</strong>(3) - [ISO_C_BINDING] 获取对象的C地址</p>
 </section>
 <section id="id27">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id27" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">c_loc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1463,14 +1462,14 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </div>
 </section>
 <section id="id28">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id28" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 </section>
 <section id="id29">
-<h3><strong>说明</strong><a class="headerlink" href="#id29" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
 <p><strong>c_loc</strong>(3) determines the C address of the argument.</p>
 </section>
 <section id="id30">
-<h3><strong>选项</strong><a class="headerlink" href="#id30" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>应具有 <em>pointer</em> 或 <em>target</em> 属性。它不应是一个共同索引的对象。它应该是一个具有可互操作类型和种类类型参数的变量，或者是一个没有长度类型参数的标量、非多态变量。</p>
@@ -1480,11 +1479,11 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </ul>
 </section>
 <section id="id31">
-<h3><strong>结果</strong><a class="headerlink" href="#id31" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
 <p>返回值是 c_ptr 类型，包含参数的 C 地址。</p>
 </section>
 <section id="id32">
-<h3><strong>示例</strong><a class="headerlink" href="#id32" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">association_test</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 <span class="w">   </span><span class="k">use </span><span class="nb">iso_c_binding</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="nb">c_associated</span><span class="p">,</span><span class="w"> </span><span class="nb">c_loc</span><span class="p">,</span><span class="w"> </span><span class="kt">c_ptr</span>
@@ -1498,24 +1497,24 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </div>
 </section>
 <section id="id33">
-<h3><strong>标准</strong><a class="headerlink" href="#id33" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
 <p>Fortran 2003</p>
 </section>
 <section id="id34">
-<h3><strong>另见</strong><a class="headerlink" href="#id34" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#c-associated"><strong>c_associated</strong>(3)</a>，<a class="reference internal" href="#c-funloc"><strong>c_funloc</strong>(3)</a>，<a class="reference internal" href="#c-f-pointer"><strong>c_f_pointer</strong>(3)</a>，</p>
 <p><a class="reference internal" href="#c-f-procpointer"><strong>c_f_procpointer</strong>(3)</a>，<strong>iso_c_binding</strong>(3)</p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>
 </section>
 <section id="c-sizeof">
-<h2>c_sizeof<a class="headerlink" href="#c-sizeof" title="此标题的永久链接">#</a></h2>
+<h2>c_sizeof<a class="headerlink" href="#c-sizeof" title="Link to this heading">#</a></h2>
 <section id="id35">
-<h3><strong>名称</strong><a class="headerlink" href="#id35" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
 <p><strong>c_sizeof</strong>(3) - [ISO_C_BINDING] 表达式的字节大小</p>
 </section>
 <section id="id36">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id36" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">c_sizeof</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1524,15 +1523,15 @@ pointer <strong>cptr</strong> to the Fortran procedure pointer <strong>fptr</str
 </div>
 </section>
 <section id="id37">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id37" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
 </section>
 <section id="id38">
-<h3><strong>说明</strong><a class="headerlink" href="#id38" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
 <p><strong>c_sizeof</strong>(3) calculates the number of bytes of storage the
 expression <strong>x</strong> occupies.</p>
 </section>
 <section id="id39">
-<h3><strong>选项</strong><a class="headerlink" href="#id39" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>参数应该是一个可互操作的数据实体。</p>
@@ -1542,7 +1541,7 @@ expression <strong>x</strong> occupies.</p>
 </ul>
 </section>
 <section id="id40">
-<h3><strong>结果</strong><a class="headerlink" href="#id40" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
 <p>The return value is of type integer and of the system-dependent kind
 c<em>size_t (from the iso_c_binding</em> module). Its value is the
 number of bytes occupied by the argument. If the argument has the
@@ -1552,7 +1551,7 @@ returned. If the argument is of a derived type with <em>pointer</em> or
 of the data pointed to by these components.</p>
 </section>
 <section id="id41">
-<h3><strong>示例</strong><a class="headerlink" href="#id41" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id41" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_c_sizeof</span>
 <span class="k">use </span><span class="nb">iso_c_binding</span>
@@ -1570,11 +1569,11 @@ of the data pointed to by these components.</p>
 default <em>real</em> variables are unusually padded.</p>
 </section>
 <section id="id42">
-<h3><strong>标准</strong><a class="headerlink" href="#id42" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
 <p>Fortran 2008</p>
 </section>
 <section id="id43">
-<h3><strong>另见</strong><a class="headerlink" href="#id43" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#storage_size"><span class="xref myst"><strong>storage_size</strong>(3)</span></a></p>
 <p><em>fortran-lang intrinsic descriptions</em></p>
 </section>

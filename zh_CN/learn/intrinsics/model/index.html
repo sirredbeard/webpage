@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="zh-CN">
+<html lang="zh-CN" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>控制和查询当前数值模型 &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=20ebe441"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/intrinsics/model.html" />
     <link rel="index" title="索引" href="../../../genindex/" />
     <link rel="search" title="搜索" href="../../../search/" />
@@ -1834,15 +1833,15 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="controlling-and-querying-the-current-numeric-model">
-<h1>控制和查询当前数值模型<a class="headerlink" href="#controlling-and-querying-the-current-numeric-model" title="此标题的永久链接">#</a></h1>
+<h1>控制和查询当前数值模型<a class="headerlink" href="#controlling-and-querying-the-current-numeric-model" title="Link to this heading">#</a></h1>
 <section id="exponent">
-<h2>exponent<a class="headerlink" href="#exponent" title="此标题的永久链接">#</a></h2>
+<h2>exponent<a class="headerlink" href="#exponent" title="Link to this heading">#</a></h2>
 <section id="name">
-<h3><strong>名称</strong><a class="headerlink" href="#name" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#name" title="Link to this heading">#</a></h3>
 <p><strong>exponent</strong>(3) - [MODEL_COMPONENTS] Exponent of floating-point number</p>
 </section>
 <section id="synopsis">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#synopsis" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">exponent</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1853,19 +1852,19 @@
 </div>
 </section>
 <section id="characteristics">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#characteristics" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> shall be of type <em>real</em> of any valid kind</p></li>
 <li><p>the result is a default <em>integer</em> type</p></li>
 </ul>
 </section>
 <section id="description">
-<h3><strong>说明</strong><a class="headerlink" href="#description" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
 <p><strong>exponent</strong>(3) returns the value of the exponent part of <strong>x</strong>, provided
 the exponent is within the range of default <em>integers</em>.</p>
 </section>
 <section id="options">
-<h3><strong>选项</strong><a class="headerlink" href="#options" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#options" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>the value to query the exponent of</p>
@@ -1875,13 +1874,13 @@ the exponent is within the range of default <em>integers</em>.</p>
 </ul>
 </section>
 <section id="result">
-<h3><strong>结果</strong><a class="headerlink" href="#result" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#result" title="Link to this heading">#</a></h3>
 <p><strong>exponent</strong>(3) returns the value of the exponent part of <strong>x</strong></p>
 <p>If <strong>x</strong> is zero the value returned is zero.</p>
 <p>If <strong>x</strong> is an IEEE infinity or NaN, the result has the value HUGE(0).</p>
 </section>
 <section id="examples">
-<h3><strong>示例</strong><a class="headerlink" href="#examples" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_exponent</span>
 <span class="k">implicit none</span>
@@ -1905,11 +1904,11 @@ the exponent is within the range of default <em>integers</em>.</p>
 </div>
 </section>
 <section id="standard">
-<h3><strong>标准</strong><a class="headerlink" href="#standard" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#standard" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="see-also">
-<h3><strong>另见</strong><a class="headerlink" href="#see-also" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#fraction"><strong>fraction</strong>(3)</a>,
@@ -1929,13 +1928,13 @@ the exponent is within the range of default <em>integers</em>.</p>
 </section>
 </section>
 <section id="fraction">
-<h2>fraction<a class="headerlink" href="#fraction" title="此标题的永久链接">#</a></h2>
+<h2>fraction<a class="headerlink" href="#fraction" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3><strong>名称</strong><a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>fraction</strong>(3) - [MODEL_COMPONENTS] 模型表示的小数部分</p>
 </section>
 <section id="id2">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">fraction</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1946,19 +1945,19 @@ the exponent is within the range of default <em>integers</em>.</p>
 </div>
 </section>
 <section id="id3">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> is of type <em>real</em></p></li>
 <li><p>The result has the same characteristics as the argument.</p></li>
 </ul>
 </section>
 <section id="id4">
-<h3><strong>说明</strong><a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p><strong>fraction</strong>(3) returns the fractional part of the model representation
 of <strong>x</strong>.</p>
 </section>
 <section id="id5">
-<h3><strong>选项</strong><a class="headerlink" href="#id5" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>The value to interrogate</p>
@@ -1968,7 +1967,7 @@ of <strong>x</strong>.</p>
 </ul>
 </section>
 <section id="id6">
-<h3><strong>结果</strong><a class="headerlink" href="#id6" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>The fractional part of the model representation of <strong>x</strong> is returned;
 it is <strong>x * radix(x)**(-exponent(x))</strong>.</p>
 <p>If <strong>x</strong> has the value zero, the result is zero.</p>
@@ -1976,7 +1975,7 @@ it is <strong>x * radix(x)**(-exponent(x))</strong>.</p>
 <p>If <strong>x</strong> is an IEEE infinity, the result is an IEEE NaN.</p>
 </section>
 <section id="id7">
-<h3><strong>示例</strong><a class="headerlink" href="#id7" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_fraction</span>
 <span class="k">implicit none</span>
@@ -1992,11 +1991,11 @@ it is <strong>x * radix(x)**(-exponent(x))</strong>.</p>
 </div>
 </section>
 <section id="id8">
-<h3><strong>标准</strong><a class="headerlink" href="#id8" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id9">
-<h3><strong>另见</strong><a class="headerlink" href="#id9" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -2016,13 +2015,13 @@ it is <strong>x * radix(x)**(-exponent(x))</strong>.</p>
 </section>
 </section>
 <section id="nearest">
-<h2>nearest<a class="headerlink" href="#nearest" title="此标题的永久链接">#</a></h2>
+<h2>nearest<a class="headerlink" href="#nearest" title="Link to this heading">#</a></h2>
 <section id="id10">
-<h3><strong>名称</strong><a class="headerlink" href="#id10" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p><strong>nearest</strong>(3) - [MODEL_COMPONENTS] 最近的可表示数字</p>
 </section>
 <section id="id11">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id11" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nearest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2034,7 +2033,7 @@ it is <strong>x * radix(x)**(-exponent(x))</strong>.</p>
 </div>
 </section>
 <section id="id12">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id12" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> may be a <em>real</em> value of any kind.</p></li>
 <li><p><strong>s</strong> may be a <em>real</em> value of any kind.</p></li>
@@ -2043,12 +2042,12 @@ it is <strong>x * radix(x)**(-exponent(x))</strong>.</p>
 </ul>
 </section>
 <section id="id13">
-<h3><strong>说明</strong><a class="headerlink" href="#id13" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p><strong>nearest</strong>(3) returns the processor-representable number nearest to
 <strong>x</strong> in the direction indicated by the sign of <strong>s</strong>.</p>
 </section>
 <section id="id14">
-<h3><strong>选项</strong><a class="headerlink" href="#id14" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <ul>
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>the value to find the nearest representable value of</p>
@@ -2068,11 +2067,11 @@ number smaller than <strong>x</strong> and nearest to it.</p>
 </ul>
 </section>
 <section id="id15">
-<h3><strong>结果</strong><a class="headerlink" href="#id15" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p>返回值与 <strong>x</strong> 的类型相同。如果 <strong>s</strong> 为正数，则 <strong>nearest</strong> 返回大于 <strong>x</strong> 且最接近它的处理器可表示数字。如果 <strong>s</strong> 为负数，则 <strong>nearest</strong> 返回小于 <strong>x</strong> 且最接近它的处理器可表示数字。</p>
 </section>
 <section id="id16">
-<h3><strong>示例</strong><a class="headerlink" href="#id16" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_nearest</span>
 <span class="k">implicit none</span>
@@ -2101,11 +2100,11 @@ number smaller than <strong>x</strong> and nearest to it.</p>
 </div>
 </section>
 <section id="id17">
-<h3><strong>标准</strong><a class="headerlink" href="#id17" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id18">
-<h3><strong>另见</strong><a class="headerlink" href="#id18" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -2125,13 +2124,13 @@ number smaller than <strong>x</strong> and nearest to it.</p>
 </section>
 </section>
 <section id="rrspacing">
-<h2>rrspacing<a class="headerlink" href="#rrspacing" title="此标题的永久链接">#</a></h2>
+<h2>rrspacing<a class="headerlink" href="#rrspacing" title="Link to this heading">#</a></h2>
 <section id="id19">
-<h3><strong>名称</strong><a class="headerlink" href="#id19" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p><strong>rrspacing</strong>(3) - [MODEL_COMPONENTS] Reciprocal of the relative spacing of a numeric type</p>
 </section>
 <section id="id20">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id20" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">rrspacing</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2142,14 +2141,14 @@ number smaller than <strong>x</strong> and nearest to it.</p>
 </div>
 </section>
 <section id="id21">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id21" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> is type <em>real</em> an any kind</p></li>
 <li><p>其返回与 <strong>x</strong>同种类型和种类.</p></li>
 </ul>
 </section>
 <section id="id22">
-<h3><strong>说明</strong><a class="headerlink" href="#id22" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <p><strong>rrspacing</strong>(3) returns the reciprocal of the relative spacing of model
 numbers near <strong>x</strong>.</p>
 <!--
@@ -2161,7 +2160,7 @@ numbers near <strong>x</strong>.</p>
 -->
 </section>
 <section id="id23">
-<h3><strong>选项</strong><a class="headerlink" href="#id23" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>应为 <em>real</em> 类型。</p>
@@ -2171,15 +2170,15 @@ numbers near <strong>x</strong>.</p>
 </ul>
 </section>
 <section id="id24">
-<h3><strong>结果</strong><a class="headerlink" href="#id24" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <p>返回值与 <strong>x</strong> 具有相同的类型和种类。返回的值等于 <strong>abs(fraction(x)) * float(radix(x))**digits(x)</strong>。</p>
 </section>
 <section id="id25">
-<h3><strong>标准</strong><a class="headerlink" href="#id25" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id26">
-<h3><strong>另见</strong><a class="headerlink" href="#id26" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -2199,13 +2198,13 @@ numbers near <strong>x</strong>.</p>
 </section>
 </section>
 <section id="scale">
-<h2>scale<a class="headerlink" href="#scale" title="此标题的永久链接">#</a></h2>
+<h2>scale<a class="headerlink" href="#scale" title="Link to this heading">#</a></h2>
 <section id="id27">
-<h3><strong>名称</strong><a class="headerlink" href="#id27" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
 <p><strong>scale</strong>(3) - [MODEL_COMPONENTS] 以基数的整数幂缩放实数值</p>
 </section>
 <section id="id28">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id28" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2217,7 +2216,7 @@ numbers near <strong>x</strong>.</p>
 </div>
 </section>
 <section id="id29">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id29" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> is type <em>real</em> of any kind</p></li>
 <li><p><strong>i</strong> is type an <em>integer</em> of any kind</p></li>
@@ -2225,13 +2224,13 @@ numbers near <strong>x</strong>.</p>
 </ul>
 </section>
 <section id="id30">
-<h3><strong>说明</strong><a class="headerlink" href="#id30" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
 <p><strong>scale</strong>(3) returns x * <strong>radix(x)**i</strong>.</p>
 <p>It is almost certain the radix(base) of the platform is two, therefore
 <strong>scale</strong>(3) is generally the same as <strong>x*2**i</strong></p>
 </section>
 <section id="id31">
-<h3><strong>选项</strong><a class="headerlink" href="#id31" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>the value to multiply by <strong>radix(x)**i</strong>. Its type and kind is used
@@ -2249,12 +2248,12 @@ value is within the range of the characteristics of <strong>x</strong>.</p>
 </ul>
 </section>
 <section id="id32">
-<h3><strong>结果</strong><a class="headerlink" href="#id32" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <p>The return value is <strong>x * radix(x)**i</strong>, assuming that value can be
 represented by a value of the type and kind of <strong>x</strong>.</p>
 </section>
 <section id="id33">
-<h3><strong>示例</strong><a class="headerlink" href="#id33" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_scale</span>
 <span class="k">implicit none</span>
@@ -2270,11 +2269,11 @@ represented by a value of the type and kind of <strong>x</strong>.</p>
 </div>
 </section>
 <section id="id34">
-<h3><strong>标准</strong><a class="headerlink" href="#id34" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id35">
-<h3><strong>另见</strong><a class="headerlink" href="#id35" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -2294,13 +2293,13 @@ represented by a value of the type and kind of <strong>x</strong>.</p>
 </section>
 </section>
 <section id="set-exponent">
-<h2>set_exponent<a class="headerlink" href="#set-exponent" title="此标题的永久链接">#</a></h2>
+<h2>set_exponent<a class="headerlink" href="#set-exponent" title="Link to this heading">#</a></h2>
 <section id="id36">
-<h3><strong>名称</strong><a class="headerlink" href="#id36" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
 <p><strong>set_exponent</strong>(3) - [MODEL_COMPONENTS] real value with specified exponent</p>
 </section>
 <section id="id37">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id37" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">set_exponent</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2312,7 +2311,7 @@ represented by a value of the type and kind of <strong>x</strong>.</p>
 </div>
 </section>
 <section id="id38">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id38" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> is type <em>real</em></p></li>
 <li><p><strong>i</strong> is type <em>integer</em></p></li>
@@ -2321,12 +2320,12 @@ represented by a value of the type and kind of <strong>x</strong>.</p>
 </ul>
 </section>
 <section id="id39">
-<h3><strong>说明</strong><a class="headerlink" href="#id39" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
 <p><strong>set_exponent</strong>(3) returns the real number whose fractional part is
 that of <strong>x</strong> and whose exponent part is <strong>i</strong>.</p>
 </section>
 <section id="id40">
-<h3><strong>选项</strong><a class="headerlink" href="#id40" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>应为 <em>real</em> 类型。</p>
@@ -2341,7 +2340,7 @@ that of <strong>x</strong> and whose exponent part is <strong>i</strong>.</p>
 </ul>
 </section>
 <section id="id41">
-<h3><strong>结果</strong><a class="headerlink" href="#id41" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id41" title="Link to this heading">#</a></h3>
 <p>The return value is of the same type and kind as <strong>x</strong>. The real number
 whose fractional part is that of <strong>x</strong> and whose exponent part
 if <strong>i</strong> is returned; it is <strong>fraction(x) * radix(x)**i</strong>.</p>
@@ -2350,7 +2349,7 @@ if <strong>i</strong> is returned; it is <strong>fraction(x) * radix(x)**i</stro
 <p>If <strong>x</strong> is an IEEE NaN, the result is the same NaN.</p>
 </section>
 <section id="id42">
-<h3><strong>示例</strong><a class="headerlink" href="#id42" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_setexp</span>
 <span class="k">implicit none</span>
@@ -2366,11 +2365,11 @@ if <strong>i</strong> is returned; it is <strong>fraction(x) * radix(x)**i</stro
 </div>
 </section>
 <section id="id43">
-<h3><strong>标准</strong><a class="headerlink" href="#id43" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id44">
-<h3><strong>另见</strong><a class="headerlink" href="#id44" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -2390,13 +2389,13 @@ if <strong>i</strong> is returned; it is <strong>fraction(x) * radix(x)**i</stro
 </section>
 </section>
 <section id="spacing">
-<h2>spacing<a class="headerlink" href="#spacing" title="此标题的永久链接">#</a></h2>
+<h2>spacing<a class="headerlink" href="#spacing" title="Link to this heading">#</a></h2>
 <section id="id45">
-<h3><strong>名称</strong><a class="headerlink" href="#id45" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id45" title="Link to this heading">#</a></h3>
 <p><strong>spacing</strong>(3) - [MODEL_COMPONENTS] 给定类型的两个数字之间的最小距离</p>
 </section>
 <section id="id46">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id46" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id46" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">spacing</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2407,19 +2406,19 @@ if <strong>i</strong> is returned; it is <strong>fraction(x) * radix(x)**i</stro
 </div>
 </section>
 <section id="id47">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id47" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> is type real of any valid kind</p></li>
 <li><p>结果与输入参数 <strong>x</strong> 的类型相同。</p></li>
 </ul>
 </section>
 <section id="id48">
-<h3><strong>说明</strong><a class="headerlink" href="#id48" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id48" title="Link to this heading">#</a></h3>
 <p><strong>spacing</strong>(3) determines the distance between the argument <strong>x</strong>
 and the nearest adjacent number of the same type.</p>
 </section>
 <section id="id49">
-<h3><strong>选项</strong><a class="headerlink" href="#id49" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id49" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>应为 <em>real</em> 类型。</p>
@@ -2429,7 +2428,7 @@ and the nearest adjacent number of the same type.</p>
 </ul>
 </section>
 <section id="id50">
-<h3><strong>结果</strong><a class="headerlink" href="#id50" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id50" title="Link to this heading">#</a></h3>
 <p>If <strong>x</strong> does not have the value zero and is not an IEEE infinity or NaN, the result has the value
 nearest to <strong>x</strong> for values of the same type and kind assuming the value is representable.</p>
 <p>Otherwise, the value is the same as <strong>tiny(x)</strong>. + zero produces <strong>tiny(x)</strong> + IEEE Infinity produces an IEEE Nan + if an IEEE NaN, that NaN is returned</p>
@@ -2440,7 +2439,7 @@ value of greater absolute value is taken.</p>
 -->
 </section>
 <section id="id51">
-<h3><strong>示例</strong><a class="headerlink" href="#id51" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id51" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_spacing</span>
 <span class="k">implicit none</span>
@@ -2464,11 +2463,11 @@ value of greater absolute value is taken.</p>
 </div>
 </section>
 <section id="id52">
-<h3><strong>标准</strong><a class="headerlink" href="#id52" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id52" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id53">
-<h3><strong>另见</strong><a class="headerlink" href="#id53" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id53" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -2488,13 +2487,13 @@ value of greater absolute value is taken.</p>
 </section>
 </section>
 <section id="digits">
-<h2>digits<a class="headerlink" href="#digits" title="此标题的永久链接">#</a></h2>
+<h2>digits<a class="headerlink" href="#digits" title="Link to this heading">#</a></h2>
 <section id="id54">
-<h3><strong>名称</strong><a class="headerlink" href="#id54" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id54" title="Link to this heading">#</a></h3>
 <p><strong>digits</strong>(3) - [NUMERIC MODEL] Significant digits in the numeric model</p>
 </section>
 <section id="id55">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id55" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id55" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">digits</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2505,21 +2504,21 @@ value of greater absolute value is taken.</p>
 </div>
 </section>
 <section id="id56">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id56" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id56" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> an <em>integer</em> or <em>real</em> scalar or array</p></li>
 <li><p>The return value is an <em>integer</em> of default kind.</p></li>
 </ul>
 </section>
 <section id="id57">
-<h3><strong>说明</strong><a class="headerlink" href="#id57" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id57" title="Link to this heading">#</a></h3>
 <p><strong>digits</strong>(3) returns the number of significant digits of the internal
 model representation of <strong>x</strong>. For example, on a system using a 32-bit
 floating point representation, a default real number would likely
 return 24.</p>
 </section>
 <section id="id58">
-<h3><strong>选项</strong><a class="headerlink" href="#id58" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id58" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>a value of the type and kind to query</p>
@@ -2529,12 +2528,12 @@ return 24.</p>
 </ul>
 </section>
 <section id="id59">
-<h3><strong>结果</strong><a class="headerlink" href="#id59" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id59" title="Link to this heading">#</a></h3>
 <p>The number of significant digits in a variable of the type and kind
 of <strong>x</strong>.</p>
 </section>
 <section id="id60">
-<h3><strong>示例</strong><a class="headerlink" href="#id60" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id60" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_digits</span>
 <span class="k">implicit none</span>
@@ -2555,11 +2554,11 @@ of <strong>x</strong>.</p>
 </div>
 </section>
 <section id="id61">
-<h3><strong>标准</strong><a class="headerlink" href="#id61" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id61" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id62">
-<h3><strong>另见</strong><a class="headerlink" href="#id62" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id62" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
 <a class="reference internal" href="#fraction"><strong>fraction</strong>(3)</a>,
@@ -2579,13 +2578,13 @@ of <strong>x</strong>.</p>
 </section>
 </section>
 <section id="epsilon">
-<h2>epsilon<a class="headerlink" href="#epsilon" title="此标题的永久链接">#</a></h2>
+<h2>epsilon<a class="headerlink" href="#epsilon" title="Link to this heading">#</a></h2>
 <section id="id63">
-<h3><strong>名称</strong><a class="headerlink" href="#id63" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id63" title="Link to this heading">#</a></h3>
 <p><strong>epsilon</strong>(3) - [NUMERIC MODEL] Epsilon 函数</p>
 </section>
 <section id="id64">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id64" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id64" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">epsilon</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2596,14 +2595,14 @@ of <strong>x</strong>.</p>
 </div>
 </section>
 <section id="id65">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id65" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id65" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> shall be of type <em>real</em>. It may be a scalar or an array.</p></li>
 <li><p>the result is a scalar of the same type and kind type parameter as <strong>x</strong>.</p></li>
 </ul>
 </section>
 <section id="id66">
-<h3><strong>说明</strong><a class="headerlink" href="#id66" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id66" title="Link to this heading">#</a></h3>
 <p><strong>epsilon</strong>(3) returns the floating point relative accuracy.
 It is the nearly negligible number relative to <strong>1</strong>
 such that <strong>1+ little_number</strong> is not equal to <strong>1</strong>; or more
@@ -2616,7 +2615,7 @@ precisely</p>
 <p>如果 <em>delta</em> 太小，算法可能永远不会停止，因为小于数据类型的十进制分辨率的计算求和值不会改变。</p>
 </section>
 <section id="id67">
-<h3><strong>选项</strong><a class="headerlink" href="#id67" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id67" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>其类型应该是 <em>real</em>.</p>
@@ -2626,11 +2625,11 @@ precisely</p>
 </ul>
 </section>
 <section id="id68">
-<h3><strong>结果</strong><a class="headerlink" href="#id68" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id68" title="Link to this heading">#</a></h3>
 <p>返回值与参数的类型相同。</p>
 </section>
 <section id="id69">
-<h3><strong>示例</strong><a class="headerlink" href="#id69" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id69" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_epsilon</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">dp</span><span class="o">=&gt;</span><span class="n">real64</span><span class="p">,</span><span class="n">sp</span><span class="o">=&gt;</span><span class="n">real32</span>
@@ -2696,11 +2695,11 @@ precisely</p>
 </div>
 </section>
 <section id="id70">
-<h3><strong>标准</strong><a class="headerlink" href="#id70" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id70" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id71">
-<h3><strong>另见</strong><a class="headerlink" href="#id71" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id71" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
 <a class="reference internal" href="#fraction"><strong>fraction</strong>(3)</a>,
@@ -2720,13 +2719,13 @@ precisely</p>
 </section>
 </section>
 <section id="huge">
-<h2>huge<a class="headerlink" href="#huge" title="此标题的永久链接">#</a></h2>
+<h2>huge<a class="headerlink" href="#huge" title="Link to this heading">#</a></h2>
 <section id="id72">
-<h3><strong>名称</strong><a class="headerlink" href="#id72" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id72" title="Link to this heading">#</a></h3>
 <p><strong>huge</strong>(3) - [NUMERIC MODEL] 该类型种类的最大数</p>
 </section>
 <section id="id73">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id73" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id73" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">huge</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2737,19 +2736,19 @@ precisely</p>
 </div>
 </section>
 <section id="id74">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id74" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id74" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> may be any <em>real</em> or <em>integer</em> scalar or array and any kind.</p></li>
 <li><p>The result will be a scalar of the same type and kind as the input <strong>x</strong></p></li>
 </ul>
 </section>
 <section id="id75">
-<h3><strong>说明</strong><a class="headerlink" href="#id75" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id75" title="Link to this heading">#</a></h3>
 <p><strong>huge</strong>(3) returns the largest number that is not an overflow
 for the kind and type of <strong>x</strong>.</p>
 </section>
 <section id="id76">
-<h3><strong>选项</strong><a class="headerlink" href="#id76" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id76" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p><strong>x</strong> is an arbitrary value which is used merely to determine what
@@ -2761,7 +2760,7 @@ as only its characteristics are used.</p>
 </ul>
 </section>
 <section id="id77">
-<h3><strong>结果</strong><a class="headerlink" href="#id77" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id77" title="Link to this heading">#</a></h3>
 <p>The result is the largest value supported by the specified type
 and kind.</p>
 <p>Note the result is as the same kind as the input to ensure the returned
@@ -2769,7 +2768,7 @@ value does not overflow. Any assignment of the result to a variable
 should take this into consideration.</p>
 </section>
 <section id="id78">
-<h3><strong>示例</strong><a class="headerlink" href="#id78" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id78" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_huge</span>
 <span class="k">implicit none</span>
@@ -2828,11 +2827,11 @@ should take this into consideration.</p>
 </div>
 </section>
 <section id="id79">
-<h3><strong>标准</strong><a class="headerlink" href="#id79" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id79" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id80">
-<h3><strong>另见</strong><a class="headerlink" href="#id80" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id80" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -2852,13 +2851,13 @@ should take this into consideration.</p>
 </section>
 </section>
 <section id="maxexponent">
-<h2>maxexponent<a class="headerlink" href="#maxexponent" title="此标题的永久链接">#</a></h2>
+<h2>maxexponent<a class="headerlink" href="#maxexponent" title="Link to this heading">#</a></h2>
 <section id="id81">
-<h3><strong>名称</strong><a class="headerlink" href="#id81" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id81" title="Link to this heading">#</a></h3>
 <p><strong>maxexponent</strong>(3) - [NUMERIC MODEL] 实数的最大指数</p>
 </section>
 <section id="id82">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id82" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id82" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">maxexponent</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2869,19 +2868,19 @@ should take this into consideration.</p>
 </div>
 </section>
 <section id="id83">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id83" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id83" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> is a <em>real</em> scalar or array of any <em>real</em> kind</p></li>
 <li><p>the result is a default <em>integer</em> scalar</p></li>
 </ul>
 </section>
 <section id="id84">
-<h3><strong>说明</strong><a class="headerlink" href="#id84" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id84" title="Link to this heading">#</a></h3>
 <p><strong>maxexponent</strong>(3) returns the maximum exponent in the model of the
 type of <strong>x</strong>.</p>
 </section>
 <section id="id85">
-<h3><strong>选项</strong><a class="headerlink" href="#id85" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id85" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>A value used to select the kind of <em>real</em> to return a value for.</p>
@@ -2891,12 +2890,12 @@ type of <strong>x</strong>.</p>
 </ul>
 </section>
 <section id="id86">
-<h3><strong>结果</strong><a class="headerlink" href="#id86" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id86" title="Link to this heading">#</a></h3>
 <p>The value returned is the maximum exponent for the kind of the value
 queried</p>
 </section>
 <section id="id87">
-<h3><strong>示例</strong><a class="headerlink" href="#id87" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id87" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_maxexponent</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">real32</span><span class="p">,</span><span class="n">real64</span><span class="p">,</span><span class="n">real128</span>
@@ -2916,11 +2915,11 @@ queried</p>
 </div>
 </section>
 <section id="id88">
-<h3><strong>标准</strong><a class="headerlink" href="#id88" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id88" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id89">
-<h3><strong>另见</strong><a class="headerlink" href="#id89" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id89" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -2940,13 +2939,13 @@ queried</p>
 </section>
 </section>
 <section id="minexponent">
-<h2>minexponent<a class="headerlink" href="#minexponent" title="此标题的永久链接">#</a></h2>
+<h2>minexponent<a class="headerlink" href="#minexponent" title="Link to this heading">#</a></h2>
 <section id="id90">
-<h3><strong>名称</strong><a class="headerlink" href="#id90" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id90" title="Link to this heading">#</a></h3>
 <p><strong>minexponent</strong>(3) - [NUMERIC MODEL] 实数的最小指数</p>
 </section>
 <section id="id91">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id91" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id91" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">minexponent</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2957,19 +2956,19 @@ queried</p>
 </div>
 </section>
 <section id="id92">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id92" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id92" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> is a <em>real</em> scalar or array of any <em>real</em> kind</p></li>
 <li><p>the result is a default <em>integer</em> scalar</p></li>
 </ul>
 </section>
 <section id="id93">
-<h3><strong>说明</strong><a class="headerlink" href="#id93" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id93" title="Link to this heading">#</a></h3>
 <p><strong>minexponent</strong>(3) returns the minimum exponent in the model of the
 type of <strong>x</strong>.</p>
 </section>
 <section id="id94">
-<h3><strong>选项</strong><a class="headerlink" href="#id94" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id94" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>A value used to select the kind of <em>real</em> to return a value for.</p>
@@ -2979,12 +2978,12 @@ type of <strong>x</strong>.</p>
 </ul>
 </section>
 <section id="id95">
-<h3><strong>结果</strong><a class="headerlink" href="#id95" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id95" title="Link to this heading">#</a></h3>
 <p>The value returned is the maximum exponent for the kind of the value
 queried</p>
 </section>
 <section id="id96">
-<h3><strong>示例</strong><a class="headerlink" href="#id96" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id96" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_minexponent</span>
 <span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">&amp;</span>
@@ -3004,11 +3003,11 @@ queried</p>
 </div>
 </section>
 <section id="id97">
-<h3><strong>标准</strong><a class="headerlink" href="#id97" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id97" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id98">
-<h3><strong>另见</strong><a class="headerlink" href="#id98" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id98" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -3028,13 +3027,13 @@ queried</p>
 </section>
 </section>
 <section id="precision">
-<h2>precision<a class="headerlink" href="#precision" title="此标题的永久链接">#</a></h2>
+<h2>precision<a class="headerlink" href="#precision" title="Link to this heading">#</a></h2>
 <section id="id99">
-<h3><strong>名称</strong><a class="headerlink" href="#id99" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id99" title="Link to this heading">#</a></h3>
 <p><strong>precision</strong>(3) - [NUMERIC MODEL] 实数小数精度</p>
 </section>
 <section id="id100">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id100" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id100" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">precision</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3045,19 +3044,19 @@ queried</p>
 </div>
 </section>
 <section id="id101">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id101" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id101" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> shall be of type <em>real</em> or <em>complex</em>. It may be a scalar or an array.</p></li>
 <li><p>the result is a default <em>integer</em> scalar.</p></li>
 </ul>
 </section>
 <section id="id102">
-<h3><strong>说明</strong><a class="headerlink" href="#id102" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id102" title="Link to this heading">#</a></h3>
 <p><strong>precision</strong>(3) returns the decimal precision in the model of the type
 of <strong>x</strong>.</p>
 </section>
 <section id="id103">
-<h3><strong>选项</strong><a class="headerlink" href="#id103" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id103" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>the type and kind of the argument are used to determine which number
@@ -3069,7 +3068,7 @@ be undefined.</p>
 </ul>
 </section>
 <section id="id104">
-<h3><strong>结果</strong><a class="headerlink" href="#id104" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id104" title="Link to this heading">#</a></h3>
 <p>The precision of values of the type and kind of <strong>x</strong></p>
 <!--
    Result Value. The result has the value INT ((p - 1) * LOG10 (b)) + k, where b and p are as defined in 16.4
@@ -3078,7 +3077,7 @@ be undefined.</p>
 -->
 </section>
 <section id="id105">
-<h3><strong>示例</strong><a class="headerlink" href="#id105" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id105" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_precision</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">dp</span><span class="o">=&gt;</span><span class="n">real64</span><span class="p">,</span><span class="n">sp</span><span class="o">=&gt;</span><span class="n">real32</span>
@@ -3099,11 +3098,11 @@ be undefined.</p>
 </div>
 </section>
 <section id="id106">
-<h3><strong>标准</strong><a class="headerlink" href="#id106" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id106" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id107">
-<h3><strong>另见</strong><a class="headerlink" href="#id107" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id107" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -3123,13 +3122,13 @@ be undefined.</p>
 </section>
 </section>
 <section id="radix">
-<h2>radix<a class="headerlink" href="#radix" title="此标题的永久链接">#</a></h2>
+<h2>radix<a class="headerlink" href="#radix" title="Link to this heading">#</a></h2>
 <section id="id108">
-<h3><strong>名称</strong><a class="headerlink" href="#id108" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id108" title="Link to this heading">#</a></h3>
 <p><strong>radix</strong>(3) - [NUMERIC MODEL] Base of a numeric model</p>
 </section>
 <section id="id109">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id109" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id109" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">radix</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3140,14 +3139,14 @@ be undefined.</p>
 </div>
 </section>
 <section id="id110">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id110" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id110" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> may be scalar or an array of any <em>real</em> or <em>integer</em> type.</p></li>
 <li><p>the result is a default integer scalar.</p></li>
 </ul>
 </section>
 <section id="id111">
-<h3><strong>说明</strong><a class="headerlink" href="#id111" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id111" title="Link to this heading">#</a></h3>
 <p><strong>radix</strong>(3) returns the base of the internal model representing the
 numeric entity <strong>x</strong>.</p>
 <p>In a positional numeral system, the radix or base is the number of
@@ -3157,7 +3156,7 @@ generically, but will be 2 (representing a binary machine) for any
 common platform for all the numeric types.</p>
 </section>
 <section id="id112">
-<h3><strong>选项</strong><a class="headerlink" href="#id112" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id112" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>used to identify the type of number to query.</p>
@@ -3167,12 +3166,12 @@ common platform for all the numeric types.</p>
 </ul>
 </section>
 <section id="id113">
-<h3><strong>结果</strong><a class="headerlink" href="#id113" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id113" title="Link to this heading">#</a></h3>
 <p>The returned value indicates what base is internally used to represent
 the type of numeric value <strong>x</strong> represents.</p>
 </section>
 <section id="id114">
-<h3><strong>示例</strong><a class="headerlink" href="#id114" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id114" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_radix</span>
 <span class="k">implicit none</span>
@@ -3190,11 +3189,11 @@ the type of numeric value <strong>x</strong> represents.</p>
 </div>
 </section>
 <section id="id115">
-<h3><strong>标准</strong><a class="headerlink" href="#id115" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id115" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id116">
-<h3><strong>另见</strong><a class="headerlink" href="#id116" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id116" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -3214,13 +3213,13 @@ the type of numeric value <strong>x</strong> represents.</p>
 </section>
 </section>
 <section id="range">
-<h2>range<a class="headerlink" href="#range" title="此标题的永久链接">#</a></h2>
+<h2>range<a class="headerlink" href="#range" title="Link to this heading">#</a></h2>
 <section id="id117">
-<h3><strong>名称</strong><a class="headerlink" href="#id117" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id117" title="Link to this heading">#</a></h3>
 <p><strong>range</strong>(3) - [NUMERIC MODEL] Decimal exponent range of a numeric kind</p>
 </section>
 <section id="id118">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id118" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id118" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3231,7 +3230,7 @@ the type of numeric value <strong>x</strong> represents.</p>
 </div>
 </section>
 <section id="id119">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id119" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id119" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> may be of type <em>integer</em>, <em>real</em>, or <em>complex</em>. It may be a scalar or an array.</p></li>
 <li><p><strong>KIND</strong> is any kind supported by the type of <strong>x</strong></p></li>
@@ -3239,14 +3238,14 @@ the type of numeric value <strong>x</strong> represents.</p>
 </ul>
 </section>
 <section id="id120">
-<h3><strong>说明</strong><a class="headerlink" href="#id120" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id120" title="Link to this heading">#</a></h3>
 <p><strong>range</strong>(3) returns the decimal exponent range in the model of the
 type of <strong>x</strong>.</p>
 <p>Since <strong>x</strong> is only used to determine the type and kind being
 interrogated, the value need not be defined.</p>
 </section>
 <section id="id121">
-<h3><strong>选项</strong><a class="headerlink" href="#id121" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id121" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>the value whose type and kind are used for the query</p>
@@ -3256,7 +3255,7 @@ interrogated, the value need not be defined.</p>
 </ul>
 </section>
 <section id="id122">
-<h3><strong>结果</strong><a class="headerlink" href="#id122" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id122" title="Link to this heading">#</a></h3>
 <dl class="simple myst">
 <dt>案例(i)</dt><dd><p>For an integer argument, the result has the value</p>
 </dd>
@@ -3280,7 +3279,7 @@ interrogated, the value need not be defined.</p>
 </div>
 </section>
 <section id="id123">
-<h3><strong>示例</strong><a class="headerlink" href="#id123" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id123" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_range</span>
 <span class="k">use</span><span class="p">,</span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">dp</span><span class="o">=&gt;</span><span class="n">real64</span><span class="p">,</span><span class="n">sp</span><span class="o">=&gt;</span><span class="n">real32</span>
@@ -3299,11 +3298,11 @@ interrogated, the value need not be defined.</p>
 </div>
 </section>
 <section id="id124">
-<h3><strong>标准</strong><a class="headerlink" href="#id124" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id124" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id125">
-<h3><strong>另见</strong><a class="headerlink" href="#id125" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id125" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,
@@ -3323,13 +3322,13 @@ interrogated, the value need not be defined.</p>
 </section>
 </section>
 <section id="tiny">
-<h2>tiny<a class="headerlink" href="#tiny" title="此标题的永久链接">#</a></h2>
+<h2>tiny<a class="headerlink" href="#tiny" title="Link to this heading">#</a></h2>
 <section id="id126">
-<h3><strong>名称</strong><a class="headerlink" href="#id126" title="此标题的永久链接">#</a></h3>
+<h3><strong>名称</strong><a class="headerlink" href="#id126" title="Link to this heading">#</a></h3>
 <p><strong>tiny</strong>(3) - [NUMERIC MODEL] 实数的最小正数</p>
 </section>
 <section id="id127">
-<h3><strong>Synopsis</strong><a class="headerlink" href="#id127" title="此标题的永久链接">#</a></h3>
+<h3><strong>Synopsis</strong><a class="headerlink" href="#id127" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tiny</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3340,14 +3339,14 @@ interrogated, the value need not be defined.</p>
 </div>
 </section>
 <section id="id128">
-<h3><strong>Characteristics</strong><a class="headerlink" href="#id128" title="此标题的永久链接">#</a></h3>
+<h3><strong>Characteristics</strong><a class="headerlink" href="#id128" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>x</strong> may be any <em>real</em> scalar or array</p></li>
 <li><p>the result has the same type and kind as <strong>x</strong></p></li>
 </ul>
 </section>
 <section id="id129">
-<h3><strong>说明</strong><a class="headerlink" href="#id129" title="此标题的永久链接">#</a></h3>
+<h3><strong>说明</strong><a class="headerlink" href="#id129" title="Link to this heading">#</a></h3>
 <p><strong>tiny</strong>(3) returns the smallest positive (non zero) number of the
 type and kind of <strong>x</strong>.</p>
 <p>For real <strong>x</strong></p>
@@ -3356,7 +3355,7 @@ type and kind of <strong>x</strong>.</p>
 </div>
 </section>
 <section id="id130">
-<h3><strong>选项</strong><a class="headerlink" href="#id130" title="此标题的永久链接">#</a></h3>
+<h3><strong>选项</strong><a class="headerlink" href="#id130" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple myst">
 <dt><strong>x</strong></dt><dd><p>The value whose kind is used to determine the model type to query</p>
@@ -3366,11 +3365,11 @@ type and kind of <strong>x</strong>.</p>
 </ul>
 </section>
 <section id="id131">
-<h3><strong>结果</strong><a class="headerlink" href="#id131" title="此标题的永久链接">#</a></h3>
+<h3><strong>结果</strong><a class="headerlink" href="#id131" title="Link to this heading">#</a></h3>
 <p>指定种类的 <em>real</em> 类型的最小正值。</p>
 </section>
 <section id="id132">
-<h3><strong>示例</strong><a class="headerlink" href="#id132" title="此标题的永久链接">#</a></h3>
+<h3><strong>示例</strong><a class="headerlink" href="#id132" title="Link to this heading">#</a></h3>
 <p>示例程序：</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">demo_tiny</span>
 <span class="k">implicit none</span>
@@ -3387,11 +3386,11 @@ type and kind of <strong>x</strong>.</p>
 </div>
 </section>
 <section id="id133">
-<h3><strong>标准</strong><a class="headerlink" href="#id133" title="此标题的永久链接">#</a></h3>
+<h3><strong>标准</strong><a class="headerlink" href="#id133" title="Link to this heading">#</a></h3>
 <p>Fortran 95</p>
 </section>
 <section id="id134">
-<h3><strong>另见</strong><a class="headerlink" href="#id134" title="此标题的永久链接">#</a></h3>
+<h3><strong>另见</strong><a class="headerlink" href="#id134" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="#digits"><strong>digits</strong>(3)</a>,
 <a class="reference internal" href="#epsilon"><strong>epsilon</strong>(3)</a>,
 <a class="reference internal" href="#exponent"><strong>exponent</strong>(3)</a>,

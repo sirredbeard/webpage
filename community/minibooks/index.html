@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../_static/images/favicon.ico" type="image/x-icon">
     <title>Mini-book Tutorials on fortran-lang.org &#8212; Fortran Programming Language</title>
 <script>
@@ -24,20 +23,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=33a0c708"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/community/minibooks.html" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
@@ -445,12 +444,12 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="mini-book-tutorials-on-fortran-lang-org">
-<h1>Mini-book Tutorials on fortran-lang.org<a class="headerlink" href="#mini-book-tutorials-on-fortran-lang-org" title="Permalink to this heading">#</a></h1>
+<h1>Mini-book Tutorials on fortran-lang.org<a class="headerlink" href="#mini-book-tutorials-on-fortran-lang-org" title="Link to this heading">#</a></h1>
 <p>This guide will cover how to write mini-book tutorials for the <a class="reference external" href="https://fortran-lang.org/learn">Learn</a>
 section of <a class="reference external" href="https://fortran-lang.org">https://fortran-lang.org</a>.</p>
 <p>See <a class="reference internal" href="../contributing/"><span class="doc std std-doc">contributing guidelines</span></a> for general guidance on contributing to <a class="reference external" href="https://fortran-lang.org">https://fortran-lang.org</a>.</p>
 <section id="mini-book-formats">
-<h2>0. Mini-book formats<a class="headerlink" href="#mini-book-formats" title="Permalink to this heading">#</a></h2>
+<h2>0. Mini-book formats<a class="headerlink" href="#mini-book-formats" title="Link to this heading">#</a></h2>
 <p>Mini-books are designed to be mostly self-contained tutorials on a particular feature of the Fortran language.</p>
 <p>There are two types of mini-book format:</p>
 <ul class="simple">
@@ -471,7 +470,7 @@ eventually be subsumed into a more-comprehensive multi-page book.</p>
 <p>The rest of this guide is split into two sections, one each for the single-page and multi-page book types.</p>
 </section>
 <section id="single-page-mini-book">
-<h2>1. Single-page mini-book<a class="headerlink" href="#single-page-mini-book" title="Permalink to this heading">#</a></h2>
+<h2>1. Single-page mini-book<a class="headerlink" href="#single-page-mini-book" title="Link to this heading">#</a></h2>
 <p>The steps required for publishing a single-page mini-book are:</p>
 <ul class="simple">
 <li><p>Create a new markdown document in the <code class="docutils literal notranslate"><span class="pre">./learn</span></code> directory</p></li>
@@ -480,7 +479,7 @@ eventually be subsumed into a more-comprehensive multi-page book.</p>
 <li><p>Open a pull request</p></li>
 </ul>
 <section id="writing-your-mini-book-in-markdown">
-<h3>1.1 Writing your mini-book in markdown<a class="headerlink" href="#writing-your-mini-book-in-markdown" title="Permalink to this heading">#</a></h3>
+<h3>1.1 Writing your mini-book in markdown<a class="headerlink" href="#writing-your-mini-book-in-markdown" title="Link to this heading">#</a></h3>
 <p>For single-page mini-books your tutorial will be entirely contained within a single markdown document.</p>
 <p>First create a new markdown document in the <code class="docutils literal notranslate"><span class="pre">./learn/{{name_of_minibook}}/</span></code> directory with the <code class="docutils literal notranslate"><span class="pre">.md</span></code> file extension
 and a short name that concisely describes the topic of your tutorial, <em>e.g.</em> <code class="docutils literal notranslate"><span class="pre">./learn/{{name_of_minibook}}/file_io.md</span></code>.</p>
@@ -519,7 +518,7 @@ see <a class="reference external" href="https://kramdown.gettalong.org/syntax.ht
 the markdown implementation.</p>
 </section>
 <section id="structuring-your-mini-book-with-headings">
-<h3>1.2 Structuring your mini-book with headings<a class="headerlink" href="#structuring-your-mini-book-with-headings" title="Permalink to this heading">#</a></h3>
+<h3>1.2 Structuring your mini-book with headings<a class="headerlink" href="#structuring-your-mini-book-with-headings" title="Link to this heading">#</a></h3>
 <p>You should use headings to break-up your single-page mini-book into a logical structure.
 Each heading will show up in the hyperlinked table-of-contents.</p>
 <p>In markdown, headings can be written as:</p>
@@ -539,7 +538,7 @@ Each heading will show up in the hyperlinked table-of-contents.</p>
 <p><strong>Note:</strong> make sure to include a blank line before your heading.</p>
 </section>
 <section id="add-your-mini-book-to-the-learn-page">
-<h3>1.3 Add your mini-book to the Learn page<a class="headerlink" href="#add-your-mini-book-to-the-learn-page" title="Permalink to this heading">#</a></h3>
+<h3>1.3 Add your mini-book to the Learn page<a class="headerlink" href="#add-your-mini-book-to-the-learn-page" title="Link to this heading">#</a></h3>
 <p>To add your new mini-book to the <em>Learn</em> page, you need to add a new entry
 in the <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a> datafile.</p>
 <p>Open this file and create a new entry under the <code class="docutils literal notranslate"><span class="pre">books:</span></code> field in the following format:</p>
@@ -570,7 +569,7 @@ at <a class="reference external" href="https://github.com/fortran-lang/webpage">
 </section>
 </section>
 <section id="multi-page-mini-books">
-<h2>2. Multi-page mini-books<a class="headerlink" href="#multi-page-mini-books" title="Permalink to this heading">#</a></h2>
+<h2>2. Multi-page mini-books<a class="headerlink" href="#multi-page-mini-books" title="Link to this heading">#</a></h2>
 <p>The steps required for publishing a multi-page mini-book are:</p>
 <ul class="simple">
 <li><p>Create a new folder in the <code class="docutils literal notranslate"><span class="pre">./learn/</span></code> directory</p></li>
@@ -580,7 +579,7 @@ at <a class="reference external" href="https://github.com/fortran-lang/webpage">
 <li><p>Open a pull request</p></li>
 </ul>
 <section id="create-a-new-folder-for-your-mini-book">
-<h3>2.1 Create a new folder for your mini-book<a class="headerlink" href="#create-a-new-folder-for-your-mini-book" title="Permalink to this heading">#</a></h3>
+<h3>2.1 Create a new folder for your mini-book<a class="headerlink" href="#create-a-new-folder-for-your-mini-book" title="Link to this heading">#</a></h3>
 <p>Create a new folder in the <code class="docutils literal notranslate"><span class="pre">./learn/</span></code> directory with a short name that concisely describes the topic of your tutorial, <em>e.g.</em> <code class="docutils literal notranslate"><span class="pre">./learn/coarrays/</span></code>.
 All pages of your mini-book will be contained within this folder.</p>
 <p>The first page of your mini-book should be called <code class="docutils literal notranslate"><span class="pre">index.md</span></code>, so create a new markdown file in
@@ -610,14 +609,14 @@ your mini-book folder called <code class="docutils literal notranslate"><span cl
 <p>you should populate the remainder of <code class="docutils literal notranslate"><span class="pre">index.md</span></code> with an introduction to your mini-book tutorial which may include: a summary of the concepts covered; any prerequisites; and any references to other related mini-books or useful third-party resources.</p>
 </section>
 <section id="add-pages-to-your-mini-book">
-<h3>2.2 Add pages to your mini-book<a class="headerlink" href="#add-pages-to-your-mini-book" title="Permalink to this heading">#</a></h3>
+<h3>2.2 Add pages to your mini-book<a class="headerlink" href="#add-pages-to-your-mini-book" title="Link to this heading">#</a></h3>
 <p>For each new page in your mini-book, create a new markdown file in your mini-book folder.</p>
 <p>As with single-page mini-books, you should use headings to break-up each
 page into a logical structure.
 Each heading on the current page will show up in the inpage table-of-contents.</p>
 </section>
 <section id="id1">
-<h3>2.3 Add your mini-book to the Learn page<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>2.3 Add your mini-book to the Learn page<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>To add your new mini-book to the <em>Learn</em> page, you need to add a new entry
 in the <a class="reference internal" href="#./data/learning.yml"><span class="xref myst">data/learning.yml</span></a> datafile.</p>
 <p>Open this file and create a new entry under the <code class="docutils literal notranslate"><span class="pre">books:</span></code> field in the following format:</p>

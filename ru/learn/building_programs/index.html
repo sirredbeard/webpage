@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="ru">
+<html lang="ru" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../_static/images/favicon.ico" type="image/x-icon">
     <title>Сборка программ &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/translations.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=aaa2236b"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/index.html" />
     <link rel="index" title="Алфавитный указатель" href="../../genindex/" />
     <link rel="search" title="Поиск" href="../../search/" />
@@ -712,12 +711,12 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="building-programs">
-<h1>Сборка программ<a class="headerlink" href="#building-programs" title="Permalink to this heading">#</a></h1>
+<h1>Сборка программ<a class="headerlink" href="#building-programs" title="Link to this heading">#</a></h1>
 <p>Языки программирования, такие как Fortran, C, C++, Java и некоторые другие, имеют общие особенности: вы пишите код программы на выбранном вами языке, но затем вам нужно преобразовать этот исходный код в исполняемый файл программы. Для других языков, которые называются интерпретируемыми — исходный код анализируется специальной программой и выполняется в виде непосредственных инструкций. Два очень простых примера такой разновидности языков: пакетные (batch) файлы в Windows и сценарии оболочки (shell scripts) в Linux.</p>
 <p>В этом руководстве мы сосредоточимся на первом типе языков программирования, взяв в качестве основного примера язык Fortran. Одним из преимуществ компилируемых языков программирования является то, что процесс сборки, необходимый для создания исполняемого файла программы, используется для преобразования человекочитаемого исходного кода в эффективную программу, которая может быть запущена на компьютере.</p>
 <p>Примечание: в данном руководстве приведены примеры для операционных систем Windows и Linux, однако рабочий процесс и общие принципы применимы и в случае использования операционной системы macOS.</p>
 <section id="compiled-languages">
-<h2>Компилируемые языки программирования<a class="headerlink" href="#compiled-languages" title="Permalink to this heading">#</a></h2>
+<h2>Компилируемые языки программирования<a class="headerlink" href="#compiled-languages" title="Link to this heading">#</a></h2>
 <p>Давайте рассмотрим простой пример программы:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">hello</span>
 <span class="w">    </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Hello!&#39;</span>

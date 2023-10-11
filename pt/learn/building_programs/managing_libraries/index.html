@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="pt">
+<html lang="pt" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas) &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aa4fbcf8"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=3b002d5c"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/building_programs/managing_libraries.html" />
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
@@ -736,7 +735,7 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="managing-libraries-static-and-dynamic-libraries">
-<h1>Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)<a class="headerlink" href="#managing-libraries-static-and-dynamic-libraries" title="Permalink to this heading">#</a></h1>
+<h1>Gerenciando bibliotecas (bibliotecas estáticas e dinâmicas)<a class="headerlink" href="#managing-libraries-static-and-dynamic-libraries" title="Link to this heading">#</a></h1>
 <p>Se você precisa gerenciar um programa com dúzias de arquivos fonte (e isso não é incomum!), o comando em linha necessário para especificar todos os arquivos objeto será bem grande. Isso logo fica tedioso ou até mesmo impossível de manter. Então uma solução diferente é necessária: criar suas próprias bibliotecas.</p>
 <p>Bibliotecas contêm qualquer quantidade de arquivos objeto de uma forma compactada, para que os comandos em linha se tornem bem menores:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>gfortran<span class="w"> </span>-o<span class="w"> </span>tabulate<span class="w"> </span>tabulate.f90<span class="w"> </span>functions.o<span class="w"> </span>supportlib.a
@@ -766,7 +765,7 @@ c:<span class="se">\.</span>..&gt;<span class="w"> </span>lib<span class="w"> </
 </ul>
 <p>Usando bibliotecas você pode construir programas gigantes sem ter que depender de linhas de comando extremamente longas.</p>
 <section id="static-versus-dynamic-libraries">
-<h2>bibliotecas estáticas versus dinâmicas<a class="headerlink" href="#static-versus-dynamic-libraries" title="Permalink to this heading">#</a></h2>
+<h2>bibliotecas estáticas versus dinâmicas<a class="headerlink" href="#static-versus-dynamic-libraries" title="Link to this heading">#</a></h2>
 <p>A discussão acima assume tacitamente que você está usando as chamadas bibliotecas estáticas. Bibliotecas estáticas (ou pelo menos parte dela) se torna uma parte integral do programa executável. A única forma de mudar as rotinas incorporadas no programa é realizando o rebuild do programa com uma nova versão da biblioteca.</p>
 <p>Uma alternativa flexível é usar as chamadas bibliotecas dinâmicas. Essas bibliotecas permanecem fora do código executável e como consequência podem ser substituídas sem refazer o build do programa completamente. Compiladores e o próprio sistema operacional são altamente dependentes de bibliotecas dinâmicas. Você pode considerar bibliotecas dinâmicas como programas executáveis que precisam de um pouco de ajuda para rodar.</p>
 <p>Construir bibliotecas dinâmicas funciona de forma ligeiramente diferente de construir bibliotecas estáticas: você usa o compilador/linker ao invés de uma ferramenta como <code class="docutils literal notranslate"><span class="pre">ar</span></code> ou <code class="docutils literal notranslate"><span class="pre">lib</span></code>.</p>
@@ -801,7 +800,7 @@ $<span class="w"> </span>ifort<span class="w"> </span>-dll<span class="w"> </spa
 <p>Por conta dos detalhes serem diferentes em cada compilador, aqui dois exemplos: gfortran no Cygwin e Intel Fortran no Windows. Em ambos os casos, olharemos o programa <code class="docutils literal notranslate"><span class="pre">tabulate</span></code> no arquivo «tabulate.f90».</p>
 </section>
 <section id="gnu-linux-and-gfortran">
-<h2>GNU/Linux e gfortran<a class="headerlink" href="#gnu-linux-and-gfortran" title="Permalink to this heading">#</a></h2>
+<h2>GNU/Linux e gfortran<a class="headerlink" href="#gnu-linux-and-gfortran" title="Link to this heading">#</a></h2>
 <p>O programa <code class="docutils literal notranslate"><span class="pre">tabulate</span></code> requer uma rotina definida pelo usuário <code class="docutils literal notranslate"><span class="pre">f</span></code>. Se deixarmos numa biblioteca dinâmica, digamos «functions.dll», nós podemos simplesmente substituir a implementação da função colocando outra biblioteca dinâmica no diretório. Não precisa refazer o build do programa.</p>
 <p>No Cygwin não é necessário exportar explicitamente um procedimento - todas as rotinas publicamente visíveis são exportadas quando você constrói uma biblioteca dinâmica. Além disso, nenhuma biblioteca de importação é gerada.</p>
 <p>Já que nossa biblioteca dinâmica pode ser construída de um único arquivo fonte, nós podemos tomar um atalho:</p>
@@ -829,7 +828,7 @@ $<span class="w"> </span>ifort<span class="w"> </span>-dll<span class="w"> </spa
 <p>Você pode substituir a biblioteca compartilhada «functions.dll» por outra, implementando uma função diferente «f». Claro, você precisa ter cuidado ao usar a interface correta para essa função. O compilador/linker não é mais invocado, então não podem fazer checagem.</p>
 </section>
 <section id="windows-and-intel-fortran">
-<h2>Windows e Intel Fortran<a class="headerlink" href="#windows-and-intel-fortran" title="Permalink to this heading">#</a></h2>
+<h2>Windows e Intel Fortran<a class="headerlink" href="#windows-and-intel-fortran" title="Link to this heading">#</a></h2>
 <p>O setup é o mesmo do Linux, mas no Windows é necessário exportar explicitamente as rotinas. E uma biblioteca de importação é gerada - essa é a biblioteca que deve ser usada na fase de link.</p>
 <p>O arquivo fonte deve conter a diretiva do compilador, ou a função <code class="docutils literal notranslate"><span class="pre">f</span></code> não é exportada:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">real </span><span class="k">function </span><span class="n">f</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">)</span>

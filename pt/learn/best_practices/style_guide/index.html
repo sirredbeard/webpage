@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="pt">
+<html lang="pt" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="256x256" href="../../../_static/images/favicon.ico" type="image/x-icon">
     <title>Guia de Estilos para o Fortran &#8212; Fortran Programming Language</title>
 <script>
@@ -24,21 +23,21 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=96a48853" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/translations.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=aa4fbcf8"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=3b002d5c"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <link rel="canonical" href="https://fortran-lang.org/en/learn/best_practices/style_guide.html" />
     <link rel="index" title="Índice" href="../../../genindex/" />
     <link rel="search" title="Pesquisar" href="../../../search/" />
@@ -736,9 +735,9 @@
               <article class="bd-article" role="main">
                 
 <section class="tex2jax_ignore mathjax_ignore" id="fortran-style-guide">
-<h1>Guia de Estilos para o Fortran<a class="headerlink" href="#fortran-style-guide" title="Permalink to this heading">#</a></h1>
+<h1>Guia de Estilos para o Fortran<a class="headerlink" href="#fortran-style-guide" title="Link to this heading">#</a></h1>
 <section id="naming-convention">
-<h2>Convenção de Nomes<a class="headerlink" href="#naming-convention" title="Permalink to this heading">#</a></h2>
+<h2>Convenção de Nomes<a class="headerlink" href="#naming-convention" title="Link to this heading">#</a></h2>
 <p>Em última análise, isso é uma questão de preferência. Aqui está um guia de estilos que gostamos e que parece ter prevalência nos códigos científicos (assim como na Fortran standard library), e recomendamos segui-lo.</p>
 <ol class="arabic simple">
 <li><p>Use caixa baixa para todos os construtores Fortran (<code class="docutils literal notranslate"><span class="pre">do</span></code>, <code class="docutils literal notranslate"><span class="pre">subroutine</span></code>, <code class="docutils literal notranslate"><span class="pre">module</span></code>, …).</p></li>
@@ -749,11 +748,11 @@
 <p>Acima são orientações gerais. Em geral, escolhe o nome correto certamente depende se a primeira sílaba da palavra truncada é suficiente. Normalmente é claro mas nem sempre. Portanto é necessário refletir sobre «tentar manter nomes em 2 sílabas ou menos» uma vez que pode afetar o significado e a simplicidade. Regras simples de nomeação consistente é uma boa ajuda nessa questão – tanto para colaboração quando para a própria sanidade quando revisitar algum código antigo que não tenha visto há um tempo.</p>
 </section>
 <section id="indentation">
-<h2>Identação<a class="headerlink" href="#indentation" title="Permalink to this heading">#</a></h2>
+<h2>Identação<a class="headerlink" href="#indentation" title="Link to this heading">#</a></h2>
 <p>Use uma indentação consistente para tornar seu código legível. A quantidade da indentação é uma questão de preferência, as escolhas mais comuns são duas, três ou quatro espaços.</p>
 </section>
 <section id="comparison-to-other-languages">
-<h2>Comparação com Outras Linguagens<a class="headerlink" href="#comparison-to-other-languages" title="Permalink to this heading">#</a></h2>
+<h2>Comparação com Outras Linguagens<a class="headerlink" href="#comparison-to-other-languages" title="Link to this heading">#</a></h2>
 <p>Por outro lado, na maioria do resto do mundo da programação, em que o foco é, de uma forma ou outra, em definir e usar grandes conjuntos de objetos complexos, com várias propriedades e comportamentos, conhecidos apenas no código onde são definidas (em oposição a definido pela mesma notação em toda a literatura), nesse caso faz mais sentido usar nomes grandes e mais descritivos. A convenção de nomes vista em linguagens de propósito geral tais como C++ e Python, portanto, são perfeitamente consistente com suas missões de propósito geral. Mas Fortran tem uma missão diferente (computação científica numérica).</p>
 </section>
 </section>
