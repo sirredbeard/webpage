@@ -737,6 +737,11 @@
    创建 CMake 项目
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-scons-build-system">
+   The SCons build system
+  </a>
+ </li>
 </ul>
 </nav> 
     </div>
@@ -1066,6 +1071,99 @@ Found ninja-1.10.0 at /usr/bin/ninja
 It is organised in manpages, which are also available with your local CMake
 installation as well using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">cmake</span></code>. While it covers all functionality of
 CMake, it sometimes covers them only very briefly.</p>
+</div>
+</section>
+<section id="the-scons-build-system">
+<h2>The SCons build system<a class="headerlink" href="#the-scons-build-system" title="Link to this heading">#</a></h2>
+<p>SCons is one another high-level cross-platform build system with automatic
+dependency analysis that supports Fortran projects. SCons configuration files
+are executed as Python scripts but it could be successfully used without
+knowledge about Python programming. The using of Python scripting if needed
+allows to handle build process and file naming in more sophisticated manner.</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>SCons doesn’t automatically passes the external environment variables such as
+<code class="docutils literal notranslate"><span class="pre">PATH</span></code> therefore it will not find programs and tools that installed into
+non-standard locations unless are specified or passed via appropriate variables.
+That guaranties that build isn’t affected by external (especially user’s)
+environment variables and build is repeatable. The most of such variables
+and compiler options and flags are required to be configured within special
+“isolated” <code class="docutils literal notranslate"><span class="pre">Environments</span></code> (please refer to
+<a href="https://scons.org/doc/production/HTML/scons-user/ch07.html" target="_blank" rel="noopener">User Guide</a>
+for additional information).</p>
+</div>
+<p>The SCons doesn’t use external low-level build systems and relies on own
+build system. The <code class="docutils literal notranslate"><span class="pre">ninja</span></code> support as external tool to generate <code class="docutils literal notranslate"><span class="pre">ninja.build</span></code>
+file is highly experimental (available since scons 4.2) and required to be
+enabled explicitly by additional configuration.</p>
+<p>The simple SCons project is <code class="docutils literal notranslate"><span class="pre">SConstruct</span></code> file that contains:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Program</span><span class="p">(</span><span class="s1">&#39;my_proj&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;tabulate.f90&#39;</span><span class="p">,</span> <span class="s1">&#39;functions.f90&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The next step is to build our project with command <code class="docutils literal notranslate"><span class="pre">scons</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+gfortran -o functions.o -c functions.f90
+gfortran -o tabulate.o -c tabulate.f90
+gfortran -o my_proj tabulate.o functions.o
+scons: done building targets.
+</pre></div>
+</div>
+<p>or with <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">-Q</span></code> to disable extended output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gfortran -o functions.o -c functions.f90
+gfortran -o tabulate.o -c tabulate.f90
+gfortran -o my_proj tabulate.o functions.o
+</pre></div>
+</div>
+<p>Find and test your program <code class="docutils literal notranslate"><span class="pre">my_prog</span></code> at the same directory as source files
+(by default) to ensure it works correctly.</p>
+<p>To cleanup the build artifacts run <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">-c</span></code> (or <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">-Qc</span></code>):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Cleaning targets ...
+Removed functions.o
+Removed user_functions.mod
+Removed tabulate.o
+Removed my_proj
+scons: done cleaning targets.
+</pre></div>
+</div>
+<p>In our SCons <code class="docutils literal notranslate"><span class="pre">SConstruct</span></code> file</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Program</span><span class="p">(</span><span class="s1">&#39;my_proj&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;tabulate.f90&#39;</span><span class="p">,</span> <span class="s1">&#39;functions.f90&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>we specified executable target name <code class="docutils literal notranslate"><span class="pre">my_proj</span></code> (optional, if omitted the first
+source file name is used) and list of source files
+<code class="docutils literal notranslate"><span class="pre">['tabulate.f90',</span> <span class="pre">'functions.f90']</span></code>. There is no need to specify project source
+files language – it’s detected automatically by SCons for supported languages.</p>
+<p>The list of source files could be specified with SCons <code class="docutils literal notranslate"><span class="pre">Glob</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Program</span><span class="p">(</span><span class="s1">&#39;my_proj&#39;</span><span class="p">,</span> <span class="n">Glob</span><span class="p">(</span><span class="s1">&#39;*.f90&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>or using SCons <code class="docutils literal notranslate"><span class="pre">Split</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Program</span><span class="p">(</span><span class="s1">&#39;my_proj&#39;</span><span class="p">,</span> <span class="n">Split</span><span class="p">(</span><span class="s1">&#39;tabulate.f90 functions.f90&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>or in more readable form by assigning variable:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">src_files</span> <span class="o">=</span> <span class="n">Split</span><span class="p">(</span><span class="s1">&#39;tabulate.f90 functions.f90&#39;</span><span class="p">)</span>
+<span class="n">Program</span><span class="p">(</span><span class="s1">&#39;my_proj&#39;</span><span class="p">,</span> <span class="n">src_files</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In case of <code class="docutils literal notranslate"><span class="pre">Split</span></code> function the multiple lines could be used with Python
+“triple-quote” syntax:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">src_files</span> <span class="o">=</span> <span class="n">Split</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;tabulate.f90</span>
+<span class="s2">                     functions.f90&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">Program</span><span class="p">(</span><span class="s1">&#39;my_proj&#39;</span><span class="p">,</span> <span class="n">src_files</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>SCons official webpage provides:
+<a href="https://scons.org/doc/production/HTML/scons-user/index.html" target="_blank" rel="noopener">User Guide</a>
+with extended description of various aspects how to handle the build process,
+<a href="https://scons.org/faq.html" target="_blank" rel="noopener">Frequently Asked Questions</a> page and
+<a href="https://scons.org/doc/production/HTML/scons-man.html" target="_blank" rel="noopener">man page</a>.</p>
 </div>
 </section>
 </section>
